@@ -1,0 +1,85 @@
+name: compile
+
+run-name: compile check for ${{ github.ref_name }} @ ${{ github.sha }}
+
+on:
+  push:
+
+concurrency:
+  group: compile-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Yield to pending tester builds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 40); do
+            queued=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/tester-build.yml/runs?status=queued&per_page=1" \
+              | jq -r '.total_count // 0')
+            if [ "$queued" = "0" ]; then echo "no queued tester builds - proceeding"; exit 0; fi
+            echo "tester build queued - yielding the runner ($i)"
+            sleep 15
+          done
+          echo "yield timeout reached - proceeding"
+
+  compile:
+    needs: gate
+    runs-on: [self-hosted, windows]
+    env:
+      PreferredToolArchitecture: x64
+      CL_MPCount: ${{ vars.BUILD_MP_COUNT }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          clean: false
+          lfs: true
+
+      - name: Asset cache (pre-build)
+        shell: powershell
+        run: |
+          $root = if ($env:GM_CACHE_ROOT) { $env:GM_CACHE_ROOT } else { 'E:\gm-cache' }
+          $assets = Join-Path $root 'assets'
+          if (Test-Path $assets) {
+            $files = Get-ChildItem -Recurse -File $assets -ErrorAction SilentlyContinue
+            $mb = [math]::Round((($files | Measure-Object Length -Sum).Sum) / 1MB, 1)
+            $newest = ($files | Sort-Object LastWriteTime -Descending | Select-Object -First 1).LastWriteTime
+            Write-Host "PRE-BUILD  $assets -> $($files.Count) files, $mb MB, newest $newest"
+          } else {
+            Write-Host "PRE-BUILD  $assets -> MISSING (cold cache)"
+          }
+
+      - name: Build (VM compile check)
+        id: build
+        uses: ./.github/actions/build
+        with:
+          yyc: 'false'
+          access-key: ${{ secrets.GAMEMAKER_ACCESS_KEY }}
+          runtime-version: ${{ vars.GM_RUNTIME_VERSION }}
+
+      - name: Asset cache (post-build)
+        if: always()
+        shell: powershell
+        run: |
+          $root = if ($env:GM_CACHE_ROOT) { $env:GM_CACHE_ROOT } else { 'E:\gm-cache' }
+          $assets = Join-Path $root 'assets'
+          if (Test-Path $assets) {
+            $files = Get-ChildItem -Recurse -File $assets -ErrorAction SilentlyContinue
+            $mb = [math]::Round((($files | Measure-Object Length -Sum).Sum) / 1MB, 1)
+            $newest = ($files | Sort-Object LastWriteTime -Descending | Select-Object -First 1).LastWriteTime
+            $writtenThisRun = ($files | Where-Object { $_.LastWriteTime -gt (Get-Date).AddMinutes(-30) }).Count
+            Write-Host "POST-BUILD $assets -> $($files.Count) files, $mb MB, newest $newest"
+            Write-Host "POST-BUILD files touched in last 30 min: $writtenThisRun of $($files.Count)"
+          } else {
+            Write-Host "POST-BUILD $assets -> MISSING (Igor is NOT writing the cache here - override not honored)"
+          }
