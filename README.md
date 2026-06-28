@@ -1,6 +1,8 @@
-# PT-Optimised
+# PT-Cleaned
 <img width="479" height="252" alt="optimised logo" src="https://github.com/user-attachments/assets/e3fc0617-7d04-4581-8409-266699a96265" />
 
+
+A more cleaner version of **Pizza Tower Optimised**. cleaning up the project to remove unused code just to make it more manageable.
 
 An optimised version of **Pizza Tower EXtracted**, a semi-accurate decompilation of Pizza Tower. The main difference is that nearly every unused sprite, script, room, etc. was removed. It was done with these reasons:
 1. Memory leaks. Pizza Tower had a lot of textures, and a lot of them are unused, which could cause a memory leak while compiling a game through GameMaker.
