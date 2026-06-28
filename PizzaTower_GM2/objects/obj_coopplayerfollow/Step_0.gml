@@ -192,9 +192,6 @@ switch (_p1spr)
 	case obj_player1.spr_piledriverland:
 		_spr = obj_player2.spr_piledriverland;
 		break;
-	//case obj_player1.spr_charge:
-	//	_spr = obj_player2.spr_charge;
-	//	break;
 	case obj_player1.spr_mach3jump:
 		_spr = obj_player2.spr_mach3jump;
 		break;
