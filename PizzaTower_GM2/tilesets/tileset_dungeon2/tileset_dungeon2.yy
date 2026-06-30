@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Bloodsauce Dungeon",
-    "path": "folders/Tile Sets/Floor 1/Bloodsauce Dungeon.yy",
+    "path": "folders/Tilesets/Floor 1/Bloodsauce Dungeon.yy",
   },
   "spriteId": {
     "name": "tile_dungeon2",

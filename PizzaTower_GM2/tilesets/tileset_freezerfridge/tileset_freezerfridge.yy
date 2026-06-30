@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "R-R-Freezerator",
-    "path": "folders/Tile Sets/Floor 4/R-R-Freezerator.yy",
+    "path": "folders/Tilesets/Floor 4/R-R-Freezerator.yy",
   },
   "spriteId": {
     "name": "spr_tileset_freezerfridge",

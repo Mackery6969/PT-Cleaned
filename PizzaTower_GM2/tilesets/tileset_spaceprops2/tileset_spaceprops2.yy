@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Deep-Dish 9",
-    "path": "folders/Tile Sets/Floor 3/Deep-Dish 9.yy",
+    "path": "folders/Tilesets/Floor 3/Deep-Dish 9.yy",
   },
   "spriteId": {
     "name": "spr_spaceprops2",

@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Oregano Desert",
-    "path": "folders/Tile Sets/Floor 2/Oregano Desert.yy",
+    "path": "folders/Tilesets/Floor 2/Oregano Desert.yy",
   },
   "spriteId": {
     "name": "spr_desertdeco",

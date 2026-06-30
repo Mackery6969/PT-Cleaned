@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "WAR",
-    "path": "folders/Tile Sets/Floor 5/WAR.yy",
+    "path": "folders/Tilesets/Floor 5/WAR.yy",
   },
   "spriteId": {
     "name": "spr_tile_waroutside",

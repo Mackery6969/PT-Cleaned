@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Floor 1",
-    "path": "folders/Tile Sets/Floor 1.yy",
+    "path": "folders/Tilesets/Floor 1.yy",
   },
   "spriteId": {
     "name": "spr_towerentrancehall",

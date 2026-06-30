@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Fast Food Saloon",
-    "path": "folders/Tile Sets/Floor 2/Fast Food Saloon.yy",
+    "path": "folders/Tilesets/Floor 2/Fast Food Saloon.yy",
   },
   "spriteId": {
     "name": "spr_tile_saloonalt",

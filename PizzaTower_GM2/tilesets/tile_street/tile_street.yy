@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Pig City",
-    "path": "folders/Tile Sets/Floor 4/Pig City.yy",
+    "path": "folders/Tilesets/Floor 4/Pig City.yy",
   },
   "spriteId": {
     "name": "spr_tile_street",

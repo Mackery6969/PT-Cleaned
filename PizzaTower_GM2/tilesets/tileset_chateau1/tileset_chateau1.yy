@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Pizzascare",
-    "path": "folders/Tile Sets/Floor 5/Pizzascare.yy",
+    "path": "folders/Tilesets/Floor 5/Pizzascare.yy",
   },
   "spriteId": {
     "name": "tile_chateau1",

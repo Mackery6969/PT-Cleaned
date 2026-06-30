@@ -14,25 +14,7 @@ permissions:
   actions: read
 
 jobs:
-  gate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Yield to pending tester builds
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for i in $(seq 1 40); do
-            queued=$(curl -fsS -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/tester-build.yml/runs?status=queued&per_page=1" \
-              | jq -r '.total_count // 0')
-            if [ "$queued" = "0" ]; then echo "no queued tester builds - proceeding"; exit 0; fi
-            echo "tester build queued - yielding the runner ($i)"
-            sleep 15
-          done
-          echo "yield timeout reached - proceeding"
-
   compile:
-    needs: gate
     runs-on: [self-hosted, windows]
     env:
       PreferredToolArchitecture: x64

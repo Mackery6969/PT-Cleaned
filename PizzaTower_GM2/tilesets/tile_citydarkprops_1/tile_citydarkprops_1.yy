@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Unused",
-    "path": "folders/Tile Sets/Unused.yy",
+    "path": "folders/Tilesets/Unused.yy",
   },
   "spriteId": {
     "name": "spr_citydarkprops_1",

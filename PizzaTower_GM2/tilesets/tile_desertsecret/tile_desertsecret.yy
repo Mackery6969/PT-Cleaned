@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Floor 2",
-    "path": "folders/Tile Sets/Floor 2.yy",
+    "path": "folders/Tilesets/Floor 2.yy",
   },
   "spriteId": {
     "name": "spr_tile_desertsecret",

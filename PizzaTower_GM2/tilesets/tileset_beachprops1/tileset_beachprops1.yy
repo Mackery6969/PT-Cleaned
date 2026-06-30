@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Crust Cove",
-    "path": "folders/Tile Sets/Floor 3/Crust Cove.yy",
+    "path": "folders/Tilesets/Floor 3/Crust Cove.yy",
   },
   "spriteId": {
     "name": "spr_tileset_beachprops1",

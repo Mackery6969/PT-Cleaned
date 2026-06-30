@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "John Gutter",
-    "path": "folders/Tile Sets/Floor 1/John Gutter.yy",
+    "path": "folders/Tilesets/Floor 1/John Gutter.yy",
   },
   "spriteId": {
     "name": "tile_tower",

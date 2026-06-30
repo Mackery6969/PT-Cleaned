@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Gnome Forest",
-    "path": "folders/Tile Sets/Floor 3/Gnome Forest.yy",
+    "path": "folders/Tilesets/Floor 3/Gnome Forest.yy",
   },
   "spriteId": {
     "name": "spr_forestplaintile",

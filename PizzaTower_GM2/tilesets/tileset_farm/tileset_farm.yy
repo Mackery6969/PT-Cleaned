@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Fun Farm",
-    "path": "folders/Tile Sets/Floor 2/Fun Farm.yy",
+    "path": "folders/Tilesets/Floor 2/Fun Farm.yy",
   },
   "spriteId": {
     "name": "spr_tileset_farm",
