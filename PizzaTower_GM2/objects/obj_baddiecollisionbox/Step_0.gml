@@ -206,32 +206,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					}
 				}
 			}
-			if (place_meeting(x, y + 1, other) && state == states.pogo && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_playerN_pogobounce && !other.baddieID.invincible)
-			{
-				switch (pogochargeactive)
-				{
-					case false:
-						pogospeedprev = false;
-						other.baddieID.vsp = -3;
-						fmod_event_one_shot_3d("event:/sfx/enemies/stomp", x, y);
-						other.baddieID.state = states.stun;
-						if (other.baddieID.stunned < 100)
-						{
-							other.baddieID.stunned = 100;
-						}
-						sprite_index = spr_playerN_pogobounce;
-						break;
-					case true:
-						pogospeedprev = false;
-						scr_throwenemy();
-						sprite_index = spr_playerN_pogobouncemach;
-						break;
-				}
-				instance_create(x, y + 50, obj_stompeffect);
-				image_index = 0;
-				movespeed = 0;
-				vsp = 0;
-			}
 			var pepp_grab = false;
 			if (character == "M" && instance_exists(other.baddieID) && (state == states.normal || state == states.jump) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw && other.baddieID.state == states.stun && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
 			{

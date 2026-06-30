@@ -87,12 +87,10 @@ if (shoving == true && image_index >= 3 && bang == false)
 	{
 		if ((obj_player1.spotlight == false && obj_player1.character == "P") || (obj_player1.spotlight == true && obj_player2.character == "P"))
 		{
-			//sprite = spr_pepinoHUDscream;
 			hsp = random_range(-1, -5);
 		}
 		else
 		{
-			//sprite = spr_noiseHUD_panic;
 			hsp = random_range(1, 5);
 		}
 	}

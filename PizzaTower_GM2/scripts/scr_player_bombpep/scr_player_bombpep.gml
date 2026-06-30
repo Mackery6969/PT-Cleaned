@@ -193,10 +193,6 @@ function scr_player_bombpepup()
 	{
 		pizzapepper = 0;
 		a = 0;
-		//if (sprite_index == spr_player_supersidejump)
-		//{
-		//	sprite_index = spr_player_supersidejumpland;
-		//}
 		if (sprite_index == spr_superjump || sprite_index == spr_superspringplayer)
 		{
 			sprite_index = spr_superjumpland;
@@ -365,7 +361,6 @@ function scr_player_bombpep()
 	if (bombpeptimer == 0 && sprite_index == spr_bombpeprunabouttoexplode)
 	{
 		hurted = true;
-		//scr_losepoints();
 		instance_create(x, y, obj_bombexplosion);
 		GamepadSetVibration((object_index == obj_player1) ? 0 : 1, 1, 1, 0.9);
 		sprite_index = spr_bombpepend;

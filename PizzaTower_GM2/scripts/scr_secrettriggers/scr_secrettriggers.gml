@@ -63,13 +63,6 @@ function secret_check_touchall()
 function secret_check_trigger(_trigger)
 {
 	var _found = true;//was false
-	//with (obj_secrettrigger)
-	//{
-	//	if (trigger == _trigger && active)
-	//	{
-	//		_found = true;
-	//	}
-	//}
 	if (_found)
 	{
 		trace(

@@ -216,11 +216,6 @@ if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && ob
 	sprite_index = spr_hamkuff_chain1;
 	var x1 = obj_player1.x;
 	var y1 = obj_player1.y;
-	//if (instance_exists(obj_ratmountgroundpound))
-	//{
-	//	x1 = obj_ratmountgroundpound.x;
-	//	y1 = obj_ratmountgroundpound.y;
-	//}
 	if (instance_exists(obj_brickcomeback))
 	{
 		x1 = obj_brickcomeback.x;
@@ -235,7 +230,6 @@ if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && ob
 	{
 		sprite_index = spr_morthookgrabeffect;
 	}
-	//instance_destroy(obj_ratmountgroundpound, false);
 	instance_destroy(obj_brickcomeback, false);
 	instance_destroy(obj_brickball, false);
 	with (instance_create(x1, y1, obj_brickcomeback))

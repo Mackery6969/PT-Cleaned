@@ -45,23 +45,10 @@ function scr_player_Sjump()
 	{
 		vsp = -11;
 	}
-	//if (sprite_index == spr_player_supersidejump)
-	//{
-	//	if (a < 25)
-	//	{
-	//		a++;
-	//	}
-	//	hsp = xscale * a;
-	//	vsp = 0;
-	//}
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles))
 	{
 		pizzapepper = 0;
 		a = 0;
-		//if (sprite_index == spr_player_supersidejump)
-		//{
-		//	sprite_index = spr_player_supersidejumpland;
-		//}
 		if (sprite_index == spr_superjump || sprite_index == spr_superspringplayer)
 		{
 			sprite_index = spr_superjumpland;

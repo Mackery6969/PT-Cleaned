@@ -49,6 +49,5 @@ objdark_arr =
 	obj_hppickup,
 	obj_vigilantecow,
 	obj_stampedecloud,
-	//obj_ladderhorizontal,
 	obj_vigilanteshot
 ];

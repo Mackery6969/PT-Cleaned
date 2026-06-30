@@ -271,22 +271,6 @@ function scr_playerreset(_stop_music = true)
 		obj_player.supercharge = 0;
 		obj_player.supercharged = false;
 		pistol = false;
-		//if (instance_exists(obj_gnome_checklist))
-		//{
-		//	var destroy = true;
-		//	with (obj_player)
-		//	{
-		//		if (state == states.gameover || state == states.timesup)
-		//		{
-		//			destroy = false;
-		//		}
-		//	}
-		//	if (destroy)
-		//	{
-		//		instance_destroy(obj_gnome_checklist);
-		//	}
-		//}
-		//obj_timeattack.stop = false;
 		obj_player1.spotlight = true;
 		obj_player2.x = -1000;
 		obj_player2.y = 500;
@@ -558,5 +542,4 @@ function scr_playerreset(_stop_music = true)
 			instance_destroy();
 		}
 	}
-	//instance_destroy(obj_shotgunback);
 }

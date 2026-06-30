@@ -30,31 +30,6 @@ if (targetgolf != noone && !view_visible[1])
 	view_visible[1] = true;
 	view_enabled = true;
 }
-//if (bubblespr != noone && bubblespr != spr_tv_bubbleclosed)
-//{
-//	if (prompt != noone)
-//	{
-//		prompt_buffer = 2;
-//	}
-//	bubbleindex += image_speed;
-//	if (floor(bubbleindex) == sprite_get_number(bubblespr))
-//	{
-//		bubbleindex = 0;
-//		switch (bubblespr)
-//		{
-//			case spr_tv_bubbleopen:
-//				bubblespr = spr_tv_bubble;
-//				break;
-//			case spr_tv_bubbleclose:
-//				bubblespr = spr_tv_bubbleclosed;
-//				if (prompt == noone || prompt == "")
-//				{
-//					bubblespr = noone;
-//				}
-//				break;
-//		}
-//	}
-//}
 switch (state)
 {
 	case states.normal:
@@ -201,20 +176,6 @@ switch (state)
 					promptspd = b[3];
 					promptx = promptxstart;
 				}
-				//else
-				//{
-				//	if (bubblespr != noone && bubblespr != spr_tv_bubbleclosed)
-				//	{
-				//		bubblespr = spr_tv_bubbleclose;
-				//	}
-				//	if (bubblespr == spr_tv_bubbleclosed)
-				//	{
-				//		bubblespr = noone;
-				//	}
-				//	bubbleindex = 0;
-				//	promptx = promptxstart;
-				//	prompt = noone;
-				//}
 				if (b[1] == tv_prompttypes.normal)
 				{
 					sprite_index = spr_tv_open;
@@ -514,12 +475,10 @@ else if (global.panic)
 else
 {
 	pizzaface_sprite = spr_timer_pizzaface1;
-	//hand_sprite = spr_timer_hand1;
 	timer_y = timer_ystart + 212;
 }
 if (global.panic && global.fill < (chunkmax / 5))
 {
-	//hand_sprite = spr_timer_hand2;
 }
 barfill_x -= 0.2;
 if (barfill_x < -173)
@@ -530,10 +489,6 @@ if (pizzaface_index > (sprite_get_number(pizzaface_sprite) - 1))
 {
 	pizzaface_index = frac(pizzaface_index);
 }
-//if (hand_index > (sprite_get_number(hand_sprite) - 1))
-//{
-//	hand_index = frac(hand_index);
-//}
 if (johnface_index > (sprite_get_number(johnface_sprite) - 1))
 {
 	johnface_index = frac(johnface_index);

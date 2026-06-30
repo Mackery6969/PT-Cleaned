@@ -92,7 +92,6 @@ function state_player_jump()
 			if (place_meeting(x + xscale, y, obj_solid))
 			{
 				fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
-				//sprite_index = spr_playerN_wallclingstart;
 				image_index = 0;
 				state = states.hang;
 				xscale *= -1;
@@ -262,12 +261,6 @@ function state_player_jump()
 				case spr_player_shotgunjump1:
 					sprite_index = spr_player_shotgunjump2;
 					break;
-				//case spr_shotgun_shootair:
-				//	sprite_index = spr_shotgunfall;
-				//	break;
-				//case spr_shotgunshoot:
-				//	sprite_index = spr_shotgunfall;
-				//	break;
 				case spr_stompprep:
 					sprite_index = spr_stomp;
 					break;
@@ -556,12 +549,6 @@ function state_player_jump()
 				hsp = 0;
 				vsp = 0;
 				state = states.Sjumpprep;
-			}
-			if (key_attack && !pogochargeactive && !key_slap2 && pizzapepper == 0)
-			{
-				sprite_index = spr_playerN_pogostart;
-				image_index = 0;
-				state = states.pogo;
 			}
 			break;
 	}

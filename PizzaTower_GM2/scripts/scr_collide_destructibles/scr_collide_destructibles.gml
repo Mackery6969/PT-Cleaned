@@ -2,7 +2,7 @@ function scr_collide_destructibles()
 {
 	with (obj_player)
 	{
-		if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || (ghostdash && sprite_index != spr_ghostidle) || state == states.machcancel || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || state == states.noisecrusher || (state == states.pogo && pogochargeactive == true))
+		if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || (ghostdash && sprite_index != spr_ghostidle) || state == states.machcancel || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || state == states.noisecrusher)
 		{
 			var arr = [[xscale, 0], [hsp + xscale, 0], [0, vsp + 1], [0, vsp - 1], [0, 1], [0, -1]];
 			for (var i = 0; i < array_length(arr); i++)
@@ -146,7 +146,7 @@ function scr_collide_destructibles()
 			}
 		}
 		ds_list_clear(global.instancelist);
-		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.unknown300 || state == states.ratmountjump || state == states.unknown301 || state == states.mach3 || state == states.machcancel || state == states.mach2 || state == states.antigrav || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.unknown302 || state == states.cheeseballclimbwall || state == states.mach3 || state == states.machcancel || (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))))
+		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.unknown300 || state == states.ratmountjump || state == states.unknown301 || state == states.mach3 || state == states.machcancel || state == states.mach2 || state == states.antigrav || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.unknown302 || state == states.cheeseballclimbwall || state == states.mach3 || state == states.machcancel || (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))))
 		{
 			var vy = -1;
 			if (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))

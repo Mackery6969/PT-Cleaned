@@ -549,12 +549,6 @@ function state_player_normal()
 					vsp = 0;
 				}
 			}
-			else if (key_attack && !key_slap2)
-			{
-				sprite_index = spr_playerN_pogostart;
-				image_index = 0;
-				state = states.pogo;
-			}
 			break;
 		case "V":
 			if (key_attack && !place_meeting(x + xscale, y, obj_solid))

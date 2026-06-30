@@ -180,7 +180,7 @@ StartProgressBarUpdater();
 
 SetUMTConsoleText("Running...");
 
-var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = 4 }; // Limit to 2 threads
+var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = 4 }; // Limit to 4 threads
 await Task.Run(() => Parallel.ForEach(sprDirs, parallelOptions, path =>
 {
     ProcessSprite(path);

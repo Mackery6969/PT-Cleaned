@@ -181,7 +181,6 @@ function get_options()
 	+	> gml_Script_get_options (locals=3, argc=0)
 	*/
 	// im going to assume that the local count issue is due to debug-exclusive lang stuff?
-	// if someone knows please correct this.
 	
 	// artificially inflate variable count
 	if (IS_DEBUG)

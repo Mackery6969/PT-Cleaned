@@ -134,7 +134,6 @@ function scr_player_tumble()
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
 		create_particle(x, y, particletypes.jumpdust, 0);
 		movespeed = 12;
-		//sprite_index = spr_breakdancesuper;
 	}
 	if (sprite_index == spr_tumblestart && ANIMATION_END)
 	{

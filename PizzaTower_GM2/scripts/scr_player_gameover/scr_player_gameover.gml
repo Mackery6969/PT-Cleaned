@@ -15,12 +15,6 @@ function scr_player_gameover()
 	alarm[7] = -1;
 	alarm[8] = -1;
 	alarm[9] = -1;
-	//if (ANIMATION_END && sprite_index == spr_deathstart)
-	//{
-	//	alarm[10] = 5;
-	//	vsp = -10;
-	//	sprite_index = spr_deathend;
-	//}
 	hurted = false;
 	inv_frames = false;
 	if (place_meeting(x + floor(hsp), y, obj_null))

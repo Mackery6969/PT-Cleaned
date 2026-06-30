@@ -50,15 +50,12 @@ enum states
 	knightpep = 47,
 	knightpepattack = 48,
 	knightpepbump = 49,
-	meteorpep = 50,
 	bombpep = 51,
 	bombgrab = 52,
 	bombpepside = 53,
 	bombpepup = 54,
 	grabbing = 55,
-	chainsawpogo = 56,
 	shotgunjump = 57,
-	pogo = 58,
 	stunned = 59,
 	highjump = 60,
 	chainsaw = 61,
@@ -110,7 +107,6 @@ enum states
 	hurt = 107,
 	freefall = 108,
 	hang = 109,
-	unknown110 = 110, // turning, doesnt exist
 	freefallland = 111,
 	door = 112,
 	barrel = 113,
@@ -131,16 +127,12 @@ enum states
 	charge = 128,
 	pizzagoblinthrow = 129,
 	turn = 130,
-	unknown131 = 131, // hitceiling, doesnt exist
-	unknown132 = 132, // hitwall, doesnt exist
 	rolling = 133, // groundpoundland
 	walk = 134,
 	fall = 135,
 	land = 136,
 	hit = 137,
 	stun = 138,
-	unknown139 = 139, // recovery, doesnt exist
-	unknown140 = 140, // stomped, doesnt exist
 	chase = 141,
 	arenaspawn = 142, // spawnenemy
 	arenaend = 143,
@@ -151,7 +143,6 @@ enum states
 	golf = 148,
 	float = 149,
 	tube = 150,
-	unknown151 = 151,
 	taxi2 = 152, // policetaxi
 	shoulderbash = 153,
 	pummel = 154,
@@ -167,22 +158,9 @@ enum states
 	groundpunchstart = 164,
 	slipbanan = 165,
 	millionpunch = 166,
-	skateboardturn = 167,
 	bombthrow = 168,
-	bombpogo = 169,
 	jetpackstart = 170,
 	jetpack = 171,
-	jetpackstart2 = 172,
-	jetpackspin = 173,
-	mrstick_shield = 174,
-	mrstick_helicopterhat = 175,
-	mrstick_panicjump = 176,
-	mrstick_smokebombstart = 177,
-	mrstick_smokebombcrawl = 178,
-	mrstick_springshoes = 179,
-	mrstick_cardboard = 180,
-	mrstick_cardboardend = 181,
-	mrstick_mockery = 182,
 	bombdelete = 183,
 	rocket = 184,
 	rocketslide = 185,
@@ -199,7 +177,6 @@ enum states
 	ratmounthurt = 196,
 	ratmountgroundpound = 197,
 	ratmountbounce = 198,
-	unknown199 = 199,
 	ratmountballoon = 200,
 	ratmounttumble = 201,
 	ratmountgrind = 202,
@@ -232,46 +209,24 @@ enum states
 	animatronic = 225,
 
 	// pizzaface states start
-	moustache = 226,
-	mouth = 227,
-	eyes = 228,
-	nose = 229,
 	ram = 230,
 	phase2transition = 231,
 	look = 232,
 	fishing = 233,
-	unknown234 = 234,
-	bombrun = 235,
-	npcthrow = 236,
 	portraitthrow = 237,
-	enguarde = 238,
-	sexypicture = 239,
 	pullinglevel = 240,
-	eat = 241,
-	surprisebox = 242,
-	spinningrun = 243,
 	spin = 244, // spinningkick
-	spinningpunch = 245,
-	groundpunch = 246,
-	bigkick = 247,
-	slamhead = 248,
-	slamhead2 = 249,
 	// pizzaface states end
 
 	whitenoise = 250, // tv
 	expression = 251, // tv
 	playersuperattack = 252,
-	unknown253 = 253,
 	jetpackjump = 254,
-	unknown255 = 255,
-	unknown256 = 256,
 	bee = 257,
-	beechase = 258,
 	ratmountpunch = 259,
 	ratmountcrouch = 260,
 	ratmountladder = 261,
 	supergrab = 262,
-	unknown263 = 263,
 	attract = 264,
 	antigrav = 265,
 	secret = 266,
@@ -312,7 +267,6 @@ enum states
 	unknown301 = 301, // Mr. Stick airspin
 	unknown302 = 302, // Mr. Stick superjump
 	unknown303 = 303, // Mr. Stick flycancel, used in obj_stickhat
-	unknown304 = 304, // Mr. Stick flight
 	machcancelstart = 305,
 	machcancel = 306,
 }

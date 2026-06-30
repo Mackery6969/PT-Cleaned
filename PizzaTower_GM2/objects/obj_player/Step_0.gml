@@ -216,9 +216,6 @@ switch (state)
 	case states.grabbing:
 		scr_player_grabbing();
 		break;
-	case states.chainsawpogo:
-		scr_player_chainsawpogo();
-		break;
 	case states.shotgunjump:
 		scr_player_shotgunjump();
 		break;
@@ -419,9 +416,6 @@ switch (state)
 		break;
 	case states.taxi2:
 		scr_player_taxi();
-		break;
-	case states.pogo:
-		scr_player_pogo();
 		break;
 	case states.rideweenie:
 		scr_player_rideweenie();
@@ -737,11 +731,6 @@ else if (sprite_index != spr_noise_phasetrans1P)
 {
 	noisebossscream = false;
 }
-//if (sprite_index == spr_noise_phasetrans1P && image_index > 23)
-//{
-//	fmod_event_one_shot_3d("event:/sfx/pep/screamboss", x, y);
-//	fmod_event_one_shot_3d("event:/sfx/voice/noisescream", obj_noiseboss.x, obj_noiseboss.y);
-//}
 if (!ispeppino)
 {
 	if (room == boss_pepperman || room == boss_vigilante || room == boss_noise || room == boss_fakepep || room == boss_pizzaface)
@@ -1166,7 +1155,7 @@ if (global.coop == true)
 		fightballadvantage = false;
 	}
 }
-if (state != states.pogo && state != states.backbreaker)
+if (state != states.backbreaker)
 {
 	pogospeed = 6;
 	pogospeedprev = false;
@@ -1320,17 +1309,6 @@ if (state == states.barrel && key_jump2 && !jumpstop)
 {
 	grav = 0.4;
 }
-//if (sprite_index == spr_player_idlevomit && image_index > 28 && image_index < 43)
-//{
-//	instance_create(x + random_range(-5, 5), y + 46, obj_vomit);
-//}
-//if (sprite_index == spr_player_idlevomitblood && image_index > 28 && image_index < 43)
-//{
-//	with (instance_create(x + random_range(-5, 5), y + 46, obj_vomit))
-//	{
-//		sprite_index = spr_vomit2;
-//	}
-//}
 if (global.combo >= 25 && !instance_exists(angryeffectid) && sprite_index != spr_catched && state == states.normal && character != "V")
 {
 	with (instance_create(x, y, obj_angrycloud))

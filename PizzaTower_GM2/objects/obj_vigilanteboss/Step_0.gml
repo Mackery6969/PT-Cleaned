@@ -234,7 +234,6 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 			instance_destroy(obj_uziprojectile);
 			instance_destroy(obj_vigilantedynamite);
 			instance_destroy(obj_vigilanteshot);
-			//instance_destroy(obj_ladderhorizontal);
 			with (obj_player1)
 			{
 				pistolanim = noone;

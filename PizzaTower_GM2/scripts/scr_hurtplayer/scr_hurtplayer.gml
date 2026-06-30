@@ -31,16 +31,6 @@ function scr_hurtplayer(_player)
 		}
 		else if (global.kungfu)
 		{
-			//if (state == states.blockstance)
-			//{
-			//	if (sprite_index != spr_player_airattackstart)
-			//	{
-			//		instance_create(x, y, obj_parryeffect);
-			//		image_index = 0;
-			//	}
-			//	sprite_index = spr_player_airattackstart;
-			//	hsp = -xscale * 2;
-			//}
 			if (state != states.thrown && state != states.hit && !hurted)
 			{
 				instance_create(x, y, obj_parryeffect);

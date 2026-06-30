@@ -128,20 +128,7 @@ function scr_player_slap()
 			}
 		}
 	}
-	//if (floor(image_index) == 1 && !instance_exists(obj_slaphitbox2))
-	//{
-	//	//if (sprite_index == spr_player_slapup)
-	//	//{
-	//	//	with (instance_create(x, y, obj_slaphitbox2))
-	//	//	{
-	//	//		sprite_index = spr_player_hitboxslapup;
-	//	//	}
-	//	//}
 	//	//else
-	//	//{
-	//		instance_create(x, y, obj_slaphitbox2);
-	//	//}
-	//}
 	if (ANIMATION_END && slapbuffer == 8)
 	{
 		if (mach2 >= 35)

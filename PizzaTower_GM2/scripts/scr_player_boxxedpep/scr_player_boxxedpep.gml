@@ -89,11 +89,6 @@ function scr_player_boxxedpep()
 		}
 		jumpstop = false;
 	}
-	//if (sprite_index == spr_boxxedpepdash || sprite_index == spr_boxxedpepdashstart)
-	//{
-	//	sprite_index = spr_boxxedpepdashend;
-	//	image_index = 0;
-	//}
 	if (sprite_index == spr_boxxedpep_spin && ANIMATION_END)
 	{
 		sprite_index = (move != 0) ? spr_boxxedpepwalk : spr_boxxedpepidle;
