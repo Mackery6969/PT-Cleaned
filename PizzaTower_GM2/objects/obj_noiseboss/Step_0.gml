@@ -31,6 +31,9 @@ switch (state)
 	case states.bounce:
 		scr_noise_bounce();
 		break;
+	case states.pogo:
+		scr_noise_pogo();
+		break;
 	case states.dropstart:
 		scr_noise_dropstart();
 		break;
@@ -282,7 +285,7 @@ if (doise && pizzahead)
 	invincible = true;
 	flash = false;
 }
-if ((state == states.mach2 || state == states.machslide || state == states.jetpack || state == states.bounce) && alarm[4] < 0)
+if ((state == states.mach2 || state == states.machslide || state == states.jetpack || state == states.bounce || state == states.pogo) && alarm[4] < 0)
 {
 	alarm[4] = 5;
 }

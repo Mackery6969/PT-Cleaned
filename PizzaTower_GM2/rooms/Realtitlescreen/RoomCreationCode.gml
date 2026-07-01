@@ -1,5 +1,6 @@
 enum states
 {
+	pogo = 58,
 	normal = 0,
 	revolver = 1,
 	dynamite = 2,

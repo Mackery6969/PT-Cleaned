@@ -21,7 +21,7 @@ function state_boss_walk(_func)
 {
 	image_speed = 0.35;
 	sprite_index = fallspr;
-	if (grounded)
+	if (grounded) 
 	{
 		if (object_index != obj_mrstickboss)
 		{

@@ -537,68 +537,6 @@ function state_player_normal()
 				movespeed = 0;
 			}
 			break;
-		case "N":
-			if (pogochargeactive || pizzapepper > 0)
-			{
-				if (key_attack2)
-				{
-					state = states.Sjumpprep;
-					image_index = 0;
-					sprite_index = !key_up ? spr_playerN_jetpackstart : spr_superjumpprep;
-					hsp = 0;
-					vsp = 0;
-				}
-			}
-			break;
-		case "V":
-			if (key_attack && !place_meeting(x + xscale, y, obj_solid))
-			{
-				if (pizzapepper == 0)
-				{
-					movespeed = 6;
-					sprite_index = spr_mach1;
-					image_index = 0;
-					jumpAnim = true;
-					state = states.mach1;
-				}
-				else
-				{
-					movespeed = 21;
-					sprite_index = spr_crazyrun;
-					jumpAnim = true;
-					state = states.mach3;
-					movespeed = 20;
-				}
-			}
-			if (key_shoot2 && !instance_exists(dynamite_inst))
-			{
-				if (move == 0)
-				{
-					movespeed = 0;
-				}
-				state = states.dynamite;
-				sprite_index = spr_playerV_dynamitethrow;
-				image_index = 0;
-				with (instance_create(x, y, obj_dynamite))
-				{
-					image_xscale = other.xscale;
-					movespeed = 6;
-					vsp = -6;
-					other.dynamite_inst = id;
-					playerid = other.id;
-				}
-			}
-			if (key_slap2)
-			{
-				if (move == 0)
-				{
-					movespeed = 0;
-				}
-				sprite_index = spr_playerV_revolverstart;
-				image_index = 0;
-				state = states.revolver;
-			}
-			break;
 	}
 	scr_dotaunt();
 	if (sprite_index == spr_shotgunshoot)
