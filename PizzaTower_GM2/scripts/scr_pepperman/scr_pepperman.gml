@@ -302,44 +302,6 @@ function scr_pepperman_walk()
 	}
 }
 
-function pepperman_nearestspot()
-{
-	if (elitehit > 1)
-	{
-		if (instance_exists(obj_pepper_marbleblock))
-		{
-			targetspot = instance_nearest(x, y, obj_pepper_marbleblock).parentID;
-		}
-		if (targetspot == oldtargetspot)
-		{
-			do
-			{
-				targetspot = instance_nearest_random(464, 3);
-			}
-			until (targetspot != oldtargetspot && targetspot != undefined);
-		}
-	}
-	else
-	{
-		targetspot = instance_nearest(obj_player1.x, obj_player1.y, obj_pepper_groundpoundspot);
-	}
-	state = states.jump;
-	jump_speed = floor(distance_to_object(targetspot) * 0.04);
-	if (jump_speed < 20)
-	{
-		jump_speed = 20;
-	}
-	jump_speed += floor(wastedhits / 2);
-	calculate_jump_velocity(targetspot.x + 16, (targetspot.y + 16) - 200, jump_speed, grav);
-	if (hsp > -2 && hsp < 2)
-	{
-		vsp = -jump_speed;
-	}
-	trace(hsp, " ", vsp);
-	sprite_index = spr_pepperman_jump;
-	image_index = 0;
-}
-
 function scr_pepperman_jump()
 {
 	if (hsp != 0)

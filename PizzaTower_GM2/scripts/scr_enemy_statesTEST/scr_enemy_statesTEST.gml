@@ -111,27 +111,6 @@ function scr_enemy_pummel()
 	}
 }
 
-function scr_enemy_stunTEST()
-{
-	sprite_index = stunfallspr;
-	image_speed = 0.35;
-	if (place_meeting(x - sign(image_xscale), y, obj_solid) || grounded)
-	{
-		if (thrown)
-		{
-			if (destroyable)
-			{
-				instance_destroy();
-			}
-		}
-		else
-		{
-			hsp = 0;
-			grav = 0.5;
-		}
-	}
-}
-
 function scr_enemy_staggered()
 {
 	sprite_index = stunfallspr;

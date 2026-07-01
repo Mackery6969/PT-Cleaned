@@ -7,21 +7,6 @@ function tv_set_idle()
 	}
 }
 
-function tv_reset()
-{
-	with (obj_tv)
-	{
-		state = states.normal;
-		sprite_index = spr_tv_idle;
-		ds_list_clear(tvprompts_list);
-	}
-}
-
-function tv_create_prompt(_text, _type, _spr, _textspd)
-{
-	return [_text, _type, _spr, _textspd];
-}
-
 function tv_push_prompt(_text, _type, _spr, _textspd)
 {
 	with (obj_tv)
@@ -64,49 +49,6 @@ function tv_push_prompt(_text, _type, _spr, _textspd)
 			state = states.normal;
 		}
 	}
-}
-
-function tv_push_prompt_array(_prompt)
-{
-	for (var i = 0; i < array_length(_prompt); i++)
-	{
-		with (obj_tv)
-		{
-			var b = _prompt[i];
-			tv_push_prompt(b[0], b[1], b[2], b[3]);
-		}
-	}
-}
-
-function tv_push_prompt_once(_prompt, _ini_key)
-{
-	with (obj_tv)
-	{
-		if (special_prompts == noone)
-		{
-			return false;
-		}
-		var b = ds_map_find_value(special_prompts, _ini_key);
-		if (is_undefined(b))
-		{
-			return false;
-		}
-		if (b != 1)
-		{
-			tv_push_prompt(_prompt[0], _prompt[1], _prompt[2], _prompt[3]);
-			ds_map_set(special_prompts, _ini_key, 1);
-			ini_open_from_string(obj_savesystem.ini_str);
-			ini_write_real("Prompts", _ini_key, 1);
-			obj_savesystem.ini_str = ini_close();
-			return true;
-		}
-		return false;
-	}
-}
-
-function tv_default_condition()
-{
-	return place_meeting(x, y, obj_player);
 }
 
 function tv_get_palette()

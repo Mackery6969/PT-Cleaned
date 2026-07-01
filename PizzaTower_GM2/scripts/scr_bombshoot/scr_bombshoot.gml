@@ -26,16 +26,3 @@ function scr_bombshoot(_state)
 	}
 }
 
-function scr_bomb_do_boss_phase2(_boss)
-{
-	with (_boss)
-	{
-		fmod_event_one_shot("event:/sfx/misc/blackoutpunch");
-		instance_create_unique(0, 0, obj_blackoutline);
-		instance_create_unique(0, 0, obj_superattackeffect);
-		state = states.phase1hurt;
-		hsp = 0;
-		vsp = 0;
-		buildup = 100;
-	}
-}
