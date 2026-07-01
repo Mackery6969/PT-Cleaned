@@ -557,3 +557,4 @@ function scr_boss_phase1hurt(_func = noone)
 		}
 	}
 }
+

@@ -4,14 +4,8 @@ switch (state)
 	case states.idle:
 		scr_enemy_idle();
 		break;
-	case states.turn:
-		scr_enemy_turn();
-		break;
 	case states.walk:
 		scr_enemy_walk();
-		break;
-	case states.land:
-		scr_enemy_land();
 		break;
 	case states.hit:
 		scr_enemy_hit();
@@ -28,14 +22,8 @@ switch (state)
 	case states.chase:
 		scr_enemy_chase();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 	case states.staggered:
 		scr_enemy_staggered();
-		break;
-	case states.rage:
-		scr_enemy_rage();
 		break;
 	case states.pizzaheadjump:
 		scr_enemy_pizzaheadjump();
@@ -137,23 +125,6 @@ if (state == states.chase && ragecooldown <= 0)
 		{
 			image_xscale = sign(player.x - x);
 		}
-		if (elite)
-		{
-			image_index = 0;
-			vsp = -8;
-			flash = true;
-			alarm[4] = 5;
-			ragecooldown = 100;
-			state = states.rage;
-			create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
-			with (instance_create(x, y, obj_forkhitbox))
-			{
-				sprite_index = spr_bighitbox;
-				mask_index = spr_bighitbox;
-				ID = other.id;
-			}
-		}
-		else
 		{
 			sprite_index = spr_minijohn_punchstart;
 			image_index = 0;

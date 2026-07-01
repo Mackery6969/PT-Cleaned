@@ -462,9 +462,6 @@ switch (state)
 	case states.tube:
 		scr_player_tube();
 		break;
-	case states.pummel:
-		scr_player_pummel();
-		break;
 	case states.slipbanan:
 		scr_player_slipbanan();
 		break;
@@ -494,12 +491,6 @@ switch (state)
 		break;
 	case states.ratmountjump:
 		scr_player_ratmountjump();
-		break;
-	case states.ratmountattack:
-		scr_player_ratmountattack();
-		break;
-	case states.ratmountspit:
-		scr_player_ratmountspit();
 		break;
 	case states.ratmountclimbwall:
 		scr_player_ratmountclimbwall();
@@ -1012,7 +1003,7 @@ if (blur_effect > 0)
 {
 	blur_effect--;
 }
-else if (breakdance_speed >= 0.6 || (state == states.slipbanan && sprite_index == spr_rockethitwall) || mach4mode == true || boxxeddash == true || state == states.ghost || state == states.tumble || state == states.ratmountbounce || state == states.noisecrusher || state == states.ratmountattack || state == states.handstandjump || (state == states.barrelslide || (state == states.grab && sprite_index == spr_swingding && swingdingdash <= 0) || state == states.freefall || state == states.lungeattack || state == states.ratmounttrickjump || state == states.trickjump))
+else if (breakdance_speed >= 0.6 || (state == states.slipbanan && sprite_index == spr_rockethitwall) || mach4mode == true || boxxeddash == true || state == states.ghost || state == states.tumble || state == states.ratmountbounce || state == states.noisecrusher || state == states.handstandjump || (state == states.barrelslide || (state == states.grab && sprite_index == spr_swingding && swingdingdash <= 0) || state == states.freefall || state == states.lungeattack || state == states.ratmounttrickjump || state == states.trickjump))
 {
 	if (visible && (collision_flags & collisionflags.secret) == 0)
 	{
@@ -1252,7 +1243,7 @@ if (state == states.gameover && y > (room_height * 2) && !instance_exists(obj_ba
 	global.leveltosave = noone;
 	global.startgate = false;
 }
-if (baddiegrabbedID == obj_null && (state == states.grab || state == states.superslam || state == states.tacklecharge))
+if (baddiegrabbedID == noone && (state == states.grab || state == states.superslam || state == states.tacklecharge))
 {
 	state = states.normal;
 }

@@ -92,7 +92,7 @@ function __global_object_depths() {
     global.__objectDepths[84] = 0; // obj_reverseminipillar
     global.__objectDepths[85] = 0; // obj_minipillar
     global.__objectDepths[86] = 2; // obj_spike
-    global.__objectDepths[87] = 0; // obj_null
+    global.__objectDepths[87] = 0; // (removed obj_null)
     global.__objectDepths[88] = 0; // obj_healthpickup
     global.__objectDepths[89] = 0; // obj_shotgunpickup
     global.__objectDepths[90] = 0; // obj_spaghetti
@@ -333,7 +333,7 @@ function __global_object_depths() {
     global.__objectNames[84] = "obj_reverseminipillar";
     global.__objectNames[85] = "obj_minipillar";
     global.__objectNames[86] = "obj_spike";
-    global.__objectNames[87] = "obj_null";
+    global.__objectNames[87] = "";
     global.__objectNames[88] = "obj_healthpickup";
     global.__objectNames[89] = "obj_shotgunpickup";
     global.__objectNames[90] = "obj_spaghetti";

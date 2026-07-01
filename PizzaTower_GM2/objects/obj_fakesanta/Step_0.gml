@@ -17,9 +17,6 @@ if (activated == true)
 		case states.grabbed:
 			scr_enemy_grabbed();
 			break;
-		case states.pummel:
-			scr_enemy_pummel();
-			break;
 		case states.staggered:
 			scr_enemy_staggered();
 			break;

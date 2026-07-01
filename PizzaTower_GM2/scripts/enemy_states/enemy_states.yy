@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_enemy_chase",
+  "name": "enemy_states",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

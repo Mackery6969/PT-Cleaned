@@ -17,9 +17,6 @@ switch (state)
 			state = states.walk;
 		}
 		break;
-	case states.turn:
-		scr_enemy_turn();
-		break;
 	case states.walk:
 		hsp = image_xscale * b_movespeed;
 		if (b_movespeed < 6)
@@ -50,9 +47,6 @@ switch (state)
 		{
 			instance_destroy();
 		}
-		break;
-	case states.land:
-		scr_enemy_land();
 		break;
 	case states.hit:
 		scr_enemy_hit();
@@ -137,17 +131,8 @@ switch (state)
 	case states.grabbed:
 		scr_enemy_grabbed();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 	case states.staggered:
 		scr_enemy_staggered();
-		break;
-	case states.rage:
-		scr_enemy_rage();
-		break;
-	case states.ghostpossess:
-		scr_enemy_ghostpossess();
 		break;
 }
 if (state == states.stun && stunned > 100 && birdcreated == false)

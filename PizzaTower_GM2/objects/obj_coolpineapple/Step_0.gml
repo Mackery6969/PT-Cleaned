@@ -17,10 +17,6 @@ switch (state)
 		grav = 0.5;
 		scr_enemy_walk();
 		break;
-	case states.land:
-		grav = 0.5;
-		scr_enemy_land();
-		break;
 	case states.hit:
 		grav = 0.5;
 		scr_enemy_hit();

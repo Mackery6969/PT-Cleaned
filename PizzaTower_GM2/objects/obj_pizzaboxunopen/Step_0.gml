@@ -3,28 +3,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 {
 	global.combotime = 60;
 	fmod_event_one_shot("event:/sfx/misc/collecttoppin");
-	if (content == obj_noisebomb)
-	{
-		with (obj_player)
-		{
-			state = states.backbreaker;
-			sprite_index = spr_player_bossintro;
-			image_index = 0;
-		}
-		with (instance_create(x, y - 25, content))
-		{
-			sprite_index = spr_noisebomb_intro;
-		}
-		instance_create(x, y, obj_taunteffect);
-		instance_create(x, y + 600, obj_itspizzatime);
-		global.panic = true;
-		global.wave = 0;
-		global.maxwave = ((global.minutes * 60) + global.seconds) * 60;
-		if (global.panicbg)
-		{
-			scr_panicbg_init();
-		}
-	}
 	if (content == obj_pizzakinshroom)
 	{
 		with (instance_create(x, y, obj_smallnumber))

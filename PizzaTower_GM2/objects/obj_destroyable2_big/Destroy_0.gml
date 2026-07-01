@@ -6,7 +6,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	{
 		sprite_index = spr_bigpizzablockdead;
 	}
-	if (content == obj_null)
+	if (content == noone)
 	{
 		global.heattime += 10;
 		global.heattime = clamp(global.heattime, 0, 60);

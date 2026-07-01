@@ -76,9 +76,6 @@ switch (state)
 	case states.grabbed:
 		scr_boss_grabbed();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 	case states.staggered:
 		scr_enemy_staggered();
 		break;

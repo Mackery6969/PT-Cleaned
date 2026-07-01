@@ -75,9 +75,6 @@ switch (state)
 	case states.grabbed:
 		scr_boss_grabbed();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 }
 boss_update_pizzaheadKO(spr_bossfight_fakepephp, spr_bossfight_fakepeppalette);
 if (phase == 2 && state != states.stun && state != states.deformed)

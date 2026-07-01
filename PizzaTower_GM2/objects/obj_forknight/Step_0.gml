@@ -7,14 +7,8 @@ switch (state)
 	case states.charge:
 		scr_enemy_charge();
 		break;
-	case states.turn:
-		scr_enemy_turn();
-		break;
 	case states.walk:
 		scr_enemy_walk();
-		break;
-	case states.land:
-		scr_enemy_land();
 		break;
 	case states.hit:
 		scr_enemy_hit();
@@ -28,17 +22,8 @@ switch (state)
 	case states.grabbed:
 		scr_enemy_grabbed();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 	case states.staggered:
 		scr_enemy_staggered();
-		break;
-	case states.rage:
-		scr_enemy_rage();
-		break;
-	case states.ghostpossess:
-		scr_enemy_ghostpossess();
 		break;
 	case states.pizzaheadjump:
 		scr_enemy_pizzaheadjump();
@@ -57,24 +42,6 @@ if (state != states.stun)
 	birdcreated = false;
 }
 scr_scareenemy();
-if (elite && ragecooldown == 0)
-{
-	var player = instance_nearest(x, y, obj_player);
-	var check = (image_xscale > 0) ? (player.x > x && player.x < (x + 400)) : (player.x < x && player.x > (x - 400));
-	if (state == states.walk)
-	{
-		if (check && (y <= (player.y + 60) && y >= (player.y - 60)))
-		{
-			image_xscale = -sign(x - player.x);
-			image_index = 0;
-			flash = true;
-			alarm[4] = 5;
-			state = states.rage;
-			ragedash = 50;
-			create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
-		}
-	}
-}
 if (ragedash > 0 && state == states.rage)
 {
 	ragedash--;

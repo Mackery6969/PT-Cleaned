@@ -1435,7 +1435,6 @@ function scr_vigilante_hit()
 		sprite_index = stunfallspr;
 		if (hitLag > 0)
 		{
-			instance_destroy(obj_junk);
 			//instance_destroy(obj_ladderhorizontal);
 			instance_destroy(obj_cowstampede);
 			with (obj_cowspawner)

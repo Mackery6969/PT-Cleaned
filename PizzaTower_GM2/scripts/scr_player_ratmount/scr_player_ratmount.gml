@@ -345,10 +345,6 @@ function scr_player_ratmount()
 		}
 		brick = false;
 	}
-	with (ratgrabbedID)
-	{
-		scr_enemy_ratgrabbed();
-	}
 	ratmount_shootpowerup();
 	ratmount_dotaunt();
 }

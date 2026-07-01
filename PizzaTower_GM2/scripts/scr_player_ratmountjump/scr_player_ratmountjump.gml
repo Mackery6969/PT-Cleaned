@@ -231,10 +231,6 @@ function scr_player_ratmountjump()
 		}
 		image_index = 0;
 	}
-	with (ratgrabbedID)
-	{
-		scr_enemy_ratgrabbed();
-	}
 	ratmount_shootpowerup();
 	ratmount_dotaunt();
 }

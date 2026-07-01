@@ -7,14 +7,8 @@ switch (state)
 	case states.charge:
 		scr_enemy_charge();
 		break;
-	case states.turn:
-		scr_enemy_turn();
-		break;
 	case states.walk:
 		scr_enemy_walk();
-		break;
-	case states.land:
-		scr_enemy_land();
 		break;
 	case states.hit:
 		scr_enemy_hit();
@@ -28,14 +22,8 @@ switch (state)
 	case states.grabbed:
 		scr_enemy_grabbed();
 		break;
-	case states.pummel:
-		scr_enemy_pummel();
-		break;
 	case states.staggered:
 		scr_enemy_staggered();
-		break;
-	case states.rage:
-		scr_enemy_rage();
 		break;
 }
 if (state == states.stun && stunned > 100 && birdcreated == false)
@@ -98,27 +86,7 @@ if (ragebuffer > 0)
 }
 if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y >= (player.y - 60)) && important == false)
 {
-	if (state != states.rage && ragebuffer == 0 && elite && (state == states.walk || state == states.charge))
-	{
-		state = states.rage;
-		if (x != player.x)
-		{
-			image_xscale = -sign(x - player.x);
-		}
-		ragebuffer = 100;
-		image_index = 0;
-		image_speed = 0.5;
-		flash = true;
-		alarm[4] = 5;
-		with (instance_create(x, y, obj_forkhitbox))
-		{
-			sprite_index = spr_bighitbox;
-			mask_index = spr_bighitbox;
-			ID = other.id;
-		}
-		create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
-	}
-	else if (x != player.x && state != states.charge && y == ystart && important == false)
+	if (x != player.x && state != states.charge && y == ystart && important == false)
 	{
 		if (state == states.walk)
 		{

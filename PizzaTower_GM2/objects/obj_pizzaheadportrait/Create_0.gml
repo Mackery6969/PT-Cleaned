@@ -1,4 +1,17 @@
-event_inherited();
+ratgrabbed = false;
+grabbed = false;
+state = states.normal;
+flash = true;
+unpickable = false;
+hp = 0;
+grounded = true;
+state = 0;
+playerid = obj_player1;
+platformid = noone;
+hsp_carry = 0;
+vsp_carry = 0;
+thrown = false;
+use_collision = true;
 pizzahead = false;
 override_throw = false;
 spd = 6;

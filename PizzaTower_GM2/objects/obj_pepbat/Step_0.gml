@@ -76,9 +76,6 @@ switch (state)
 			state = states.turn;
 		}
 		break;
-	case states.land:
-		scr_enemy_land();
-		break;
 	case states.hit:
 		scr_enemy_hit();
 		break;
@@ -91,9 +88,6 @@ switch (state)
 		break;
 	case states.grabbed:
 		scr_enemy_grabbed();
-		break;
-	case states.pummel:
-		scr_enemy_pummel();
 		break;
 	case states.staggered:
 		scr_enemy_staggered();
