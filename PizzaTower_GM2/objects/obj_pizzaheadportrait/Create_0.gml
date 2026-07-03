@@ -6,7 +6,7 @@ unpickable = false;
 hp = 0;
 grounded = true;
 state = 0;
-playerid = obj_player1;
+playerid = obj_player;
 platformid = noone;
 hsp_carry = 0;
 vsp_carry = 0;
@@ -28,7 +28,7 @@ alarm[1] = 10;
 idlespr = spr_pizzahead_TVprojectile;
 bouncespr = spr_pizzahead_TVprojectilebounce;
 var palinfo = get_pep_palette_info();
-if (!obj_player1.ispeppino)
+if (!obj_player.ispeppino)
 {
 	palinfo = get_noise_palette_info();
 	sprite_index = spr_pizzahead_TVprojectileN;

@@ -1,3 +1,6 @@
+scr_initinput();
+scr_initinput2();
+depth = -7;
 if (instance_number(object_index) > 1)
 {
 	instance_destroy();

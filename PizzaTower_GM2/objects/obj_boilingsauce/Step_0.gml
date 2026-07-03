@@ -8,8 +8,7 @@ with (playerid)
 	}
 	else if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
 	{
-		var _pindex = (object_index == obj_player1) ? 0 : 1;
-		GamepadSetVibration(_pindex, 1, 1, 0.85);
+		GamepadSetVibration(0, 1, 1, 0.85);
 		if (state != states.fireass)
 		{
 			notification_push(notifications.touched_lava, [room]);

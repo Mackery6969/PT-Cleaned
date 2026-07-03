@@ -28,7 +28,7 @@ if (room == hub_loadingscreen && state != 2)
 				state = states.victory;
 				if (other.ispeppino)
 				{
-					with (obj_player1)
+					with (obj_player)
 					{
 						character = "P";
 						ispeppino = true;
@@ -37,7 +37,7 @@ if (room == hub_loadingscreen && state != 2)
 				}
 				else
 				{
-					with (obj_player1)
+					with (obj_player)
 					{
 						character = "P";
 						ispeppino = false;

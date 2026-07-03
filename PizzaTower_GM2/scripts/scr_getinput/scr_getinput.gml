@@ -254,60 +254,58 @@ function scr_getinput()
 	{
 		stickpressed_vertical = false;
 	}
-	if (object_index == obj_player1)
+	if (state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel)
 	{
-		if (state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel)
+		var in, dz;
+		if (state == states.Sjumpprep)
 		{
-			var in, dz;
-			if (state == states.Sjumpprep)
+			in = tdp_input_get("player_upC");
+			dz = global.gamepad_deadzone_superjump;
+		}
+		else
+		{
+			in = tdp_input_get("player_downC");
+			dz = global.gamepad_deadzone_crouch;
+		}
+		for (var i = 0; i < array_length(in.actions); i++)
+		{
+			var b = in.actions[i];
+			with (b)
 			{
-				in = tdp_input_get("player_upC");
-				dz = global.gamepad_deadzone_superjump;
-			}
-			else
-			{
-				in = tdp_input_get("player_downC");
-				dz = global.gamepad_deadzone_crouch;
-			}
-			for (var i = 0; i < array_length(in.actions); i++)
-			{
-				var b = in.actions[i];
-				with (b)
+				if (type == tdp_input_actiontypes.gamepad_axis)
 				{
-					if (type == tdp_input_actiontypes.gamepad_axis)
+					var inverted_axis;
+					switch (value)
 					{
-						var inverted_axis;
-						switch (value)
+						case gp_axislv:
+							inverted_axis = gamepad_axis_value(_dvc, gp_axislh);
+							break;
+						case gp_axisrv:
+							inverted_axis = gamepad_axis_value(_dvc, gp_axisrh);
+							break;
+						case gp_axislh:
+							inverted_axis = gamepad_axis_value(_dvc, gp_axislv);
+							break;
+						case gp_axisrh:
+							inverted_axis = gamepad_axis_value(_dvc, gp_axisrv);
+							break;
+					}
+					if (other.state == states.Sjumpprep)
+					{
+						if (axis_value <= (-0.8 + dz) && (axis_value != 0 || inverted_axis != 0))
 						{
-							case gp_axislv:
-								inverted_axis = gamepad_axis_value(_dvc, gp_axislh);
-								break;
-							case gp_axisrv:
-								inverted_axis = gamepad_axis_value(_dvc, gp_axisrh);
-								break;
-							case gp_axislh:
-								inverted_axis = gamepad_axis_value(_dvc, gp_axislv);
-								break;
-							case gp_axisrh:
-								inverted_axis = gamepad_axis_value(_dvc, gp_axisrv);
-								break;
+							other.key_up = true;
 						}
-						if (other.state == states.Sjumpprep)
-						{
-							if (axis_value <= (-0.8 + dz) && (axis_value != 0 || inverted_axis != 0))
-							{
-								other.key_up = true;
-							}
-						}
-						else if (axis_value >= (0.8 - dz) && (axis_value != 0 || inverted_axis != 0))
-						{
-							other.key_down = true;
-						}
+					}
+					else if (axis_value >= (0.8 - dz) && (axis_value != 0 || inverted_axis != 0))
+					{
+						other.key_down = true;
 					}
 				}
 			}
 		}
 	}
+
 }
 
 function scr_get_move_axis(_inputname)

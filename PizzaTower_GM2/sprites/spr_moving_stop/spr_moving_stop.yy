@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 1,
   "parent": {
-    "name": "DEBUG",
-    "path": "folders/Sprites/DEBUG.yy",
+    "name": "Masks",
+    "path": "folders/Sprites/Room Structure/Collision/Masks.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

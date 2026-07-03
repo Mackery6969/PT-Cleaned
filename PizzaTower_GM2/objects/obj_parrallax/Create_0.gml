@@ -1,6 +1,6 @@
 bg = bg_desert;
-bg2 = bg_null;
-bg3 = bg_null;
+bg2 = noone;
+bg3 = noone;
 bg_scrollx = 0;
 bg_scrolly = 0;
 bg_scrollxoffset = 0;

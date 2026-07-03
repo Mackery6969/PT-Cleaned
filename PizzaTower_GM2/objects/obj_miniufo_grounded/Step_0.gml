@@ -68,7 +68,7 @@ if (flash == true && alarm[2] <= 0)
 	alarm[2] = 0.15 * room_speed;
 }
 scr_scareenemy();
-var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
+var targetplayer = obj_player;
 if (bombreset > 0)
 {
 	bombreset--;

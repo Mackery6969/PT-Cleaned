@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_cowturned90degreesclockwise",
-    "path": "sprites/spr_cowturned90degreesclockwise/spr_cowturned90degreesclockwise.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

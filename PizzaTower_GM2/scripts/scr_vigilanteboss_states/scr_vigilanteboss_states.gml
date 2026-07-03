@@ -142,11 +142,10 @@ function boss_vigilante_decide_attack()
 				}
 				with (obj_player)
 				{
-					if (object_index == obj_player1 || global.coop)
-					{
-						state = states.superattackstart;
-						movespeed = 0;
-					}
+					state = states.superattackstart;
+					movespeed = 0;
+				
+
 				}
 				with (obj_tv)
 				{

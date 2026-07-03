@@ -4,7 +4,7 @@ if (!global.option_vibration)
 }
 with (obj_player)
 {
-	var _pindex = (object_index == obj_player1) ? 0 : 1;
+	var _pindex = 0;
 	_dvc = other.player_input_device[_pindex];
 	if (state != other.prevstate[_pindex])
 	{

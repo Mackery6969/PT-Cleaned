@@ -9,7 +9,7 @@ if (other.state != states.gotoplayer)
 	instance_destroy();
 	global.combotime = 60;
 	var val = heat_calculate(value);
-	if (other.object_index == obj_player1)
+	if (other.object_index == obj_player)
 	{
 		global.collect += val;
 	}

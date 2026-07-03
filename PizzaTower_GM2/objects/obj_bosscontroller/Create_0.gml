@@ -43,7 +43,7 @@ player_index = 0;
 player_hpsprite = spr_bossfight_playerhp;
 bosstimer_x = 257;
 bosstimer_y = 466;
-bell_sprite = spr_null;
+bell_sprite = noone;
 bell_index = 0;
 bell_buffer = 0;
 bar_surface = noone;
@@ -65,7 +65,7 @@ vstitleplayer = spr_vstitle_player;
 playerspr = spr_vspeppino;
 playersprshadow = spr_vspeppinoshadow;
 bossspr = spr_vsnoise;
-if (!obj_player1.ispeppino)
+if (!obj_player.ispeppino)
 {
 	playerspr = spr_vsnoiseplayer;
 	playersprshadow = spr_vsnoiseplayershadow;
