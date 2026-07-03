@@ -73,11 +73,8 @@ function DebugCommand(_command_id, _desc, _format, _func) constructor
 
 function TextList_Add(_type, _text)
 {
-	with (obj_debugcontroller)
+	with (obj_consoledebug)
 	{
-		if (DEBUG)
-		{
-			ds_list_add(text_list, [_type, _text]);
-		}
+		ds_list_add(text_list, [_type, _text]);
 	}
 }

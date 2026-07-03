@@ -1,6 +1,6 @@
 function scr_getinput2()
 {
-	if (instance_exists(obj_debugcontroller) && obj_debugcontroller.active)
+	if (instance_exists(obj_consoledebug) && obj_consoledebug.active)
 	{
 		exit;
 	}

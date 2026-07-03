@@ -1,83 +1,53 @@
-if (state > 0)
+if (!active)
 {
-	draw_set_font(-1);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	var height = string_height("ABC");
-	var yy = 0;
-	var command_max_width = 0;
-	for (var i = 0; i < array_length(commands); i++)
+	exit;
+}
+draw_set_font(-1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(0.7);
+draw_rectangle_color(0, 0, SCREEN_WIDTH, 152, c_black, c_black, c_black, c_black, false);
+var search_y = 152;
+if (input_text != "" && !ds_list_empty(search_commands))
+{
+	var search_h = 152 + (ds_list_size(search_commands) * 16) + 16;
+	draw_rectangle_color(0, search_y + 1, search_w + 16, search_h, c_black, c_black, c_black, c_black, false);
+}
+draw_set_alpha(1);
+var ys = 128 - (16 * ds_list_size(text_list));
+for (var i = 0; i < ds_list_size(text_list); i++)
+{
+	var t = array_get(ds_list_find_value(text_list, i), 0);
+	var txt = array_get(ds_list_find_value(text_list, i), 1);
+	var str = txt;
+	var c = c_white;
+	switch (t)
 	{
-		var w = string_width(commands[i].name);
-		if (command_max_width < w)
-		{
-			command_max_width = w;
-		}
+		case debug_texttypes.error:
+			str = concat("[ERROR] ", txt);
+			c = c_red;
+			break;
+		case debug_texttypes.debug_log:
+			str = concat("[DEBUG] ", txt);
+			c = c_gray;
+			break;
+		case debug_texttypes.command:
+			str = concat("[COMMAND] ", txt);
+			c = c_green;
+			break;
 	}
-	for (var i = selected; i < array_length(commands); i++)
+	draw_text_color(8, ys + (16 * i), str, c, c, c, c, 1);
+}
+draw_text(8, 128, concat("> ", input_text));
+if (input_text != "")
+{
+	search_y += 8;
+	for (var w = 0; w < ds_list_size(search_commands); w++)
 	{
-		var tc = c_white;
-		var bc = c_black;
-		if (i == selected)
+		var b = ds_list_find_value(search_commands, w);
+		if (b != undefined)
 		{
-			tc = c_black;
-			bc = c_white;
-		}
-		var txt = commands[i].name;
-		draw_rectangle_color(0, yy, command_max_width, yy + height, bc, bc, bc, bc, false);
-		draw_text_color(0, yy, txt, tc, tc, tc, tc, 1);
-		yy += height;
-	}
-	if (state > 1)
-	{
-		var cmd_args = commands[selected].args;
-		var max_widths = array_create(0);
-		for (var i = 0; i < (array_length(args) + 1); i++)
-		{
-			if (array_length(cmd_args) == i)
-			{
-				break;
-			}
-			var sel = arg_select;
-			if (i < array_length(args))
-			{
-				sel = args[i];
-			}
-			var arg_array = cmd_args[i];
-			yy = 0;
-			var max_width = 0;
-			for (var j = 0; j < array_length(arg_array); j++)
-			{
-				var w = string_width(string(arg_array[j]));
-				if (max_width < w)
-				{
-					max_width = w;
-				}
-			}
-			var xx;
-			if (array_length(max_widths) == 0)
-			{
-				xx = command_max_width;
-			}
-			else
-			{
-				xx = command_max_width + max_widths[array_length(max_widths) - 1];
-			}
-			array_push(max_widths, max_width);
-			for (var j = sel; j < array_length(arg_array); j++)
-			{
-				var tc = c_white;
-				var bc = c_black;
-				if (j == sel)
-				{
-					tc = c_black;
-					bc = c_white;
-				}
-				var txt = string(arg_array[j]);
-				draw_rectangle_color(xx, yy, xx + max_width, yy + height, bc, bc, bc, bc, false);
-				draw_text_color(xx, yy, txt, tc, tc, tc, tc, 1);
-				yy += height;
-			}
+			draw_text_color(8, search_y + (16 * w), b, c_white, c_white, c_white, c_white, 1);
 		}
 	}
 }

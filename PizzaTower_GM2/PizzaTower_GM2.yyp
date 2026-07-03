@@ -765,7 +765,6 @@
     {"id":{"name":"spr_tv_exprcollectN","path":"sprites/spr_tv_exprcollectN/spr_tv_exprcollectN.yy",},"order":63,},
     {"id":{"name":"ruin_secret1","path":"rooms/ruin_secret1/ruin_secret1.yy",},"order":63,},
     {"id":{"name":"tdp_text_draw","path":"scripts/tdp_text_draw/tdp_text_draw.yy",},"order":64,},
-    {"id":{"name":"obj_debugcontroller","path":"objects/obj_debugcontroller/obj_debugcontroller.yy",},"order":64,},
     {"id":{"name":"spr_tutorialkeyspecial","path":"sprites/spr_tutorialkeyspecial/spr_tutorialkeyspecial.yy",},"order":64,},
     {"id":{"name":"ruin_8","path":"rooms/ruin_8/ruin_8.yy",},"order":64,},
     {"id":{"name":"scr_secrettriggers","path":"scripts/scr_secrettriggers/scr_secrettriggers.yy",},"order":3,},

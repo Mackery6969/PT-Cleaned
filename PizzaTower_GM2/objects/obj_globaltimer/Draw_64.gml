@@ -2,7 +2,7 @@ if (!global.option_timer || room == Realtitlescreen || room == Longintro || room
 {
 	exit;
 }
-if (!global.option_hud || (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud))
+if (!global.option_hud || (instance_exists(obj_consoledebug) && !obj_consoledebug.showhud))
 {
 	exit;
 }

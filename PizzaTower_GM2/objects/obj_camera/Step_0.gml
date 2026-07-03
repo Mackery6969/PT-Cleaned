@@ -40,7 +40,7 @@ else
 {
 	visible = true;
 }
-if ((instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud) || !global.option_hud)
+if ((instance_exists(obj_consoledebug) && !obj_consoledebug.showhud) || !global.option_hud)
 {
 	visible = false;
 }
