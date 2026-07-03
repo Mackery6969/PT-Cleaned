@@ -11,7 +11,6 @@ unpickable = false;
 hp = 0;
 grounded = true;
 state = 0;
-playerid = obj_player;
 mask_index = spr_player_mask;
 depth = -5;
 platformid = noone;

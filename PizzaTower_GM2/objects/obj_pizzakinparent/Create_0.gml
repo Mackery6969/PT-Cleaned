@@ -8,7 +8,6 @@ vsp = 0;
 grav = 0.23;
 movespeed = 3;
 panic = false;
-playerid = obj_player;
 state = states.normal;
 spr_intro = sprite_index;
 spr_run = sprite_index;

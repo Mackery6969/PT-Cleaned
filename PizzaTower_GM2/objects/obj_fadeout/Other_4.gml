@@ -14,7 +14,6 @@ if (obj_player.state == states.taxi)
 	{
 		with (instance_create(obj_stopsign.x - (SCREEN_WIDTH / 2), obj_stopsign.y, obj_taxidud))
 		{
-			playerid = obj_player;
 			if (obj_player.policetaxi)
 			{
 				obj_player.policetaxi = false;
@@ -26,7 +25,6 @@ if (obj_player.state == states.taxi)
 	{
 		with (instance_create(obj_checkpoint.x - (SCREEN_WIDTH / 2), obj_checkpoint.y - 50, obj_taxidud))
 		{
-			playerid = obj_player;
 		}
 		with (obj_player)
 		{

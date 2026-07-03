@@ -1,4 +1,3 @@
-playerid = obj_player;
 picked = false;
 depth = -8;
 pickable = false;

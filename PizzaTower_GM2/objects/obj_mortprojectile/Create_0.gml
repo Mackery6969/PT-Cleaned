@@ -7,7 +7,6 @@ distance = 220;
 movespeed = 25;
 deccel = 2;
 accel = 3;
-playerid = obj_player.id;
 snd = fmod_event_create_instance("event:/sfx/mort/throwloop");
 var objs = [obj_ratblock, obj_morthook, obj_electricpotato, obj_baddie];
 var closestID = noone;
@@ -37,8 +36,8 @@ else
 {
 	targetx = closestID.x;
 	targety = closestID.y;
-	if (targetx != playerid.x)
+	if (targetx != obj_player.x)
 	{
-		playerid.xscale = sign(targetx - playerid.x);
+		obj_player.xscale = sign(targetx - obj_player.x);
 	}
 }

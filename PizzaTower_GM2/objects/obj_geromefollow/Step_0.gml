@@ -6,7 +6,6 @@ if (room == rank_room || room == timesuproom)
 {
 	visible = false;
 }
-	playerid = obj_player;
 
 image_speed = 0.35;
 depth = -6;

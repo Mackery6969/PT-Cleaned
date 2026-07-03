@@ -3,11 +3,10 @@ if (picked == false && pickable == true)
 	hsp = 0;
 	vsp = 0;
 	grav = 0;
-	playerid = obj_player;
 	alarm[0] = 150;
-	y = playerid.y - 50;
-	x = playerid.x;
-	with (playerid)
+	y = obj_player.y - 50;
+	x = obj_player.x;
+	with (obj_player)
 	{
 		state = states.gottreasure;
 		fmod_event_one_shot("event:/sfx/misc/secretfound");

@@ -13,7 +13,6 @@ with (other)
 			obj_player.vsp = 0;
 			obj_player.state = states.taxi;
 			fmod_event_one_shot("event:/sfx/misc/taximove");
-			playerid = obj_player;
 			move = true;
 			sprite_index = spr_taximove;
 			hsp = 10;

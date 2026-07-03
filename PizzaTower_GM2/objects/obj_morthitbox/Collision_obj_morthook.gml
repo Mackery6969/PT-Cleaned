@@ -10,7 +10,7 @@ if (instance_exists(obj_parryeffect))
 		}
 	}
 }
-with (playerid)
+with (obj_player)
 {
 	if (state != states.morthook)
 	{

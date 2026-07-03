@@ -1,9 +1,8 @@
-visible = (room == rank_room || room == timesuproom) ? false : playerid.visible;
+visible = (room == rank_room || room == timesuproom) ? false : obj_player.visible;
 if (obj_player.state == states.pizzathrow)
 {
 	visible = false;
 }
-playerid = obj_player;
 if (state != states.backbreaker)
 {
 	if (object_index != obj_pizzakinpineapple || (sprite_index != spr_monsterpineapple_pose1 && sprite_index != spr_monsterpineapple_pose2 && sprite_index != spr_monsterpineapple_pose3))
@@ -14,7 +13,7 @@ if (state != states.backbreaker)
 		}
 		if (sprite_index != spr_intro)
 		{
-			image_alpha = playerid.image_alpha;
+			image_alpha = obj_player.image_alpha;
 			sprite_index = (xprev != x) ? spr_run : spr_idle;
 			depth = -6;
 		}
