@@ -16,7 +16,6 @@
     {"name":"inst_7FAF7D0D","path":"rooms/saloon_treasure/saloon_treasure.yy",},
     {"name":"inst_56D2765","path":"rooms/saloon_treasure/saloon_treasure.yy",},
     {"name":"inst_484BFC90","path":"rooms/saloon_treasure/saloon_treasure.yy",},
-    {"name":"inst_484BFC90","path":"rooms/saloon_treasure/saloon_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

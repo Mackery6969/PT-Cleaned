@@ -42,7 +42,7 @@ if (scr_solid(x, y + 1) && bounce == false)
 	vsp = -5;
 	bounce = true;
 }
-if (scr_solid(x + image_xscale, y) && kicked && !place_meeting(x + image_xscale, y, obj_destructibles) && !place_meeting(x + image_xscale, y, obj_slope))
+if (scr_solid(x + image_xscale, y) && kicked && !place_meeting(x + image_xscale, y, obj_destructibles) && !place_meeting(x + image_xscale, y, obj_metalblock) && !place_meeting(x + image_xscale, y, obj_slope))
 {
 	instance_destroy();
 }
@@ -77,5 +77,12 @@ with (instance_place(x + image_xscale, y, obj_destructibles))
 		{
 			instance_destroy(other);
 		}
+	}
+}
+if (kicked)
+{
+	with (instance_place(x + image_xscale, y, obj_metalblock))
+	{
+		instance_destroy();
 	}
 }

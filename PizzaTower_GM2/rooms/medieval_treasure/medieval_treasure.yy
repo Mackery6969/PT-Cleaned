@@ -16,7 +16,6 @@
     {"name":"inst_2186CFF5","path":"rooms/medieval_treasure/medieval_treasure.yy",},
     {"name":"inst_27447A4C","path":"rooms/medieval_treasure/medieval_treasure.yy",},
     {"name":"inst_6A234F77","path":"rooms/medieval_treasure/medieval_treasure.yy",},
-    {"name":"inst_6A234F77","path":"rooms/medieval_treasure/medieval_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

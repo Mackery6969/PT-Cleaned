@@ -16,7 +16,6 @@
     {"name":"inst_2DDFF7AB","path":"rooms/sewer_treasure/sewer_treasure.yy",},
     {"name":"inst_339DA202","path":"rooms/sewer_treasure/sewer_treasure.yy",},
     {"name":"inst_767C772D","path":"rooms/sewer_treasure/sewer_treasure.yy",},
-    {"name":"inst_767C772D","path":"rooms/sewer_treasure/sewer_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

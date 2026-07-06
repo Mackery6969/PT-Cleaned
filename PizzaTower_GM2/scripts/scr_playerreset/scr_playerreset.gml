@@ -179,7 +179,6 @@ function scr_playerreset(_stop_music = true)
 		global.mort = false;
 		global.style = 0;
 		global.spaceblockswitch = true;
-		global.stylethreshold = 0;
 		global.baddiespeed = 1;
 		global.bullet = 3;
 		global.fuel = 3;

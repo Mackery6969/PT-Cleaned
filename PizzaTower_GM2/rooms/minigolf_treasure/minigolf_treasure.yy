@@ -16,7 +16,6 @@
     {"name":"inst_227F0B8E","path":"rooms/minigolf_treasure/minigolf_treasure.yy",},
     {"name":"inst_283CB5E5","path":"rooms/minigolf_treasure/minigolf_treasure.yy",},
     {"name":"inst_6B1B8B10","path":"rooms/minigolf_treasure/minigolf_treasure.yy",},
-    {"name":"inst_6B1B8B10","path":"rooms/minigolf_treasure/minigolf_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

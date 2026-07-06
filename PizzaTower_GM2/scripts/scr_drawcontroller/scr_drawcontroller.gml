@@ -122,10 +122,6 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 		{
 			c = c_yellow;
 		}
-		if (elitegrab)
-		{
-			c = c_green;
-		}
 		if (_color != c_white)
 		{
 			c = _color;

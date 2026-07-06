@@ -305,7 +305,7 @@ switch (state)
 				break;
 			case spr_tv_exprcombo:
 			case spr_tv_exprcomboN:
-				if (global.combo < 3 || _transfospr != noone || obj_player.isgustavo || obj_player.mach4mode || obj_player.state == states.hurt || obj_player.state == states.mach3 || obj_player.sprite_index == obj_player.spr_mach3boost || global.stylethreshold >= 3)
+				if (global.combo < 3 || _transfospr != noone || obj_player.isgustavo || obj_player.mach4mode || obj_player.state == states.hurt || obj_player.state == states.mach3 || obj_player.sprite_index == obj_player.spr_mach3boost)
 				{
 					state = states.whitenoise;
 					expressionsprite = noone;
@@ -368,11 +368,8 @@ switch (state)
 						_transfo = true;
 					}
 				}
-				if (global.stylethreshold < 3 || _transfo || obj_player.mach4mode || obj_player.state == states.hurt || obj_player.state == states.mach3 || obj_player.sprite_index == obj_player.spr_mach3boost)
-				{
-					state = states.whitenoise;
-					expressionsprite = noone;
-				}
+				state = states.whitenoise;
+				expressionsprite = noone;
 				break;
 			case spr_tv_exprpanic:
 			case spr_tv_exprpanicN:

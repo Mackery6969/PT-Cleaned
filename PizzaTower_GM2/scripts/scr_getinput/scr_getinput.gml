@@ -75,14 +75,6 @@ function scr_check_groundpound2()
 	return (gp && key_down) || key_groundpound2;
 }
 
-function scr_switch_get_menu_input()
-{
-	var _dvc = obj_inputAssigner.player_input_device[0];
-	key_jump = gamepad_button_check_pressed(_dvc, gp_face2);
-	key_jump2 = gamepad_button_check(_dvc, gp_face2);
-	key_back = gamepad_button_check_pressed(_dvc, gp_face1);
-}
-
 function scr_menu_getinput()
 {
 	if (!instance_exists(obj_player))

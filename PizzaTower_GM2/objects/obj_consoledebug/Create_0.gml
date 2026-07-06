@@ -158,6 +158,60 @@ GIVEHEAT = new DebugCommand("giveheat", "Gives heat", "", function()
 {
 	global.style += 100;
 });
+GIVETOPPIN = new DebugCommand("givetoppin", "Gives selected Toppin", "<toppin>", function(_toppin)
+{
+	var _selected = noone;
+	if (_toppin != undefined)
+	{
+		_toppin = string_lower(_toppin)
+		_toppin = string_replace(_toppin, "obj_", "");
+		_toppin = string_replace(_toppin, "pizzakin", "");
+		switch (_toppin)
+		{
+			case "mushroom":
+			case "shroom":
+				if (!instance_exists(obj_pizzakinshroom))
+				{
+					instance_create(obj_player.x, obj_player.y, obj_pizzakinshroom);
+				}
+				global.shroomfollow = true;
+				break;
+			case "cheese":
+				if (!instance_exists(obj_pizzakincheese))
+				{
+					instance_create(obj_player.x, obj_player.y, obj_pizzakincheese);
+				}
+				global.cheesefollow = true;
+				break;
+			case "tomato":
+				if (!instance_exists(obj_pizzakintomato))
+				{
+					instance_create(obj_player.x, obj_player.y, obj_pizzakintomato);
+				}
+				global.tomatofollow = true;
+				break;
+			case "sausage":
+				if (!instance_exists(obj_pizzakinsausage))
+				{
+					instance_create(obj_player.x, obj_player.y, obj_pizzakinsausage);
+				}
+				global.sausagefollow = true;
+				break;
+			case "pineapple":
+				if (!instance_exists(obj_pizzakinpineapple))
+				{
+					instance_create(obj_player.x, obj_player.y, obj_pizzakinpineapple);
+				}
+				global.pineapplefollow = true;
+				break;
+		}
+	}
+});
+GIVEGEROME = new DebugCommand("givegerome", "Spawns Gerome", "", function()
+{
+	instance_create(obj_player.x, obj_player.y, obj_gerome);
+	global.gerome = true;
+});
 ALLTOPPINS = new DebugCommand("alltoppins", "Adds all the toppins", "", function()
 {
 	if (!instance_exists(obj_pizzakincheese))
@@ -402,7 +456,7 @@ TEST_PIZZAFACE = new DebugCommand("test_pizzaface", "Pizza time at low fill", ""
 });
 command_list = ds_list_create();
 ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
-ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, UNLOCK_WORLD, TEST_PIZZAFACE);
+ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, GIVETOPPIN, GIVEGEROME, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, UNLOCK_WORLD, TEST_PIZZAFACE);
 input_text = "";
 command_history = ds_list_create();
 history_index = -1;

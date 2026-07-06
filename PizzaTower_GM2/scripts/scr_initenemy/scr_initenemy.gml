@@ -137,7 +137,6 @@ function scr_initenemy()
 	turner = false;
 	elite = false;
 	elitehit = 0;
-	elitegrab = false;
 	elitehurt = true;
 	ventilator_vsp = -5;
 	linethrown = false;

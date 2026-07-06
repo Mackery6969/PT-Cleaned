@@ -16,7 +16,6 @@
     {"name":"inst_62FB295A","path":"rooms/badland_treasure/badland_treasure.yy",},
     {"name":"inst_68B8D3B1","path":"rooms/badland_treasure/badland_treasure.yy",},
     {"name":"inst_2B97A8DD","path":"rooms/badland_treasure/badland_treasure.yy",},
-    {"name":"inst_2B97A8DD","path":"rooms/badland_treasure/badland_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

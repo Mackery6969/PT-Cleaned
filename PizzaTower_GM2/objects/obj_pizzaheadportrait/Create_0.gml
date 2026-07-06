@@ -1,4 +1,3 @@
-ratgrabbed = false;
 grabbed = false;
 state = states.normal;
 flash = true;

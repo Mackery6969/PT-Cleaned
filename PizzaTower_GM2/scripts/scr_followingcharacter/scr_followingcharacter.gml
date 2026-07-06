@@ -80,33 +80,6 @@ function farmer_rearrange()
 	}
 }
 
-function following_has_follower(_obj)
-{
-	for (var i = 0; i < ds_list_size(global.followerlist); i++)
-	{
-		var b = ds_list_find_value(global.followerlist, i);
-		if (instance_exists(b) && b.object_index == _obj)
-		{
-			return true;
-		}
-	}
-	return false;
-}
-
-function following_count(_obj)
-{
-	var n = 0;
-	for (var i = 0; i < ds_list_size(global.followerlist); i++)
-	{
-		var b = ds_list_find_value(global.followerlist, i);
-		if (instance_exists(b) && b.object_index == _obj)
-		{
-			n++;
-		}
-	}
-	return n;
-}
-
 function following_moonwalk_fix()
 {
 	if (!instance_exists(playerid))

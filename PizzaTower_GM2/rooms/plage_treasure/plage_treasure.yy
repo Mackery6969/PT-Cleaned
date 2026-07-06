@@ -16,7 +16,6 @@
     {"name":"inst_5D8F4967","path":"rooms/plage_treasure/plage_treasure.yy",},
     {"name":"inst_634CF3BE","path":"rooms/plage_treasure/plage_treasure.yy",},
     {"name":"inst_262BC8EA","path":"rooms/plage_treasure/plage_treasure.yy",},
-    {"name":"inst_262BC8EA","path":"rooms/plage_treasure/plage_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

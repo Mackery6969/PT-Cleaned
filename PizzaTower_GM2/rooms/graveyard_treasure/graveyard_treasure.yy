@@ -16,7 +16,6 @@
     {"name":"inst_1A5C8F12","path":"rooms/graveyard_treasure/graveyard_treasure.yy",},
     {"name":"inst_201A3969","path":"rooms/graveyard_treasure/graveyard_treasure.yy",},
     {"name":"inst_62F90E94","path":"rooms/graveyard_treasure/graveyard_treasure.yy",},
-    {"name":"inst_62F90E94","path":"rooms/graveyard_treasure/graveyard_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

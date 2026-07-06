@@ -16,7 +16,6 @@
     {"name":"inst_58B2EE9F","path":"rooms/entrance_treasure/entrance_treasure.yy",},
     {"name":"inst_5E7098F6","path":"rooms/entrance_treasure/entrance_treasure.yy",},
     {"name":"inst_214F6E22","path":"rooms/entrance_treasure/entrance_treasure.yy",},
-    {"name":"inst_214F6E22","path":"rooms/entrance_treasure/entrance_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

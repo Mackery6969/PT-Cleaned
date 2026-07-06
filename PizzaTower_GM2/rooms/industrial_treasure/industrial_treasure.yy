@@ -16,7 +16,6 @@
     {"name":"inst_101889E3","path":"rooms/industrial_treasure/industrial_treasure.yy",},
     {"name":"inst_15D6343A","path":"rooms/industrial_treasure/industrial_treasure.yy",},
     {"name":"inst_58B50965","path":"rooms/industrial_treasure/industrial_treasure.yy",},
-    {"name":"inst_58B50965","path":"rooms/industrial_treasure/industrial_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

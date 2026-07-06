@@ -19,7 +19,6 @@ if (escape == true && !_destroyed)
 if (elite && object_index != obj_robot)
 {
 	hp += 1;
-	elitehp = hp;
 }
 if (object_index == obj_cheeseslime && snotty)
 {

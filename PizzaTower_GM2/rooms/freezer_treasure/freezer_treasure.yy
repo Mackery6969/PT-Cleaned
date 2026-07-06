@@ -16,7 +16,6 @@
     {"name":"inst_50548666","path":"rooms/freezer_treasure/freezer_treasure.yy",},
     {"name":"inst_561230BD","path":"rooms/freezer_treasure/freezer_treasure.yy",},
     {"name":"inst_18F105E9","path":"rooms/freezer_treasure/freezer_treasure.yy",},
-    {"name":"inst_18F105E9","path":"rooms/freezer_treasure/freezer_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

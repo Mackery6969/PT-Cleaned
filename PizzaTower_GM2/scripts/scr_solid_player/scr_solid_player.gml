@@ -75,12 +75,6 @@ function scr_solid_player(_x, _y)
 		y = old_y;
 		return true;
 	}
-	if (state == states.grind && check_slope_player(obj_grindrailslope))
-	{
-		x = old_x;
-		y = old_y;
-		return true;
-	}
 	x = old_x;
 	y = old_y;
 	return false;

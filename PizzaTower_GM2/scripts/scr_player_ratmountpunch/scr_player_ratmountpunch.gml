@@ -20,6 +20,16 @@ function scr_player_ratmountpunch()
 			xscale = dir;
 		}
 	}
+	if (key_attack2 && grounded)
+	{
+		sprite_index = spr_lonegustavo_walk;
+		state = states.ratmount;
+		if (hsp != 0)
+		{
+			dir = sign(hsp);
+			xscale = dir;
+		}
+	}
 	if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);

@@ -4,6 +4,14 @@
 
 A more cleaner version of **Pizza Tower Optimised**. cleaning up the project to remove unused code just to make it more manageable.
 
+Extra Features:
+
+- Better Debug Console: The debug console has been improved to act like an actual console, with support for TAB or UP/DOWN controls.
+- Skippable Titlecards: The titlecards can now be skipped by pressing JUMP.
+- Slightly Adjusted Gustavo & Brick:
+  - Gustavo's Spin attack is cancellable by holding DASH.
+  - Gustavo can start mach running even when he is blocked by a destructible object.
+
 An optimised version of **Pizza Tower EXtracted**, a semi-accurate decompilation of Pizza Tower. The main difference is that nearly every unused sprite, script, room, etc. was removed. It was done with these reasons:
 1. Memory leaks. Pizza Tower had a lot of textures, and a lot of them are unused, which could cause a memory leak while compiling a game through GameMaker.
 2. More comfortable working. Now you can easily find something used and add new without lags.

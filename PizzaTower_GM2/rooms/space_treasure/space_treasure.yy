@@ -16,7 +16,6 @@
     {"name":"inst_3F335F41","path":"rooms/space_treasure/space_treasure.yy",},
     {"name":"inst_44F10998","path":"rooms/space_treasure/space_treasure.yy",},
     {"name":"inst_7CFDEC4","path":"rooms/space_treasure/space_treasure.yy",},
-    {"name":"inst_7CFDEC4","path":"rooms/space_treasure/space_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

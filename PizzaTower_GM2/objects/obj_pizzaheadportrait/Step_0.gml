@@ -6,7 +6,7 @@ if (ANIMATION_END && sprite_index == bouncespr)
 mask_index = spr_pizzahead_TVprojectile;
 if (move)
 {
-	if (!grabbed && !ratgrabbed && !thrown)
+	if (!grabbed && !thrown)
 	{
 		hsp = dir * spd;
 		if (place_meeting(x, y + 1, obj_solid) && vsp > 0)
@@ -64,19 +64,12 @@ if (land)
 {
 	depth = 0;
 }
-if (grounded && grabbed == false && !ratgrabbed)
+if (grounded && grabbed == false)
 {
 	thrown = false;
 }
-if (!ratgrabbed)
-{
-	state = states.normal;
-}
-if (ratgrabbed && ratplayerid.ratgrabbedID != id)
-{
-	ratgrabbed = false;
-}
-if (grabbed == true && !ratgrabbed)
+state = states.normal;
+if (grabbed == true)
 {
 	image_xscale = -playerid.xscale;
 	grav = 0;
@@ -305,7 +298,7 @@ if (vsp > 0 && grounded && !place_meeting(x, y, obj_spike))
 {
 	hsp = 0;
 }
-if (grabbed == false && ratgrabbed == false && use_collision)
+if (grabbed == false && use_collision)
 {
 	scr_collide();
 }

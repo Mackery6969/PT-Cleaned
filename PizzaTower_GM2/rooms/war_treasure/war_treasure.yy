@@ -16,7 +16,6 @@
     {"name":"inst_79883072","path":"rooms/war_treasure/war_treasure.yy",},
     {"name":"inst_7F45DAC9","path":"rooms/war_treasure/war_treasure.yy",},
     {"name":"inst_4224AFF5","path":"rooms/war_treasure/war_treasure.yy",},
-    {"name":"inst_4224AFF5","path":"rooms/war_treasure/war_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

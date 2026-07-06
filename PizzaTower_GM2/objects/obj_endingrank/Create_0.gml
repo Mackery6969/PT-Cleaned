@@ -194,7 +194,7 @@ if (!ispeppino)
 	}
 }
 ini_write_string("Game", "finalrank", r);
-if (ini_read_real("Game", "snotty", false) == false)
+if (!ini_read_real("Game", "snotty", false))
 {
 	ini_write_real("Game", "finalsnotty", true);
 }

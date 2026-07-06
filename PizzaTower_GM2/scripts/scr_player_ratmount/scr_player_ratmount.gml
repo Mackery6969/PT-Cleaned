@@ -19,13 +19,9 @@ function scr_player_ratmount()
 	}
 	move = key_left + key_right;
 	doublejump = false;
-	if (ratgrabbedID != noone && !instance_exists(ratgrabbedID))
-	{
-		ratgrabbedID = noone;
-	}
 	hsp = movespeed;
 	var r = ratmount_movespeed;
-	if ((place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)) || (abs(movespeed) < 8 && move != xscale) || !key_attack || abs(movespeed) <= 6)
+	if ((place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)) || (abs(movespeed) < 8 && move != xscale && !key_attack) || !key_attack || abs(movespeed) <= 6)
 	{
 		gustavodash = 0;
 		ratmount_movespeed = 8;
@@ -156,18 +152,17 @@ function scr_player_ratmount()
 				if (sprite_index != spr_player_ratmountidleanim)
 				{
 					sprite_index = spr_player_ratmountidle;
-					if (ratgrabbedID == noone)
+					if (idle < 400)
 					{
-						if (idle < 400)
-						{
-							idle++;
-						}
-						if (idle >= 150)
-						{
-							sprite_index = spr_player_ratmountidleanim;
-							image_index = 0;
-						}
+						idle++;
 					}
+					if (idle >= 150)
+					{
+						sprite_index = spr_player_ratmountidleanim;
+						image_index = 0;
+					}
+				
+
 				}
 				else if (ANIMATION_END)
 				{
@@ -283,7 +278,7 @@ function scr_player_ratmount()
 			sprite_index = spr_player_ratmountgroundpoundfall;
 		}
 	}
-	if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
+	if (key_attack && grounded && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)))
 	{
 		move = xscale;
 		if (ratmount_movespeed < 12)

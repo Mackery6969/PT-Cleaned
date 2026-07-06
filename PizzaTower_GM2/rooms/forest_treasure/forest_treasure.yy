@@ -16,7 +16,6 @@
     {"name":"inst_59CAB42B","path":"rooms/forest_treasure/forest_treasure.yy",},
     {"name":"inst_5F885E82","path":"rooms/forest_treasure/forest_treasure.yy",},
     {"name":"inst_226733AE","path":"rooms/forest_treasure/forest_treasure.yy",},
-    {"name":"inst_226733AE","path":"rooms/forest_treasure/forest_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

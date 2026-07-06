@@ -16,7 +16,6 @@
     {"name":"inst_6710F182","path":"rooms/ruin_treasure/ruin_treasure.yy",},
     {"name":"inst_6CCE9BD9","path":"rooms/ruin_treasure/ruin_treasure.yy",},
     {"name":"inst_2FAD7105","path":"rooms/ruin_treasure/ruin_treasure.yy",},
-    {"name":"inst_2FAD7105","path":"rooms/ruin_treasure/ruin_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

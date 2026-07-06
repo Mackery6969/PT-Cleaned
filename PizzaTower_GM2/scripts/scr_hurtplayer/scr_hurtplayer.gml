@@ -402,7 +402,7 @@ function scr_hurtplayer(_player)
 				txt = embed_value_string(txt, [damage_n]);
 				create_transformation_tip(txt);
 			}
-			var loseamount = 50 * (global.stylethreshold + 1);
+			var loseamount = 50;
 			if (instance_exists(obj_bosscontroller))
 			{
 				loseamount = 0;

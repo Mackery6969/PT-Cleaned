@@ -169,7 +169,6 @@ invhurt_buffer = 0;
 invhurt_max = 30;
 ratmount_movespeed = 8;
 ratmount_fallingspeed = 0;
-ratgrabbedID = noone;
 ratpowerup = noone;
 ratshootbuffer = 0;
 rateaten = false;
@@ -599,7 +598,6 @@ if (!variable_global_exists("saveroom"))
 	global.baddiepowerup = false;
 	global.baddierage = false;
 	global.style = 0;
-	global.stylethreshold = 0;
 	global.pizzadelivery = false;
 	global.failcutscene = false;
 	global.pizzasdelivered = 0;

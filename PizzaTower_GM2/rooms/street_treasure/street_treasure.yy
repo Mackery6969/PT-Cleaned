@@ -16,7 +16,6 @@
     {"name":"inst_3D743CAA","path":"rooms/street_treasure/street_treasure.yy",},
     {"name":"inst_4331E701","path":"rooms/street_treasure/street_treasure.yy",},
     {"name":"inst_610BC2D","path":"rooms/street_treasure/street_treasure.yy",},
-    {"name":"inst_610BC2D","path":"rooms/street_treasure/street_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

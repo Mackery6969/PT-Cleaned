@@ -16,7 +16,6 @@
     {"name":"inst_21FAB4FD","path":"rooms/dungeon_treasure/dungeon_treasure.yy",},
     {"name":"inst_27B85F54","path":"rooms/dungeon_treasure/dungeon_treasure.yy",},
     {"name":"inst_6A97347F","path":"rooms/dungeon_treasure/dungeon_treasure.yy",},
-    {"name":"inst_6A97347F","path":"rooms/dungeon_treasure/dungeon_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

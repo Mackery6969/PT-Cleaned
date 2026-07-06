@@ -64,20 +64,7 @@ switch (state)
 					break;
 			}
 		}
-		switch (global.stylethreshold)
-		{
-			case 0:
-				stunned -= 0.5;
-				break;
-			case 1:
-				stunned -= 0.65;
-				break;
-			case 2:
-				stunned -= 0.8;
-				break;
-			case 3:
-				stunned -= 1;
-		}
+		stunned -= 0.5;
 		if (stuntouchbuffer > 0)
 		{
 			stuntouchbuffer--;

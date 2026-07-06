@@ -16,7 +16,6 @@
     {"name":"inst_3F280F1A","path":"rooms/farm_treasure/farm_treasure.yy",},
     {"name":"inst_44E5B971","path":"rooms/farm_treasure/farm_treasure.yy",},
     {"name":"inst_7C48E9D","path":"rooms/farm_treasure/farm_treasure.yy",},
-    {"name":"inst_7C48E9D","path":"rooms/farm_treasure/farm_treasure.yy",},
   ],
   "isDnd": false,
   "layers": [

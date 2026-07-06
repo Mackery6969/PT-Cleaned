@@ -24,9 +24,7 @@ if (!place_meeting(x, y, obj_doorblocked))
 			fmod_event_one_shot("event:/sfx/misc/door");
 			obj_camera.chargecamera = 0;
 			ds_list_add(global.saveroom, id);
-						obj_player.sprite_index = obj_player.spr_lookdoor;
-		
-
+			obj_player.sprite_index = obj_player.spr_lookdoor;
 			obj_player.targetDoor = other.targetDoor;
 			obj_player.targetRoom = other.targetRoom;
 			with (obj_player)

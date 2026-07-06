@@ -7,50 +7,6 @@ function tv_set_idle()
 	}
 }
 
-function tv_push_prompt(_text, _type, _spr, _textspd)
-{
-	with (obj_tv)
-	{
-		var b = [_text, _type, _spr, _textspd];
-		var play = false;
-		switch (_type)
-		{
-			case tv_prompttypes.normal:
-				play = true;
-				ds_list_insert(tvprompts_list, 0, b);
-				break;
-			case tv_prompttypes.triggered:
-				var placed = false;
-				for (var i = 0; i < ds_list_size(tvprompts_list); i++)
-				{
-					var b2 = ds_list_find_value(tvprompts_list, i);
-					if (b2[1] == tv_prompttypes.transformation)
-					{
-						if (i == 0)
-						{
-							play = true;
-						}
-						ds_list_insert(tvprompts_list, i, b);
-						placed = true;
-						break;
-					}
-				}
-				if (!placed)
-				{
-					ds_list_add(tvprompts_list, b);
-				}
-				break;
-			case tv_prompttypes.transformation:
-				ds_list_add(tvprompts_list, b);
-				break;
-		}
-		if (play)
-		{
-			state = states.normal;
-		}
-	}
-}
-
 function tv_get_palette()
 {
 	if (!instance_exists(obj_player))
