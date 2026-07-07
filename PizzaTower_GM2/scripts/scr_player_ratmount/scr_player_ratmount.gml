@@ -21,7 +21,7 @@ function scr_player_ratmount()
 	doublejump = false;
 	hsp = movespeed;
 	var r = ratmount_movespeed;
-	if ((place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)) || (abs(movespeed) < 8 && move != xscale && !key_attack) || !key_attack || abs(movespeed) <= 6)
+	if ((place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles)) || (abs(movespeed) < 8 && move != xscale) || !key_attack || abs(movespeed) <= 6)
 	{
 		gustavodash = 0;
 		ratmount_movespeed = 8;
@@ -278,7 +278,7 @@ function scr_player_ratmount()
 			sprite_index = spr_player_ratmountgroundpoundfall;
 		}
 	}
-	if (key_attack && grounded && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)))
+	if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
 	{
 		move = xscale;
 		if (ratmount_movespeed < 12)

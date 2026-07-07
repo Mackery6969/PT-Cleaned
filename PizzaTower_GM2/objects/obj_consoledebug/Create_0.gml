@@ -158,60 +158,6 @@ GIVEHEAT = new DebugCommand("giveheat", "Gives heat", "", function()
 {
 	global.style += 100;
 });
-GIVETOPPIN = new DebugCommand("givetoppin", "Gives selected Toppin", "<toppin>", function(_toppin)
-{
-	var _selected = noone;
-	if (_toppin != undefined)
-	{
-		_toppin = string_lower(_toppin)
-		_toppin = string_replace(_toppin, "obj_", "");
-		_toppin = string_replace(_toppin, "pizzakin", "");
-		switch (_toppin)
-		{
-			case "mushroom":
-			case "shroom":
-				if (!instance_exists(obj_pizzakinshroom))
-				{
-					instance_create(obj_player.x, obj_player.y, obj_pizzakinshroom);
-				}
-				global.shroomfollow = true;
-				break;
-			case "cheese":
-				if (!instance_exists(obj_pizzakincheese))
-				{
-					instance_create(obj_player.x, obj_player.y, obj_pizzakincheese);
-				}
-				global.cheesefollow = true;
-				break;
-			case "tomato":
-				if (!instance_exists(obj_pizzakintomato))
-				{
-					instance_create(obj_player.x, obj_player.y, obj_pizzakintomato);
-				}
-				global.tomatofollow = true;
-				break;
-			case "sausage":
-				if (!instance_exists(obj_pizzakinsausage))
-				{
-					instance_create(obj_player.x, obj_player.y, obj_pizzakinsausage);
-				}
-				global.sausagefollow = true;
-				break;
-			case "pineapple":
-				if (!instance_exists(obj_pizzakinpineapple))
-				{
-					instance_create(obj_player.x, obj_player.y, obj_pizzakinpineapple);
-				}
-				global.pineapplefollow = true;
-				break;
-		}
-	}
-});
-GIVEGEROME = new DebugCommand("givegerome", "Spawns Gerome", "", function()
-{
-	instance_create(obj_player.x, obj_player.y, obj_gerome);
-	global.gerome = true;
-});
 ALLTOPPINS = new DebugCommand("alltoppins", "Adds all the toppins", "", function()
 {
 	if (!instance_exists(obj_pizzakincheese))
@@ -430,36 +376,10 @@ ds_map_set(state_map, "states.cheesepep", states.cheesepep);
 ds_map_set(state_map, "states.knightpep", states.knightpep);
 ds_map_set(state_map, "states.firemouth", states.firemouth);
 ds_map_set(state_map, "states.ratmount", states.ratmount);
-UNLOCK_WORLD = new DebugCommand("unlock_world", "Unlocks worlds 1..N (door + boss key)", "<number>", function(_world)
-{
-	if (_world == undefined)
-	{
-		exit;
-	}
-	_world = real(_world);
-	ini_open_from_string(obj_savesystem.ini_str);
-	for (var i = 0; i < _world; i++)
-	{
-		var save = concat("w", i + 1, "stick");
-		ini_write_real(save, "door", true);
-		ini_write_real(save, "bosskey", true);
-	}
-	obj_savesystem.ini_str = ini_close();
-	gamesave_async_save();
-});
-TEST_PIZZAFACE = new DebugCommand("test_pizzaface", "Pizza time at low fill", "", function()
-{
-	global.panic = true;
-	global.fill = 100;
-	obj_camera.alarm[1] = 60;
-	obj_tv.chunkmax = global.fill;
-});
 command_list = ds_list_create();
 ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
-ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, GIVETOPPIN, GIVEGEROME, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, UNLOCK_WORLD, TEST_PIZZAFACE);
+ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY);
 input_text = "";
-command_history = ds_list_create();
-history_index = -1;
 text_list = ds_list_create();
 search_commands = ds_list_create();
 ds_list_clear(search_commands);
