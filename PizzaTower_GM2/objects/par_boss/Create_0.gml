@@ -78,7 +78,6 @@ function SUPER_boss_destroy(_boss)
 {
 	destroyed = true;
 	depth = _boss.depth;
-	global.attackstyle = 0;
 	with (_boss)
 	{
 		camera_zoom(1, 0.1);

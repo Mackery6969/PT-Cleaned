@@ -52,18 +52,17 @@ switch (state)
 		scr_enemy_hit();
 		break;
 	case states.stun:
-		if (global.attackstyle != 2)
+				switch (hp)
 		{
-			switch (hp)
-			{
-				case -1:
-					grav = 1.1;
-					break;
-				case -2:
-					grav = 1.3;
-					break;
-			}
+			case -1:
+				grav = 1.1;
+				break;
+			case -2:
+				grav = 1.3;
+				break;
 		}
+	
+
 		stunned -= 0.5;
 		if (stuntouchbuffer > 0)
 		{

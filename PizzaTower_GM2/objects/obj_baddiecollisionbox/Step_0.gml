@@ -86,11 +86,11 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					image_index = 0;
 				}
 			}
-			if (instance_exists(other.baddieID) && other.baddieID.invtime == 0 && ((other.baddieID.object_index != obj_bigcheese && other.baddieID.object_index != obj_pepbat) || state != states.tumble) && ((state == states.handstandjump && global.attackstyle == 1) || instakillmove == true) && other.baddieID.state != states.grabbed && !other.baddieID.invincible && other.baddieID.instantkillable)
+			if (instance_exists(other.baddieID) && other.baddieID.invtime == 0 && ((other.baddieID.object_index != obj_bigcheese && other.baddieID.object_index != obj_pepbat) || state != states.tumble) && (instakillmove == true) && other.baddieID.state != states.grabbed && !other.baddieID.invincible && other.baddieID.instantkillable)
 			{
 				Instakill();
 			}
-			else if (instance_exists(other.baddieID) && state == states.handstandjump && global.attackstyle == 0 && other.baddieID.invtime <= 0 && !other.baddieID.invincible)
+			else if (instance_exists(other.baddieID) && state == states.handstandjump && other.baddieID.invtime <= 0 && !other.baddieID.invincible)
 			{
 				swingdingthrow = false;
 				image_index = 0;
@@ -134,75 +134,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					state = states.superslam;
 					image_index = 0;
 					image_speed = 0.35;
-				}
-			}
-			else if (state == states.handstandjump && global.attackstyle == 3 && !other.baddieID.invincible)
-			{
-				var _ms = movespeed;
-				movespeed = 0;
-				baddiegrabbedID = other.baddieID;
-				grabbingenemy = true;
-				var _prevstate = other.baddieID.state;
-				other.baddieID.state = states.grabbed;
-				other.baddieID.grabbedby = 1;
-				heavy = other.baddieID.heavy;
-				if (global.pummeltest)
-				{
-					if (image_index > 6)
-					{
-						if (key_up)
-						{
-							state = states.finishingblow;
-							sprite_index = spr_uppercutfinishingblow;
-							image_index = 4;
-							movespeed = 0;
-						}
-						else if (key_down)
-						{
-							sprite_index = spr_piledriver;
-							vsp = -5;
-							state = states.superslam;
-							image_index = 4;
-							image_speed = 0.35;
-						}
-						else
-						{
-							state = states.finishingblow;
-							sprite_index = spr_player_lungehit;
-							image_index = 0;
-						}
-					}
-					else
-					{
-						other.baddieID.state = _prevstate;
-						grabbingenemy = false;
-						movespeed = _ms;
-					}
-				}
-				else
-				{
-					image_index = 0;
-					if (key_up)
-					{
-						state = states.finishingblow;
-						sprite_index = spr_uppercutfinishingblow;
-						image_index = 4;
-						movespeed = 0;
-					}
-					else if (key_down)
-					{
-						sprite_index = spr_piledriver;
-						vsp = -5;
-						state = states.superslam;
-						image_index = 4;
-						image_speed = 0.35;
-					}
-					else
-					{
-						state = states.finishingblow;
-						sprite_index = spr_player_lungehit;
-						image_index = 0;
-					}
 				}
 			}
 			if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && state != states.chainsaw && (state == states.tumble || state == states.mach2 || state == states.machslide || sprite_index == spr_player_ratmountattack || sprite_index == spr_lonegustavo_dash) && other.baddieID.state != states.punch && other.baddieID.state != states.hit && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != states.grabbed && other.baddieID.state != states.chainsawbump && other.baddieID.state != states.chainsaw && !other.baddieID.invincible)

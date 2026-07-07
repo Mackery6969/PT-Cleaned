@@ -521,8 +521,6 @@ if (!variable_global_exists("saveroom"))
 	global.wartimerfont1 = font_add_sprite_ext(spr_wartimer_font1, "1234567890", true, 0);
 	global.wartimerfont2 = font_add_sprite_ext(spr_wartimer_font2, "1234567890", true, 0);
 	global.mort = false;
-	global.attackstyle = 0;
-	global.pummeltest = true;
 	global.horse = false;
 	global.graffiticount = 0;
 	global.graffitimax = 20;
