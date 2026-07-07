@@ -16,15 +16,11 @@ function scr_init_input()
 	key_taunt2 = false;
 	key_attack = false;
 	key_attack2 = false;
-	key_shoot = false;
 	key_shoot2 = false;
 	key_start = false;
-	key_escape = false;
 	key_chainsaw = false;
 	key_chainsaw2 = false;
 	stickpressed = false;
-	stickpressed_horizontal = false;
-	stickpressed_vertical = false;
 }
 
 function scr_check_superjump()
@@ -218,7 +214,6 @@ function scr_getinput()
 		key_groundpound = tdp_input_get("player_groundpoundC").pressed;
 		key_groundpound2 = tdp_input_get("player_groundpoundC").held;
 	}
-	key_shoot = false;
 	key_shoot2 = false;
 	key_chainsaw = false;
 	key_chainsaw2 = false;
@@ -226,22 +221,6 @@ function scr_getinput()
 	key_right_axis = scr_get_move_axis("player_rightC");
 	key_up_axis = scr_get_move_axis("player_upC");
 	key_down_axis = scr_get_move_axis("player_downC");
-	if (gamepad_axis_value(_dvc, gp_axislh) >= horizpress_dz || gamepad_axis_value(_dvc, gp_axislh) <= -horizpress_dz)
-	{
-		stickpressed_horizontal = true;
-	}
-	else
-	{
-		stickpressed_horizontal = false;
-	}
-	if (gamepad_axis_value(_dvc, gp_axislv) >= vertpress_dz || gamepad_axis_value(_dvc, gp_axislv) <= -vertpress_dz)
-	{
-		stickpressed_vertical = true;
-	}
-	else
-	{
-		stickpressed_vertical = false;
-	}
 	if (state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel)
 	{
 		var in, dz;

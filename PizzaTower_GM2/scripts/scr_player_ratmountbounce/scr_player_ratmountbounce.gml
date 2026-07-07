@@ -85,7 +85,6 @@ function scr_player_ratmountbounce()
 			{
 				fmod_event_one_shot_3d("event:/sfx/ratmount/walljump1", x, y);
 				state = states.ratmountclimbwall;
-				sticktime = 15;
 				xscale = sign(hsp);
 				landAnim = false;
 			}

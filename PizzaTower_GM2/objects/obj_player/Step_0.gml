@@ -1,9 +1,7 @@
 scr_getinput();
-prevhsp = hsp;
 prevmove = move;
 prevmovespeed = movespeed;
 previcemovespeed = icemovespeed;
-prevxscale = xscale;
 if (key_slap2)
 {
 	input_buffer_shoot = 10;
@@ -777,14 +775,12 @@ if (global.pistol && ispeppino && state != states.animation && state != states.g
 		if (state != states.backbreaker && state != states.chainsaw)
 		{
 			scr_pistolshoot(states.normal, true);
-			pistolchargedelay = 5;
 			pistolchargeshot--;
 		}
 	}
 	else if (pistolchargeshot <= 0 && pistolchargeshooting)
 	{
 		pistolcharge = 0;
-		pistolchargedelay = 5;
 		pistolchargeshooting = false;
 		pistolchargeshot = 1;
 		if (key_slap)
@@ -796,7 +792,6 @@ if (global.pistol && ispeppino && state != states.animation && state != states.g
 else if (state == states.hurt || state == states.bump || state == states.Sjumpprep || state == states.Sjump || instance_exists(obj_vigilante_duelintro))
 {
 	pistolcharge = 0;
-	pistolcharged = false;
 	pistolchargeshooting = false;
 	pistolchargeshot = 1;
 }
@@ -993,10 +988,6 @@ if (cow_buffer > 0)
 {
 	cow_buffer--;
 }
-if (state == states.lungeattack)
-{
-	lunge_buffer = 14;
-}
 if (blur_effect > 0)
 {
 	blur_effect--;
@@ -1023,7 +1014,6 @@ if (state != states.grab)
 }
 if (state != states.mach2 && state != states.mach3 && state != states.trickjump && state != states.ratmounttumble && state != states.ratmounttrickjump)
 {
-	ramp = false;
 	ramp_points = false;
 }
 if (state != states.door && state != states.chainsaw && state != states.hit && place_meeting(x, y, obj_boxofpizza))
@@ -1097,10 +1087,6 @@ if (state != states.Sjump)
 {
 	sjumpvsp = -12;
 }
-if (state != states.freefall)
-{
-	freefallvsp = 20;
-}
 if (supercharge > 9 && state != states.backbreaker)
 {
 	if (!supercharged)
@@ -1115,14 +1101,6 @@ if (supercharge > 9 && state != states.backbreaker)
 	}
 	supercharged = true;
 }
-if (!instance_exists(pizzashieldid) && pizzashield == true)
-{
-	with (instance_create(x, y, obj_pizzashield))
-	{
-		playerid = other.object_index;
-		other.pizzashieldid = id;
-	}
-}
 if (visible == false && state == states.comingoutdoor)
 {
 	coopdelay++;
@@ -1132,11 +1110,6 @@ if (visible == false && state == states.comingoutdoor)
 		visible = true;
 		coopdelay = 0;
 	}
-}
-if (state != states.backbreaker)
-{
-	pogospeed = 6;
-	pogospeedprev = false;
 }
 scr_playersounds();
 if (grounded)
@@ -1163,10 +1136,6 @@ else
 {
 	flashflicker = false;
 }
-if (state != states.throwing)
-{
-	kickbomb = false;
-}
 if (pogocharge == 0)
 {
 	pogochargeactive = false;
@@ -1184,13 +1153,6 @@ if (flashflicker == true)
 if (state != states.mach3 && state != states.grabbed)
 {
 	fightball = false;
-}
-if (state != states.grabbed && state != states.hurt)
-{
-	if (grounded && state != states.grabbing)
-	{
-		suplexmove = false;
-	}
 }
 if (state != states.freefall && state != states.superslam && (state != states.chainsaw || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && (state != states.backbreaker || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && !instance_exists(obj_secretportalstart))
 {
@@ -1242,10 +1204,6 @@ if (anger > 0)
 if (sprite_index == spr_winding && state != states.normal)
 {
 	windingAnim = 0;
-}
-if (state != states.grab)
-{
-	swingdingbuffer = 0;
 }
 if (state == states.antigrav || state == states.rocket || state == states.rocketslide)
 {
@@ -1456,14 +1414,6 @@ if (state == states.chainsaw || state == states.backbreaker)
 {
 	instakillmove = false;
 }
-if ((state == states.ratmountbounce || state == states.noisecrusher) && vsp < 0)
-{
-	stunmove = true;
-}
-else
-{
-	stunmove = false;
-}
 if (flash == true && alarm[0] <= 0)
 {
 	alarm[0] = 0.15 * room_speed;
@@ -1471,10 +1421,6 @@ if (flash == true && alarm[0] <= 0)
 if (state != states.ladder)
 {
 	hooked = false;
-}
-if (state != states.mach3 && state != states.machslide)
-{
-	autodash = false;
 }
 if ((state != states.jump && state != states.crouchjump && state != states.slap) || vsp < 0)
 {
@@ -1491,7 +1437,6 @@ if (state != states.normal && state != states.machslide)
 if (state != states.normal && state != states.ratmount)
 {
 	idle = 0;
-	dashdust = false;
 }
 if (state != states.mach1 && state != states.cheesepepjump && state != states.jump && state != states.hookshot && state != states.handstandjump && state != states.normal && state != states.mach2 && state != states.mach3 && state != states.freefallprep && state != states.knightpep && state != states.shotgun && state != states.knightpepslopes)
 {

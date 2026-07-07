@@ -63,8 +63,6 @@ if (ds_queue_size(followqueue) > (LAG_STEPS * 2))
 	}
 	mask_index = ds_queue_dequeue(followqueue);
 	image_xscale = ds_queue_dequeue(followqueue);
-	lastplayerposx = _x;
-	lastplayerposy = _y;
 }
 image_xscale = obj_player.xscale * obj_player.scale_xs;
 image_yscale = obj_player.yscale * obj_player.scale_ys;

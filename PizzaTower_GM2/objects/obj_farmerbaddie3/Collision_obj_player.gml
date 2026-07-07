@@ -5,9 +5,6 @@ if (state == states.charge)
 		if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
 		{
 			GamepadSetVibration(0, 1, 1, 0.85);
-			if (state != states.fireass)
-			{
-			}
 			state = states.fireass;
 			vsp = -25;
 			sprite_index = spr_fireass;

@@ -14,7 +14,6 @@ if (!hub)
 	alarm[0] = 2;
 	obj_player.state = states.titlescreen;
 	obj_player.targetDoor = "A";
-global.cowboyhat = false;
 	global.coop = false;
 }
 else
@@ -34,7 +33,6 @@ global.leveltorestart = noone;
 		fadealpha = 1;
 		fadein = false;
 		reset = true;
-		pos_player = false;
 		obj_player.targetRoom = obj_player.backtohubroom;
 		room_goto(obj_player.backtohubroom);
 	}

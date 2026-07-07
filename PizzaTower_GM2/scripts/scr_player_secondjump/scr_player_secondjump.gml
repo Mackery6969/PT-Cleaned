@@ -50,7 +50,6 @@ function scr_player_secondjump()
 		jumpstop = false;
 		image_index = 0;
 		create_particle(x, y, particletypes.landcloud, 0);
-		freefallstart = 0;
 	}
 	if (grounded && vsp > 0)
 	{
@@ -64,7 +63,6 @@ function scr_player_secondjump()
 		jumpstop = false;
 		image_index = 0;
 		instance_create(x, y, obj_landcloud);
-		freefallstart = 0;
 	}
 	if (key_jump)
 	{

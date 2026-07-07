@@ -13,11 +13,9 @@ function scr_player_machfreefall()
 	machslideAnim = true;
 	move2 = key_right2 + key_left2;
 	move = key_right + key_left;
-	crouchslideAnim = true;
 	sprite_index = spr_player_machfreefall;
 	if (scr_solid(x + 1, y) && image_xscale == 1)
 	{
-		machhitAnim = false;
 		state = states.bump;
 		hsp = -2.5;
 		vsp = -2.5;
@@ -27,7 +25,6 @@ function scr_player_machfreefall()
 	}
 	else if (scr_solid(x - 1, y) && image_xscale == -1)
 	{
-		machhitAnim = false;
 		state = states.bump;
 		hsp = 2.5;
 		vsp = -2.5;
@@ -51,7 +48,6 @@ function scr_player_machfreefall()
 			image_xscale = obj_player.image_xscale;
 		}
 		create_particle(x, y, particletypes.landcloud, 0);
-		freefallstart = 0;
 		with (obj_baddie)
 		{
 			if (shakestun && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0)
@@ -75,7 +71,6 @@ function scr_player_machfreefall()
 		jumpstop = false;
 		image_index = 0;
 		create_particle(x, y, particletypes.landcloud, 0);
-		freefallstart = 0;
 	}
 	image_speed = 0.5;
 }

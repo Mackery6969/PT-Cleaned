@@ -10,7 +10,6 @@ with (other)
 		global.leveltosave = other.level;
 		global.leveltorestart = other.targetRoom;
 		global.levelattempts = 0;
-		global.hub_bgsprite = other.bgsprite;
 		backtohubstartx = x;
 		backtohubstarty = y;
 		backtohubroom = room;
@@ -42,7 +41,6 @@ if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player
 				global.minutes = 9;
 			}
 		}
-		obj_music.fadeoff = 0;
 		targetDoor = other.targetDoor;
 		targetRoom = other.targetRoom;
 		if (targetRoom == tower_finalhallway)

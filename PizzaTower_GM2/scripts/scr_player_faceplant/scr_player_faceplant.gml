@@ -26,7 +26,6 @@ function scr_player_faceplant()
 			{
 				stun = true;
 				alarm[0] = 200;
-				ministun = false;
 				vsp = -5;
 				hsp = 0;
 			}
@@ -55,7 +54,6 @@ function scr_player_faceplant()
 	{
 		grav = 0.5;
 		sprite_index = spr_crouchslip;
-		machhitAnim = false;
 		state = states.crouchslide;
 		movespeed = 15;
 	}

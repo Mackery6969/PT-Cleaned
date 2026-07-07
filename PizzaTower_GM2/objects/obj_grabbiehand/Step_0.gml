@@ -111,7 +111,6 @@ switch (state)
 					if (state == states.mach3)
 					{
 						sprite_index = spr_mach4;
-						machhitAnim = false;
 					}
 				}
 			}

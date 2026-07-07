@@ -9,8 +9,6 @@ function following_character_init()
 	space = 0;
 	maxspace = 1;
 	spaceaccel = 0.2;
-	lastplayerposx = obj_player.x;
-	lastplayerposy = obj_player.y;
 	hsp = 0;
 	vsp = 0;
 	hsp_carry = 0;

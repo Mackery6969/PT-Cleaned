@@ -46,7 +46,6 @@ switch (state)
 					destroy = false;
 					with (obj_monstertrackingrooms)
 					{
-						sound_buffer = 0;
 						monster_pos[other.monsterid].x = last_puppet_pos.x;
 						monster_pos[other.monsterid].y = last_puppet_pos.y;
 					}
@@ -76,10 +75,6 @@ switch (state)
 			image_xscale = sign(playerid.x - x);
 		}
 		break;
-}
-if (state != states.monsteridle)
-{
-	inactivebuffer = 900;
 }
 if (state == states.monsterchase)
 {

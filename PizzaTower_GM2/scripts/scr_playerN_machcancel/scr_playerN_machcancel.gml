@@ -163,12 +163,6 @@ function scr_playerN_machcancel()
 	}
 	if (!ispeppino && key_up && input_buffer_jump > 0 && !scr_check_groundpound2())
 	{
-		freefallstart = 0;
-		railmomentum = false;
-		if (place_meeting(x, y + 1, obj_railparent))
-		{
-			railmomentum = true;
-		}
 		scr_player_do_noisecrusher();
 	}
 	if (grounded && !key_attack && vsp >= 0 && sprite_index == spr_playerN_wallbounce)

@@ -26,8 +26,6 @@ function scr_player_freefall()
 					image_xscale = other.xscale;
 					playerid = other.id;
 					maxmovespeed = 6;
-					vertical = true;
-					fadeoutstate = states.freefall;
 				}
 			}
 			if (piledrivereffect > 0)
@@ -188,7 +186,6 @@ function scr_player_freefall()
 				bounce = false;
 			}
 			create_particle(x, y + 3, particletypes.groundpoundeffect, 0);
-			freefallstart = 0;
 		}
 	}
 	image_speed = 0.35;

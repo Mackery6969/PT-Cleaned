@@ -22,7 +22,6 @@ function state_player_jump()
 		input_finisher_buffer = 60;
 		input_attack_buffer = 0;
 		input_up_buffer = 0;
-		input_down_buffefr = 0;
 	}
 	if (dir != xscale)
 	{
@@ -121,12 +120,6 @@ function state_player_jump()
 		state = states.jump;
 		jumpAnim = true;
 		jumpstop = false;
-		freefallstart = 0;
-		railmomentum = false;
-		if (place_meeting(x, y + 1, obj_railparent))
-		{
-			railmomentum = true;
-		}
 		if (sprite_index != spr_shotgunshoot)
 		{
 			sprite_index = spr_jump;
@@ -145,12 +138,6 @@ function state_player_jump()
 	}
 	if (!can_jump && !ispeppino && key_up && noisedoublejump && input_buffer_jump > 0 && !key_down && !key_attack)
 	{
-		freefallstart = 0;
-		railmomentum = false;
-		if (place_meeting(x, y + 1, obj_railparent))
-		{
-			railmomentum = true;
-		}
 		scr_player_do_noisecrusher();
 	}
 	if (grounded && vsp > 0)
@@ -178,7 +165,6 @@ function state_player_jump()
 			state = states.normal;
 			jumpAnim = true;
 			jumpstop = false;
-			freefallstart = 0;
 			create_particle(x, y, particletypes.landcloud, 0);
 		}
 	}
@@ -319,7 +305,6 @@ function state_player_jump()
 		create_particle(x, y, particletypes.jumpdust, 0);
 		image_index = 0;
 		sprite_index = spr_suplexdashjumpstart;
-		suplexmove = true;
 		fmod_event_instance_play(suplexdashsnd);
 		state = states.handstandjump;
 		movespeed = 5;
@@ -380,7 +365,6 @@ function state_player_jump()
 				var _playerid = 1;
 				with (parry_inst)
 				{
-					player_id = _playerid;
 					image_xscale = other.xscale;
 				}
 			}

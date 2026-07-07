@@ -16,7 +16,6 @@ function scr_player_tacklecharge()
 	move2 = key_right2 + key_left2;
 	move = key_right + key_left;
 	movespeed = 10;
-	crouchslideAnim = true;
 	if (movespeed < 24 && move == xscale)
 	{
 		movespeed += 0.05;
@@ -74,7 +73,6 @@ function scr_player_tacklecharge()
 	if (key_down && grounded)
 	{
 		sprite_index = spr_crouchslip;
-		machhitAnim = false;
 		state = states.crouchslide;
 	}
 	if (!key_attack && move != xscale && grounded)

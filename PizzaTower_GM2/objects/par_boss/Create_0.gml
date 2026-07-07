@@ -14,7 +14,6 @@ team = 1;
 important = true;
 mach3destroy = false;
 jugglecount = 0;
-max_hp = 400;
 hp = 0;
 invincible = false;
 inv_timer = -1;
@@ -30,24 +29,18 @@ hitX = x;
 hitY = y;
 hithsp = 0;
 hitvsp = 0;
-hitstate = states.normal;
 stunfallspr = sprite_index;
 walkspr = sprite_index;
 spr_dead = sprite_index;
-fallspr = sprite_index;
-bumpspr = sprite_index;
 parryspr = sprite_index;
-defeatplayerspr = sprite_index;
 lastplayerid = obj_player.id;
 attacking = false;
 destroyed = false;
-playerdestroyed = false;
 colliding = true;
 
 function SUPER_player_destroy(_player)
 {
 	depth = _player.depth;
-	playerdestroyed = true;
 	with (_player)
 	{
 		camera_zoom(1, 0.1);
@@ -58,7 +51,6 @@ function SUPER_player_destroy(_player)
 		other.x = other.hitX;
 		other.y = other.hitY;
 		other.state = states.chainsaw;
-		other.hitstate = states.arenaround;
 		other.hitvsp = -4;
 		other.hithsp = -other.image_xscale * 8;
 		hitLag = lag;
@@ -87,7 +79,6 @@ function SUPER_boss_destroy(_boss)
 	destroyed = true;
 	depth = _boss.depth;
 	global.attackstyle = 0;
-	global.savedattackstyle = 0;
 	with (_boss)
 	{
 		camera_zoom(1, 0.1);

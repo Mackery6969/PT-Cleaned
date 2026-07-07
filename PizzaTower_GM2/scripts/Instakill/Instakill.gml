@@ -38,7 +38,6 @@ function Instakill()
 		sprite_index = spr_player_chainsawhit;
 	}
 	other.baddieID.invtime = 25;
-	suplexmove = true;
 	other.baddieID.grabbedby = 1;
 
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
@@ -68,7 +67,6 @@ function Instakill()
 	if (!grounded && state != states.ratmountgroundpound && state != states.ratmountpunch && state != states.ratmountpunch && state != states.boxxedpepspin && state != states.freefall && (key_jump2 || input_buffer_jump > 0 || state == states.jetpackjump))
 	{
 		input_buffer_jump = 0;
-		suplexmove = false;
 		vsp = -11;
 	}
 	if (state == states.boxxedpepspin)

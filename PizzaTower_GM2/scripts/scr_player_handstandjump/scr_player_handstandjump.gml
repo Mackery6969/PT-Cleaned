@@ -130,7 +130,6 @@ function scr_player_handstandjump()
 		grav = 0.5;
 		sprite_index = spr_crouchslip;
 		image_index = 0;
-		machhitAnim = false;
 		state = states.tumble;
 		fmod_event_instance_play(snd_crouchslide);
 	}

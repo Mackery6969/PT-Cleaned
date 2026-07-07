@@ -107,7 +107,6 @@ if (state == states.stun)
 	if (thrown)
 	{
 		formed = false;
-		deformedtimer = 480;
 	}
 }
 if (flashbuffer > 0)
@@ -155,7 +154,6 @@ if (prevhp != elitehit)
 		}
 		deformed_cooldown = attack.cooldown;
 		deformed_timer = timer;
-		deformed_dir = 1;
 		global.playerhit++;
 		boss_do_pizzaheadKO();
 		if (phase == 2)
@@ -225,7 +223,6 @@ if (state == states.stun)
 	if (grounded && vsp > 0 && savedthrown)
 	{
 		stunned = 1;
-		idle_timer = 1;
 		ammo = 6;
 	}
 }

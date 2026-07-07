@@ -20,7 +20,6 @@ function scr_player_mach2()
 	hsp = (xscale * movespeed) + (railmovespeed * raildir);
 	move2 = key_right2 + key_left2;
 	move = key_right + key_left;
-	crouchslideAnim = true;
 	if (!key_jump2 && jumpstop == false && vsp < 0.5)
 	{
 		vsp /= 20;
@@ -121,7 +120,6 @@ function scr_player_mach2()
 		}
 		if (abs(hsp) >= maxmovespeed && skateboarding == false && sprite_index != spr_suplexdash)
 		{
-			machhitAnim = false;
 			state = states.mach3;
 			flash = true;
 			if (sprite_index != spr_rollgetup)
@@ -300,7 +298,6 @@ function scr_player_mach2()
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
-		suplexmove = true;
 		fmod_event_instance_play(suplexdashsnd);
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
 		create_particle(x, y, particletypes.jumpdust, 0);

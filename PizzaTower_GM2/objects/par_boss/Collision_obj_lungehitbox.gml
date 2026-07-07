@@ -15,7 +15,6 @@ if (!attacking && !invincible && lungehurt)
 			}
 			hit_connected = true;
 			lunge_hits++;
-			lunge_hit_buffer = 100;
 			tauntstoredvsp = 0;
 			tauntstoredmovespeed = 4;
 		}

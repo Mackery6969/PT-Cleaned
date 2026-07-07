@@ -35,9 +35,6 @@ function vigilante_end_attack(_phase, _hits)
 			break;
 		}
 	}
-	if (!found)
-	{
-	}
 }
 
 function scr_vigilante_init_sounds()

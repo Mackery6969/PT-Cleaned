@@ -34,5 +34,4 @@ with (instance_create(0, 0, obj_backtohub_fadeout))
 {
 	fadealpha = 1;
 	fadein = false;
-	pos_player = true;
 }

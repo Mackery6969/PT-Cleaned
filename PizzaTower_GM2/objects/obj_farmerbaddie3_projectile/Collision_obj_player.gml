@@ -3,9 +3,6 @@ with (other)
 	if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer && state != states.backbreaker)
 	{
 		GamepadSetVibration(0, 1, 1, 0.85);
-		if (state != states.fireass)
-		{
-		}
 		hurted = false;
 		state = states.fireass;
 		vsp = -25;

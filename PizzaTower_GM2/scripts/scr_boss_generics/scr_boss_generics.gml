@@ -308,7 +308,6 @@ function scr_boss_do_hurt_phase2(_player, _invulnerability = 100)
 		hitX = x;
 		hitY = y;
 	}
-	pulse = 0;
 	state = states.phase1hurt;
 	buildup = _invulnerability;
 	buildup_playerID = _player;

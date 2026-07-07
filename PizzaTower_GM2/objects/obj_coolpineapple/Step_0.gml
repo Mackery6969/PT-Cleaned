@@ -151,7 +151,6 @@ switch (state)
 			grav = taunt_storedgrav;
 			state = taunt_storedstate;
 			hsp = taunt_storedhsp;
-			cooldown_count = cooldown_max;
 			movespeed = taunt_storedmovespeed;
 		}
 		break;

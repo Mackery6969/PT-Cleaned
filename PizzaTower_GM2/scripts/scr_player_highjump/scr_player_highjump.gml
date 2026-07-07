@@ -51,7 +51,6 @@ function scr_player_highjump()
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
-		freefallstart = 0;
 	}
 	if (can_jump && input_buffer_jump > 0 && !key_attack && !key_down && vsp > 0)
 	{
@@ -61,7 +60,6 @@ function scr_player_highjump()
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
-		freefallstart = 0;
 	}
 	if (jumpAnim == true)
 	{

@@ -39,7 +39,6 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
 				hit_connected = true;
 				lunge_hits++;
 				finisher_hits++;
-				lunge_hit_buffer = 100;
 				if (state == states.handstandjump)
 				{
 					state = states.lungeattack;

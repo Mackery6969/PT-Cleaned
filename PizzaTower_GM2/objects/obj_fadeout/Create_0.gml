@@ -8,7 +8,6 @@ gamestart = false;
 xx = 0;
 yy = 0;
 fadein = false;
-gotonoplayer = 0;
 finalhallway = false;
 group_arr = noone;
 offload_arr = noone;

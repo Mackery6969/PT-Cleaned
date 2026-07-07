@@ -2,14 +2,11 @@ pause = false;
 i = false;
 color = make_color_rgb(121, 103, 151);
 scr_init_input();
-player1 = noone;
-player2 = noone;
 selected = 0;
 stickpressed = false;
 image_speed = 0;
 depth = -500;
 backbuffer = 2;
-savedmusicmuffle = 0;
 offload_textures = false;
 offload_arr = noone;
 pause_menu = ["pause_resume", "pause_options", "pause_restart", "pause_exit"];
@@ -92,7 +89,6 @@ var exit_function = function()
 		}
 		hub = true;
 		arr = ["hubgroup"];
-		global.stargate = false;
 		global.leveltorestart = noone;
 	}
 	else
@@ -149,7 +145,6 @@ savedkidspartypause = false;
 fade = 0;
 fadein = false;
 screensprite = noone;
-screensize = 0;
 guisprite = noone;
 instance_list = ds_list_create();
 sound_list = ds_list_create();

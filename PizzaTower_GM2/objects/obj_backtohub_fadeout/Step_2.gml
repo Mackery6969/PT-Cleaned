@@ -10,7 +10,6 @@ if (fadein)
 		else
 		{
 			fadein = false;
-			pos_player = false;
 			obj_player.targetRoom = obj_player.backtohubroom;
 			room_goto(obj_player.backtohubroom);
 		}

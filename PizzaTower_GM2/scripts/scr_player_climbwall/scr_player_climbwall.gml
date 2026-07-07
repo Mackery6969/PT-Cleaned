@@ -5,7 +5,6 @@ function scr_player_climbwall()
 		windingAnim++;
 	}
 	move = key_left + key_right;
-	suplexmove = false;
 	vsp = -wallspeed;
 	if (wallspeed < 20)
 	{
@@ -29,7 +28,6 @@ function scr_player_climbwall()
 			vsp = 0;
 		}
 	}
-	crouchslideAnim = true;
 	if (vsp < -5)
 	{
 		sprite_index = spr_machclimbwall;
@@ -153,7 +151,6 @@ function scr_player_climbwall()
 			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 			image_index = 0;
 			state = states.Sjumpland;
-			machhitAnim = false;
 		}
 		else if (!key_jump)
 		{

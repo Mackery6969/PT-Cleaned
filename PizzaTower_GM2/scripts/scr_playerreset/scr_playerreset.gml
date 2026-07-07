@@ -125,13 +125,8 @@ function scr_playerreset(_stop_music = true)
 		}
 		with (obj_tv)
 		{
-			shownranka = false;
-			shownrankb = false;
-			shownrankc = false;
 			ds_list_clear(tvprompts_list);
-			prompt = "";
 			bubblespr = noone;
-			promptx = promptxstart;
 			tv_bg_index = 0;
 			expressionsprite = noone;
 			if (!global.levelreset)
@@ -146,58 +141,42 @@ function scr_playerreset(_stop_music = true)
 		{
 			ds_list_clear(secrettriggers);
 			ds_list_clear(touchall);
-			touchrequirement = noone;
 			init = false;
 		}
 		ds_list_clear(global.baddieroom);
 		ds_list_clear(global.saveroom);
 		ds_list_clear(global.escaperoom);
 		global.combodropped = false;
-		global.timeractive = false;
 		global.wave = 0;
-		global.maxwave = 0;
 		global.secretfound = 0;
 		global.hurtcounter = 0;
 		global.snickchallenge = false;
-		global.giantkey = false;
 		global.pizzadelivery = false;
 		global.failcutscene = false;
 		global.pizzasdelivered = 0;
 		global.spaceblockswitch = true;
 		global.fill = 500;
-		global.chunk = 5;
 		global.hasfarmer = array_create(3, false);
-		global.checkpoint_room = noone;
-		global.checkpoint_door = "A";
 		global.hp = 0;
 		global.kungfu = false;
 		global.graffiticount = 0;
 		global.gerome = false;
 		global.stylelock = false;
-		global.ammorefill = 0;
-		global.ammoalt = 1;
 		global.mort = false;
 		global.style = 0;
 		global.spaceblockswitch = true;
 		global.baddiespeed = 1;
-		global.bullet = 3;
-		global.fuel = 3;
 		global.horse = false;
 		global.golfhit = 0;
 		global.railspeed = global.maxrailspeed;
-		global.temperature = 0;
 		if (room != freezer_1)
 		{
 			global.use_temperature = false;
 		}
-		global.heatmeter_count = 0;
-		global.monsterspeed = 0;
 		global.timedgate = false;
 		global.timedgatetimer = false;
 		global.timedgateid = noone;
 		global.timedgatetime = 0;
-		global.taseconds = 0;
-		global.taminutes = 0;
 		global.key_inv = false;
 		global.pepanimatronic = false;
 		global.shroomfollow = false;
@@ -218,14 +197,12 @@ function scr_playerreset(_stop_music = true)
 		global.combo = 0;
 		global.combotime = 0;
 		global.heattime = 0;
-		global.pizzacoin = 0;
 		global.toppintotal = 1;
 		global.hit = 0;
 		global.playerhealth = 100;
 		global.panic = false;
 		with (obj_music)
 		{
-			arena = false;
 		}
 		if (instance_exists(obj_endlevelfade))
 		{
@@ -270,7 +247,6 @@ function scr_playerreset(_stop_music = true)
 		obj_player.supercharged = false;
 		pistol = false;
 		obj_player.spotlight = true;
-		obj_music.fadeoff = 0;
 		audio_stop_all();
 		global.seconds = 59;
 		global.minutes = 1;
@@ -284,7 +260,6 @@ function scr_playerreset(_stop_music = true)
 		{
 			flash = false;
 			pistolcharge = 0;
-			pistolchargedelay = 5;
 			pistolchargeshooting = false;
 			pistolchargeshot = 8;
 			ds_list_clear(hitlist);
@@ -294,7 +269,6 @@ function scr_playerreset(_stop_music = true)
 			boxxeddash = false;
 			supercharged = false;
 			pizzapepper = 0;
-			pizzashield = false;
 			c = c_black;
 			heavy = false;
 			image_index = 0;
@@ -317,45 +291,31 @@ function scr_playerreset(_stop_music = true)
 			parry = false;
 			parry_inst = noone;
 			parry_count = 0;
-			is_firing = false;
-			pogospeed = 6;
 			pogochargeactive = false;
 			pogocharge = 100;
 			x = backtohubstartx;
 			y = backtohubstarty;
 			roomstartx = x;
 			roomstarty = y;
-			backupweapon = false;
 			shotgunAnim = false;
 			box = false;
 			steppy = false;
-			movespeedmax = 5;
 			jumpstop = false;
-			start_running = true;
 			obj_camera.ded = false;
 			visible = true;
 			turn = false;
 			jumpAnim = true;
-			dashAnim = true;
 			landAnim = false;
 			machslideAnim = false;
-			moveAnim = true;
-			stopAnim = true;
-			crouchslideAnim = true;
 			crouchAnim = true;
-			machhitAnim = false;
 			stompAnim = false;
 			inv_frames = false;
-			turning = false;
-			hurtbounce = 0;
 			hurted = false;
-			autodash = false;
 			mach2 = 0;
 			input_buffer_jump = 0;
 			input_buffer_secondjump = 8;
 			input_buffer_highjump = 8;
 			flash = false;
-			in_water = false;
 			key_particles = false;
 			barrel = false;
 			bounce = false;
@@ -374,24 +334,15 @@ function scr_playerreset(_stop_music = true)
 			ladderbuffer = 0;
 			chainsaw = 50;
 			toomuchalarm1 = 0;
-			toomuchalarm2 = 0;
-			dashdust = false;
-			throwforce = 0;
-			hurtsound = false;
 			idleanim = 0;
 			momemtum = false;
 			cutscene = false;
 			grabbing = false;
 			dir = xscale;
-			goingdownslope = false;
-			goingupslope = false;
 			fallinganimation = 0;
 			bombpeptimer = 100;
 			slapbuffer = 0;
 			slaphand = 1;
-			suplexmove = false;
-			suplexhavetomash = 0;
-			timeuntilhpback = 300;
 			anger = 0;
 			angry = false;
 			skateboarding = false;
@@ -399,7 +350,6 @@ function scr_playerreset(_stop_music = true)
 			isgustavo = false;
 			noisecrusher = false;
 			tauntstoredisgustavo = false;
-			controllableSjump = false;
 			noisebossscream = false;
 		}
 	}

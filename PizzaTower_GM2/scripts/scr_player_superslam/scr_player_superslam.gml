@@ -41,8 +41,6 @@ function scr_player_superslam()
 				image_xscale = other.xscale;
 				playerid = other.id;
 				maxmovespeed = 6;
-				vertical = true;
-				fadeoutstate = states.superslam;
 			}
 		}
 	}
@@ -93,7 +91,6 @@ function scr_player_superslam()
 			xscale = obj_player.xscale;
 		}
 		create_particle(x, y, particletypes.landcloud, 0);
-		freefallstart = 0;
 		if (freefallsmash >= 10)
 		{
 			with (obj_baddie)
@@ -121,12 +118,8 @@ function scr_player_superslam()
 		}
 	}
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
 	machslideAnim = true;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = true;
 	if (sprite_index == spr_piledriverland && ANIMATION_END)
 	{

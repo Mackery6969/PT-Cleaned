@@ -124,7 +124,6 @@ function scr_player_boots()
 		image_index = 0;
 		grav = 0.5;
 		sprite_index = spr_playerV_divekickstart;
-		machhitAnim = false;
 		state = states.crouchslide;
 	}
 	if (movespeed == 12 && !instance_exists(speedlineseffectid))

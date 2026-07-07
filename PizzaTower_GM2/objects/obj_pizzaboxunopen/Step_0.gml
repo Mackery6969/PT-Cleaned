@@ -33,10 +33,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
-		if (global.toppintotal == 5)
-		{
-			obj_tv.message = "YOU HAVE ALL TOPPINS!";
-		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
 		global.toppintotal += 1;
@@ -71,10 +67,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		if (global.toppintotal < 5)
 		{
 			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
-		}
-		if (global.toppintotal == 5)
-		{
-			obj_tv.message = "YOU HAVE ALL TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -111,10 +103,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
-		if (global.toppintotal == 5)
-		{
-			obj_tv.message = "YOU HAVE ALL TOPPINS!";
-		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
 		global.toppintotal += 1;
@@ -149,10 +137,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		if (global.toppintotal < 5)
 		{
 			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
-		}
-		if (global.toppintotal == 5)
-		{
-			obj_tv.message = "YOU HAVE ALL TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -190,10 +174,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		if (global.toppintotal < 5)
 		{
 			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
-		}
-		if (global.toppintotal == 5)
-		{
-			obj_tv.message = "YOU HAVE ALL TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;

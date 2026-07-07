@@ -182,13 +182,8 @@ function scr_player_bombpepup()
 	hsp = 0;
 	mach2 = 0;
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = false;
-	machhitAnim = false;
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles))
 	{
 		pizzapepper = 0;
@@ -216,7 +211,6 @@ function scr_player_bombpepup()
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		image_index = 0;
 		state = states.Sjumpland;
-		machhitAnim = false;
 	}
 	if (bombup_dir == 1 && scr_solid(x, y + 1) && !place_meeting(x, y + 1, obj_destructibles))
 	{
@@ -256,13 +250,8 @@ function scr_player_bombpepside()
 		movespeed += 0.5;
 	}
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = false;
-	machhitAnim = false;
 	with (instance_place(x + hsp, y, obj_metalblock))
 	{
 		instance_destroy();
@@ -284,7 +273,6 @@ function scr_player_bombpepside()
 			{
 				stun = true;
 				alarm[0] = 200;
-				ministun = false;
 				vsp = -5;
 				hsp = 0;
 			}

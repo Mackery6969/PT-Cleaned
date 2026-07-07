@@ -30,12 +30,8 @@ function scr_player_slam()
 		movespeed = 0;
 	}
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
 	machslideAnim = true;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = true;
 	if (floor(image_index) == 8)
 	{

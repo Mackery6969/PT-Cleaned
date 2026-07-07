@@ -98,9 +98,6 @@ if (activated == true)
 		var ii = floor(image_index);
 		hsp = 0;
 		vsp = 0;
-		if (!shot)
-		{
-		}
 		if (ii == (image_number - 1))
 		{
 			state = states.walk;

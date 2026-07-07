@@ -41,7 +41,6 @@ with (other)
 				image_index = 0;
 			}
 			scr_fmod_soundeffect(snd_dashpad, x, y);
-			machhitAnim = false;
 			state = states.mach3;
 			xscale = sign(other.image_xscale);
 			dir = xscale;

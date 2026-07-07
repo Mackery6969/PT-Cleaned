@@ -7,7 +7,6 @@ function scr_player_cheeseballclimbwall()
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		image_index = 0;
 		movespeed = 0;
-		cheesepeptimer = 2;
 		state = states.cheesepepjump;
 		sprite_index = spr_cheesepepfall;
 		repeat (8)

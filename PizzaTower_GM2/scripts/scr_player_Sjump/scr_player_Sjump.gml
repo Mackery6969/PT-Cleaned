@@ -4,13 +4,8 @@ function scr_player_Sjump()
 	hsp = 0;
 	mach2 = 0;
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = false;
-	machhitAnim = false;
 	if (sprite_index == spr_superjump)
 	{
 		if (steppybuffer > 0)
@@ -68,7 +63,6 @@ function scr_player_Sjump()
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		image_index = 0;
 		state = states.Sjumpland;
-		machhitAnim = false;
 	}
 	else if ((key_attack2 || input_buffer_slap > 0) && sprite_index != spr_superspringplayer && sprite_index != spr_player_Sjumpcancelstart)
 	{

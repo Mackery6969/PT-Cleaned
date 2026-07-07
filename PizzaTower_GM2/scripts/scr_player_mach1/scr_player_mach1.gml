@@ -2,8 +2,6 @@ function scr_player_mach1()
 {
 	image_speed = 0.5;
 	landAnim = false;
-	machhitAnim = false;
-	crouchslideAnim = true;
 	dir = xscale;
 	move = key_left + key_right;
 	if (scr_solid(x + xscale, y) && (!place_meeting(x + xscale, y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))

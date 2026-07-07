@@ -1,7 +1,6 @@
 image_speed = 0.35;
 depth = 0;
 state = 0;
-pointsid = noone;
 minus = 10;
 value = minus * 10;
 xoffset = 0;

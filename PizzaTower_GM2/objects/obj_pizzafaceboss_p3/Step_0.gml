@@ -97,7 +97,6 @@ if (state == states.stun)
 	if (grounded && vsp > 0 && savedthrown)
 	{
 		stunned = 1;
-		idle_timer = 1;
 		ammo = 6;
 	}
 }

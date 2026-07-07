@@ -1,14 +1,8 @@
 function scr_player_ladder()
 {
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = false;
-	machhitAnim = false;
-	turning = false;
 	jumpstop = false;
 	movespeed = 0;
 	hsp = 0;
@@ -41,13 +35,8 @@ function scr_player_ladder()
 	}
 	mach2 = 0;
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = true;
-	machhitAnim = false;
 	if (!place_meeting(x, y, obj_ladder) && !place_meeting(x, y, obj_stairs))
 	{
 		landAnim = false;

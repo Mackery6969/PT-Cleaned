@@ -129,7 +129,6 @@ if (state == states.stun)
 	if (grounded && vsp > 0 && savedthrown)
 	{
 		stunned = 1;
-		idle_timer = 1;
 		if (wastedhits >= 10 && phase == 2 && !pizzahead)
 		{
 			instance_destroy(obj_pepper_marbleblock);

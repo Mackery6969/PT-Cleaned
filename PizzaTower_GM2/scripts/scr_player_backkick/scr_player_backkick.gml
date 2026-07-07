@@ -131,11 +131,7 @@ function scr_player_backkick()
 		}
 	}
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = true;
 	if (ANIMATION_END)
 	{

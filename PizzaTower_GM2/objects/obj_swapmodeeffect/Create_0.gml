@@ -13,7 +13,6 @@ obj_player.movespeed = 0;
 taunt = false;
 dest_x = obj_player.x - camera_get_view_x(view_camera[0]);
 dest_y = obj_player.y - camera_get_view_y(view_camera[0]);
-savedxscale = obj_player.xscale;
 spr_palette = obj_player.spr_palette;
 paletteselect = obj_player.player_paletteselect[!obj_player.player_paletteindex];
 patterntexture = obj_player.player_patterntexture[!obj_player.player_paletteindex];

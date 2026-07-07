@@ -358,7 +358,6 @@ function scr_pizzaface_p2_fishing()
 	hsp = 0;
 	if (instance_exists(obj_pizzaheadswordstone) && abs(x - obj_pizzaheadswordstone.x) <= 120)
 	{
-		leveldown = false;
 		state = states.pullinglevel;
 		sprite_index = spr_pizzahead_pullinglevel2;
 		image_index = 0;
@@ -379,10 +378,6 @@ function scr_pizzaface_p2_fishing()
 	else if (ANIMATION_END)
 	{
 		saveddir = -image_xscale;
-		if (throwsword && lastattack != pizzafacep2_attacks.pullinglevel)
-		{
-			leveldown = true;
-		}
 		if (miniguncount > 0)
 		{
 			brick = false;
@@ -612,7 +607,6 @@ function boss_pizzahead_pullinglevel()
 			state = states.walk;
 			image_xscale *= -1;
 			idle_buffer = 0;
-			leveldown = false;
 			throwsword = false;
 			instance_destroy(obj_pizzaheadswordstone);
 		}

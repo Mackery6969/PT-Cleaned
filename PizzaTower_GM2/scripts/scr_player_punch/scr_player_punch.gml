@@ -49,7 +49,6 @@ function scr_player_punch()
 			{
 				image_xscale = other.xscale;
 				playerid = other.id;
-				vertical = true;
 			}
 		}
 	}

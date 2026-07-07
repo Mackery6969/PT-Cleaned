@@ -202,7 +202,6 @@ function scr_player_jetpackjump()
 		image_index = 0;
 		sprite_index = spr_suplexdashjumpstart;
 		flash = true;
-		suplexmove = true;
 		fmod_event_instance_play(suplexdashsnd);
 		state = states.handstandjump;
 		movespeed = 5;

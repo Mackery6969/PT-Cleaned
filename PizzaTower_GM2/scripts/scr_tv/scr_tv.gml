@@ -84,14 +84,6 @@ function tv_do_expression(_spr, _reset_palette = false, _make_peppino = false)
 					expressionsprite = n;
 				}
 			}
-			if (_reset_palette)
-			{
-				reset_palette = true;
-			}
-			else
-			{
-				reset_palette = false;
-			}
 		}
 	}
 }

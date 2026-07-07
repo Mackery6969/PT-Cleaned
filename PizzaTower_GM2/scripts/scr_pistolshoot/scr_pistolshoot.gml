@@ -18,7 +18,6 @@ function scr_pistolshoot(_state, _enable_charge = false)
 		machslideAnim = false;
 		landAnim = false;
 		jumpAnim = false;
-		crouchslideAnim = false;
 		crouchAnim = false;
 		stompAnim = false;
 		if (_state == states.mach3 || _state == states.mach2)

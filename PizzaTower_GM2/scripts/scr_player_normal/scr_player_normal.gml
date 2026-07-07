@@ -88,7 +88,6 @@ function state_player_normal()
 		var _railinst = instance_place(x, y + 1, obj_railparent);
 		railmovespeed = _railinst.movespeed;
 		raildir = _railinst.dir;
-		railmomentum = true;
 	}
 	hsp = (move * movespeed) + (railmovespeed * raildir);
 	if (move != 0)
@@ -239,7 +238,6 @@ function state_player_normal()
 			{
 				if (windingAnim < 1800 || angry || global.playerhealth == 1 || shoot)
 				{
-					start_running = true;
 					movespeed = 0;
 					if (shoot)
 					{
@@ -412,11 +410,6 @@ function state_player_normal()
 			state = states.jump;
 			jumpAnim = true;
 			jumpstop = false;
-			if (place_meeting(x, y + 1, obj_railparent))
-			{
-				railmomentum = true;
-			}
-			freefallstart = 0;
 		}
 		if (key_down || (grounded && vsp > 0 && scr_solid(x, y - 3) && scr_solid(x, y)) || place_meeting(x, y, obj_solid))
 		{
@@ -467,7 +460,6 @@ function state_player_normal()
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
-		suplexmove = true;
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
 		create_particle(x, y, particletypes.jumpdust, 0);
 		fmod_event_instance_play(suplexdashsnd);

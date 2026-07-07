@@ -12,7 +12,6 @@ function scr_player_crouch()
 	}
 	movespeed = 4;
 	mask_index = spr_crouchmask;
-	turning = false;
 	if (!grounded && !key_jump)
 	{
 		jumpAnim = false;

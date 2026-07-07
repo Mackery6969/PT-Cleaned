@@ -7,19 +7,7 @@ function scr_hurtplayer(_player)
 	var _swap = false;
 	with (_player)
 	{
-		if (global.failcutscene || instance_exists(obj_endlevelfade))
-		{
-		}
-		else if (state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan)
-		{
-		}
-		else if (global.noisejetpack == true && (ispeppino || noisepizzapepper))
-		{
-		}
-		else if (holycross > 0 || invtime > 0)
-		{
-		}
-		else if (sprite_index == spr_jetpackstart2)
+		if (global.failcutscene || instance_exists(obj_endlevelfade) || state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan || (global.noisejetpack == true && (ispeppino || noisepizzapepper)) || holycross > 0 || invtime > 0 || sprite_index == spr_jetpackstart2)
 		{
 		}
 		else if ((state == states.backbreaker && (parrytimer > 0 || instance_exists(obj_parryhitbox) || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt)) || state == states.chainsaw || state == states.phase1hurt || state == states.actor || instance_exists(obj_bossdark))
@@ -27,55 +15,6 @@ function scr_hurtplayer(_player)
 			if (state == states.backbreaker)
 			{
 				trace(parrytimer);
-			}
-		}
-		else if (global.kungfu)
-		{
-			if (state != states.thrown && state != states.hit && !hurted)
-			{
-				instance_create(x, y, obj_parryeffect);
-				repeat (5)
-				{
-					with (create_debris(x, y, spr_slapstar))
-					{
-						vsp = irandom_range(-6, -11);
-					}
-				}
-				hitLag = 3;
-				hitxscale = (x != other.x) ? sign(other.x - x) : -other.image_xscale;
-				state = states.hit;
-				hitstunned = 50;
-				hurted = true;
-				alarm[7] = hitstunned + 30;
-				hithsp = 12;
-				hitvsp = -5;
-				hitX = x;
-				hitY = y;
-				sprite_index = spr_hurt;
-				if (global.hp > 1)
-				{
-					global.hp--;
-					with (obj_camera)
-					{
-						healthshaketime = 60;
-					}
-				}
-				else
-				{
-					with (obj_music)
-					{
-						arena = false;
-					}
-					global.kungfu = false;
-					if (!instance_exists(obj_fadeout))
-					{
-						with (obj_player)
-						{
-							targetRoom = lastroom;
-						}
-						instance_create(x, y, obj_fadeout);
-					}
-				}
 			}
 		}
 		else if (isgustavo)
@@ -104,69 +43,8 @@ function scr_hurtplayer(_player)
 				_swap = swap_player(true);
 			}
 		}
-		else if (instance_exists(obj_pizzafaceboss) && obj_pizzafaceboss.state == states.transitioncutscene)
+		else if ((instance_exists(obj_pizzafaceboss) && obj_pizzafaceboss.state == states.transitioncutscene) || (instance_exists(obj_pizzafaceboss_p2) && obj_pizzafaceboss_p2.state == states.fall) || state == states.shotgundash || ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.knightpepbump) && cutscene == false) || state == states.ghost || state == states.slipnslide || state == states.trickjump || state == states.chainsaw || state == states.chainsawbump || (state == states.bombpep && hurted == false) || state == states.rideweenie)
 		{
-		}
-		else if (instance_exists(obj_pizzafaceboss_p2) && obj_pizzafaceboss_p2.state == states.fall)
-		{
-		}
-		else if (state == states.shotgundash)
-		{
-		}
-		else if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.knightpepbump) && cutscene == false)
-		{
-		}
-		else if (state == states.ghost)
-		{
-		}
-		else if (state == states.ghostpossess)
-		{
-			if (instance_exists(possessID) && object_get_parent(possessID) == obj_baddie)
-			{
-				state = states.ghost;
-				with (obj_baddie)
-				{
-					if (is_controllable && state == states.ghostpossess && playerid == other.id)
-					{
-						instance_destroy();
-					}
-				}
-			}
-		}
-		else if (state == states.slipnslide)
-		{
-		}
-		else if (state == states.trickjump || state == states.chainsaw)
-		{
-		}
-		else if (state == states.chainsawbump)
-		{
-		}
-		else if (state == states.bombpep && hurted == false)
-		{
-		}
-		else if (state == states.rideweenie)
-		{
-		}
-		else if (state == states.slipnslide)
-		{
-		}
-		else if (pizzashield == true)
-		{
-			pizzashield = false;
-			with (instance_create(x, y, obj_sausageman_dead))
-			{
-				sprite_index = spr_pizzashield_collectible;
-			}
-			hsp = -xscale * 4;
-			vsp = -5;
-			state = states.bump;
-			sprite_index = spr_bump;
-			invhurt_buffer = 120;
-			alarm[8] = 60;
-			alarm[7] = 120;
-			hurted = true;
-			fmod_event_one_shot_3d("event:/sfx/pep/hurt", x, y);
 		}
 		else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (hurted == false || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && cutscene == false)
 		{
@@ -216,10 +94,6 @@ function scr_hurtplayer(_player)
 				}
 				else
 				{
-					with (obj_music)
-					{
-						arena = false;
-					}
 					global.kungfu = false;
 					if (!instance_exists(obj_fadeout))
 					{
@@ -255,7 +129,6 @@ function scr_hurtplayer(_player)
 			}
 			movespeed = 8;
 			vsp = -14;
-			timeuntilhpback = 300;
 			pistolanim = noone;
 			instance_create(x, y, obj_spikehurteffect);
 			state = states.hurt;

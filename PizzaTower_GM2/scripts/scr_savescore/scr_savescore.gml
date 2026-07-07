@@ -7,10 +7,6 @@ function scr_savescore(_level)
 		{
 			global.rank = "p";
 		}
-		if (global.snickchallenge == true)
-		{
-			global.SAGEsnicksrank = true;
-		}
 	}
 	else if ((global.collect + global.collectN) > global.arank)
 	{

@@ -64,7 +64,6 @@ function scr_player_cheeseball()
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		image_index = 0;
 		movespeed = 0;
-		cheesepeptimer = 2;
 		state = states.cheesepepjump;
 		create_transformation_tip(lang_get_value("cheesedtip"), "cheesed");
 		state = states.cheesepepstick;

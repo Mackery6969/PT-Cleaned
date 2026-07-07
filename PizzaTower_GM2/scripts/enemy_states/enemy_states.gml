@@ -185,7 +185,6 @@ function scr_enemy_grabbed()
 		}
 		with (obj_player)
 		{
-			suplexhavetomash = other.hp - 1;
 			move = key_left2 + key_right2;
 			if (!(state == states.grab || state == states.chainsaw || state == states.pummel || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
 			{
@@ -340,12 +339,6 @@ function scr_enemy_grabbed()
 			hitLag = lag;
 			hitX = x;
 			hitY = y;
-			if (object_index != obj_noisey && object_index != obj_tank)
-			{
-			}
-			else
-			{
-			}
 			obj_player.movespeed = 0;
 			obj_player.hitLag = lag;
 			obj_player.hitX = obj_player.x;
@@ -662,7 +655,6 @@ function scr_enemy_grabbed()
 			vsp = -6;
 			_player.sprite_index = spr_pepperman_throw;
 			_player.image_index = 0;
-			_player.pepperman_grabID = noone;
 		}
 		if (_player.key_attack && _player.key_up)
 		{
@@ -676,11 +668,9 @@ function scr_enemy_grabbed()
 			vsp = -20;
 			_player.sprite_index = spr_pepperman_throw;
 			_player.image_index = 0;
-			_player.pepperman_grabID = noone;
 		}
 		if (_player.state != states.normal && _player.state != states.jump)
 		{
-			_player.pepperman_grabID = noone;
 			state = states.stun;
 			pepperman_grab = false;
 		}

@@ -133,7 +133,6 @@ function scr_player_knightpep()
 		combo = 0;
 		bounce = false;
 		image_index = 0;
-		freefallstart = 0;
 		momemtum = false;
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		create_particle(x, y + 3, particletypes.groundpoundeffect, 0);

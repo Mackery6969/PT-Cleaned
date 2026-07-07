@@ -23,7 +23,6 @@ if (state == states.tube)
 					x += sign(other.image_xscale);
 				}
 			}
-			machhitAnim = false;
 			state = states.mach3;
 			if (movespeed < 14)
 			{

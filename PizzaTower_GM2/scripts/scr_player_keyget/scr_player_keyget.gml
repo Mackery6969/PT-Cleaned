@@ -6,13 +6,8 @@ function scr_player_keyget()
 	movespeed = 0;
 	mach2 = 0;
 	jumpAnim = true;
-	dashAnim = true;
 	landAnim = false;
-	moveAnim = true;
-	stopAnim = true;
-	crouchslideAnim = true;
 	crouchAnim = true;
-	machhitAnim = false;
 	global.combotime = 60;
 	sprite_index = spr_keyget;
 	if (!keysound && floor(image_index) >= 16)

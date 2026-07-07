@@ -53,7 +53,6 @@ function scr_pizzaface_p3_do_player_attack(_player)
 	{
 		state = states.supergrab;
 		substate = states.grab;
-		attackcooldown = 0;
 		baddieID = other.id;
 		image_index = 0;
 		randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch]);

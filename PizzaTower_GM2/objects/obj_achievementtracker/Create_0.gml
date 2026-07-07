@@ -59,7 +59,6 @@ enum notifications
 	john_resurrected = 56,
 	knight_obtained = 57,
 	mooney_unlocked = 58,
-	unknown59 = 59,
 	pumpkin_gotten = 60,
 	pumpkindoor_entered = 61,
 	trickytreat_failed = 62,

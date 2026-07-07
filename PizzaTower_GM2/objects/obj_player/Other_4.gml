@@ -5,10 +5,6 @@ if (room == timesuproom)
 	xscale = 1;
 	visible = true;
 }
-savedhallwaydirection = hallwaydirection;
-savedhallway = hallway;
-savedvhallwaydirection = vhallwaydirection;
-savedverticalhallway = verticalhallway;
 if (room != boss_noise)
 {
 	global.resetdoise = false;

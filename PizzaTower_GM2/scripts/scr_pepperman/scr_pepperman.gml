@@ -657,7 +657,6 @@ function scr_pepperman_do_contemplate()
 				fmod_event_one_shot_3d("event:/sfx/voice/peppermansnicker", x, y);
 			}
 			state = states.contemplate;
-			animbuffer = 80;
 			hsp = 0;
 			vsp = 0;
 			sprite_index = spr_pepperman_contemplate;

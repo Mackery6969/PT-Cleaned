@@ -28,7 +28,6 @@ if (targetgolf != noone && !instance_exists(targetgolf))
 if (targetgolf != noone && !view_visible[1])
 {
 	view_visible[1] = true;
-	view_enabled = true;
 }
 switch (state)
 {
@@ -172,9 +171,6 @@ switch (state)
 				{
 					bubblespr = noone;
 					bubbleindex = 0;
-					prompt = b[0];
-					promptspd = b[3];
-					promptx = promptxstart;
 				}
 				if (b[1] == tv_prompttypes.normal)
 				{
@@ -227,7 +223,6 @@ switch (state)
 			}
 			else
 			{
-				promptx = promptxstart;
 				ds_list_delete(tvprompts_list, 0);
 				state = states.normal;
 			}
@@ -473,9 +468,6 @@ else
 {
 	pizzaface_sprite = spr_timer_pizzaface1;
 	timer_y = timer_ystart + 212;
-}
-if (global.panic && global.fill < (chunkmax / 5))
-{
 }
 barfill_x -= 0.2;
 if (barfill_x < -173)

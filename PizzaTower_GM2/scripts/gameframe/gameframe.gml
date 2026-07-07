@@ -827,8 +827,6 @@ function gameframe_std_haxe_class(_id, _name) constructor {
 	static marker = undefined; /// @is {any}
 	static index = undefined; /// @is {int}
 	static name = undefined; /// @is {string}
-	self.superClass = undefined;
-	self.marker = gameframe_std_haxe_type_markerValue;
 	self.index = _id;
 	self.name = _name;
 	static __class__ = "class";

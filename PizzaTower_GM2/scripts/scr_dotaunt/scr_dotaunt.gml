@@ -66,7 +66,6 @@ function scr_create_parryhitbox()
 	var _playerid = 1;
 	with (parry_inst)
 	{
-		player_id = _playerid;
 		image_xscale = other.xscale;
 	}
 }

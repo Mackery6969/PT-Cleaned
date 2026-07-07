@@ -13,15 +13,10 @@ if (healthshaketime > 0)
 	healthshaketime--;
 	healthshake = random_range(-2, 2);
 }
-if (healthshaketime == 0)
-{
-	healthshake = 0;
-}
-else
+if (!(healthshaketime == 0))
 {
 	if (healthold != global.hp)
 	{
-		playerhealthup = healthold < global.hp;
 		healthshaketime = 30;
 		healthold = global.hp;
 	}
@@ -135,9 +130,6 @@ if (shake_mag > 0)
 		shake_mag = 0;
 	}
 }
-detachedby = -1;
-detach = false;
-follow_golf = false;
 if (instance_exists(player) && !lock && player.state != states.timesup && player.state != states.gameover)
 {
 	switch (state)

@@ -93,7 +93,6 @@ function scr_player_mach3()
 			}
 		}
 	}
-	crouchslideAnim = true;
 	if (ANIMATION_END && sprite_index == spr_playerN_skateboarddoublejump)
 	{
 		image_index = image_number - 3;
@@ -258,7 +257,6 @@ function scr_player_mach3()
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
-		suplexmove = true;
 		fmod_event_instance_play(suplexdashsnd);
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
 		create_particle(x, y, particletypes.jumpdust, 0);
@@ -330,7 +328,6 @@ function scr_player_mach3()
 				{
 					stun = true;
 					alarm[0] = 200;
-					ministun = false;
 					vsp = -5;
 					hsp = 0;
 				}

@@ -46,7 +46,6 @@ actual_height = ideal_height;
 window_width_current = 0;
 window_height_current = 0;
 last_scale_mode = global.option_scale_mode;
-last_fullscreen = false;
 alarm[1] = 1;
 application_surface_draw_enable(false);
 display_set_gui_size(CAM_WIDTH, CAM_HEIGHT);

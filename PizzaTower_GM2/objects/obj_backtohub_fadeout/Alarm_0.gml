@@ -14,7 +14,6 @@ else
 			event_perform(ev_other, ev_room_start);
 		}
 	}
-	pos_player = true;
 	obj_player.x = obj_player.backtohubstartx;
 	obj_player.y = obj_player.backtohubstarty - (SCREEN_HEIGHT * 2);
 	obj_player.state = states.backtohub;

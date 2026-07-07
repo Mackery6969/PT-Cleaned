@@ -380,7 +380,6 @@ function scr_player_ghost()
 					var mv = sign(vsp);
 					if (move_h != 0 || move_v != 0)
 					{
-						mh = move_h;
 						mv = move_v;
 					}
 				}

@@ -37,7 +37,6 @@ function scr_player_pistol()
 	{
 		grav = 0.5;
 		sprite_index = spr_crouchslip;
-		machhitAnim = false;
 		state = states.crouchslide;
 		movespeed += 3;
 	}

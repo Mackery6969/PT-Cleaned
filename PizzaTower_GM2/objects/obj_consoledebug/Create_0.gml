@@ -43,7 +43,6 @@ SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function
 });
 FILL_GATESWITCH = new DebugCommand("gateswitchmax", "", "", function()
 {
-	global.gateswitch = global.gateswitchmax;
 });
 SHOW_DEBUG_OVERLAY = new DebugCommand("show_debug_overlay", "Toggles debug overlay", "", function()
 {
