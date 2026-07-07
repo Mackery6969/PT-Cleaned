@@ -232,7 +232,7 @@ function state_player_jump()
 	{
 		sprite_index = spr_stomp;
 	}
-	if (scr_check_groundpound() && !global.kungfu)
+	if (scr_check_groundpound())
 	{
 		input_buffer_slap = 0;
 		if (!shotgunAnim)

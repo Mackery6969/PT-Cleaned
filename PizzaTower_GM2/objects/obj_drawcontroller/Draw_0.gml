@@ -51,12 +51,11 @@ if (finisher_alpha > 0)
 	draw_rectangle_color(-32, -32, room_width + 32, room_height + 32, c_black, c_black, c_black, c_black, false);
 	draw_set_alpha(1);
 }
-var _kungfu = global.kungfu;
 with (obj_baddie)
 {
 	if (object_index != obj_pizzafaceboss)
 	{
-		draw_enemy(_kungfu, true);
+		draw_enemy(false, true);
 	}
 }
 shader_set(global.Pal_Shader);

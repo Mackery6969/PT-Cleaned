@@ -54,7 +54,7 @@ function Instakill()
 	{
 		other.baddieID.mach3destroy = true;
 	}
-	if (!other.baddieID.killprotection && !global.kungfu && (!other.baddieID.elite || other.baddieID.elitehit <= 0))
+	if (!other.baddieID.killprotection && (!other.baddieID.elite || other.baddieID.elitehit <= 0))
 	{
 		other.baddieID.instakilled = true;
 	}
@@ -101,7 +101,7 @@ function Instakill()
 			sprite_index = spr_player_ungroundedattack;
 		}
 	}
-	if (state == states.chainsawbump && !global.kungfu)
+	if (state == states.chainsawbump)
 	{
 		sprite_index = spr_player_chainsawhit;
 		image_index = 0;

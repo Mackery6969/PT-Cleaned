@@ -528,7 +528,6 @@ if (!variable_global_exists("saveroom"))
 	global.attackstyle = 0;
 	global.pummeltest = true;
 	global.horse = false;
-	global.kungfu = false;
 	global.graffiticount = 0;
 	global.graffitimax = 20;
 	global.noisejetpack = false;

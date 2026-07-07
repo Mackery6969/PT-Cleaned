@@ -82,27 +82,12 @@ function scr_hurtplayer(_player)
 			}
 			_hurt = true;
 			pistolanim = noone;
-			if (global.kungfu)
+			if (global.hp > 1)
 			{
-				if (global.hp > 1)
+				global.hp--;
+				with (obj_camera)
 				{
-					global.hp--;
-					with (obj_camera)
-					{
-						healthshaketime = 60;
-					}
-				}
-				else
-				{
-					global.kungfu = false;
-					if (!instance_exists(obj_fadeout))
-					{
-						with (obj_player)
-						{
-							targetRoom = lastroom;
-						}
-						instance_create(x, y, obj_fadeout);
-					}
+					healthshaketime = 60;
 				}
 			}
 			if (state == states.trashroll || state == states.trashjump)

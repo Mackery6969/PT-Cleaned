@@ -158,7 +158,6 @@ function scr_playerreset(_stop_music = true)
 		global.fill = 500;
 		global.hasfarmer = array_create(3, false);
 		global.hp = 0;
-		global.kungfu = false;
 		global.graffiticount = 0;
 		global.gerome = false;
 		global.stylelock = false;

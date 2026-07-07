@@ -213,7 +213,7 @@ function draw_superslam_enemy()
 	{
 		with (baddiegrabbedID)
 		{
-			draw_enemy(global.kungfu, true);
+			draw_enemy(false, true);
 		}
 	}
 }

@@ -779,10 +779,7 @@ function scr_enemy_hit()
 		global.heattime = 60;
 		alarm[1] = 5;
 		var _hp = 0;
-		if ((global.attackstyle == 3 || global.attackstyle == 0) && !global.kungfu)
-		{
-			_hp = -1;
-		}
+		_hp = -1;
 		if (((!elite && (hp <= _hp || mach3destroy)) || (elite && (elitehit <= 0 || mach3destroy))) && object_get_parent(object_index) != par_boss && object_index != obj_pizzafaceboss && destroyable && !mach2)
 		{
 			instance_destroy();

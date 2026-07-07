@@ -501,7 +501,7 @@ function state_player_normal()
 			}
 		}
 	}
-	if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
+	if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)))
 	{
 		if (!global.pistol || pistolanim == noone)
 		{
@@ -517,13 +517,6 @@ function state_player_normal()
 				movespeed = 6;
 			}
 		}
-	}
-	if (global.kungfu && key_attack && state != states.handstandjump)
-	{
-		state = states.blockstance;
-		sprite_index = spr_player_airattack;
-		hsp = 0;
-		movespeed = 0;
 	}
 	scr_dotaunt();
 	if (sprite_index == spr_shotgunshoot)
