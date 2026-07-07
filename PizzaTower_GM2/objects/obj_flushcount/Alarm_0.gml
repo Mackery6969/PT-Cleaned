@@ -2,8 +2,6 @@ if (count > 0)
 {
 	count--;
 	scr_sound_multiple("event:/sfx/misc/collect", obj_player.x, obj_player.y);
-	global.heattime += 10;
-	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
 	with (obj_camera)

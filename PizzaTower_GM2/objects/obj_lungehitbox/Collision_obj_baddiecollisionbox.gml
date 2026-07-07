@@ -33,7 +33,6 @@ if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hitt
 					if (!important)
 					{
 						global.combotime = 60;
-						global.heattime = 60;
 					}
 				}
 				hit_connected = true;

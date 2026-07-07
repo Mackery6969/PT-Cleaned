@@ -22,8 +22,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	scr_sleep(5);
 	create_baddiegibsticks(x + 16, y + 16);
 	scr_sound_multiple("event:/sfx/misc/collect", x, y);
-	global.heattime += 10;
-	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
 	var val = heat_calculate(10);

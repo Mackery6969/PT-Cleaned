@@ -480,7 +480,6 @@ if (!variable_global_exists("saveroom"))
 	global.tauntcount = 0;
 	global.comboscore = 0;
 	global.savedcombo = 0;
-	global.heattime = 0;
 	global.toppintotal = 1;
 	global.hit = 0;
 	global.baddieroom = ds_list_create();
@@ -488,11 +487,9 @@ if (!variable_global_exists("saveroom"))
 	global.panic = false;
 	global.snickchallenge = false;
 	global.golfhit = 0;
-	global.style = -1;
 	global.secretfound = 0;
 	global.coop = false;
 	global.baddiespeed = 1;
-	global.style = 0;
 	global.pizzadelivery = false;
 	global.failcutscene = false;
 	global.pizzasdelivered = 0;
@@ -524,7 +521,6 @@ if (!variable_global_exists("saveroom"))
 	global.wartimerfont1 = font_add_sprite_ext(spr_wartimer_font1, "1234567890", true, 0);
 	global.wartimerfont2 = font_add_sprite_ext(spr_wartimer_font2, "1234567890", true, 0);
 	global.mort = false;
-	global.stylelock = false;
 	global.attackstyle = 0;
 	global.pummeltest = true;
 	global.horse = false;

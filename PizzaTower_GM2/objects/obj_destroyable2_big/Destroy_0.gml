@@ -8,8 +8,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	}
 	if (content == noone)
 	{
-		global.heattime += 10;
-		global.heattime = clamp(global.heattime, 0, 60);
 		global.combotime += 50;
 		global.combotime = clamp(global.combotime, 0, 60);
 		var val = heat_calculate(100);

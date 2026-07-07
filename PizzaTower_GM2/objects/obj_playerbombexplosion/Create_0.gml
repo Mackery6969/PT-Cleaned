@@ -153,9 +153,7 @@ ds_map_set(collision_function, obj_baddie, function(_obj)
 			fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 			if (!_obj.important)
 			{
-				global.style += (5 + global.combo);
 				global.combotime = 60;
-				global.heattime = 60;
 			}
 			var lag = 2;
 			_obj.hitLag = lag;

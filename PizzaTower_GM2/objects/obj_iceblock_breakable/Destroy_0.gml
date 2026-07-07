@@ -17,8 +17,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	{
 		number = string(val);
 	}
-	global.heattime += 10;
-	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
 	ds_list_add(global.saveroom, id);

@@ -1,6 +1,5 @@
 if (other.state != states.gotoplayer)
 {
-	global.heattime = 60;
 	with (obj_camera)
 	{
 		healthshaketime = 60;

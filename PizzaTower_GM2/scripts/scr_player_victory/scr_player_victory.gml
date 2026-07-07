@@ -5,7 +5,6 @@ function scr_player_victory()
 	jumpAnim = true;
 	landAnim = false;
 	crouchAnim = true;
-	global.heattime = 60;
 	if (place_meeting(x, y, obj_keydoor) || place_meeting(x, y, obj_geromedoor))
 	{
 		sprite_index = spr_victory;

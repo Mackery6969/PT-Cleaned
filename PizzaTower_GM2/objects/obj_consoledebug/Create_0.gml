@@ -152,10 +152,6 @@ SETCOMBO = new DebugCommand("set_combo", "Set the combo", "<combo> <combotime:op
 		supercharge = 10;
 	}
 });
-GIVEHEAT = new DebugCommand("giveheat", "Gives heat", "", function()
-{
-	global.style += 100;
-});
 ALLTOPPINS = new DebugCommand("alltoppins", "Adds all the toppins", "", function()
 {
 	if (!instance_exists(obj_pizzakincheese))
@@ -309,23 +305,6 @@ DESTROYICE = new DebugCommand("destroyice", "", "", function()
 	instance_destroy(obj_iceblock);
 	instance_destroy(obj_iceblockslope);
 });
-HARDMODE = new DebugCommand("hardmode", "Toggles hardmode", "<bool>", function(_bool)
-{
-	if (_bool == undefined)
-	{
-		exit;
-	}
-	_bool = get_bool(_bool);
-	show_debug_message(!_bool);
-	if (_bool != undefined)
-	{
-		global.hardmode = _bool;
-		with (obj_hardmode)
-		{
-			event_perform(ev_other, ev_room_start);
-		}
-	}
-});
 PLAYER_SET_STATE = new DebugCommand("player_set_state", "Changes the player state", "<states.state>", function(_state)
 {
 	if (_state == undefined)
@@ -375,7 +354,7 @@ ds_map_set(state_map, "states.knightpep", states.knightpep);
 ds_map_set(state_map, "states.firemouth", states.firemouth);
 ds_map_set(state_map, "states.ratmount", states.ratmount);
 command_list = ds_list_create();
-ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
+ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, PLAYER_SET_STATE, PANIC, ALLTOPPINS, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
 ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY);
 input_text = "";
 text_list = ds_list_create();

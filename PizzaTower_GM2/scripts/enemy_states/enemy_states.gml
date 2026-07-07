@@ -216,11 +216,7 @@ function scr_enemy_grabbed()
 			{
 				global.combotime = 60;
 			}
-			if (!important)
-			{
-				global.style += (5 + global.combo);
-			}
-			instance_create(x, y, obj_slapstar);
+						instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
 			with (obj_camera)
@@ -265,11 +261,7 @@ function scr_enemy_grabbed()
 			{
 				global.combotime = 60;
 			}
-			if (!important)
-			{
-				global.style += (5 + global.combo);
-			}
-			instance_create(x, y, obj_slapstar);
+						instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
 			with (obj_camera)
@@ -311,11 +303,7 @@ function scr_enemy_grabbed()
 			{
 				global.combotime = 60;
 			}
-			if (!important)
-			{
-				global.style += (5 + global.combo);
-			}
-			instance_create(x, y, obj_slapstar);
+						instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
 			with (obj_camera)
@@ -349,12 +337,7 @@ function scr_enemy_grabbed()
 			{
 				global.combotime = 60;
 			}
-			global.heattime = 60;
-			if (!important)
-			{
-				global.style += (5 + global.combo);
-			}
-			GamepadSetVibration((obj_player.object_index == obj_player) ? 0 : 1, 0.8, 0.8, 0.65);
+						GamepadSetVibration((obj_player.object_index == obj_player) ? 0 : 1, 0.8, 0.8, 0.65);
 			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
 			fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 			if (!obj_player.ispeppino)
@@ -437,11 +420,7 @@ function scr_enemy_grabbed()
 			{
 				global.combotime = 60;
 			}
-			if (!important)
-			{
-				global.style += (5 + global.combo);
-			}
-			instance_create(x, y, obj_slapstar);
+						instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
 			with (obj_camera)
@@ -776,7 +755,6 @@ function scr_enemy_hit()
 		{
 			global.combotime = 60;
 		}
-		global.heattime = 60;
 		alarm[1] = 5;
 		var _hp = 0;
 		_hp = -1;

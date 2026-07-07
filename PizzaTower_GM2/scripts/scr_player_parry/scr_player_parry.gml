@@ -37,7 +37,6 @@ function scr_player_parry()
 				if (!important)
 				{
 					global.combotime = 60;
-					global.heattime = 60;
 				}
 				obj_player.hitLag = lag;
 				obj_player.hitX = obj_player.x;

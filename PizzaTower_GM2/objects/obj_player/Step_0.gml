@@ -1188,10 +1188,6 @@ if (baddiegrabbedID == noone && (state == states.grab || state == states.supersl
 {
 	state = states.normal;
 }
-if (cutscene == true && state != states.gotoplayer)
-{
-	global.heattime = 60;
-}
 if (anger == 0)
 {
 	angry = false;
@@ -1273,10 +1269,6 @@ if (!(state == states.door || state == states.teleporter || state == states.shot
 		global.combotime -= 0.15;
 	}
 }
-if (global.heattime > 0)
-{
-	global.heattime -= 0.15;
-}
 if (global.combotime <= 0 && global.combo >= 1)
 {
 	if (global.combo >= 1)
@@ -1295,10 +1287,6 @@ if (global.combotime <= 0 && global.combo >= 1)
 		}
 	}
 	supercharge = 0;
-}
-if (global.heattime <= 0 && global.style > -1 && global.stylelock == false)
-{
-	global.style -= 0.05;
 }
 
 if (key_jump && !grounded && (state == states.mach2 || state == states.mach3) && (state != (states.climbwall & walljumpbuffer)) <= 0)

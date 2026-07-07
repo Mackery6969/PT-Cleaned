@@ -9,8 +9,6 @@ if (image_alpha == 1)
 	{
 		scr_sound_multiple("event:/sfx/misc/bellcollect", x, y);
 	}
-	global.heattime += 10;
-	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
 	with (obj_camera)

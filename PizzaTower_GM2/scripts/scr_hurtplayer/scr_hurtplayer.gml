@@ -135,7 +135,6 @@ function scr_hurtplayer(_player)
 		{
 			notification_push(notifications.hurt, [_player.id, _savedstate, _obj]);
 			global.combotime -= 25;
-			global.style -= 25;
 			global.hurtcounter += 1;
 			global.player_damage += 1;
 			if (global.swapmode)
