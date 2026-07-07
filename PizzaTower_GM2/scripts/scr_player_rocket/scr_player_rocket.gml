@@ -75,17 +75,15 @@ function scr_player_rocket()
 			image_xscale = sign(hsp);
 		}
 	}
-	if (fightball == false)
-	{
 		if (sprite_index != spr_rocketstart)
+	{
+		sprite_index = spr_rocket;
+		if (grounded && vsp >= 0 && ispeppino)
 		{
-			sprite_index = spr_rocket;
-			if (grounded && vsp >= 0 && ispeppino)
-			{
-				sprite_index = spr_player_rocketrun;
-			}
+			sprite_index = spr_player_rocketrun;
 		}
 	}
+
 	if (grounded)
 	{
 		move = key_left + key_right;
@@ -153,10 +151,6 @@ function scr_player_rocket()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == true)
-			{
-				instance_create(obj_player.x, obj_player.y, obj_slapstar);
-			}
 			image_xscale = other.xscale;
 			other.dashcloudid = id;
 		}
@@ -165,10 +159,6 @@ function scr_player_rocket()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == true)
-			{
-				instance_create(obj_player.x, obj_player.y, obj_slapstar);
-			}
 			image_xscale = other.xscale;
 			sprite_index = spr_watereffect;
 			other.dashcloudid = id;

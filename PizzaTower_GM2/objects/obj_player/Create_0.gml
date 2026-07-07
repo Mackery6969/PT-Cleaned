@@ -264,7 +264,6 @@ macheffect = false;
 chargeeffectid = noone;
 dashcloudid = noone;
 crazyruneffectid = noone;
-fightball = false;
 superslameffectid = noone;
 speedlineseffectid = noone;
 angryeffectid = noone;

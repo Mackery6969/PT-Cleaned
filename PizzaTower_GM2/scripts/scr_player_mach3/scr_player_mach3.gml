@@ -128,43 +128,41 @@ function scr_player_mach3()
 	{
 		scr_player_do_noisecrusher();
 	}
-	if (fightball == false)
-	{
 		if (sprite_index == spr_mach3jump && ANIMATION_END)
-		{
-			sprite_index = mach3_spr;
-		}
-		if (sprite_index == spr_player_Sjumpcancel && grounded)
-		{
-			sprite_index = mach3_spr;
-		}
-		if (ANIMATION_END && (sprite_index == spr_rollgetup || sprite_index == spr_mach3hit || sprite_index == spr_dashpadmach))
-		{
-			sprite_index = mach3_spr;
-		}
-		if (sprite_index == spr_mach2jump && grounded && vsp > 0)
-		{
-			sprite_index = mach3_spr;
-		}
-		if (sprite_index == spr_playerN_sidewayspin && ANIMATION_END)
-		{
-			sprite_index = spr_playerN_sidewayspinend;
-		}
-		if (grounded && (sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend))
-		{
-			sprite_index = mach3_spr;
-		}
-		if (movespeed > mach3movespeed && sprite_index != spr_crazyrun && sprite_index != spr_player_Sjumpcancelstart && sprite_index != spr_taunt)
-		{
-			mach4mode = true;
-			flash = true;
-			sprite_index = spr_crazyrun;
-		}
-		else if (movespeed <= mach3movespeed && sprite_index == spr_crazyrun)
-		{
-			sprite_index = mach3_spr;
-		}
+	{
+		sprite_index = mach3_spr;
 	}
+	if (sprite_index == spr_player_Sjumpcancel && grounded)
+	{
+		sprite_index = mach3_spr;
+	}
+	if (ANIMATION_END && (sprite_index == spr_rollgetup || sprite_index == spr_mach3hit || sprite_index == spr_dashpadmach))
+	{
+		sprite_index = mach3_spr;
+	}
+	if (sprite_index == spr_mach2jump && grounded && vsp > 0)
+	{
+		sprite_index = mach3_spr;
+	}
+	if (sprite_index == spr_playerN_sidewayspin && ANIMATION_END)
+	{
+		sprite_index = spr_playerN_sidewayspinend;
+	}
+	if (grounded && (sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend))
+	{
+		sprite_index = mach3_spr;
+	}
+	if (movespeed > mach3movespeed && sprite_index != spr_crazyrun && sprite_index != spr_player_Sjumpcancelstart && sprite_index != spr_taunt)
+	{
+		mach4mode = true;
+		flash = true;
+		sprite_index = spr_crazyrun;
+	}
+	else if (movespeed <= mach3movespeed && sprite_index == spr_crazyrun)
+	{
+		sprite_index = mach3_spr;
+	}
+
 	if (sprite_index == spr_crazyrun && !instance_exists(crazyruneffectid))
 	{
 		with (instance_create(x, y, obj_crazyrunothereffect))
@@ -185,7 +183,7 @@ function scr_player_mach3()
 	{
 		image_speed = 0.4;
 	}
-	if (((!key_attack && fightball == false && !launched) && sprite_index != spr_dashpadmach && grounded && vsp > 0))
+	if (((!key_attack && !launched) && sprite_index != spr_dashpadmach && grounded && vsp > 0))
 	{
 		sprite_index = spr_machslidestart;
 		if (ispeppino)
@@ -200,7 +198,7 @@ function scr_player_mach3()
 		image_index = 0;
 		launched = false;
 	}
-	if (move == -xscale && grounded && vsp > 0 && !launched && fightball == false && sprite_index != spr_dashpadmach)
+	if (move == -xscale && grounded && vsp > 0 && !launched && sprite_index != spr_dashpadmach)
 	{
 		if (ispeppino)
 		{
@@ -214,7 +212,7 @@ function scr_player_mach3()
 		state = states.machslide;
 		image_index = 0;
 	}
-	if (scr_mach_check_dive() && fightball == false && (sprite_index != spr_dashpadmach || dropboost))
+	if (scr_mach_check_dive() && (sprite_index != spr_dashpadmach || dropboost))
 	{
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
 		create_particle(x, y, particletypes.jumpdust, 0);
@@ -332,38 +330,19 @@ function scr_player_mach3()
 					hsp = 0;
 				}
 			}
-			if (!fightball)
-			{
-				sprite_index = spr_hitwall;
-				fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
-				fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
-				hsp = 0;
-				flash = false;
-				state = states.bump;
-				hsp = -6 * xscale;
-				vsp = -6;
-				mach2 = 0;
-				image_index = 0;
-				instance_create(x + (xscale * 15), y + 10, obj_bumpeffect);
-			}
-			else
-			{
-				fightball = false;
-				with (obj_player)
-				{
-					sprite_index = spr_hitwall;
-					instance_create(x + 10, y + 10, obj_bumpeffect);
-					fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
-					fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
-					hsp = 0;
-					flash = false;
-					state = states.bump;
-					hsp = -6 * xscale;
-					vsp = -6;
-					mach2 = 0;
-					image_index = 0;
-				}
-			}
+						sprite_index = spr_hitwall;
+			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+			fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
+			hsp = 0;
+			flash = false;
+			state = states.bump;
+			hsp = -6 * xscale;
+			vsp = -6;
+			mach2 = 0;
+			image_index = 0;
+			instance_create(x + (xscale * 15), y + 10, obj_bumpeffect);
+		
+
 		}
 	}
 	var b = false;
@@ -378,10 +357,6 @@ function scr_player_mach3()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == true)
-			{
-				instance_create(obj_player.x, obj_player.y, obj_slapstar);
-			}
 			image_xscale = other.xscale;
 			other.dashcloudid = id;
 		}
@@ -390,10 +365,6 @@ function scr_player_mach3()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == true)
-			{
-				instance_create(obj_player.x, obj_player.y, obj_slapstar);
-			}
 			image_xscale = other.xscale;
 			sprite_index = spr_watereffect;
 			other.dashcloudid = id;
@@ -424,7 +395,7 @@ function scr_player_mach3()
 	{
 		image_speed = 0.4;
 	}
-	if (scr_check_superjump() && fightball == false && state == states.mach3 && grounded && vsp > 0 && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
+	if (scr_check_superjump() && state == states.mach3 && grounded && vsp > 0 && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
 	{
 		sprite_index = spr_superjumpprep;
 		state = states.Sjumpprep;

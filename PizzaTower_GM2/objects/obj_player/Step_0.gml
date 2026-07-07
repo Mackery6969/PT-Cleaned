@@ -1152,7 +1152,6 @@ if (flashflicker == true)
 }
 if (state != states.mach3 && state != states.grabbed)
 {
-	fightball = false;
 }
 if (state != states.freefall && state != states.superslam && (state != states.chainsaw || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && (state != states.backbreaker || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && !instance_exists(obj_secretportalstart))
 {

@@ -1,16 +1,9 @@
 function scr_player_grabbed()
 {
 	var _obj_player = obj_player;
-	if (fightball == false)
-	{
 		xscale = -_obj_player.xscale;
-	}
+
 	_obj_player.baddiegrabbedID = id;
-	if (_obj_player.state == states.mach3 && fightball == true)
-	{
-		x = _obj_player.x;
-		y = _obj_player.y;
-	}
 	if (_obj_player.state == states.grabbing || _obj_player.state == states.grab || _obj_player.state == states.throwing || _obj_player.state == states.slam || _obj_player.state == states.tacklecharge)
 	{
 		x = _obj_player.x;
@@ -57,7 +50,7 @@ function scr_player_grabbed()
 				shake_mag_acc = 3 / room_speed;
 			}
 		}
-		if (!(state == states.grab || (state == states.mach3 && fightball == true) || (state == states.ratmount || state == states.ratmountjump) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
+		if (!(state == states.grab || (state == states.ratmount || state == states.ratmountjump) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
 		{
 			baddiegrabbedID = noone;
 			other.x = _obj_player.x;
