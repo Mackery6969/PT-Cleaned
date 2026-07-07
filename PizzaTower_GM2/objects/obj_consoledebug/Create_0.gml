@@ -41,9 +41,6 @@ SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function
 		scr_characterspr();
 	}
 });
-FILL_GATESWITCH = new DebugCommand("gateswitchmax", "", "", function()
-{
-});
 SHOW_DEBUG_OVERLAY = new DebugCommand("show_debug_overlay", "Toggles debug overlay", "", function()
 {
 	show_debug_overlay(!showoverlay);
@@ -355,7 +352,7 @@ ds_map_set(state_map, "states.firemouth", states.firemouth);
 ds_map_set(state_map, "states.ratmount", states.ratmount);
 command_list = ds_list_create();
 ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, PLAYER_SET_STATE, PANIC, ALLTOPPINS, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
-ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY);
+ds_list_add(command_list, KILL_BOSS, TEST_P_RANK, SETCOMBO, GIVEKEY, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY);
 input_text = "";
 text_list = ds_list_create();
 search_commands = ds_list_create();
