@@ -2,11 +2,7 @@
 var playerid = instance_place(x, y - 1, obj_player);
 with (playerid)
 {
-	if (character == "V")
-	{
-		scr_hurtplayer(id);
-	}
-	else if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
+	if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
 	{
 		GamepadSetVibration(0, 1, 1, 0.85);
 		if (state != states.fireass)

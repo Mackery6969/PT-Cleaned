@@ -37,7 +37,6 @@ SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function
 {
 	with (obj_player)
 	{
-		character = "P";
 		ispeppino = !ispeppino;
 		scr_characterspr();
 	}

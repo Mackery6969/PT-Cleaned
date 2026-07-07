@@ -35,21 +35,10 @@ with (other)
 			}
 			vsp = 0;
 			create_particle(x, y, particletypes.jumpdust, 0);
-			if (character == "P")
+			if (sprite_index != spr_dashpadmach)
 			{
-				if (sprite_index != spr_dashpadmach)
-				{
-					sprite_index = spr_dashpadmach;
-					image_index = 0;
-				}
-			}
-			else if (character == "N")
-			{
-				if (sprite_index != spr_crazyrun)
-				{
-					sprite_index = spr_crazyrun;
-					image_index = 0;
-				}
+				sprite_index = spr_dashpadmach;
+				image_index = 0;
 			}
 			scr_fmod_soundeffect(snd_dashpad, x, y);
 			machhitAnim = false;

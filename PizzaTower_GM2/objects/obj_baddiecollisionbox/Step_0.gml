@@ -205,16 +205,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					}
 				}
 			}
-			var pepp_grab = false;
-			if (character == "M" && instance_exists(other.baddieID) && (state == states.normal || state == states.jump) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw && other.baddieID.state == states.stun && other.baddieID.stuntouchbuffer == 0 && !other.baddieID.thrown && !other.baddieID.invincible)
-			{
-				other.baddieID.pepperman_grab = true;
-				pepperman_grabID = other.baddieID.id;
-				other.baddieID.state = states.grabbed;
-				other.baddieID.grabbedby = 1;
-				pepp_grab = true;
-			}
-			if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && state != states.chainsaw && (state == states.tumble || state == states.mach2 || state == states.machslide || sprite_index == spr_player_ratmountattack || sprite_index == spr_lonegustavo_dash) && other.baddieID.state != states.punch && other.baddieID.state != states.hit && !pepp_grab && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != states.grabbed && other.baddieID.state != states.chainsawbump && other.baddieID.state != states.chainsaw && !other.baddieID.invincible)
+			if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && state != states.chainsaw && (state == states.tumble || state == states.mach2 || state == states.machslide || sprite_index == spr_player_ratmountattack || sprite_index == spr_lonegustavo_dash) && other.baddieID.state != states.punch && other.baddieID.state != states.hit && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != states.grabbed && other.baddieID.state != states.chainsawbump && other.baddieID.state != states.chainsaw && !other.baddieID.invincible)
 			{
 				var lag = 0;
 				other.baddieID.stuntouchbuffer = 15;
@@ -251,7 +242,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					}
 				}
 			}
-			if (character != "M" && instance_exists(other.baddieID) && state == states.grabbing && !other.baddieID.invincible)
+			if (instance_exists(other.baddieID) && state == states.grabbing && !other.baddieID.invincible)
 			{
 				if (instance_exists(other.baddieID) && y < (other.baddieID.y - 50) && attacking == false && state != states.handstandjump && other.baddieID.state != states.grabbed && sprite_index != spr_player_mach2jump && (state == states.jump || state == states.mach1 || (state == states.grab && sprite_index != spr_swingding)) && vsp > 0 && (other.baddieID.vsp >= 0 || other.baddieID.object_index == obj_farmerbaddie || other.baddieID.object_index == obj_farmerbaddie2 || other.baddieID.object_index == obj_farmerbaddie3) && sprite_index != spr_stompprep && !other.baddieID.invincible)
 				{
@@ -289,7 +280,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 						}
 					}
 				}
-				if (other.baddieID.thrown == false && (character == "P" || character == "N") && !other.baddieID.invincible)
+				if (other.baddieID.thrown == false && !other.baddieID.invincible)
 				{
 					movespeed = 0;
 					image_index = 0;

@@ -1,9 +1,8 @@
 state = 0;
 snd = fmod_event_create_instance("event:/sfx/ending/towercollapse");
 credits = [
-	[noone, lang_get_value_newline_raw("en", "decomp_credits1")],
-	[noone, lang_get_value_newline_raw("en", "decomp_credits2")],
-	[noone, lang_get_value_newline_raw("en", "decomp_credits3")],
+	[noone, "PT OPTIMIZED BY\n\nDockronic\n\nCONTRIBUTORS\n\nMackery"],
+	[noone, "PT EXTRACTED BY\n\nSetupWitch\nTheWilmster\nTraxter\nobj_niya\nDisttraction"],
 	[noone, lang_get_value_newline_raw("en", "credits_game")],
 	[noone, string_replace_all(lang_get_value_newline_raw("en", "credits_music"), "%", "\"")],
 	[noone, string_replace_all(lang_get_value_newline_raw("en", "credits_sfx"), "%", "\"")],

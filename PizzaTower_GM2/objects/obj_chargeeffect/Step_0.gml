@@ -4,7 +4,7 @@ if (obj_player.state != states.rocket && obj_player.gusdashpadbuffer <= 0 && obj
 	instance_destroy();
 }
 x = obj_player.x + (((obj_player.sprite_index == spr_player_Sjumpcancel) ? 20 : 0) * obj_player.xscale);
-y = obj_player.y - ((obj_player.character == "M") ? 10 : 0);
+y = obj_player.y;
 if (obj_player.state == states.rocket)
 {
 	x = obj_player.x + (obj_player.xscale * 18);

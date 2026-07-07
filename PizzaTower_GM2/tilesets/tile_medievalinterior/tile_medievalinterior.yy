@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Pizzascape",
-    "path": "folders/Tilesets/Floor 1/Pizzascape.yy",
+    "path": "folders/Tile Sets/Floor 1/Pizzascape.yy",
   },
   "spriteId": {
     "name": "spr_medievalinterior",

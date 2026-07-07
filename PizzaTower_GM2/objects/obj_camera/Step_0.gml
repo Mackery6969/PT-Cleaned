@@ -17,7 +17,7 @@ if (healthshaketime == 0)
 {
 	healthshake = 0;
 }
-else if (obj_player.character == "P")
+else
 {
 	if (healthold != global.hp)
 	{

@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Peppibot Factory",
-    "path": "folders/Tilesets/Floor 4/Peppibot Factory.yy",
+    "path": "folders/Tile Sets/Floor 4/Peppibot Factory.yy",
   },
   "spriteId": {
     "name": "tile_factory",

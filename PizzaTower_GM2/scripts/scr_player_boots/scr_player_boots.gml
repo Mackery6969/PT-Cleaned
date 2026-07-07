@@ -127,25 +127,6 @@ function scr_player_boots()
 		machhitAnim = false;
 		state = states.crouchslide;
 	}
-	if (key_shoot2 && character == "V")
-	{
-		state = states.dynamite;
-		image_index = 0;
-		sprite_index = spr_playerV_dynamitethrow;
-		with (instance_create(x, y, obj_dynamite))
-		{
-			image_xscale = other.xscale;
-			movespeed = 6;
-			vsp = -6;
-		}
-	}
-	if (key_slap2 && character == "V")
-	{
-		state = states.revolver;
-		image_index = 0;
-		sprite_index = spr_playerV_revolverstart;
-		vsp = -5;
-	}
 	if (movespeed == 12 && !instance_exists(speedlineseffectid))
 	{
 		with (instance_create(x, y, obj_speedlines))

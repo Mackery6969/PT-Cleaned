@@ -101,7 +101,6 @@ var exit_function = function()
 		arr = ["menugroup"];
 		with (obj_player)
 		{
-			character = "P";
 			ispeppino = true;
 			scr_characterspr();
 		}

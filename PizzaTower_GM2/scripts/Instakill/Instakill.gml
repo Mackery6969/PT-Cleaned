@@ -19,7 +19,7 @@ function Instakill()
 			}
 		}
 	}
-	if (state == states.mach3 && sprite_index != spr_player_Sjumpcancel && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
+	if (state == states.mach3 && sprite_index != spr_player_Sjumpcancel && sprite_index != spr_mach3hit)
 	{
 		if (sprite_index != spr_fightball)
 		{
@@ -79,12 +79,6 @@ function Instakill()
 		}
 		boxxedpepjump = 10;
 		noisejetpack = 80;
-	}
-	if (character == "M" && state == states.freefall)
-	{
-		vsp = -11;
-		state = states.jump;
-		sprite_index = spr_jump;
 	}
 	if (state != states.chainsaw)
 	{

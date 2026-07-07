@@ -31,18 +31,16 @@ function scr_collide_destructibles()
 		{
 			if (place_meeting(x + hsp, y, obj_destructibles))
 			{
-				if (character != "V")
+				with (instance_place(x + hsp, y, obj_destructibles))
 				{
-					with (instance_place(x + hsp, y, obj_destructibles))
-					{
-						GamepadSetVibration(0, 0.8, 0.8, 0.5);
-						instance_destroy();
-					}
-					if (state == states.mach2)
-					{
-						machpunchAnim = true;
-					}
+					GamepadSetVibration(0, 0.8, 0.8, 0.5);
+					instance_destroy();
 				}
+				if (state == states.mach2)
+				{
+					machpunchAnim = true;
+				}
+
 			}
 		}
 		if (state == states.hurt && thrown == true)

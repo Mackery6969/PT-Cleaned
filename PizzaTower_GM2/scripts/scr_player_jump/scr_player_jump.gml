@@ -85,31 +85,6 @@ function state_player_jump()
 			jumpstop = true;
 		}
 	}
-	if (character == "N")
-	{
-		if (key_jump && wallclingcooldown == 10)
-		{
-			if (place_meeting(x + xscale, y, obj_solid))
-			{
-				fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
-				image_index = 0;
-				state = states.hang;
-				xscale *= -1;
-				vsp = 0;
-				doublejump = false;
-			}
-			else if (!doublejump && sprite_index != spr_freefall && sprite_index != spr_facestomp)
-			{
-				sprite_index = spr_playerN_doublejump;
-				image_index = 0;
-				jumpstop = false;
-				vsp = -9;
-				doublejump = true;
-				particle_set_scale(particletypes.highjumpcloud2, xscale, 1);
-				create_particle(x, y, particletypes.highjumpcloud2, 0);
-			}
-		}
-	}
 	if (global.mort && (sprite_index == spr_mortdoublejump || sprite_index == spr_mortdoublejumpstart))
 	{
 		if (vsp > 6)
@@ -168,7 +143,7 @@ function state_player_jump()
 		particle_set_scale(particletypes.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particletypes.highjumpcloud2, 0);
 	}
-	if (!can_jump && character == "P" && !ispeppino && key_up && noisedoublejump && input_buffer_jump > 0 && !key_down && !key_attack)
+	if (!can_jump && !ispeppino && key_up && noisedoublejump && input_buffer_jump > 0 && !key_down && !key_attack)
 	{
 		freefallstart = 0;
 		railmomentum = false;
@@ -426,7 +401,7 @@ function state_player_jump()
 					shake_mag_acc = 3 / room_speed;
 				}
 			}
-			else if (character != "V" && shoot)
+			else if (shoot)
 			{
 				sprite_index = spr_pistolshot;
 				image_index = 0;
@@ -457,25 +432,17 @@ function state_player_jump()
 					}
 				}
 			}
-			else if (character != "V")
-			{
-			}
 		}
 	}
-	switch (character)
+	if (key_attack && grounded && fallinganimation < 40)
 	{
-		case "P":
-			if (key_attack && grounded && fallinganimation < 40)
-			{
-				sprite_index = spr_mach1;
-				image_index = 0;
-				state = states.mach2;
-				if (movespeed < machspeed)
-				{
-					movespeed = machspeed;
-				}
-			}
-			break;
+		sprite_index = spr_mach1;
+		image_index = 0;
+		state = states.mach2;
+		if (movespeed < machspeed)
+		{
+			movespeed = machspeed;
+		}
 	}
 	if (!key_attack || move != xscale)
 	{
@@ -510,117 +477,7 @@ function state_player_jump()
 	}
 }
 
-function state_pepperman_jump()
-{
-	pepperman_grab_reset();
-	move = key_left + key_right;
-	if (move != 0 && move == sign(xscale) && movespeed < pepperman_maxhsp_normal)
-	{
-		movespeed += pepperman_accel_air;
-	}
-	else if (move != 0 && move != sign(xscale) && movespeed > 0)
-	{
-		movespeed -= pepperman_deccel_air;
-	}
-	else if (move == 0)
-	{
-		movespeed -= pepperman_deccel_air;
-	}
-	if (floor(movespeed) == pepperman_maxhsp_normal)
-	{
-		movespeed = pepperman_maxhsp_normal;
-	}
-	if (movespeed > pepperman_maxhsp_normal)
-	{
-		movespeed -= 0.3;
-	}
-	else if (movespeed < 0)
-	{
-		movespeed = 0;
-	}
-	if (move != 0 && movespeed == 0)
-	{
-		xscale = move;
-	}
-	hsp = xscale * movespeed;
-	if (sprite_index == spr_jump && ANIMATION_END)
-	{
-		sprite_index = spr_fall;
-	}
-	if (sprite_index == spr_player_pistoljump1 && ANIMATION_END)
-	{
-		sprite_index = spr_player_pistoljump2;
-	}
-	if (!key_jump2 && jumpstop == false && vsp < 0.5)
-	{
-		vsp /= 20;
-		jumpstop = true;
-	}
-	if (grounded && vsp > 0)
-	{
-		state = states.normal;
-		instance_create(x, y - 5, obj_landcloud);
-	}
-	if (scr_check_groundpound() && !grounded)
-	{
-		state = states.freefall;
-		freefallsmash = 12;
-		vsp = 14;
-		sprite_index = spr_bodyslamfall;
-	}
-	if (key_attack && (!place_meeting(x + xscale, y, obj_solid) || place_meeting(x + xscale, y, obj_destructibles)) && pepperman_grabID == noone && sprite_index != spr_pepperman_throw)
-	{
-		if (move != 0)
-		{
-			xscale = move;
-		}
-		state = states.shoulderbash;
-		sprite_index = spr_pepperman_shoulderstart;
-		image_index = 0;
-	}
-	if (sprite_index == spr_pepperman_throw && ANIMATION_END)
-	{
-		sprite_index = spr_pepperman_fall;
-	}
-	if (ladderbuffer > 0)
-	{
-		ladderbuffer--;
-	}
-	if (key_taunt2)
-	{
-		fmod_event_one_shot_3d("event:/sfx/pep/taunt", x, y);
-		taunttimer = 20;
-		tauntstoredmovespeed = movespeed;
-		tauntstoredvsp = vsp;
-		tauntstoredsprite = sprite_index;
-		tauntstoredstate = state;
-		state = states.backbreaker;
-		if (supercharged == true)
-		{
-			image_index = 0;
-			sprite_index = choose(spr_supertaunt1, spr_supertaunt2, spr_supertaunt3, spr_supertaunt4);
-		}
-		else
-		{
-			taunttimer = 20;
-			image_index = random_range(0, 11);
-			sprite_index = spr_taunt;
-		}
-		with (instance_create(x, y, obj_taunteffect))
-		{
-			player = other.id;
-		}
-	}
-}
-
 function scr_player_jump()
 {
-	if (character != "M")
-	{
-		state_player_jump();
-	}
-	else
-	{
-		state_pepperman_jump();
-	}
+	state_player_jump();
 }

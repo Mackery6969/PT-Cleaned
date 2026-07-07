@@ -74,10 +74,7 @@ function scr_player_tacklecharge()
 	if (key_down && grounded)
 	{
 		sprite_index = spr_crouchslip;
-		if (character == "P")
-		{
-			machhitAnim = false;
-		}
+		machhitAnim = false;
 		state = states.crouchslide;
 	}
 	if (!key_attack && move != xscale && grounded)

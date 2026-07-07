@@ -45,7 +45,7 @@ function scr_player_mach2()
 		}
 		vsp = jumpspeed;
 	}
-	if (input_buffer_jump > 0 && !can_jump && !ispeppino && key_up && character == "P" && noisedoublejump && !skateboarding && sprite_index != spr_clownjump)
+	if (input_buffer_jump > 0 && !can_jump && !ispeppino && key_up && noisedoublejump && !skateboarding && sprite_index != spr_clownjump)
 	{
 		scr_player_do_noisecrusher();
 	}
@@ -214,17 +214,8 @@ function scr_player_mach2()
 		{
 			sprite_index = spr_machroll;
 		}
-		if (character == "V")
-		{
-			sprite_index = spr_playerV_divekickstart;
-		}
 	}
-	if (key_attack && !place_meeting(x + xscale, y, obj_solid) && character == "S" && grounded)
-	{
-		state = states.handstandjump;
-		movespeed = 0;
-	}
-	if ((!key_attack && movespeed >= 8 && grounded && vsp > 0 && skateboarding == false) || (character == "S" && move == 0 && grounded))
+	if ((!key_attack && movespeed >= 8 && grounded && vsp > 0 && skateboarding == false))
 	{
 		image_index = 0;
 		state = states.machslide;
@@ -269,35 +260,6 @@ function scr_player_mach2()
 	{
 		state = states.normal;
 		instance_create(x, y, obj_genericpoofeffect);
-	}
-	if (key_slap2 && character == "V")
-	{
-		vsp = -5;
-		state = states.revolver;
-		image_index = 0;
-		sprite_index = spr_playerV_airrevolver;
-		image_index = 0;
-		with (instance_create(x + (xscale * 20), y + 20, obj_shotgunbullet))
-		{
-			is_solid = false;
-			image_xscale = other.xscale;
-		}
-		fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
-	}
-	if (key_shoot2 && character == "V" && !instance_exists(dynamite_inst))
-	{
-		vsp = -5;
-		state = states.dynamite;
-		image_index = 0;
-		sprite_index = spr_playerV_dynamitethrow;
-		with (instance_create(x, y, obj_dynamite))
-		{
-			image_xscale = other.xscale;
-			other.dynamite_inst = id;
-			playerid = other.id;
-			movespeed = other.movespeed + 4;
-			vsp = -6;
-		}
 	}
 	if (sprite_index == spr_rollgetup || sprite_index == spr_longjumpend || sprite_index == spr_longjump || sprite_index == spr_suplexdash)
 	{

@@ -270,7 +270,6 @@ anger = 0;
 angry = false;
 baddiegrabbedID = 0;
 spr_palette = spr_peppalette;
-character = "P";
 scr_characterspr();
 paletteselect = 1;
 player_paletteselect[0] = 1;

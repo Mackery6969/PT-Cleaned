@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Ancient Cheese",
-    "path": "folders/Tilesets/Floor 1/Ancient Cheese.yy",
+    "path": "folders/Tile Sets/Floor 1/Ancient Cheese.yy",
   },
   "spriteId": {
     "name": "tile_ruin2",

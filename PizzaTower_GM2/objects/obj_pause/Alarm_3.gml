@@ -6,7 +6,6 @@ if (!hub)
 	room = Realtitlescreen;
 	with (obj_player)
 	{
-		character = "P";
 		scr_characterspr();
 	}
 	global.leveltosave = noone;

@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Oh Shit!",
-    "path": "folders/Tilesets/Floor 4/Oh Shit!.yy",
+    "path": "folders/Tile Sets/Floor 4/Oh Shit!.yy",
   },
   "spriteId": {
     "name": "spr_sewer2props",

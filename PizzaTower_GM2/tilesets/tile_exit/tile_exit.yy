@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "The Crumbling Tower Of Pizza",
-    "path": "folders/Tilesets/Floor 5/The Crumbling Tower Of Pizza.yy",
+    "path": "folders/Tile Sets/Floor 5/The Crumbling Tower Of Pizza.yy",
   },
   "spriteId": {
     "name": "spr_exittile",

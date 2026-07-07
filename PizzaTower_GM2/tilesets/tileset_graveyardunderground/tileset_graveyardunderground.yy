@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Wasteyard",
-    "path": "folders/Tilesets/Floor 2/Wasteyard.yy",
+    "path": "folders/Tile Sets/Floor 2/Wasteyard.yy",
   },
   "spriteId": {
     "name": "tile_graveyard2",

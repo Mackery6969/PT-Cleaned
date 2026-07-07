@@ -223,57 +223,55 @@ if (grabbed == true)
 	}
 	if (playerid.state == states.superslam)
 	{
-		if (playerid.character == "P")
+		if (floor(playerid.image_index) == 0)
 		{
-			if (floor(playerid.image_index) == 0)
-			{
-				depth = 0;
-				x = playerid.x + (playerid.xscale * 10);
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 1)
-			{
-				depth = 0;
-				x = playerid.x + (playerid.xscale * 5);
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 2)
-			{
-				depth = 0;
-				x = playerid.x;
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 3)
-			{
-				depth = 0;
-				x = playerid.x + (playerid.xscale * -5);
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 4)
-			{
-				depth = 0;
-				x = playerid.x + (playerid.xscale * -10);
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 5)
-			{
-				depth = -8;
-				x = playerid.x + (playerid.xscale * -5);
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 6)
-			{
-				depth = -8;
-				x = playerid.x;
-				y = playerid.y;
-			}
-			if (floor(playerid.image_index) == 7)
-			{
-				depth = -8;
-				x = playerid.x + (playerid.xscale * 5);
-				y = playerid.y;
-			}
+			depth = 0;
+			x = playerid.x + (playerid.xscale * 10);
+			y = playerid.y;
 		}
+		if (floor(playerid.image_index) == 1)
+		{
+			depth = 0;
+			x = playerid.x + (playerid.xscale * 5);
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 2)
+		{
+			depth = 0;
+			x = playerid.x;
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 3)
+		{
+			depth = 0;
+			x = playerid.x + (playerid.xscale * -5);
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 4)
+		{
+			depth = 0;
+			x = playerid.x + (playerid.xscale * -10);
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 5)
+		{
+			depth = -8;
+			x = playerid.x + (playerid.xscale * -5);
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 6)
+		{
+			depth = -8;
+			x = playerid.x;
+			y = playerid.y;
+		}
+		if (floor(playerid.image_index) == 7)
+		{
+			depth = -8;
+			x = playerid.x + (playerid.xscale * 5);
+			y = playerid.y;
+		}
+
 		else
 		{
 			depth = -7;

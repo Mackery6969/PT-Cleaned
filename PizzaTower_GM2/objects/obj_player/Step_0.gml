@@ -42,7 +42,7 @@ if (state != states.grab)
 {
 	swingdingthrow = false;
 }
-if (character == "P" && !ispeppino && !isgustavo)
+if (!ispeppino && !isgustavo)
 {
 	if (can_jump && vsp > 0)
 	{
@@ -64,7 +64,7 @@ if (place_meeting(x, y + 1, obj_slope))
 {
 	collision_flags |= collisionflags.on_slope;
 }
-if (character == "P" && !ispeppino && !skateboarding && ((scr_check_superjump() && key_jump2) || key_superjump) && state != states.mach3 && can_jump && vsp > 0 && (state == states.normal || state == states.mach2))
+if (!ispeppino && !skateboarding && ((scr_check_superjump() && key_jump2) || key_superjump) && state != states.mach3 && can_jump && vsp > 0 && (state == states.normal || state == states.mach2))
 {
 	sprite_index = spr_superjumpprep;
 	state = states.Sjumpprep;
@@ -1279,7 +1279,7 @@ if (state == states.barrel && key_jump2 && !jumpstop)
 {
 	grav = 0.4;
 }
-if (global.combo >= 25 && !instance_exists(angryeffectid) && sprite_index != spr_catched && state == states.normal && character != "V")
+if (global.combo >= 25 && !instance_exists(angryeffectid) && sprite_index != spr_catched && state == states.normal)
 {
 	with (instance_create(x, y, obj_angrycloud))
 	{
@@ -1629,18 +1629,11 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
 		y = -100;
 	}
 }
-if (character != "M")
+if (!scr_solid_player(x, y))
 {
-	if (!scr_solid_player(x, y))
+	if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_barrelslipnslide && sprite_index != spr_barrelroll && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
 	{
-		if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_barrelslipnslide && sprite_index != spr_barrelroll && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
-		{
-			mask_index = spr_player_mask;
-		}
-		else
-		{
-			mask_index = spr_crouchmask;
-		}
+		mask_index = spr_player_mask;
 	}
 	else
 	{
@@ -1649,7 +1642,7 @@ if (character != "M")
 }
 else
 {
-	mask_index = spr_pepperman_mask;
+	mask_index = spr_crouchmask;
 }
 if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.gameover || state == states.gotoplayer || state == states.taxi2 || state == states.actor || (collision_flags & collisionflags.secret) > 0)
 {

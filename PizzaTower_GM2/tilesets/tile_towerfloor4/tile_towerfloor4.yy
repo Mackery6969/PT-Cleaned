@@ -13,7 +13,7 @@
   "out_tilevborder": 2,
   "parent": {
     "name": "Floor 4",
-    "path": "folders/Tilesets/Floor 4.yy",
+    "path": "folders/Tile Sets/Floor 4.yy",
   },
   "spriteId": {
     "name": "spr_tile_towerfloor4",

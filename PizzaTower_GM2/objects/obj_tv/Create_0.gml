@@ -64,7 +64,6 @@ global.srank = 0;
 global.arank = 0;
 global.brank = 0;
 global.crank = 0;
-character = "PEPPINO";
 chunkmax = 0;
 timer_xplus = -153;
 timer_yplus = -76;
