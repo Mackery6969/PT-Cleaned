@@ -34,6 +34,7 @@ if (active)
 		input_text = "";
 		keyboard_string = "";
 		_search = true;
+		active = false;
 	}
 	if (_search)
 	{
