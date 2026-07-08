@@ -57,22 +57,6 @@ switch (state)
 				hsp = 0;
 				sprite_index = spr_pizzaslug_idle;
 				break;
-			case states.turn:
-				image_speed = 0.35;
-				substate_buffer = 5;
-				if (sprite_index != spr_pizzaslug_turn)
-				{
-					image_index = 0;
-					sprite_index = spr_pizzaslug_turn;
-				}
-				if (sprite_index == spr_pizzaslug_turn && ANIMATION_END)
-				{
-					image_xscale *= -1;
-					substate_buffer = substate_max;
-					substate = states.idle;
-					sprite_index = spr_pizzaslug_idle;
-				}
-				break;
 			case states.pizzagoblinthrow:
 				state = states.pizzagoblinthrow;
 				substate_buffer = 0;

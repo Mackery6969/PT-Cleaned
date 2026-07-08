@@ -154,18 +154,6 @@ switch (state)
 			state = states.monsterchase;
 		}
 		break;
-	case states.monsterrun:
-		targetplayer = instance_nearest(x, y, obj_player);
-		hsp = image_xscale * 6;
-		if (place_meeting(x + sign(hsp), y, obj_monstersolid) && (!place_meeting(x + sign(hsp), y, obj_monsterslope) || place_meeting(x + sign(hsp), y - 4, obj_solid)))
-		{
-			state = states.monsterwalk;
-		}
-		if (scr_monster_detect(300, room_height, targetplayer))
-		{
-			state = states.monsterchase;
-		}
-		break;
 	case states.monsterinvestigate:
 		scr_monsterinvestigate(10, spr_monstershroom_chase, spr_monstershroom_idle);
 		break;

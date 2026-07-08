@@ -6,7 +6,6 @@ if (global.key_inv == true)
 }
 hsp = 0;
 vsp = 0;
-inv_frame = false;
 grav = 0.4;
 image_speed = 0.35;
 platformid = noone;

@@ -105,12 +105,6 @@ with (obj_player)
 			case states.stringfall:
 				GamepadSetVibration(_pindex, 0.7, 0.7, 0.8);
 				break;
-			case states.stringjump:
-				GamepadSetVibration(_pindex, 0.7, 0.7, 0.8);
-				break;
-			case states.stringfling:
-				GamepadSetVibration(_pindex, 0.7, 0.7, 0.8);
-				break;
 			case states.jetpackjump:
 				GamepadSetVibration(_pindex, 0.9, 0.9, 0.8);
 				break;

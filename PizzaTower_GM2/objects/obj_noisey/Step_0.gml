@@ -25,9 +25,6 @@ switch (state)
 	case states.staggered:
 		scr_enemy_staggered();
 		break;
-	case states.float:
-		scr_noisey_float();
-		break;
 	case states.pizzaheadjump:
 		scr_boss_pizzaheadjump();
 		break;

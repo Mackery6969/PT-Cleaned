@@ -12,9 +12,6 @@ switch (state)
 	case states.fishing:
 		scr_pizzaface_p2_fishing();
 		break;
-	case states.look:
-		scr_pizzaface_p2_look();
-		break;
 	case states.pullinglevel:
 		boss_pizzahead_pullinglevel();
 		break;

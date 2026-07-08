@@ -400,14 +400,3 @@ function scr_player_ghost()
 	}
 }
 
-function scr_player_ghostpossess()
-{
-	visible = false;
-	hsp = 0;
-	if (!instance_exists(possessID))
-	{
-		visible = true;
-		state = states.ghost;
-		sprite_index = spr_ghostidle;
-	}
-}

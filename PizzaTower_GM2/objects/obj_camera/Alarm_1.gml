@@ -18,7 +18,7 @@ if (global.panic == true && !instance_exists(obj_ghostcollectibles))
 		global.minutes -= 1;
 	}
 }
-if (global.timedgate == true || global.miniboss == true)
+if (global.timedgate == true)
 {
 	global.seconds -= 1;
 	if (global.seconds < 0)

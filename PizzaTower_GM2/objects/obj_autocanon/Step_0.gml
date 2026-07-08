@@ -6,10 +6,6 @@ if (cooldown <= 0 && (escape == false || global.panic == true))
 		other.ID = id;
 		image_xscale = other.image_xscale;
 	}
-	if (cooldownrandom == true)
-	{
-		cooldownmax = random_range(50, 150);
-	}
 	repeat (5)
 	{
 		with (instance_create(x + (image_xscale * 35), y, obj_firemouthflame))

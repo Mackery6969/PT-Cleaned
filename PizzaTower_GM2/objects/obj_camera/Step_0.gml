@@ -22,11 +22,6 @@ if (!(healthshaketime == 0))
 	}
 }
 	p2pdistancex = 0;
-
-if (floor(image_index) == 10)
-{
-	shoving = false;
-}
 if (room == Longintro || room == Mainmenu || room == rank_room || room == timesuproom || room == Realtitlescreen || room == characterselect || room == hub_loadingscreen || (string_copy(room_get_name(room), 1, 5) == "tower" && !global.panic))
 {
 	visible = false;
@@ -67,29 +62,13 @@ else if (comboend)
 	comboend = false;
 	event_perform(ev_alarm, 4);
 }
-if (shoving == true && image_index >= 3 && bang == false)
-{
-	with (instance_create(x, y, obj_fallingHUDface))
-	{
-		hsp = random_range(-1, -5);
-	}
-	bang = true;
-}
-if (shoving == false)
-{
-	bang = false;
-}
+bang = false;
+
 if (global.seconds <= 0 && global.minutes <= 0 && ded == false)
 {
 	alarm[1] = -1;
-	if (global.miniboss)
-	{
-		alarm[2] = 1;
-	}
-	else
-	{
 		alarm[3] = 1;
-	}
+
 	ded = true;
 }
 if (global.seconds > 59)

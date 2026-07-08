@@ -80,8 +80,6 @@ switch (state)
 			image_xscale *= -1;
 		}
 		break;
-	case states.turn:
-		break;
 	case states.hit:
 		scr_enemy_hit();
 		break;

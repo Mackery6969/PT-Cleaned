@@ -9,10 +9,6 @@ switch (state)
 		grav = 0.5;
 		scr_enemy_charge();
 		break;
-	case states.turn:
-		grav = 0.5;
-		scr_enemy_turn();
-		break;
 	case states.walk:
 		grav = 0.5;
 		scr_enemy_walk();

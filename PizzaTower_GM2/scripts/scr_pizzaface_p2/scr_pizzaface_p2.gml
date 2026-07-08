@@ -331,28 +331,6 @@ function scr_pizzaface_p2_normal()
 	}
 }
 
-function scr_pizzaface_p2_look()
-{
-	hsp = 0;
-	if (fishingbuffer > 0)
-	{
-		fishingbuffer--;
-	}
-	else if (fishcount > 0)
-	{
-		fishcount--;
-		state = states.walk;
-		image_xscale *= -1;
-		sprite_index = spr_pizzahead_giddy;
-	}
-	else
-	{
-		state = states.fishing;
-		fishingbuffer = 80;
-		fishcount = irandom_range(1, 3);
-	}
-}
-
 function scr_pizzaface_p2_fishing()
 {
 	hsp = 0;
