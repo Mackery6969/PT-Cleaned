@@ -21,8 +21,8 @@
   "width": 32,
   "height": 128,
   "textureGroupId": {
-    "name": "backgroundgroup",
-    "path": "texturegroups/backgroundgroup",
+    "name": "smallgroup",
+    "path": "texturegroups/smallgroup",
   },
   "swatchColours": null,
   "gridX": 0,
