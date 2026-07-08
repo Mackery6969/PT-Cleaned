@@ -24,7 +24,6 @@ flash = false;
 idlespr = spr_fakesanta_idle;
 stunfallspr = spr_fakesanta_idle;
 walkspr = spr_fakesanta_idle;
-turnspr = spr_fakesanta_idle;
 grabbedspr = spr_fakesanta_idle;
 scaredspr = spr_fakesanta_idle;
 image_xscale = -1;

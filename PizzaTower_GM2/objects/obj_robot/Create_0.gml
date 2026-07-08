@@ -1,6 +1,5 @@
 scr_initenemy();
 machspeed = 16;
-startmachspeed = 8;
 tacklespeed = 11;
 grav = 0.5;
 hsp = 0;

@@ -63,7 +63,6 @@ function scr_create_parryhitbox()
 	parrytimer = taunt_to_parry_max;
 	instance_destroy(parry_inst);
 	parry_inst = instance_create(x, y, obj_parryhitbox);
-	var _playerid = 1;
 	with (parry_inst)
 	{
 		image_xscale = other.xscale;

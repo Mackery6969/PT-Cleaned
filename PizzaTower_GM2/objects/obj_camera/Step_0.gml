@@ -11,7 +11,6 @@ if (collect_shake > 0)
 if (healthshaketime > 0)
 {
 	healthshaketime--;
-	healthshake = random_range(-2, 2);
 }
 if (!(healthshaketime == 0))
 {
@@ -62,7 +61,6 @@ else if (comboend)
 	comboend = false;
 	event_perform(ev_alarm, 4);
 }
-bang = false;
 
 if (global.seconds <= 0 && global.minutes <= 0 && ded == false)
 {

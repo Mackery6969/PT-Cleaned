@@ -740,7 +740,6 @@ function boss_pizzahead_shotgun()
 					sprite_index = spr_pizzahead_throwaway;
 					image_index = 0;
 					miniguncount = 2;
-					fishcount = 0;
 				}
 			}
 			break;
@@ -784,11 +783,7 @@ function boss_pizzahead_shotgun()
 					}
 					else
 					{
-						if (miniguncount > 0)
-						{
-							fishcount = 0;
-						}
-						else
+						if (!(miniguncount > 0))
 						{
 							image_xscale = saveddir;
 						}

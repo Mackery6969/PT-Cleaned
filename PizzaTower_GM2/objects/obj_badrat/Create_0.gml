@@ -14,7 +14,6 @@ flash = false;
 idlespr = spr_badrat_walk;
 stunfallspr = spr_badrat_stun;
 walkspr = spr_badrat_walk;
-turnspr = spr_badrat_walk;
 grabbedspr = spr_badrat_stun;
 scaredspr = spr_badrat_scared;
 image_xscale = -1;

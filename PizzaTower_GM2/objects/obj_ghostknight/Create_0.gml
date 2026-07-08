@@ -1,7 +1,6 @@
 scr_initenemy();
 image_alpha = 0.5;
 parryable = false;
-is_controllable = true;
 shakestun = false;
 grav = 0.5;
 hsp = 0;

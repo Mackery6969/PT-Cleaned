@@ -27,7 +27,6 @@ if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player
 		if (other.level == "snickchallenge")
 		{
 			global.wave = 0;
-			global.maxwave = ((global.minutes * 60) + global.seconds) * 60;
 			if (global.panicbg)
 			{
 				scr_panicbg_init();

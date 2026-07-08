@@ -17,7 +17,6 @@ flash = false;
 idlespr = spr_pizzaslug_idle;
 stunfallspr = spr_pizzaslug_stun;
 walkspr = spr_pizzaslug_walk;
-turnspr = spr_pizzaslug_turn;
 grabbedspr = spr_pizzaslug_stun;
 scaredspr = spr_pizzaslug_scared;
 image_xscale = -1;

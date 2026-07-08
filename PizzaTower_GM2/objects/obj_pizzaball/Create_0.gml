@@ -24,7 +24,6 @@ flash = false;
 idlespr = spr_pizzaball_idle2;
 stunfallspr = spr_pizzaball_stun;
 walkspr = spr_pizzaball_walk;
-turnspr = spr_pizzaball_walk;
 grabbedspr = spr_pizzaball_stun;
 scaredspr = spr_pizzaball_stun;
 ragespr = spr_pizzaball_stun;

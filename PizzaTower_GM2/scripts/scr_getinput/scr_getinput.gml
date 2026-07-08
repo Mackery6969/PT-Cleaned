@@ -18,7 +18,6 @@ function scr_init_input()
 	key_attack2 = false;
 	key_shoot2 = false;
 	key_start = false;
-	key_chainsaw = false;
 	key_chainsaw2 = false;
 	stickpressed = false;
 }
@@ -180,7 +179,6 @@ function scr_getinput()
 		key_down2 = tdp_input_get("player_down").pressed || tdp_input_get("player_downC").pressed;
 		key_jump = tdp_input_get("player_jump").pressed || tdp_input_get("player_jumpC").pressed;
 		key_jump2 = tdp_input_get("player_jump").held || tdp_input_get("player_jumpC").held;
-		key_jump3 = tdp_input_get("player_jump").released || tdp_input_get("player_jumpC").released;
 		key_slap = tdp_input_get("player_slap").held || tdp_input_get("player_slapC").held;
 		key_slap2 = tdp_input_get("player_slap").pressed || tdp_input_get("player_slapC").pressed;
 		key_taunt = tdp_input_get("player_taunt").held || tdp_input_get("player_tauntC").held;
@@ -203,7 +201,6 @@ function scr_getinput()
 		key_down2 = tdp_input_get("player_downC").pressed;
 		key_jump = tdp_input_get("player_jumpC").pressed;
 		key_jump2 = tdp_input_get("player_jumpC").held;
-		key_jump3 = tdp_input_get("player_jumpC").released;
 		key_slap = tdp_input_get("player_slapC").held;
 		key_slap2 = tdp_input_get("player_slapC").pressed;
 		key_taunt = tdp_input_get("player_tauntC").held;
@@ -215,7 +212,6 @@ function scr_getinput()
 		key_groundpound2 = tdp_input_get("player_groundpoundC").held;
 	}
 	key_shoot2 = false;
-	key_chainsaw = false;
 	key_chainsaw2 = false;
 	key_left_axis = scr_get_move_axis("player_leftC");
 	key_right_axis = scr_get_move_axis("player_rightC");

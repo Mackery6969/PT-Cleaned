@@ -815,10 +815,6 @@ if (walljumpbuffer > 0)
 {
 	walljumpbuffer--;
 }
-if (grounded && vsp > 0 && state != states.noisejetpack)
-{
-	jetpackfuel = jetpackmax;
-}
 if (tauntstoredisgustavo)
 {
 	isgustavo = true;
@@ -991,9 +987,6 @@ if (flashflicker == true)
 		flash = true;
 		flashflickertime = 0;
 	}
-}
-if (state != states.mach3 && state != states.grabbed)
-{
 }
 if (state != states.freefall && state != states.superslam && (state != states.chainsaw || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && (state != states.backbreaker || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && !instance_exists(obj_secretportalstart))
 {
@@ -1274,10 +1267,6 @@ if (state != states.mach1 && state != states.cheesepepjump && state != states.ju
 if (state != states.Sjump && state != states.Sjumpprep)
 {
 	a = 0;
-}
-if (state != states.facestomp)
-{
-	facestompAnim = false;
 }
 if (state != states.freefall && state != states.facestomp && state != states.superslam && state != states.freefallland)
 {

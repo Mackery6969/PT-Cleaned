@@ -1,5 +1,4 @@
 scr_initenemy();
-is_controllable = true;
 grav = 0.5;
 hsp = 0;
 vsp = 0;
@@ -13,7 +12,6 @@ flash = false;
 idlespr = spr_sausageman_walk;
 stunfallspr = spr_sausageman_stun;
 walkspr = spr_sausageman_walk;
-turnspr = spr_sausageman_walk;
 grabbedspr = spr_sausageman_stun;
 scaredspr = spr_sausageman_scared;
 ragespr = spr_sausageman_scared;

@@ -1,6 +1,5 @@
 scr_initenemy();
 usepalette = true;
-is_controllable = true;
 gusrat = false;
 grav = 0.5;
 hsp = 0;
@@ -22,7 +21,6 @@ if (obj_player.isgustavo)
 idlespr = _hurt;
 stunfallspr = _hurt;
 walkspr = _hurt;
-turnspr = _hurt;
 grabbedspr = _hurt;
 scaredspr = _hurt;
 ragespr = _hurt;

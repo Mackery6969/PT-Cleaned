@@ -1,6 +1,5 @@
 scr_initenemy();
 usepalette = true;
-is_controllable = true;
 grav = 0.5;
 hsp = 0;
 vsp = 0;
@@ -14,7 +13,6 @@ flash = false;
 idlespr = spr_slimeidle;
 stunfallspr = spr_slimestun;
 walkspr = spr_slimemove;
-turnspr = noone;
 grabbedspr = noone;
 scaredspr = spr_slime_scared;
 ragespr = spr_slime_scared;

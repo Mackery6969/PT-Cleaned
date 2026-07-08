@@ -80,13 +80,11 @@ function scr_initenemy()
 	killprotection = false;
 	mach3destroy = false;
 	provoked = false;
-	is_controllable = false;
 	turnmax = 200;
 	turntimer = 0;
 	turnstart = false;
 	timedgate = false;
 	angle = image_angle;
-	is_controllable = false;
 	grav = 0.5;
 	hsp = 0;
 	vsp = 0;

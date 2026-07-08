@@ -16,7 +16,6 @@ flash = false;
 idlespr = spr_golfburger_walk;
 stunfallspr = spr_golfburger_stun;
 walkspr = spr_golfburger_walk;
-turnspr = spr_golfburger_walk;
 grabbedspr = spr_golfburger_stun;
 scaredspr = spr_golfburger_scared;
 image_xscale = -1;

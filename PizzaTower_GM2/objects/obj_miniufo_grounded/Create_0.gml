@@ -12,7 +12,6 @@ flash = false;
 idlespr = spr_ufogrounded_walk;
 stunfallspr = spr_ufogrounded_stun;
 walkspr = spr_ufogrounded_walk;
-turnspr = noone;
 grabbedspr = spr_ufogrounded_stun;
 scaredspr = spr_ufogrounded_scared;
 image_xscale = -1;

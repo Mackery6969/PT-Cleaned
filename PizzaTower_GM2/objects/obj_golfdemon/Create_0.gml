@@ -18,7 +18,6 @@ flash = false;
 idlespr = spr_golfdemon_idle;
 stunfallspr = spr_golfdemon_stun;
 walkspr = spr_golfdemon_walk;
-turnspr = spr_golfdemon_walk;
 grabbedspr = spr_golfdemon_dead;
 scaredspr = spr_golfdemon_dead;
 spr_palette = spr_minijohn_palette;

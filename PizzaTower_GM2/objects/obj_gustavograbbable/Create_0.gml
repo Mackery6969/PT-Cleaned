@@ -21,7 +21,6 @@ flash = false;
 idlespr = spr_lonegustavo_grabbable;
 stunfallspr = spr_lonegustavo_stun;
 walkspr = spr_lonegustavo_walk;
-turnspr = spr_lonegustavo_idle;
 grabbedspr = spr_lonegustavo_grabbable;
 scaredspr = spr_lonegustavo_grabbable;
 ragespr = spr_lonegustavo_grabbable;

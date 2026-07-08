@@ -14,7 +14,6 @@ flash = false;
 idlespr = spr_minijohn_stun;
 stunfallspr = spr_minijohn_stun;
 walkspr = spr_minijohn_charge;
-turnspr = noone;
 grabbedspr = spr_minijohn_stun;
 scaredspr = spr_minijohn_stun;
 spr_palette = spr_minijohn_palette;

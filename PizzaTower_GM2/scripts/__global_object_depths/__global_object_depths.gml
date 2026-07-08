@@ -213,7 +213,6 @@ function __global_object_depths() {
     global.__objectDepths[205] = -7; // obj_bulletimpact
     global.__objectDepths[206] = -7; // obj_bulletdisappear
     global.__objectDepths[207] = -7; // obj_chargeeffect
-    global.__objectDepths[208] = 0; // obj_pogoeffect
     global.__objectDepths[209] = 0; // obj_chainsaweffect
     global.__objectDepths[210] = 0; // obj_explosioneffect
     global.__objectDepths[211] = 0; // obj_pistoleffect
@@ -454,7 +453,6 @@ function __global_object_depths() {
     global.__objectNames[205] = "obj_bulletimpact";
     global.__objectNames[206] = "obj_bulletdisappear";
     global.__objectNames[207] = "obj_chargeeffect";
-    global.__objectNames[208] = "obj_pogoeffect";
     global.__objectNames[209] = "obj_chainsaweffect";
     global.__objectNames[210] = "obj_explosioneffect";
     global.__objectNames[211] = "obj_pistoleffect";

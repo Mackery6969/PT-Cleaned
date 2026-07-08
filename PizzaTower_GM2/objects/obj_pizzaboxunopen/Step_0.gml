@@ -31,7 +31,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		}
 		if (global.toppintotal < 5)
 		{
-			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -66,7 +65,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
 		{
-			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -101,7 +99,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
 		{
-			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -136,7 +133,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
 		{
-			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;
@@ -171,7 +167,6 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
 		{
-			obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 		}
 		obj_tv.showtext = true;
 		obj_tv.alarm[0] = 150;

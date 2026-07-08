@@ -17,7 +17,6 @@ flash = false;
 idlespr = spr_patroller_walk;
 stunfallspr = spr_patroller_stun;
 walkspr = spr_patroller_walk;
-turnspr = spr_patroller_walk;
 grabbedspr = spr_patroller_stun;
 scaredspr = spr_patroller_scared;
 image_xscale = -1;

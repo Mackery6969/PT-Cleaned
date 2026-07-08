@@ -118,8 +118,6 @@ var exit_function = function()
 ds_map_set(pause_menu_map, "pause_exit", [3, exit_function]);
 ds_map_set(pause_menu_map, "pause_exit_title", [3, exit_function]);
 cursor_index = 0;
-cursor_sprite_number = sprite_get_number(spr_angelpriest);
-cursor_sprite_height = sprite_get_height(spr_angelpriest);
 cursor_x = -1000;
 cursor_y = -1000;
 cursor_actualx = 0;

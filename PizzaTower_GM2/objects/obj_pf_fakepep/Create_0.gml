@@ -23,7 +23,6 @@ flash = false;
 idlespr = spr_fakepeppino_idle;
 stunfallspr = spr_fakepeppino_stun;
 walkspr = spr_fakepeppino_idle;
-turnspr = spr_fakepeppino_idle;
 grabbedspr = spr_fakepeppino_stun;
 scaredspr = spr_fakepeppino_idle;
 ragespr = spr_fakepeppino_idle;

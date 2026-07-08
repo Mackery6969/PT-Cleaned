@@ -14,7 +14,6 @@ flash = false;
 idlespr = spr_player_idle;
 stunfallspr = spr_pepclone_stun;
 walkspr = spr_player_move;
-turnspr = spr_player_move;
 grabbedspr = spr_pepclone_stun;
 scaredspr = spr_player_hurt;
 image_xscale = -1;

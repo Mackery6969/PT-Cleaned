@@ -21,7 +21,6 @@ flash = false;
 idlespr = spr_farmer1_idle;
 stunfallspr = spr_farmer1_stun;
 walkspr = spr_farmer1_walk;
-turnspr = spr_farmer1_idle;
 grabbedspr = spr_farmer1_stun;
 scaredspr = spr_farmer1_scared;
 ragespr = spr_farmer1_attack;

@@ -43,7 +43,6 @@ player_index = 0;
 player_hpsprite = spr_bossfight_playerhp;
 bar_surface = noone;
 barfill_x = 0;
-round_timermax = 36000;
 round_timer_init = false;
 state = states.arenaintro;
 playerx = -415;

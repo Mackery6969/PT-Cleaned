@@ -7,10 +7,7 @@ function scr_hurtplayer(_player)
 	var _swap = false;
 	with (_player)
 	{
-		if (global.failcutscene || instance_exists(obj_endlevelfade) || state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan || (global.noisejetpack == true && (ispeppino || noisepizzapepper)) || holycross > 0 || invtime > 0 || sprite_index == spr_jetpackstart2)
-		{
-		}
-		else if ((state == states.backbreaker && (parrytimer > 0 || instance_exists(obj_parryhitbox) || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt)) || state == states.chainsaw || state == states.phase1hurt || state == states.actor || instance_exists(obj_bossdark))
+		if (!(global.failcutscene || instance_exists(obj_endlevelfade) || state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan || (global.noisejetpack == true && (ispeppino || noisepizzapepper)) || holycross > 0 || invtime > 0 || sprite_index == spr_jetpackstart2)) if ((state == states.backbreaker && (parrytimer > 0 || instance_exists(obj_parryhitbox) || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt)) || state == states.chainsaw || state == states.phase1hurt || state == states.actor || instance_exists(obj_bossdark))
 		{
 			if (state == states.backbreaker)
 			{

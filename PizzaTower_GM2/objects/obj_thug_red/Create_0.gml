@@ -30,7 +30,6 @@ flash = false;
 idlespr = spr_shrimp_idle;
 stunfallspr = spr_shrimp_stun;
 walkspr = spr_shrimp_walk;
-turnspr = noone;
 grabbedspr = spr_shrimp_stun;
 scaredspr = spr_shrimp_scared;
 hp = 5;

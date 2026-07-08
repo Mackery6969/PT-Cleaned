@@ -19,7 +19,6 @@ flash = false;
 idlespr = spr_meatball_idle;
 stunfallspr = spr_meatball_idle;
 walkspr = spr_meatball_roll;
-turnspr = spr_meatball_idle;
 grabbedspr = spr_meatball_idle;
 scaredspr = spr_meatball_idle;
 hp = 1;

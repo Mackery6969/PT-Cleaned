@@ -87,43 +87,6 @@ unlock_noise = function(_showpopup)
 	}
 };
 
-unlock_swap = function(_showpopup)
-{
-	for (var i = 0; i < 3; i++)
-	{
-		if (global.gameN[i].judgement != "none")
-		{
-			_showpopup = true;
-			break;
-		}
-	}
-	if (!_showpopup)
-	{
-		ini_open_from_string(obj_savesystem.ini_str_options);
-		_showpopup = ini_read_real("Game", "swapunlocked", 0);
-		ini_close();
-	}
-	if (_showpopup)
-	{
-		swap_unlocked = true;
-		ini_open_from_string(obj_savesystem.ini_str_options);
-		if (ini_read_real("Game", "swapunlocked", 0) == 0)
-		{
-			with (instance_create(0, 0, obj_noiseunlocked))
-			{
-				sprite_index = spr_swapmodeunlocked;
-			}
-			ini_write_real("Game", "swapunlocked", 1);
-			obj_savesystem.ini_str_options = ini_close();
-			gamesave_async_save_options();
-		}
-		else
-		{
-			ini_close();
-		}
-	}
-};
-
 unlock_noise(false);
 ini_open_from_string(obj_savesystem.ini_str_options);
 swap_unlocked = ini_read_real("Game", "swapmode", 0) == 1;

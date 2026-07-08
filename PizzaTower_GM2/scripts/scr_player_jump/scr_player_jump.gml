@@ -362,7 +362,6 @@ function state_player_jump()
 			if (!instance_exists(parry_inst) && flash == true)
 			{
 				parry_inst = instance_create(x, y, obj_parryhitbox);
-				var _playerid = 1;
 				with (parry_inst)
 				{
 					image_xscale = other.xscale;

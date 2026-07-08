@@ -1,5 +1,4 @@
 scr_initenemy();
-is_controllable = true;
 attract_player = false;
 shakestun = false;
 grav = 0.5;
@@ -15,7 +14,6 @@ flash = false;
 idlespr = spr_hamkuff_idle;
 stunfallspr = spr_hamkuff_stun;
 walkspr = spr_hamkuff_idle;
-turnspr = spr_hamkuff_idle;
 grabbedspr = spr_hamkuff_stun;
 scaredspr = spr_hamkuff_stun;
 hp = 1;

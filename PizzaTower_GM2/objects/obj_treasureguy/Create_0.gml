@@ -44,7 +44,6 @@ flash = false;
 idlespr = spr_treasureguy_idle;
 stunfallspr = spr_treasureguy_stun;
 walkspr = spr_treasureguy_idle;
-turnspr = noone;
 grabbedspr = spr_treasureguy_stun;
 scaredspr = spr_treasureguy_escapestart;
 image_xscale = -1;

@@ -32,7 +32,6 @@ function camera_zoom(_zoom, _zoomspd)
 		targetzoom = clamp(targetzoom, 0, max_zoom);
 		if (_zoomspd != undefined)
 		{
-			zoomspd = abs(_zoomspd);
 		}
 	}
 }

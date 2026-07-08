@@ -22,7 +22,6 @@ flash = false;
 idlespr = spr_soldier_idle;
 stunfallspr = spr_soldier_stun;
 walkspr = spr_soldier_walk;
-turnspr = spr_soldier_walk;
 grabbedspr = spr_soldier_stun;
 scaredspr = spr_soldier_scared;
 image_xscale = -1;

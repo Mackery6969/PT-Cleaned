@@ -293,7 +293,6 @@ CAMERA_ZOOM = new DebugCommand("camera_zoom", "Zoom", "<targetzoom> <spd>", func
 		targetzoom = clamp(targetzoom, 0, max_zoom);
 		if (_spd != undefined)
 		{
-			zoomspd = abs(_spd);
 		}
 	}
 });

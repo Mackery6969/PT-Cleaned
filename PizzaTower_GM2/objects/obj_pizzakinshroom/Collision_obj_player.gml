@@ -4,7 +4,6 @@ if (obj_player.state != states.hurt && global.shroomfollow == false)
 	ds_list_add(global.saveroom, id);
 	if (global.toppintotal < 5)
 	{
-		obj_tv.message = "YOU NEED " + string(5 - global.toppintotal) + " MORE TOPPINS!";
 	}
 	obj_tv.showtext = true;
 	obj_tv.alarm[0] = 150;

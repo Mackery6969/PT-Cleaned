@@ -13,7 +13,6 @@ flash = false;
 idlespr = spr_pizzice_walk;
 stunfallspr = spr_pizzice_stun;
 walkspr = spr_pizzice_walk;
-turnspr = spr_pizzice_walk;
 grabbedspr = spr_pizzice_stun;
 scaredspr = spr_pizzice_stun;
 ragespr = spr_pizzice_stun;

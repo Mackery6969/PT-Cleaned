@@ -13,7 +13,6 @@ flash = false;
 idlespr = spr_banditochicken_sleep;
 stunfallspr = spr_banditochicken_stun;
 walkspr = spr_banditochicken_chase;
-turnspr = noone;
 grabbedspr = spr_banditochicken_stun;
 scaredspr = spr_banditochicken_scared;
 hp = 2;

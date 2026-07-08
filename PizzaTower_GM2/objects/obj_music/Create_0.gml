@@ -13,7 +13,6 @@ savedmusicpos = 0;
 exitmusic = false;
 pillarmusicID = fmod_event_create_instance("event:/music/pillarmusic");
 panicmusicP = fmod_event_create_instance("event:/music/pizzatime");
-panicmusicN = fmod_event_create_instance("event:/music/pizzatimenoise");
 panicmusicID = panicmusicP;
 kidspartychaseID = fmod_event_create_instance("event:/music/w5/kidspartychase");
 panicstart = false;

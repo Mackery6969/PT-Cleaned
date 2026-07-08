@@ -13,7 +13,6 @@ flash = false;
 idlespr = spr_clownmato_fall;
 stunfallspr = spr_clownmato_stun;
 walkspr = spr_clownmato_fall;
-turnspr = spr_clownmato_fall;
 grabbedspr = spr_clownmato_stun;
 scaredspr = spr_clownmato_fall;
 spr_dead = spr_clownmato_dead;

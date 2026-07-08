@@ -5,7 +5,6 @@ disx = 150;
 idlespr = spr_farmer2_throwstart;
 stunfallspr = spr_farmer2_stun;
 walkspr = spr_farmer2_walk;
-turnspr = spr_farmer2_idle;
 grabbedspr = spr_farmer2_idle;
 scaredspr = spr_farmer2_scared;
 ragespr = spr_farmer2_attack;

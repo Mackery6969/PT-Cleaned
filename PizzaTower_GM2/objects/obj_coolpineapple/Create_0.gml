@@ -5,7 +5,6 @@ taunt_storedgrav = 0.5;
 taunt_storedstate = states.walk;
 taunt_storedmovespeed = 1;
 taunt_storedhsp = 0;
-cooldown_max = 50;
 inv_timer = 0;
 inv_max = 10;
 parryspr = noone;

@@ -45,7 +45,6 @@ function scr_characterspr()
 		spr_catched = spr_player_catched;
 		spr_land2 = spr_player_land2;
 		spr_punch = spr_player_punch;
-		spr_uppunch = spr_player_uppunch;
 		spr_stomp = spr_player_stomp;
 		spr_stompprep = spr_player_stompprep;
 		spr_crouch = spr_player_crouch;
@@ -295,8 +294,6 @@ function scr_characterspr()
 		spr_wallsplat = spr_playerN_wallsplat;
 		spr_land2 = spr_playerN_land2;
 		spr_punch = spr_playerN_punch;
-		spr_backkick = spr_playerN_backkick;
-		spr_uppunch = spr_playerN_backkick;
 		spr_stomp = spr_playerN_stomp;
 		spr_stompprep = spr_playerN_stompprep;
 		spr_crouch = spr_playerN_crouch;

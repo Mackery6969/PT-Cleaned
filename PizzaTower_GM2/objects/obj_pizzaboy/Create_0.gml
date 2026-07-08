@@ -13,7 +13,6 @@ flash = false;
 idlespr = spr_pizzaboy;
 stunfallspr = spr_pizzaboy_stun;
 walkspr = spr_pizzaboy;
-turnspr = spr_pizzaboy;
 grabbedspr = spr_pizzaboy;
 scaredspr = spr_pizzaboy;
 image_xscale = -1;

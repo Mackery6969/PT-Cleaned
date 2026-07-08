@@ -40,7 +40,6 @@ global.panicbg = true;
 global.wave = 0;
 ded = false;
 player = obj_player;
-bang = false;
 image_speed = 0.35;
 p2pdistancex = 0;
 global.timedgate = false;

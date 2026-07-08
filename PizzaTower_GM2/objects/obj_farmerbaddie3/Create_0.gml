@@ -4,7 +4,6 @@ disx = 150;
 idlespr = spr_peasanto_throwstart;
 stunfallspr = spr_peasanto_stun;
 walkspr = spr_peasanto_walk;
-turnspr = spr_peasanto_idle;
 grabbedspr = spr_peasanto_stun;
 scaredspr = spr_peasanto_scared;
 ragespr = spr_peasanto_flameattack;
