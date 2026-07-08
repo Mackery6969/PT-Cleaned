@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "backgroundgroup",
-    "path": "texturegroups/backgroundgroup",
+    "name": "baddiegroup",
+    "path": "texturegroups/baddiegroup",
   },
   "type": 0,
   "VTile": false,

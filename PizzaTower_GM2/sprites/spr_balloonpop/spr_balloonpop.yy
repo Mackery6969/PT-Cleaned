@@ -73,8 +73,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "backgroundgroup",
-    "path": "texturegroups/backgroundgroup",
+    "name": "smallgroup",
+    "path": "texturegroups/smallgroup",
   },
   "type": 0,
   "VTile": false,

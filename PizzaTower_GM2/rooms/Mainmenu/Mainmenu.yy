@@ -13,6 +13,7 @@
     {"name":"inst_4A36BAE8","path":"rooms/Mainmenu/Mainmenu.yy",},
     {"name":"inst_D159014","path":"rooms/Mainmenu/Mainmenu.yy",},
     {"name":"inst_4FF4653F","path":"rooms/Mainmenu/Mainmenu.yy",},
+    {"name":"inst_FFB703D","path":"rooms/Mainmenu/Mainmenu.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -23,6 +24,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4A36BAE8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_menutv1","path":"objects/obj_menutv1/obj_menutv1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":188.0,"y":103.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_D159014","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_menutv2","path":"objects/obj_menutv2/obj_menutv2.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":534.0,"y":116.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4FF4653F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_menutv3","path":"objects/obj_menutv3/obj_menutv3.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":794.0,"y":258.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_FFB703D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_version","path":"objects/obj_version/obj_version.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":true,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_2","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_487E6B16","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_percentstatemenu","path":"sprites/spr_percentstatemenu/spr_percentstatemenu.yy",},"x":199.0,"y":443.0,},

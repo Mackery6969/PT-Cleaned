@@ -179,3 +179,8 @@ penis
 a lot of bugfixxing are coming but I need to test it out a bit
 also figured out why spitcheese were spitting cheese fast - I removed one line in player create code lmao. though my fix works
 fine too, I'm gonna return it back.
+
+08.07.2026 (D.M.Y) - obj_version and obj_hiddenobject are back.
+hiddenobject is an unused object which makes collectables appear if you touch obj_hiddenobjecttrigger
+for some reason it is used in scr_deactivate_escape. very weird script I dunno what does it do
+and why it is used in obj_inputAssigner
