@@ -577,6 +577,7 @@
     {"id":{"name":"shd_alphafix","path":"shaders/shd_alphafix/shd_alphafix.yy",},"order":9,},
     {"id":{"name":"spr_railh2right","path":"sprites/spr_railh2right/spr_railh2right.yy",},"order":9,},
     {"id":{"name":"obj_introprop","path":"objects/obj_introprop/obj_introprop.yy",},"order":10,},
+    {"id":{"name":"obj_introscooter","path":"objects/obj_introscooter/obj_introscooter.yy",},"order":24,},
     {"id":{"name":"spr_railh2left","path":"sprites/spr_railh2left/spr_railh2left.yy",},"order":10,},
     {"id":{"name":"tile_medievaldeco2","path":"tilesets/tile_medievaldeco2/tile_medievaldeco2.yy",},"order":10,},
     {"id":{"name":"scr_do_rank","path":"scripts/scr_do_rank/scr_do_rank.yy",},"order":0,},
