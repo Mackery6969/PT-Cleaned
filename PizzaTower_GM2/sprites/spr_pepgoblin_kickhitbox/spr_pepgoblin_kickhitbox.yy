@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sprite1025",
+  "name": "spr_pepgoblin_kickhitbox",
   "bbox_bottom": 46,
   "bbox_left": 28,
   "bbox_right": 58,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sprite1025",
+    "name": "spr_pepgoblin_kickhitbox",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c3d97aed-57a9-438a-abd1-9cfc8dfb6ccb","path":"sprites/sprite1025/sprite1025.yy",},},},"Disabled":false,"id":"96c68ee2-d08c-4c1e-a127-757ddbfa16b9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c3d97aed-57a9-438a-abd1-9cfc8dfb6ccb","path":"sprites/spr_pepgoblin_kickhitbox/spr_pepgoblin_kickhitbox.yy",},},},"Disabled":false,"id":"96c68ee2-d08c-4c1e-a127-757ddbfa16b9","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

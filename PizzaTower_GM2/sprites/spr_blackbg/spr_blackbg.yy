@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "sprite1122",
+  "name": "spr_blackbg",
   "bbox_bottom": 63,
   "bbox_left": 0,
   "bbox_right": 63,
@@ -25,14 +25,14 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Masks",
-    "path": "folders/Sprites/Room Structure/Collision/Masks.yy",
+    "name": "Everything",
+    "path": "folders/Sprites/World/Everything.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "sprite1122",
+    "name": "spr_blackbg",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3d3fbea5-150f-4bbe-9d3e-f0e70903a775","path":"sprites/sprite1122/sprite1122.yy",},},},"Disabled":false,"id":"2772daa6-8b56-4acf-ae74-a3d7bd0728c2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3d3fbea5-150f-4bbe-9d3e-f0e70903a775","path":"sprites/spr_blackbg/spr_blackbg.yy",},},},"Disabled":false,"id":"2772daa6-8b56-4acf-ae74-a3d7bd0728c2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
