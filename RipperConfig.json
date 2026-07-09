@@ -13,7 +13,9 @@
         "spr_tiledestroy_trigger": "sprite10293",
         "spr_generictrigger_32": "sprite1029",
         "spr_pizzafacehall_window": "Sprite4102",
-        "spr_kidsparty_decoration": "Sprite3518"
+        "spr_kidsparty_decoration": "Sprite3518",
+        "spr_blackbg": "sprite1122",
+        "spr_pepgoblin_kickhitbox": "sprite1025"
     },
 
 }
