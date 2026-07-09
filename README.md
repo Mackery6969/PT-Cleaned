@@ -97,6 +97,8 @@ HAVE FUN NOW MOVING ON EXTRACTED DESCRIPTION
   <img src=".github/Guide5.png">
   
   6. Edit or remove the .gitignore file from the repository, this will allow you to commit the assets in git.
+
+  7. I would reccomend moving all PizzaTower_GM2 files to the root of the repository.
 </details>
 
 # Find an issue or inaccuracy?

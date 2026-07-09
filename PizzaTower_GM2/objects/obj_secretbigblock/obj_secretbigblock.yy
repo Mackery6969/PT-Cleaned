@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite1030",
-    "path": "sprites/sprite1030/sprite1030.yy",
+    "name": "spr_genericmarker_64",
+    "path": "sprites/spr_genericmarker_64/spr_genericmarker_64.yy",
   },
   "spriteMaskId": null,
   "visible": false,

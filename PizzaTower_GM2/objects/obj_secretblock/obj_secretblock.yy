@@ -36,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite1029",
-    "path": "sprites/sprite1029/sprite1029.yy",
+    "name": "spr_generictrigger_32",
+    "path": "sprites/spr_generictrigger_32/spr_generictrigger_32.yy",
   },
   "spriteMaskId": null,
   "visible": false,

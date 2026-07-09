@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprite10332478",
-    "path": "sprites/sprite10332478/sprite10332478.yy",
+    "name": "spr_genericmarker_32",
+    "path": "sprites/spr_genericmarker_32/spr_genericmarker_32.yy",
   },
   "spriteMaskId": null,
   "visible": true,

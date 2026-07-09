@@ -7,9 +7,6 @@ PizzaTower_GM2/sprites/**/*.png
 # datafiles
 PizzaTower_GM2/datafiles/*
 
-# Ignore resource orders
-**/*.resource_order
-
 # unignore all tileset sprites
 !PizzaTower_GM2/sprites/bg_grindrail/**
 !PizzaTower_GM2/sprites/bg_title/**
