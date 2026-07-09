@@ -1397,7 +1397,7 @@
     {"id":{"name":"spr_monstercheese_chase","path":"sprites/spr_monstercheese_chase/spr_monstercheese_chase.yy",},"order":314,},
     {"id":{"name":"get_savefile_ini","path":"scripts/get_savefile_ini/get_savefile_ini.yy",},"order":315,},
     {"id":{"name":"spr_robot_dead","path":"sprites/spr_robot_dead/spr_robot_dead.yy",},"order":0,},
-    {"id":{"name":"obj_version","path":"objects/obj_version/obj_version.yy",},"order":20,},
+    {"id":{"name":"obj_version","path":"objects/obj_version/obj_version.yy",},"order":17,},
     {"id":{"name":"obj_railparent","path":"objects/obj_railparent/obj_railparent.yy",},"order":317,},
     {"id":{"name":"spr_robot_stun","path":"sprites/spr_robot_stun/spr_robot_stun.yy",},"order":1,},
     {"id":{"name":"spr_ghostpumpkin","path":"sprites/spr_ghostpumpkin/spr_ghostpumpkin.yy",},"order":319,},

@@ -1129,8 +1129,7 @@ add_achievement_notify("entrance1", function()
 	}
 });
 add_achievement_notify("entrance2", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	var arr = _array[1];
@@ -1201,8 +1200,7 @@ add_achievement_notify("medieval2", function()
 	}
 });
 add_achievement_notify("medieval3", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	if (type == notifications.generic_killed && global.leveltosave == "medieval" && (obj_player.state == states.tumble || (obj_player.tauntstoredstate == states.tumble && obj_player.state == states.chainsaw)) && (obj_player.sprite_index == obj_player.spr_tumblestart || obj_player.sprite_index == obj_player.spr_tumbleend || obj_player.sprite_index == obj_player.spr_tumble))
@@ -1229,8 +1227,7 @@ add_achievement_notify("ruin1", function()
 	}
 });
 add_achievement_notify("ruin2", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	if (type == notifications.rat_destroyed_with_baddie && global.leveltosave == "ruin")
@@ -1271,8 +1268,7 @@ add_achievement_notify("dungeon1", function()
 	}
 });
 add_achievement_notify("dungeon2", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	var arr = _array[1];
@@ -1298,8 +1294,7 @@ add_achievement_notify("dungeon3", function()
 	}
 });
 add_achievement_notify("badland1", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	if (type == notifications.totem_reactivated && global.leveltosave == "badland")
@@ -1485,8 +1480,7 @@ add_achievement_notify("saloon3", function()
 	}
 });
 add_achievement_notify("plage1", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	var arr = _array[1];
@@ -1562,8 +1556,7 @@ add_achievement_notify("forest2", function()
 	}
 });
 add_achievement_notify("forest3", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	var arr = _array[1];
@@ -2065,8 +2058,7 @@ add_achievement_notify("war2", function()
 	}
 });
 add_achievement_notify("war3", function()
-{
-}, function(_array)
+{}, function(_array)
 {
 	var type = _array[0];
 	var arr = _array[1];
