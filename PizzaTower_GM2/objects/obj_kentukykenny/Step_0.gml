@@ -23,7 +23,7 @@ switch (state)
 		break;
 }
 scr_scareenemy();
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -40,7 +40,7 @@ stunfallspr = spr_kentukykenny_stun;
 walkspr = spr_kentukykenny_walk;
 stunspr = spr_kentukykenny_stun;
 grabbedspr = spr_kentukykenny_stun;
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -70,7 +70,7 @@ if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset <= 0 &&
 		}
 	}
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

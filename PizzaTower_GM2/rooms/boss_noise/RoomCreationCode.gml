@@ -1,5 +1,3 @@
-pal_swap_init_system(shd_pal_swapper);
-global.roommessage = "PIZZA TOWER ISLAND";
 global.gameframe_caption_text = lang_get_value("caption_boss_noise");
 if (!obj_player.ispeppino || global.swapmode)
 {

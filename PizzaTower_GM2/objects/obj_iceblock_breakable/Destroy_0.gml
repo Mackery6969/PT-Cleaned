@@ -11,7 +11,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		create_debris(x + 32, y + 32, spr_icedebris);
 	}
 	instance_create(x + 32, y + 32, obj_parryeffect);
-	var val = heat_calculate(10);
+	var val = 10;
 	global.collect += val;
 	with (instance_create(x + 32, y + 32, obj_smallnumber))
 	{

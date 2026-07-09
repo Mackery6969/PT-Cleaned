@@ -52,7 +52,7 @@ function scr_player_knightpep()
 	}
 	if (sprite_index == spr_knightpepdowntrust && vsp >= 0)
 	{
-		if (knightdowncloud == true && vsp >= 12)
+		if (knightdowncloud && vsp >= 12)
 		{
 			with (instance_create(x, y - 16, obj_parryeffect))
 			{
@@ -79,7 +79,7 @@ function scr_player_knightpep()
 	{
 		sprite_index = spr_knightpepidle;
 	}
-	if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;

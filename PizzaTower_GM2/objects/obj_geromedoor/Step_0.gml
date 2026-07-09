@@ -11,7 +11,7 @@ else if (uparrow)
 	uparrow = false;
 	instance_destroy(uparrowID);
 }
-if (!global.horse && (obj_player.state == states.normal || obj_player.state == states.mach1 || obj_player.state == states.mach2 || obj_player.state == states.mach3 || obj_player.state == states.Sjumpprep) && obj_player.key_up && obj_player.grounded && (global.gerome == true || image_index == 1) && place_meeting(x, y, obj_player))
+if (!global.horse && (obj_player.state == states.normal || obj_player.state == states.mach1 || obj_player.state == states.mach2 || obj_player.state == states.mach3 || obj_player.state == states.Sjumpprep) && obj_player.key_up && obj_player.grounded && (global.gerome || image_index == 1) && place_meeting(x, y, obj_player))
 {
 	ds_list_add(global.saveroom, id);
 	fmod_event_one_shot_3d("event:/sfx/misc/keyunlock", x, y);

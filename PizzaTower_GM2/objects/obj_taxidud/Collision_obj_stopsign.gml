@@ -1,4 +1,4 @@
-if (playerid.visible == false)
+if (!playerid.visible)
 {
 	jumpbuffer = 15;
 	start = true;

@@ -251,33 +251,3 @@ function scr_monsterinvestigate(_spd, _walkingspr, _idlespr)
 		state = states.monsterchase;
 	}
 }
-
-function scr_monster_detect_audio()
-{
-	if (scr_monster_audio_check())
-	{
-		if (!point_in_camera(x, y, view_camera[0]))
-		{
-			state = states.monsterinvestigate;
-			investigatestate = 0;
-		}
-		else
-		{
-			targetplayer = instance_nearest(x, y, obj_player);
-			if (object_index == obj_blobmonster)
-			{
-				state = states.fall;
-				gravdir *= -1;
-				chase = false;
-			}
-			else
-			{
-				state = states.monsterchase;
-			}
-		}
-	}
-}
-
-function scr_monster_audio_check()
-{
-}

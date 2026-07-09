@@ -298,7 +298,7 @@ function state_player_jump()
 			shake_mag_acc = 30 / room_speed;
 		}
 	}
-	if (input_buffer_slap > 0 && !key_up && sprite_index != spr_suplexbump && shotgunAnim == false && !global.pistol)
+	if (input_buffer_slap > 0 && !key_up && sprite_index != spr_suplexbump && !shotgunAnim && !global.pistol)
 	{
 		input_buffer_slap = 0;
 		particle_set_scale(particletypes.jumpdust, xscale, 1);
@@ -309,7 +309,7 @@ function state_player_jump()
 		state = states.handstandjump;
 		movespeed = 5;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == false && (!global.pistol || !ispeppino))
+	else if (input_buffer_slap > 0 && key_up && !shotgunAnim && (!global.pistol || !ispeppino))
 	{
 		input_buffer_slap = 0;
 		state = states.punch;
@@ -359,7 +359,7 @@ function state_player_jump()
 		if (!shotgunAnim)
 		{
 			flash = true;
-			if (!instance_exists(parry_inst) && flash == true)
+			if (!instance_exists(parry_inst) && flash)
 			{
 				parry_inst = instance_create(x, y, obj_parryhitbox);
 				with (parry_inst)
@@ -394,7 +394,7 @@ function state_player_jump()
 				with (obj_camera)
 				{
 					shake_mag = 3;
-					shake_mag = 3 / room_speed;
+					shake_mag_acc = 3 / room_speed;
 				}
 				if (ispeppino)
 				{

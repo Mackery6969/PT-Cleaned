@@ -1,5 +1,5 @@
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 {
 	if (room == tower_finalhallway)
 	{
@@ -7,7 +7,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	}
 	with (obj_baddie)
 	{
-		if (escape == true)
+		if (escape)
 		{
 			visible = true;
 			instance_create(x, y, obj_genericpoofeffect);

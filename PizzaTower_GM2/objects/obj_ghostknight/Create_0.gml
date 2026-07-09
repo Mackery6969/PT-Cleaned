@@ -9,7 +9,6 @@ state = states.walk;
 stunned = 0;
 alarm[5] = 1;
 alarm[0] = 150;
-roaming = true;
 shot = false;
 reset = false;
 hp = 2;

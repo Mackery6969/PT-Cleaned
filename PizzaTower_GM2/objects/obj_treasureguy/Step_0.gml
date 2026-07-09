@@ -27,7 +27,7 @@ else
 	parryable = true;
 	supertauntable = true;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -43,7 +43,7 @@ if (state != states.stun)
 {
 	birdcreated = false;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -136,7 +136,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

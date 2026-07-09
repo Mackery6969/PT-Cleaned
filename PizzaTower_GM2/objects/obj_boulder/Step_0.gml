@@ -72,7 +72,7 @@ switch (state)
 		image_speed = 0.35;
 		if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0 && !place_meeting(x + hsp, y, obj_destructibles))
 		{
-			if (thrown == true && destroyable)
+			if (thrown && destroyable)
 			{
 				instance_destroy();
 			}
@@ -81,7 +81,7 @@ switch (state)
 		}
 		if (hitvsp < 0 && place_meeting(x, y - 1, obj_solid) && !place_meeting(x, y - 1, obj_destructibles))
 		{
-			if (thrown == true && destroyable)
+			if (thrown && destroyable)
 			{
 				instance_destroy();
 			}
@@ -91,7 +91,7 @@ switch (state)
 		{
 			particle_set_scale(particletypes.impact, -image_xscale, 1);
 			create_particle(x, y, particletypes.impact, 0);
-			if (thrown == true && destroyable)
+			if (thrown && destroyable)
 			{
 				instance_destroy();
 			}
@@ -121,7 +121,7 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -152,7 +152,7 @@ else
 {
 	stuntouched = false;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -166,7 +166,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

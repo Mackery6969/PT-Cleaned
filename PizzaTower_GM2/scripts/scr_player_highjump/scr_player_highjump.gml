@@ -1,7 +1,7 @@
 function scr_player_highjump()
 {
 	move = key_left + key_right;
-	if (momemtum == false)
+	if (!momemtum)
 	{
 		hsp = move * movespeed;
 	}
@@ -9,7 +9,7 @@ function scr_player_highjump()
 	{
 		hsp = xscale * movespeed;
 	}
-	if (move == 0 && momemtum == false)
+	if (move == 0 && !momemtum)
 	{
 		movespeed = 0;
 	}
@@ -27,7 +27,7 @@ function scr_player_highjump()
 		movespeed = 2;
 	}
 	landAnim = true;
-	if (!key_jump2 && jumpstop == false && vsp < 0)
+	if (!key_jump2 && !jumpstop && vsp < 0)
 	{
 		vsp /= 2;
 		jumpstop = true;
@@ -36,7 +36,7 @@ function scr_player_highjump()
 	{
 		ladderbuffer--;
 	}
-	if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
+	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
 	{
 		vsp = grav;
 		jumpstop = true;
@@ -61,7 +61,7 @@ function scr_player_highjump()
 		jumpstop = false;
 		image_index = 0;
 	}
-	if (jumpAnim == true)
+	if (jumpAnim)
 	{
 		sprite_index = spr_player_Sjumpstart;
 		if (floor(image_index) == 3)
@@ -69,7 +69,7 @@ function scr_player_highjump()
 			jumpAnim = false;
 		}
 	}
-	if (jumpAnim == false)
+	if (!jumpAnim)
 	{
 		sprite_index = spr_player_Sjump;
 	}

@@ -5,7 +5,7 @@ if (obj_player.vsp > 0)
 {
 	fade = true;
 }
-if (fade == true)
+if (fade)
 {
 	image_alpha -= 0.1;
 }

@@ -456,7 +456,7 @@ function state_player_normal()
 			scr_pistolshoot(states.normal);
 		}
 	}
-	if (input_buffer_slap > 0 && !key_up && shotgunAnim == false && !global.pistol)
+	if (input_buffer_slap > 0 && !key_up && !shotgunAnim && !global.pistol)
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
@@ -467,7 +467,7 @@ function state_player_normal()
 		movespeed = 8;
 		image_index = 0;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == false && (!global.pistol || !ispeppino))
+	else if (input_buffer_slap > 0 && key_up && !shotgunAnim && (!global.pistol || !ispeppino))
 	{
 		state = states.punch;
 		input_buffer_slap = 0;

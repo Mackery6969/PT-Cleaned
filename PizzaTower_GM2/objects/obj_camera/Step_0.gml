@@ -62,7 +62,7 @@ else if (comboend)
 	event_perform(ev_alarm, 4);
 }
 
-if (global.seconds <= 0 && global.minutes <= 0 && ded == false)
+if (global.seconds <= 0 && global.minutes <= 0 && !ded)
 {
 	alarm[1] = -1;
 		alarm[3] = 1;
@@ -88,12 +88,12 @@ if (global.timedgatetimer)
 }
 if (!instance_exists(obj_ghostcollectibles))
 {
-	if ((global.panic == true && global.minutes < 1) || player.sprite_index == spr_player_timesup)
+	if ((global.panic && global.minutes < 1) || player.sprite_index == spr_player_timesup)
 	{
 		shake_mag = 2;
 		shake_mag_acc = 3 / room_speed;
 	}
-	else if (global.panic == true && basement == false)
+	else if (global.panic && !basement)
 	{
 		shake_mag = 2;
 		shake_mag_acc = 3 / room_speed;

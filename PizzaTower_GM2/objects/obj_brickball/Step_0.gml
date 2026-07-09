@@ -1,5 +1,5 @@
 hsp = image_xscale * movespeed;
-if (speedline == false)
+if (!speedline)
 {
 	with (instance_create(x, y, obj_brickballspeedline))
 	{
@@ -25,7 +25,7 @@ else
 	blur_effect = 2;
 	create_blur_afterimage(x, y, sprite_index, image_index - 1, image_xscale);
 }
-if (hitbox == false)
+if (!hitbox)
 {
 	with (instance_create(x, y, obj_shotgunbullet))
 	{

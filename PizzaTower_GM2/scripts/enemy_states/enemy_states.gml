@@ -1041,7 +1041,7 @@ function scr_enemy_rage()
 			}
 			break;
 		case obj_miniufo:
-			if (floor(image_index) == 3 && shoot == false)
+			if (floor(image_index) == 3 && !shoot)
 			{
 				shoot = true;
 				instance_create(x, y, obj_warplaserhoming);
@@ -1239,7 +1239,7 @@ function scr_enemy_stun()
 	{
 		if (sprite_index != spr_tank_hitwall)
 		{
-			if (thrown == false)
+			if (!thrown)
 			{
 				sprite_index = stunfallspr;
 			}
@@ -1307,7 +1307,7 @@ function scr_enemy_stun()
 	}
 	if (hitvsp < 0 && place_meeting(x, y - 1, obj_solid) && !place_meeting(x, y - 1, obj_destructibles))
 	{
-		if (thrown == true)
+		if (thrown)
 		{
 			if ((!elite || elitehit <= 0) && elitehurt && destroyable)
 			{
@@ -1318,7 +1318,7 @@ function scr_enemy_stun()
 	}
 	if (hithsp != 0 && place_meeting(x + hithsp, y, obj_solid) && !place_meeting(x + hithsp, y, obj_destructibles))
 	{
-		if (thrown == true)
+		if (thrown)
 		{
 			if ((!elite || elitehit <= 0) && elitehurt && destroyable)
 			{
@@ -1473,7 +1473,7 @@ function scr_enemy_walk()
 	{
 		hsp = 0;
 	}
-	if (turntimer > 0 && turner == true)
+	if (turntimer > 0 && turner)
 	{
 		turntimer--;
 	}

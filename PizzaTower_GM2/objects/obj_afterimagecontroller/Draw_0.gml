@@ -76,7 +76,10 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 					pal_swap_set(playerid.spr_palette, playerid.paletteselect, false);
 				}
 			}
-			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, a);
+			if (sprite_exists(sprite_index))
+			{
+				draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, a);
+			}
 			if (shd)
 			{
 				pattern_reset();

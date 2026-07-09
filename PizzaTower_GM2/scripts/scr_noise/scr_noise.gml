@@ -1004,7 +1004,7 @@ function scr_noise_pogo()
 			attackspeed -= 0.1;
 		}
 	}
-	if (pogobomb == true && ((image_xscale > 0 && targetplayer.x > (x - 20)) || (image_xscale < 0 && targetplayer.x < (x + 20)) || vsp > 0) && attackspeed > 10)
+	if (pogobomb && ((image_xscale > 0 && targetplayer.x > (x - 20)) || (image_xscale < 0 && targetplayer.x < (x + 20)) || vsp > 0) && attackspeed > 10)
 	{
 		if (!doise)
 		{

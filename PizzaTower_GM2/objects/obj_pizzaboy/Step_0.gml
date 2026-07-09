@@ -20,7 +20,7 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -36,7 +36,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

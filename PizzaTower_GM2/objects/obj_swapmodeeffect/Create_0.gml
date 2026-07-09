@@ -33,8 +33,6 @@ playerindex = 0;
 ispeppino = obj_player.ispeppino;
 isgustavo = obj_player.isgustavo;
 noisecrusher = obj_player.noisecrusher;
-var vx = camera_get_view_x(view_camera[0]) + (SCREEN_WIDTH / 2);
-var vy = camera_get_view_y(view_camera[0]) + (SCREEN_HEIGHT / 2);
 var snd = fmod_event_create_instance("event:/sfx/voice/swap");
 var s = 0;
 if (isgustavo)

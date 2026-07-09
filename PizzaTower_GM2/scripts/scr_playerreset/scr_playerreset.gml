@@ -125,14 +125,11 @@ function scr_playerreset(_stop_music = true)
 		}
 		with (obj_tv)
 		{
-			ds_list_clear(tvprompts_list);
-			bubblespr = noone;
 			tv_bg_index = 0;
 			expressionsprite = noone;
 			if (!global.levelreset)
 			{
 				sprite_index = spr_tv_off;
-				tvsprite = spr_tv_idle;
 				state = states.normal;
 				tv_set_idle();
 			}
@@ -165,16 +162,11 @@ function scr_playerreset(_stop_music = true)
 		global.horse = false;
 		global.golfhit = 0;
 		global.railspeed = global.maxrailspeed;
-		if (room != freezer_1)
-		{
-			global.use_temperature = false;
-		}
 		global.timedgate = false;
 		global.timedgatetimer = false;
 		global.timedgateid = noone;
 		global.timedgatetime = 0;
 		global.key_inv = false;
-		global.pepanimatronic = false;
 		global.shroomfollow = false;
 		global.cheesefollow = false;
 		global.tomatofollow = false;

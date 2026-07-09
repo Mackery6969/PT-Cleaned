@@ -1,5 +1,5 @@
 
-if (obj_player.state != states.hurt && global.sausagefollow == false)
+if (obj_player.state != states.hurt && !global.sausagefollow)
 {
 	ds_list_add(global.saveroom, id);
 	if (global.toppintotal < 5)

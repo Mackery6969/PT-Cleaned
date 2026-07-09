@@ -296,7 +296,7 @@ function scr_player_bombpep()
 	{
 		input_buffer_jump = 0;
 	}
-	if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;

@@ -7,12 +7,12 @@ if (image_alpha == 1 && !place_meeting(x, y, obj_metalblock))
 	fmod_event_one_shot("event:/sfx/misc/collectpizza");
 	instance_destroy();
 	global.combotime = 60;
-	var val = heat_calculate(value);
+	var val = value;
 	global.collect += val;
 	create_collect(x, y, sprite_index, val);
 	with (instance_create(x + 16, y, obj_smallnumber))
 	{
 		number = string(val);
 	}
-	tv_do_expression(spr_tv_exprcollect, true);
+	tv_do_expression(spr_tv_exprcollect);
 }

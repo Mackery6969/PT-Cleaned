@@ -7,7 +7,7 @@ if (other.state != states.gotoplayer)
 	fmod_event_one_shot("event:/sfx/misc/collectpizza");
 	instance_destroy();
 	global.combotime = 60;
-	var val = heat_calculate(value);
+	var val = value;
 	if (other.object_index == obj_player)
 	{
 		global.collect += val;
@@ -24,5 +24,5 @@ if (other.state != states.gotoplayer)
 	{
 		number = string(val);
 	}
-	tv_do_expression(spr_tv_exprcollect, true);
+	tv_do_expression(spr_tv_exprcollect);
 }

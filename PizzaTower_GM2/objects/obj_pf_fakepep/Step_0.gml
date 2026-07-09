@@ -108,7 +108,7 @@ if (prevhp != elitehit)
 	state = states.transitioncutscene;
 	hsp = 0;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -136,7 +136,7 @@ if (!invincible && !flash && alarm[5] == -1)
 {
 	alarm[5] = 10;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -149,7 +149,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

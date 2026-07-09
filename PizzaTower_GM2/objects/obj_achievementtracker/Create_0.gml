@@ -250,7 +250,7 @@ add_achievement_notify("pal_money", noone, function(_array)
 		{
 			for (var j = 0; j < 5; j++)
 			{
-				if (ini_read_real("Toppin", concat(lvl[i], j + 1), false) == true)
+				if (ini_read_real("Toppin", concat(lvl[i], j + 1), false))
 				{
 					_money += 10;
 				}
@@ -354,7 +354,7 @@ add_achievement_notify("pal_dark", noone, function(_array)
 		var ach = ["pepperman", "vigilante", "noise", "fakepep", "pizzaface"];
 		for (var i = 0; i < array_length(ach); i++)
 		{
-			if (ini_read_real("achievements", ach[i], false) == false)
+			if (!ini_read_real("achievements", ach[i], false))
 			{
 				_found = true;
 			}
@@ -512,7 +512,7 @@ add_achievement_notify("pal_goldemanne", noone, function(_array)
 		ini_open_from_string(obj_savesystem.ini_str);
 		for (var i = 0; i < array_length(ach); i++)
 		{
-			if (ini_read_real("achievements", ach[i], false) == false)
+			if (!ini_read_real("achievements", ach[i], false))
 			{
 				_found = true;
 				break;
@@ -1172,7 +1172,7 @@ add_achievement_notify("medieval1", function()
 		}
 		else if (type == notifications.priest_touched)
 		{
-			if (achievement_get_variable("med1start").value == true && achievement_get_variable("med1hurt").value == false)
+			if (achievement_get_variable("med1start").value && achievement_get_variable("med1hurt").value == false)
 			{
 				achievement_get_variable("med1count").value += 1;
 			}
@@ -1642,7 +1642,7 @@ add_achievement_notify("space3", function()
 		{
 			achievement_get_variable("space3start").value = true;
 		}
-		else if (achievement_get_variable("space3start").value == true && type == notifications.generic_killed && arr[2] == obj_miniufo)
+		else if (achievement_get_variable("space3start").value && type == notifications.generic_killed && arr[2] == obj_miniufo)
 		{
 			achievement_get_variable("space3count").value += 1;
 			trace("Meteor Man Count: ", achievement_get_variable("space3count").value);
@@ -1712,7 +1712,7 @@ add_achievement_notify("minigolf3", function()
 			achievement_get_variable("g3_hit").value = false;
 		}
 	}
-	else if (type == notifications.pizzaball_goal && achievement_get_variable("g3_hit").value == true)
+	else if (type == notifications.pizzaball_goal && achievement_get_variable("g3_hit").value)
 	{
 		achievement_unlock(name, "Helpful Burger", spr_achievement_golf, 2);
 	}
@@ -2044,7 +2044,7 @@ add_achievement_notify("war2", function()
 			achievement_get_variable("war2_hit").value = false;
 			achievement_get_variable("war2_start").value = true;
 		}
-		else if ((type == notifications.generic_killed || type == notifications.room_enemiesdead || type == notifications.destroyable_destroyed || type == notifications.bazooka_explosion) && achievement_get_variable("war2_start").value == true)
+		else if ((type == notifications.generic_killed || type == notifications.room_enemiesdead || type == notifications.destroyable_destroyed || type == notifications.bazooka_explosion) && achievement_get_variable("war2_start").value)
 		{
 			achievement_get_variable("war2_hit").value = true;
 		}

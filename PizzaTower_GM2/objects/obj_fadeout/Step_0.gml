@@ -65,11 +65,11 @@ if (fadealpha > f)
 		event_perform(ev_alarm, 0);
 	}
 }
-if (fadein == false)
+if (!fadein)
 {
 	fadealpha += 0.1;
 }
-else if (fadein == true)
+else if (fadein)
 {
 	fadealpha -= 0.1;
 }
@@ -77,19 +77,19 @@ if (instance_exists(obj_player))
 {
 	with (obj_player)
 	{
-		if (other.fadein == true && (obj_player.state == states.door || obj_player.state == states.victory) && (sprite_index == spr_victory || place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)))
+		if (other.fadein && (obj_player.state == states.door || obj_player.state == states.victory) && (sprite_index == spr_victory || place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)))
 		{
 			state = states.comingoutdoor;
 			image_index = 0;
 		}
-		if (other.fadein == true && obj_player.state == states.door && (obj_player.sprite_index == spr_downpizzabox || obj_player.sprite_index == spr_uppizzabox))
+		if (other.fadein && obj_player.state == states.door && (obj_player.sprite_index == spr_downpizzabox || obj_player.sprite_index == spr_uppizzabox))
 		{
 			state = states.crouchjump;
 			uncrouch = 20;
 		}
 	}
 }
-if (fadein == true && fadealpha < 0)
+if (fadein && fadealpha < 0)
 {
 	instance_destroy();
 }

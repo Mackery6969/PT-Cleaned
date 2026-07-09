@@ -12,7 +12,7 @@ global.levelreset = false;
 scr_playerreset();
 global.levelreset = true;
 obj_player.targetRoom = rm;
-scr_room_goto(rm);
+room_goto(rm);
 var _d = "A";
 if (rm == boss_pizzaface)
 {

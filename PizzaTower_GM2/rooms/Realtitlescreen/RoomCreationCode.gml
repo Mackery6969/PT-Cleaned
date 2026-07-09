@@ -28,7 +28,6 @@ enum states
 	cheesepep = 24,
 	cheesepepstick = 25,
 	cheesepepjump = 26,
-	cheesepepfling = 27,
 	cheesepeplaunch = 28,
 	cheesepepstickside = 29,
 	cheesepepstickup = 30,
@@ -37,16 +36,12 @@ enum states
 	boxxedpep = 33,
 	boxxedpepspin = 34,
 	boxxedpepjump = 35,
-	pistolaim = 36,
 	climbwall = 37,
 	knightpepslopes = 38,
 	portal = 39,
-	secondjump = 40,
 	chainsawbump = 41,
 	handstandjump = 42,
 	lungeattack = 43,
-	lungegrab = 44,
-	dashtumble = 45,
 	gottreasure = 46,
 	knightpep = 47,
 	knightpepattack = 48,
@@ -84,9 +79,7 @@ enum states
 	shoulder = 83,
 	backbreaker = 84,
 	graffiti = 85,
-	bossdefeat = 86,
 	pizzathrow = 87,
-	bossintro = 88,
 	gameover = 89,
 	keyget = 90,
 	tackle = 91,
@@ -94,7 +87,6 @@ enum states
 	ladder = 93,
 	slipnslide = 94,
 	comingoutdoor = 95,
-	smirk = 96,
 	Sjump = 97,
 	victory = 98,
 	Sjumpprep = 99,
@@ -107,17 +99,14 @@ enum states
 	bump = 106,
 	hurt = 107,
 	freefall = 108,
-	hang = 109,
 	freefallland = 111,
 	door = 112,
 	barrel = 113,
 	barreljump = 114,
 	barrelclimbwall = 115,
 	barrelslide = 116,
-	current = 117,
 	boulder = 118,
 	taxi = 119,
-	runonball = 120,
 	mach3 = 121,
 	freefallprep = 122,
 	Sjumpland = 123,
@@ -138,7 +127,6 @@ enum states
 	arenaspawn = 142, // spawnenemy
 	arenaend = 143,
 	arenaintro = 144,
-	arenaround = 145,
 	actor = 146,
 	parry = 147,
 	golf = 148,
@@ -149,13 +137,10 @@ enum states
 	pummel = 154,
 	staggered = 155,
 	thrown = 156,
-	superattackstart = 158,
 	superattack = 160,
 	shoulderturn = 161,
 	fistmatch = 162,
-	groundpunchstart = 164,
 	slipbanan = 165,
-	millionpunch = 166,
 	bombthrow = 168,
 	jetpackstart = 170,
 	jetpack = 171,
@@ -187,8 +172,6 @@ enum states
 	stringfling = 212,
 	stringjump = 213,
 	stringfall = 214,
-	noisejetpack = 215,
-	spiderweb = 216,
 
 	// robot states start
 	monsteridle = 217,
@@ -206,7 +189,6 @@ enum states
 	// pizzaface states start
 	ram = 230,
 	phase2transition = 231,
-	look = 232,
 	fishing = 233,
 	portraitthrow = 237,
 	pullinglevel = 240,
@@ -217,7 +199,6 @@ enum states
 	expression = 251, // tv
 	playersuperattack = 252,
 	jetpackjump = 254,
-	bee = 257,
 	ratmountpunch = 259,
 	ratmountcrouch = 260,
 	ratmountladder = 261,
@@ -262,7 +243,6 @@ enum states
 	unknown301 = 301, // Mr. Stick airspin
 	unknown302 = 302, // Mr. Stick superjump
 	unknown303 = 303, // Mr. Stick flycancel, used in obj_stickhat
-	machcancelstart = 305,
 	machcancel = 306,
 }
 
@@ -270,7 +250,6 @@ enum states
 
 global.coop = false;
 global.currentsavefile = 1;
-var achievement_arr = ["sranks1", "sranks2", "sranks3", "sranks4", "sranks5"];
 var data_arr = [get_save_folder() + "/saveData1", get_save_folder() + "/saveData2", get_save_folder() + "/saveData3"];
 global.stickreq[0] = 100;
 global.stickreq[1] = 150;
@@ -278,7 +257,6 @@ global.stickreq[2] = 200;
 global.stickreq[3] = 200;
 global.stickreq[4] = 210;
 global.levelattempts = 0;
-global.palette_arr = [false, false, false, false, false];
 for (var i = 0; i < array_length(data_arr); i++)
 {
 	global.game[i] = scr_read_game(data_arr[i] + ".ini");
@@ -295,13 +273,10 @@ global.afterimage_color1 = make_colour_rgb(255, 0, 0);
 global.afterimage_color2 = make_colour_rgb(0, 255, 0);
 global.smallnumber_color1 = make_colour_rgb(255, 255, 255);
 global.smallnumber_color2 = make_colour_rgb(248, 0, 0);
-global.optimize = 0;
-global.autotile = true;
 global.smallnumber_fnt = font_add_sprite_ext(spr_smallnumber, "1234567890-+", true, 0);
 global.pigreduction = 0;
 global.pigtotal = 0;
 global.levelcomplete = false;
-global.levelcompletename = noone;
 global.entrancetreasure = false;
 global.medievaltreasure = false;
 global.ruintreasure = false;
@@ -322,61 +297,6 @@ global.chateautreasure = false;
 global.mansiontreasure = false;
 global.kidspartytreasure = false;
 global.wartreasure = false;
-global.entrancecutscene = noone;
-global.medievalcutscene = noone;
-global.ruincutscene = noone;
-global.ruincutscene2 = noone;
-global.ruincutscene3 = noone;
-global.dungeoncutscene = noone;
-global.peppermancutscene1 = noone;
-global.peppermancutscene2 = noone;
-global.chieftaincutscene = noone;
-global.chieftaincutscene2 = noone;
-global.desertcutscene = noone;
-global.graveyardcutscene = noone;
-global.spacecutscene = noone;
-global.vigilantecutscene1 = noone;
-global.vigilantecutscene2 = noone;
-global.vigilantecutscene3 = noone;
-global.farmcutscene = noone;
-global.superpinballcutscene = noone;
-global.pubcutscene = noone;
-global.pinballcutscene = noone;
-global.beercutscene = noone;
-global.exitfeecutscene = noone;
-global.forestcutscene = noone;
-global.bottlecutscene = noone;
-global.papercutscene = noone;
-global.beachboatcutscene = noone;
-global.beachcutscene = noone;
-global.sewercutscene = noone;
-global.burgercutscene = noone;
-global.golfcutscene = noone;
-global.anarchistcutscene1 = noone;
-global.anarchistcutscene2 = noone;
-global.factoryblock = noone;
-global.streetcutscene = noone;
-global.graffiticutscene = noone;
-global.factorygraffiti = noone;
-global.factorycutscene = noone;
-global.hatcutscene1 = noone;
-global.hatcutscene2 = noone;
-global.hatcutscene3 = noone;
-global.jetpackcutscene = noone;
-global.noisecutscene1 = noone;
-global.noisecutscene2 = noone;
-global.freezercutscene = noone;
-global.kidspartycutscene = noone;
-global.gasolinecutscene = noone;
-global.mansioncutscene = noone;
-global.chateaucutscene = noone;
-global.ghostsoldiercutscene = noone;
-global.mrstickcutscene1 = noone;
-global.mrstickcutscene2 = noone;
-global.mrstickcutscene3 = noone;
-global.chateauswap = noone;
-global.warcutscene = noone;
-pal_swap_init_system(shd_pal_swapper);
 with (obj_player)
 {
 	state = states.normal;

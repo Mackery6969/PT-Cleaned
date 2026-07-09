@@ -11,7 +11,7 @@ else
 {
 	depth = 2;
 }
-if (global.panic == true || instance_exists(obj_wartimer))
+if (global.panic || instance_exists(obj_wartimer))
 {
 	image_alpha = 1;
 	if (!gotowardsplayer && distance_to_object(obj_player) < 25)
@@ -19,7 +19,7 @@ if (global.panic == true || instance_exists(obj_wartimer))
 		gotowardsplayer = true;
 		scr_ghostcollectible();
 	}
-	if (gotowardsplayer == true)
+	if (gotowardsplayer)
 	{
 		move_towards_point(obj_player.x, obj_player.y, movespeed);
 		movespeed++;

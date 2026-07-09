@@ -10,7 +10,7 @@ if (player < 2)
 		player = 2;
 	}
 }
-if (global.panic == false || player <= 1)
+if (!global.panic || player <= 1)
 {
 	x = -100;
 	y = -100;

@@ -1,4 +1,4 @@
-if (image_index == 1 && global.panic == false && room != war_13)
+if (image_index == 1 && !global.panic && room != war_13)
 {
 	with (obj_player)
 	{
@@ -29,10 +29,9 @@ if (drop && dropstate != states.idle)
 }
 with (obj_player)
 {
-	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || global.snickchallenge == true || room == war_13 || other.random_secret))
+	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic || global.snickchallenge || room == war_13 || other.random_secret))
 	{
 		global.noisejetpack = false;
-		global.startgate = false;
 		stop_music();
 		if (global.collect <= 0)
 		{

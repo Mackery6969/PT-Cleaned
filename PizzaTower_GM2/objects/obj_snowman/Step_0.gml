@@ -22,7 +22,7 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -34,7 +34,7 @@ if (state == states.walk)
 {
 	state = states.charge;
 }
-if (hitboxcreate == false && state == states.charge && obj_player.state != states.mach3)
+if (!hitboxcreate && state == states.charge && obj_player.state != states.mach3)
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
@@ -46,7 +46,7 @@ if (state != states.stun)
 {
 	birdcreated = false;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -58,7 +58,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

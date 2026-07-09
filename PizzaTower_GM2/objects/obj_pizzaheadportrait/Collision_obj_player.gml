@@ -7,7 +7,7 @@ if (other.state != states.handstandjump && !hasgrabbed)
 }
 else if (!move)
 {
-	if (!grabbed && (other.state == states.handstandjump || other.state == states.punch || other.state == states.lungeattack) && unpickable == false)
+	if (!grabbed && (other.state == states.handstandjump || other.state == states.punch || other.state == states.lungeattack) && !unpickable)
 	{
 		with (other)
 		{

@@ -13,4 +13,3 @@ bg_1xoffset = 0;
 bg_1yoffset = 0;
 bg_2xoffset = 0;
 bg_2yoffset = 0;
-backgrounds = ["Backgrounds_still1", "Backgrounds_still2"];

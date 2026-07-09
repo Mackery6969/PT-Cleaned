@@ -3,7 +3,7 @@ if (instance_exists(obj_player))
 	if (room != obj_player.targetRoom || roomreset)
 	{
 		var r = room;
-		scr_room_goto(obj_player.targetRoom);
+		room_goto(obj_player.targetRoom);
 		if (r == tower_peppinohouse)
 		{
 			scr_unlock_swap();

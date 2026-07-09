@@ -43,7 +43,7 @@ function scr_collide_destructibles()
 
 			}
 		}
-		if (state == states.hurt && thrown == true)
+		if (state == states.hurt && thrown)
 		{
 			if (place_meeting(x - hsp, y, obj_destructibles))
 			{
@@ -137,7 +137,7 @@ function scr_collide_destructibles()
 					notification_push(notifications.cheeseblock_destroyed, [room]);
 				}
 				falling = true;
-				if (falling == true)
+				if (falling)
 				{
 					image_speed = 0.35;
 				}

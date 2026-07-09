@@ -1,12 +1,11 @@
 var gate = id;
 with (other)
 {
-	if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && spotlight == true)
+	if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && spotlight)
 	{
 		audio_stop_all();
 		stop_music();
 		global.collect = 0;
-		global.startgate = true;
 		global.leveltosave = other.level;
 		global.leveltorestart = other.targetRoom;
 		global.levelattempts = 0;
@@ -27,10 +26,6 @@ if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player
 		if (other.level == "snickchallenge")
 		{
 			global.wave = 0;
-			if (global.panicbg)
-			{
-				scr_panicbg_init();
-			}
 			global.snickchallenge = true;
 			global.collect = 10000;
 			with (obj_camera)

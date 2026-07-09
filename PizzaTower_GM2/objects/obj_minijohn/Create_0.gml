@@ -7,7 +7,6 @@ movespeed = 7;
 state = states.chase;
 stunned = 0;
 alarm[0] = 150;
-roaming = true;
 shot = false;
 reset = false;
 flash = false;

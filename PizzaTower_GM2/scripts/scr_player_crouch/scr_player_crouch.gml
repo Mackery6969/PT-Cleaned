@@ -29,11 +29,11 @@ function scr_player_crouch()
 		image_index = 0;
 		mask_index = spr_player_mask;
 	}
-	if (crouchAnim == false)
+	if (!crouchAnim)
 	{
 		if (move == 0)
 		{
-			if (shotgunAnim == false)
+			if (!shotgunAnim)
 			{
 				sprite_index = spr_crouch;
 			}
@@ -44,7 +44,7 @@ function scr_player_crouch()
 		}
 		if (move != 0)
 		{
-			if (shotgunAnim == false)
+			if (!shotgunAnim)
 			{
 				sprite_index = spr_crawl;
 			}
@@ -54,11 +54,11 @@ function scr_player_crouch()
 			}
 		}
 	}
-	if (crouchAnim == true)
+	if (crouchAnim)
 	{
 		if (move == 0)
 		{
-			if (shotgunAnim == false)
+			if (!shotgunAnim)
 			{
 				sprite_index = spr_couchstart;
 			}

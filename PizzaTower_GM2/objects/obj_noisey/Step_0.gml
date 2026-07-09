@@ -41,7 +41,7 @@ if (bounce && grounded && vsp > 0)
 	_b = true;
 	create_particle(x, y, particletypes.highjumpcloud1);
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -57,11 +57,11 @@ if (state != states.float)
 {
 	scr_scareenemy();
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
-if (hitboxcreate == false && state == states.walk && grounded && vsp > 0 && state != states.stun)
+if (!hitboxcreate && state == states.walk && grounded && vsp > 0 && state != states.stun)
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
@@ -77,7 +77,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false && ((grounded && vsp > 0) || _b))
+if (!boundbox && ((grounded && vsp > 0) || _b))
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

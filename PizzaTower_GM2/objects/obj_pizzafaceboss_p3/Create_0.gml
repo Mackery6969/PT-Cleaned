@@ -86,7 +86,6 @@ hsp = 0;
 vsp = 0;
 stunned = 0;
 alarm[0] = 150;
-roaming = true;
 shot = false;
 reset = false;
 flash = false;

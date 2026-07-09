@@ -1,5 +1,5 @@
 
-if (global.key_inv == true)
+if (global.key_inv)
 {
 	vsp = -15;
 	hsp = random_range(-4, 4);

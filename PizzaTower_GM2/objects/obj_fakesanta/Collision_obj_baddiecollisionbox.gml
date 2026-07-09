@@ -1,5 +1,5 @@
 var baddieID = id;
-if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.thrown != true && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown == true && other.baddieID.state != states.hit)
+if (instance_exists(baddieID) && instance_exists(other.baddieID) && !baddieID.thrown && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown && other.baddieID.state != states.hit)
 {
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 	if (!baddieID.important)

@@ -23,11 +23,11 @@ function tv_get_palette()
 	patterntexture = _info.patterntexture;
 }
 
-function tv_do_expression(_spr, _reset_palette = false, _make_peppino = false)
+function tv_do_expression(_spr, _make_peppino = false)
 {
 	with (obj_tv)
 	{
-		if (expressionsprite != _spr && bubblespr == noone)
+		if (expressionsprite != _spr)
 		{
 			state = states.whitenoise;
 			expressionsprite = _spr;

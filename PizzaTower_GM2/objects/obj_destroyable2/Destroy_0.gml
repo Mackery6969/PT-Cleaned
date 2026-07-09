@@ -1,5 +1,5 @@
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 {
 	repeat (6)
 	{
@@ -20,11 +20,10 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 		sprite_index = spr_pizzablockdead;
 	}
 	scr_sleep(5);
-	create_baddiegibsticks(x + 16, y + 16);
 	scr_sound_multiple("event:/sfx/misc/collect", x, y);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	var val = heat_calculate(10);
+	var val = 10;
 	global.collect += val;
 	with (instance_create(x + 16, y, obj_smallnumber))
 	{

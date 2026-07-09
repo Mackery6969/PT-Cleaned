@@ -11,7 +11,7 @@ if (image_alpha == 1)
 		fmod_event_one_shot_3d("event:/sfx/misc/collectpizza", x, y);
 		fmod_event_one_shot_3d("event:/sfx/misc/bellcollectbig", x, y);
 		instance_destroy();
-		var val = heat_calculate(value);
+		var val = value;
 		if (other.object_index == obj_player)
 		{
 			global.collect += val;

@@ -15,7 +15,7 @@ if (other.state != states.gotoplayer)
 	{
 		healthshaketime = 30;
 	}
-	var val = heat_calculate(10);
+	var val = 10;
 	if (other.object_index == obj_player)
 	{
 		global.collect += val;

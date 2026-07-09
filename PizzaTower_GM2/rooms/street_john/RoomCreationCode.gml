@@ -1,5 +1,3 @@
-pal_swap_init_system(shd_pal_swapper);
-global.roommessage = "PIZZA TOWER ISLAND";
 var lay_id = layer_get_id("Assets_stillBG1");
 var gus = layer_sprite_get_id(lay_id, "gustv");
 var noise = layer_sprite_get_id(lay_id, "noisetv2");

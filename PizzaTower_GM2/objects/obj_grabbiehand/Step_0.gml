@@ -79,7 +79,7 @@ switch (state)
 			if (object_index != obj_pizzagoblinbomb)
 			{
 				state = states.actor;
-				if (boxxed == false)
+				if (!boxxed)
 				{
 					sprite_index = spr_catched;
 				}

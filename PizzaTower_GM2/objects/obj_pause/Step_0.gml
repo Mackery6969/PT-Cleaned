@@ -331,7 +331,6 @@ if (!instance_exists(obj_loadingscreen))
 }
 cursor_index += 0.35;
 pause_update_priests();
-var prevpause = pause;
 if (pause && !instance_exists(obj_loadingscreen) && alarm[3] == -1)
 {
 	with (obj_music)

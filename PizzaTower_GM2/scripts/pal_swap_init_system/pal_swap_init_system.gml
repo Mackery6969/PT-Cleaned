@@ -1,8 +1,3 @@
-function pal_swap_init_system()
-{
-	// deprecated
-}
-
 function pal_swap_init_system_fix()
 {
 	global.Pal_Shader = argument[0];

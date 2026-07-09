@@ -37,15 +37,19 @@ switch (state)
 		{
 			idlespr = spr_tv_idleN;
 		}
+		if (obj_player.shotgunAnim)
+		{
+			idlespr = spr_tv_shotgun;
+		}
 		if (global.panic)
 		{
 			idlespr = spr_tv_exprpanic;
 		}
-		else if (global.combo >= 3 && global.combo < 50 && !obj_player.isgustavo)
+		else if (global.combo >= 3 && global.combo < 50 && !obj_player.isgustavo && !obj_player.shotgunAnim)
 		{
 			idlespr = spr_tv_exprcombo;
 		}
-		else if (global.combo >= 50 && !obj_player.isgustavo)
+		else if (global.combo >= 50 && !obj_player.isgustavo && !obj_player.shotgunAnim)
 		{
 			idlespr = spr_tv_exprheat;
 		}
@@ -91,13 +95,13 @@ switch (state)
 			{
 				if (!isgustavo || !ispeppino)
 				{
-					if (mach4mode == true)
+					if (mach4mode)
 					{
-						tv_do_expression(spr_tv_exprmach4, true);
+						tv_do_expression(spr_tv_exprmach4);
 					}
 					else if (state == states.mach3 || sprite_index == spr_mach3boost)
 					{
-						tv_do_expression(spr_tv_exprmach3, true);
+						tv_do_expression(spr_tv_exprmach3);
 					}
 				}
 			}
@@ -160,72 +164,6 @@ switch (state)
 				break;
 			default:
 				sprite_index = idlespr;
-		}
-		if (sprite_index != spr_tv_open)
-		{
-			if (!ds_list_empty(tvprompts_list))
-			{
-				var b = ds_list_find_value(tvprompts_list, 0);
-				prompt_buffer = prompt_max;
-				if (b[0] != "" && b[0] != noone)
-				{
-					bubblespr = noone;
-					bubbleindex = 0;
-				}
-				if (b[1] == tv_prompttypes.normal)
-				{
-					sprite_index = spr_tv_open;
-					image_index = 0;
-					tvsprite = b[2];
-					if (!obj_player.ispeppino)
-					{
-						var spr = sprite_get_name(tvsprite);
-						spr = asset_get_index(concat(spr, "N"));
-						if (spr > -1)
-						{
-							tvsprite = spr;
-						}
-					}
-				}
-				else
-				{
-					tvsprite = b[2];
-					if (!obj_player.ispeppino)
-					{
-						var spr = sprite_get_name(tvsprite);
-						spr = asset_get_index(concat(spr, "N"));
-						if (spr > -1)
-						{
-							tvsprite = spr;
-						}
-					}
-					sprite_index = tvsprite;
-					image_index = 0;
-				}
-				state = states.transitioncutscene;
-			}
-			else
-			{
-				bubblespr = noone;
-			}
-		}
-		break;
-	case states.transitioncutscene:
-		if (sprite_index == spr_tv_open && ANIMATION_END)
-		{
-			sprite_index = tvsprite;
-		}
-		if (sprite_index == tvsprite)
-		{
-			if (prompt_buffer > 0)
-			{
-				prompt_buffer--;
-			}
-			else
-			{
-				ds_list_delete(tvprompts_list, 0);
-				state = states.normal;
-			}
 		}
 		break;
 	case states.whitenoise:
@@ -306,7 +244,7 @@ switch (state)
 					expressionsprite = noone;
 					if (obj_player.state == states.hurt)
 					{
-						tv_do_expression(spr_tv_exprhurt, true);
+						tv_do_expression(spr_tv_exprhurt);
 					}
 				}
 				break;
@@ -327,14 +265,14 @@ switch (state)
 			case spr_tv_exprmach3N:
 				with (obj_player)
 				{
-					if (state != states.mach3 && state != states.climbwall && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)) && sprite_index != spr_mach3boost && mach4mode == false)
+					if (state != states.mach3 && state != states.climbwall && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)) && sprite_index != spr_mach3boost && !mach4mode)
 					{
 						other.state = states.whitenoise;
 						other.expressionsprite = noone;
 					}
 					if (mach4mode)
 					{
-						tv_do_expression(spr_tv_exprmach4, true);
+						tv_do_expression(spr_tv_exprmach4);
 					}
 				}
 				break;
@@ -342,7 +280,7 @@ switch (state)
 			case spr_tv_exprmach4N:
 				with (obj_player)
 				{
-					if (mach4mode == false && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)))
+					if (!mach4mode && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)))
 					{
 						other.state = states.whitenoise;
 						other.expressionsprite = noone;
@@ -387,12 +325,6 @@ switch (state)
 				}
 				break;
 		}
-		if (!ds_list_empty(tvprompts_list))
-		{
-			state = states.whitenoise;
-			tv_trans = 0;
-			expressionsprite = noone;
-		}
 		break;
 }
 if (state != states.whitenoise && state != states.expression && instance_exists(obj_player))
@@ -409,10 +341,6 @@ else
 }
 var change_pos = false;
 if (obj_player.x > (room_width - 224) && obj_player.y < 187)
-{
-	change_pos = true;
-}
-if (bubblespr != noone && obj_player.x > 316 && obj_player.y < 101)
 {
 	change_pos = true;
 }

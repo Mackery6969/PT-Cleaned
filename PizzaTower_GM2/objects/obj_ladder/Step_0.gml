@@ -16,7 +16,7 @@ if (place_meeting(x, y - 1, obj_player))
 		if (key_down && place_meeting(x, y + 1, obj_ladder) && !place_meeting(other.x + 16, y + 1, obj_solid) && state == states.ratmountcrouch && place_meeting(x, y + 1, obj_platform))
 		{
 			state = states.ratmountladder;
-			if (brick == true)
+			if (brick)
 			{
 				with (instance_create(x, y, obj_brickcomeback))
 				{

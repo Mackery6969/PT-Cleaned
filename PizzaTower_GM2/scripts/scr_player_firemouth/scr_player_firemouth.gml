@@ -51,7 +51,7 @@ function scr_player_firemouth()
 		}
 		jumpstop = false;
 	}
-	if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 2;
 		jumpstop = true;
@@ -224,7 +224,7 @@ function scr_player_firemouth()
 			vsp = -12;
 		}
 	}
-	if (sprite_index == spr_firemouthintro && image_index > 22 && firemouthflames == false)
+	if (sprite_index == spr_firemouthintro && image_index > 22 && !firemouthflames)
 	{
 		repeat (10)
 		{

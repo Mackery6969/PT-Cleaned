@@ -2,7 +2,7 @@ with (other)
 {
 	if (scr_transformationcheck())
 	{
-		if (state != states.firemouth && state != states.parry && hurted == false)
+		if (state != states.firemouth && state != states.parry && !hurted)
 		{
 			fmod_event_one_shot_3d("event:/sfx/firemouth/start", x, y);
 			create_transformation_tip(lang_get_value("firemouthtip"), "firemouth");

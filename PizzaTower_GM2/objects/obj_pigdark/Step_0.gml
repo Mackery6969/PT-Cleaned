@@ -12,7 +12,7 @@ if (image_xscale >= 1 && sprite_index != bg_pigdarkthumb)
 	sprite_index = bg_pigdarkthumb;
 	alarm[0] = 120;
 }
-if (fade == true)
+if (fade)
 {
 	image_alpha = Approach(image_alpha, 0, 0.5);
 }

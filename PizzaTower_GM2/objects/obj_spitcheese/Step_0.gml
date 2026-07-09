@@ -25,7 +25,7 @@ switch (state)
 		scr_enemy_pizzaheadjump();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -58,7 +58,7 @@ if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y
 		}
 	}
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -74,7 +74,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

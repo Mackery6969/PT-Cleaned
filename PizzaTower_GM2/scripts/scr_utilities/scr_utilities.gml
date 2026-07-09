@@ -164,8 +164,3 @@ function bbox_in_camera(_cam, _threshold = 0)
 	var cam_h = camera_get_view_height(_cam);
 	return bbox_left < (cam_x + cam_w + _threshold) && bbox_right > (cam_x - _threshold) && bbox_top < (cam_y + cam_h + _threshold) && bbox_bottom > (cam_y - _threshold);
 }
-
-function heat_calculate(_val)
-{
-	return _val;
-}

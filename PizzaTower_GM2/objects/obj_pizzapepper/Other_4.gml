@@ -1,4 +1,4 @@
-if (global.panic == true && room != freezer_secret1)
+if (global.panic && room != freezer_secret1)
 {
 	instance_destroy();
 }

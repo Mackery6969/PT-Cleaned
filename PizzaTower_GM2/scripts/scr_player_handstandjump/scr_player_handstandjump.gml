@@ -21,7 +21,7 @@ function scr_player_handstandjump()
 		}
 	}
 
-	if (shoot == true)
+	if (shoot)
 	{
 		var attackdash = spr_player_pistolshot;
 	}
@@ -35,7 +35,7 @@ function scr_player_handstandjump()
 	}
 	var airattackdash = spr_suplexdashjump;
 	var airattackdashstart = spr_suplexdashjumpstart;
-	if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
+	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
 		vsp /= 20;
 		jumpstop = true;

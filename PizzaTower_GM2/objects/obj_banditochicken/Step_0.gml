@@ -26,7 +26,7 @@ switch (state)
 		scr_enemy_pizzaheadjump();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -38,7 +38,7 @@ if (state != states.stun)
 {
 	birdcreated = false;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -54,7 +54,7 @@ if (!activated && (state == states.walk || state == states.idle))
 {
 	sprite_index = spr_banditochicken_sleep;
 }
-if ((state == states.walk || state == states.idle) && activated == true && sprite_index != spr_banditochicken_wake && sprite_index != spr_banditochicken_scared)
+if ((state == states.walk || state == states.idle) && activated && sprite_index != spr_banditochicken_wake && sprite_index != spr_banditochicken_scared)
 {
 	fmod_event_one_shot_3d("event:/sfx/enemies/banditochicken", x, y);
 	movespeed = 0;
@@ -128,7 +128,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

@@ -15,7 +15,7 @@ with (other)
 	{
 		input_buffer_jump = 0;
 		state = states.ratmountladder;
-		if (brick == true)
+		if (brick)
 		{
 			with (instance_create(x, y, obj_brickcomeback))
 			{

@@ -24,7 +24,7 @@ function scr_player_cheeseball()
 			slopejumpx = slope.x + (slope.image_xscale * 32);
 		}
 	}
-	if ((x > (slopejumpx - 10) && x < (slopejumpx + 10)) && slopejump == true && cheeseballbounce == 0)
+	if ((x > (slopejumpx - 10) && x < (slopejumpx + 10)) && slopejump && cheeseballbounce == 0)
 	{
 		fmod_event_one_shot_3d("event:/sfx/cheese/jump", x, y);
 		vsp = -12;

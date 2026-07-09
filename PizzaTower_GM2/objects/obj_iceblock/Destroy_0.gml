@@ -27,7 +27,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 			instance_create(xx, yy, obj_parryeffect);
 		}
 	}
-	var val = heat_calculate(10);
+	var val = 10;
 	global.collect += val;
 	with (instance_create(x + 16, y, obj_smallnumber))
 	{

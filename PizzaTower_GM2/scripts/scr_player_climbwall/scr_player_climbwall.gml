@@ -12,7 +12,7 @@ function scr_player_climbwall()
 	}
 	if (wallspeed < 0)
 	{
-		if (mach4mode == false)
+		if (!mach4mode)
 		{
 			movespeed += 0.2;
 		}

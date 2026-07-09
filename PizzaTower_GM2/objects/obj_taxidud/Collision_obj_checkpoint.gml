@@ -1,4 +1,4 @@
-if (playerid.visible == false)
+if (!playerid.visible)
 {
 	global.hp = 8;
 	global.failcutscene = false;

@@ -102,7 +102,7 @@ function Instakill()
 		image_index = 0;
 	}
 	var lag;
-	if (other.baddieID.heavy == true)
+	if (other.baddieID.heavy)
 	{
 		lag = 15;
 	}

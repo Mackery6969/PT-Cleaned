@@ -374,15 +374,6 @@ function scr_player_ghost()
 					hsp = dx * ghostbump;
 					vsp = dy * ghostbump;
 				}
-				else
-				{
-					var mh = sign(hsp);
-					var mv = sign(vsp);
-					if (move_h != 0 || move_v != 0)
-					{
-						mv = move_v;
-					}
-				}
 			}
 			else
 			{

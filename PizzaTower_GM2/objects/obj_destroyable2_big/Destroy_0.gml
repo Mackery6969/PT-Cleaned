@@ -1,5 +1,5 @@
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 {
 	scr_sleep(5);
 	with (instance_create(x + 32, y + 32, obj_parryeffect))
@@ -10,7 +10,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	{
 		global.combotime += 50;
 		global.combotime = clamp(global.combotime, 0, 60);
-		var val = heat_calculate(100);
+		var val = 100;
 		global.collect += val;
 		scr_sound_multiple("event:/sfx/misc/collect", x, y);
 		with (instance_create(x + 16, y, obj_smallnumber))
@@ -21,10 +21,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == fa
 	else
 	{
 		instance_create(x + 32, y, content);
-	}
-	repeat (3)
-	{
-		create_baddiegibsticks(x + 32, y + 32);
 	}
 	notification_push(notifications.destroyable_destroyed, [room]);
 	tile_layer_delete_at(1, x, y);

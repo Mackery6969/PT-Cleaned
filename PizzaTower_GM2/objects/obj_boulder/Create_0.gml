@@ -12,7 +12,6 @@ hsp = 0;
 vsp = 0;
 state = states.idle;
 stunned = 0;
-roaming = true;
 shot = false;
 reset = false;
 flash = false;

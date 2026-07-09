@@ -1,16 +1,6 @@
-enum tv_prompttypes
-{
-	normal = 0,
-	transformation = 2,
-}
-
 image_speed = 0.1;
 showtext = false;
-tvprompts_list = ds_list_create();
 state = states.normal;
-prompt_buffer = 0;
-prompt_max = 150;
-promptsurface = surface_create(290, 102);
 visualcombo = 0;
 spr_palette = spr_peppalette;
 paletteselect = 1;
@@ -20,7 +10,6 @@ tv_trans = 0;
 tv_x = SCREEN_WIDTH - 115;
 tv_y = 80;
 targetgolf = noone;
-special_prompts = noone;
 hud_posY = 0;
 combo_state = 0;
 combo_posX = 0;
@@ -31,10 +20,7 @@ combofill_y = 0;
 combofill_index = 0;
 expressionsprite = noone;
 expressionbuffer = 0;
-tvsprite = spr_tv_idle;
 sprite_index = spr_tv_off;
-bubbleindex = 0;
-bubblespr = noone;
 idleanim = 180;
 xi = 500;
 yi = 600;

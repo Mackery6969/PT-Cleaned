@@ -26,7 +26,7 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -48,7 +48,7 @@ if ((player.x > (x - 400) && player.x < (x + 400)) && (y <= (player.y + 60) && y
 {
 	if (x != player.x && grounded)
 	{
-		if (state == states.walk && charging == false)
+		if (state == states.walk && !charging)
 		{
 			fmod_event_instance_play(chargesnd);
 			fmod_event_instance_set_3d_attributes(chargesnd, x, y);
@@ -73,11 +73,11 @@ if (sprite_index == spr_fencer_chargestart && ANIMATION_END)
 {
 	sprite_index = spr_fencer_charge;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
-if (hitboxcreate == false && (state == states.walk || state == states.rage || state == states.charge))
+if (!hitboxcreate && (state == states.walk || state == states.rage || state == states.charge))
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
@@ -93,7 +93,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

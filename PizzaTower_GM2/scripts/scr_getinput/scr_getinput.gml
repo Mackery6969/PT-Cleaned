@@ -158,10 +158,6 @@ function scr_getinput()
 	{
 		exit;
 	}
-	var verticaldeadzone = global.input_controller_deadzone_vertical;
-	var horizontaldeadzone = global.input_controller_deadzone_horizontal;
-	var vertpress_dz = global.input_controller_deadzone_press;
-	var horizpress_dz = global.input_controller_deadzone_press;
 	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
 	if (key_start_p2)
 	{

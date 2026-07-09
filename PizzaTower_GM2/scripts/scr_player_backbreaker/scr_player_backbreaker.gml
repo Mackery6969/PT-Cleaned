@@ -22,7 +22,7 @@ function scr_player_backbreaker()
 	landAnim = false;
 	if (sprite_index == spr_taunt || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmounttaunt || sprite_index == spr_player_ratmountsupertaunt)
 	{
-		if (supercharged == true && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt) && !instance_exists(obj_tauntaftereffectspawner))
+		if (supercharged && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt) && !instance_exists(obj_tauntaftereffectspawner))
 		{
 			instance_create(x, y, obj_tauntaftereffectspawner);
 			var c = c_black;

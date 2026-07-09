@@ -3,7 +3,7 @@ with (other)
 {
 	if (state != states.gotoplayer && state != states.ghost && state != states.actor)
 	{
-		if (boxxed == false && isgustavo == false && other.buffer == 0 && other.sprite_index == spr_dashpad)
+		if (!boxxed && !isgustavo && other.buffer == 0 && other.sprite_index == spr_dashpad)
 		{
 			if (state == states.trashjump || state == states.trashstart)
 			{

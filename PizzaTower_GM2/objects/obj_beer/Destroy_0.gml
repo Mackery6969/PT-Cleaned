@@ -22,7 +22,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	{
 		healthshaketime = 30;
 	}
-	var val = heat_calculate(10);
+	var val = 10;
 	global.collect += val;
 	create_collect(x, y, spr_beerliquid, val);
 	with (instance_create(x + 16, y, obj_smallnumber))

@@ -64,12 +64,12 @@ if (land)
 {
 	depth = 0;
 }
-if (grounded && grabbed == false)
+if (grounded && !grabbed)
 {
 	thrown = false;
 }
 state = states.normal;
-if (grabbed == true)
+if (grabbed)
 {
 	image_xscale = -playerid.xscale;
 	grav = 0;
@@ -296,11 +296,11 @@ if (vsp > 0 && grounded && !place_meeting(x, y, obj_spike))
 {
 	hsp = 0;
 }
-if (grabbed == false && use_collision)
+if (!grabbed && use_collision)
 {
 	scr_collide();
 }
-if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
+if (place_meeting(x, y, obj_swordhitbox) && !thrown)
 {
 	grabbed = false;
 	thrown = true;

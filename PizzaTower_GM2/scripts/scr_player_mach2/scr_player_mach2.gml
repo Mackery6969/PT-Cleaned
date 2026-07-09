@@ -20,7 +20,7 @@ function scr_player_mach2()
 	hsp = (xscale * movespeed) + (railmovespeed * raildir);
 	move2 = key_right2 + key_left2;
 	move = key_right + key_left;
-	if (!key_jump2 && jumpstop == false && vsp < 0.5)
+	if (!key_jump2 && !jumpstop && vsp < 0.5)
 	{
 		vsp /= 20;
 		jumpstop = true;
@@ -49,7 +49,7 @@ function scr_player_mach2()
 		scr_player_do_noisecrusher();
 	}
 	var mortjump = false;
-	if (key_jump && global.mort == true && sprite_index != spr_mortdoublejump && !grounded && !skateboarding)
+	if (key_jump && global.mort && sprite_index != spr_mortdoublejump && !grounded && !skateboarding)
 	{
 		state = states.jump;
 		repeat (6)
@@ -73,7 +73,7 @@ function scr_player_mach2()
 			sprite_index = spr_mach;
 			fmod_event_one_shot_3d("event:/sfx/playerN/wallbounceland", x, y);
 		}
-		if (machpunchAnim == false && sprite_index != spr_mach && sprite_index != spr_mach1 && sprite_index != spr_mach4)
+		if (!machpunchAnim && sprite_index != spr_mach && sprite_index != spr_mach1 && sprite_index != spr_mach4)
 		{
 			if (sprite_index != spr_rollgetup && sprite_index != spr_suplexdash && sprite_index != spr_taunt && sprite_index != spr_player_Sjumpcancelstart)
 			{
@@ -109,7 +109,7 @@ function scr_player_mach2()
 		}
 		if (movespeed < maxmovespeed)
 		{
-			if (mach4mode == false)
+			if (!mach4mode)
 			{
 				movespeed += accel;
 			}
@@ -118,7 +118,7 @@ function scr_player_mach2()
 				movespeed += mach4accel;
 			}
 		}
-		if (abs(hsp) >= maxmovespeed && skateboarding == false && sprite_index != spr_suplexdash)
+		if (abs(hsp) >= maxmovespeed && !skateboarding && sprite_index != spr_suplexdash)
 		{
 			state = states.mach3;
 			flash = true;
@@ -213,7 +213,7 @@ function scr_player_mach2()
 			sprite_index = spr_machroll;
 		}
 	}
-	if ((!key_attack && movespeed >= 8 && grounded && vsp > 0 && skateboarding == false))
+	if ((!key_attack && movespeed >= 8 && grounded && vsp > 0 && !skateboarding))
 	{
 		image_index = 0;
 		state = states.machslide;
@@ -227,11 +227,11 @@ function scr_player_mach2()
 		}
 		sprite_index = spr_machslidestart;
 	}
-	else if (!key_attack && movespeed < 8 && grounded && vsp > 0 && skateboarding == false)
+	else if (!key_attack && movespeed < 8 && grounded && vsp > 0 && !skateboarding)
 	{
 		state = states.normal;
 	}
-	if (move == -xscale && movespeed >= 8 && grounded && vsp > 0 && skateboarding == false)
+	if (move == -xscale && movespeed >= 8 && grounded && vsp > 0 && !skateboarding)
 	{
 		if (ispeppino)
 		{
@@ -245,16 +245,16 @@ function scr_player_mach2()
 		state = states.machslide;
 		sprite_index = spr_machslideboost;
 	}
-	else if (move == -xscale && movespeed < 8 && grounded && vsp > 0 && skateboarding == false)
+	else if (move == -xscale && movespeed < 8 && grounded && vsp > 0 && !skateboarding)
 	{
 		xscale *= -1;
 		movespeed = 6;
 	}
-	if (clowntimer > 0 && skateboarding == true)
+	if (clowntimer > 0 && skateboarding)
 	{
 		clowntimer--;
 	}
-	if (clowntimer <= 0 && skateboarding == true)
+	if (clowntimer <= 0 && skateboarding)
 	{
 		state = states.normal;
 		instance_create(x, y, obj_genericpoofeffect);
@@ -294,7 +294,7 @@ function scr_player_mach2()
 			}
 		}
 	}
-	if (input_buffer_slap > 0 && !key_up && !skateboarding && shotgunAnim == false && !global.pistol)
+	if (input_buffer_slap > 0 && !key_up && !skateboarding && !shotgunAnim && !global.pistol)
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
@@ -308,7 +308,7 @@ function scr_player_mach2()
 		}
 		image_index = 0;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == false && !skateboarding && (!global.pistol || !ispeppino))
+	else if (input_buffer_slap > 0 && key_up && !shotgunAnim && !skateboarding && (!global.pistol || !ispeppino))
 	{
 		input_buffer_slap = 0;
 		state = states.punch;

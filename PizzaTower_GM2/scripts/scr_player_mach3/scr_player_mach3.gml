@@ -58,7 +58,7 @@ function scr_player_mach3()
 	{
 		if (movespeed < mach4movespeed)
 		{
-			if (mach4mode == false)
+			if (!mach4mode)
 			{
 				movespeed += accel;
 			}
@@ -101,7 +101,7 @@ function scr_player_mach3()
 	{
 		sprite_index = mach3_spr;
 	}
-	if (!key_jump2 && jumpstop == false && vsp < 0.5)
+	if (!key_jump2 && !jumpstop && vsp < 0.5)
 	{
 		vsp /= 20;
 		jumpstop = true;
@@ -251,7 +251,7 @@ function scr_player_mach3()
 			state = states.climbwall;
 		}
 	}
-	if (input_buffer_slap > 0 && !key_up && shotgunAnim == false && !global.pistol && sprite_index != spr_dashpadmach)
+	if (input_buffer_slap > 0 && !key_up && !shotgunAnim && !global.pistol && sprite_index != spr_dashpadmach)
 	{
 		input_buffer_slap = 0;
 		sprite_index = spr_suplexdash;
@@ -265,7 +265,7 @@ function scr_player_mach3()
 		}
 		image_index = 0;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == false && sprite_index != spr_dashpadmach && (!global.pistol || !ispeppino))
+	else if (input_buffer_slap > 0 && key_up && !shotgunAnim && sprite_index != spr_dashpadmach && (!global.pistol || !ispeppino))
 	{
 		input_buffer_slap = 0;
 		state = states.punch;

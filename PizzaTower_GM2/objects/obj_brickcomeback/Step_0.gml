@@ -1,4 +1,4 @@
-if (obj_player.isgustavo == false)
+if (!obj_player.isgustavo)
 {
 	instance_create(x, y, obj_genericpoofeffect);
 	instance_destroy();
@@ -13,7 +13,7 @@ if (!trapped)
 		depth = obj_player.depth + 1;
 		comeback = false;
 	}
-	if (comeback == true)
+	if (comeback)
 	{
 		depth = obj_player.depth + 1;
 		x = Approach(x, obj_player.x, cbspeed);

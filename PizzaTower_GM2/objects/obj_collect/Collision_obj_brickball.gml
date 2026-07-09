@@ -15,7 +15,7 @@ if (image_alpha == 1)
 	{
 		healthshaketime = 30;
 	}
-	var val = heat_calculate(10);
+	var val = 10;
 	global.collect += val;
 	create_collect(x, y, sprite_index, val);
 	with (instance_create(x + 16, y, obj_smallnumber))

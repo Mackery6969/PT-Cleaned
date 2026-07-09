@@ -78,22 +78,6 @@ if (room != rm_blank)
 	pattern_reset();
 }
 reset_shader_fix();
-if (bubblespr != noone)
-{
-	draw_sprite_ext(bubblespr, bubbleindex, SCREEN_WIDTH - 448, 53, 1, 1, 1, c_white, alpha);
-}
-if (!surface_exists(promptsurface))
-{
-	promptsurface = surface_create(290, 102);
-}
-surface_set_target(promptsurface);
-draw_clear_alpha(c_black, 0);
-draw_set_font(font1);
-draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
-draw_set_halign(fa_left);
-surface_reset_target();
-draw_surface(promptsurface, SCREEN_WIDTH - 610, 0);
 draw_set_font(global.smallnumber_fnt);
 draw_set_halign(fa_center);
 if (global.panic)

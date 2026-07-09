@@ -29,8 +29,6 @@ function scr_do_rank(_showtoppins = true, _isboss = false)
 	}
 	targetDoor = "none";
 	obj_camera.alarm[2] = -1;
-	var roomname = room_get_name(room);
-	var namestring = string_letters(roomname);
 	if (!global.tutorial_room)
 	{
 		if (!_isboss)
@@ -90,7 +88,7 @@ function scr_do_rank(_showtoppins = true, _isboss = false)
 		var _lap = false;
 		ini_open_from_string(obj_savesystem.ini_str);
 		ini_write_real("Tutorial", "finished", true);
-		if ((global.level_minutes < 2 || (global.level_minutes < 1 || (global.level_minutes == 1 && global.level_seconds <= 40))) && ini_read_real("Tutorial", "lapunlocked", false) == false)
+		if ((global.level_minutes < 2 || (global.level_minutes < 1 || (global.level_minutes == 1 && global.level_seconds <= 40))) && !ini_read_real("Tutorial", "lapunlocked", false))
 		{
 			ini_write_real("Tutorial", "lapunlocked", true);
 			_lap = true;

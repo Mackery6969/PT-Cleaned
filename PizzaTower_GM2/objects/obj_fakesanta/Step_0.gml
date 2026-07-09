@@ -1,10 +1,10 @@
 
-if (point_in_camera(x, y, view_camera[0]) && activated == false)
+if (point_in_camera(x, y, view_camera[0]) && !activated)
 {
 	activated = true;
 	scr_fmod_soundeffect(global.snd_fakesanta, x, y);
 }
-if (activated == true)
+if (activated)
 {
 	switch (state)
 	{
@@ -103,7 +103,7 @@ if (activated == true)
 			state = states.walk;
 		}
 	}
-	if (flash == true && alarm[2] <= 0)
+	if (flash && alarm[2] <= 0)
 	{
 		alarm[2] = 0.15 * room_speed;
 	}

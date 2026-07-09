@@ -1,13 +1,12 @@
 function scr_hurtplayer(_player)
 {
 	var _obj = object_index;
-	var _other = id;
 	var _savedstate = _player.state;
 	var _hurt = false;
 	var _swap = false;
 	with (_player)
 	{
-		if (!(global.failcutscene || instance_exists(obj_endlevelfade) || state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan || (global.noisejetpack == true && (ispeppino || noisepizzapepper)) || holycross > 0 || invtime > 0 || sprite_index == spr_jetpackstart2)) if ((state == states.backbreaker && (parrytimer > 0 || instance_exists(obj_parryhitbox) || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt)) || state == states.chainsaw || state == states.phase1hurt || state == states.actor || instance_exists(obj_bossdark))
+		if (!(global.failcutscene || instance_exists(obj_endlevelfade) || state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan || (global.noisejetpack && (ispeppino || noisepizzapepper)) || holycross > 0 || invtime > 0 || sprite_index == spr_jetpackstart2)) if ((state == states.backbreaker && (parrytimer > 0 || instance_exists(obj_parryhitbox) || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt)) || state == states.chainsaw || state == states.phase1hurt || state == states.actor || instance_exists(obj_bossdark))
 		{
 			if (state == states.backbreaker)
 			{
@@ -40,10 +39,10 @@ function scr_hurtplayer(_player)
 				_swap = swap_player(true);
 			}
 		}
-		else if ((instance_exists(obj_pizzafaceboss) && obj_pizzafaceboss.state == states.transitioncutscene) || (instance_exists(obj_pizzafaceboss_p2) && obj_pizzafaceboss_p2.state == states.fall) || state == states.shotgundash || ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.knightpepbump) && cutscene == false) || state == states.ghost || state == states.slipnslide || state == states.trickjump || state == states.chainsaw || state == states.chainsawbump || (state == states.bombpep && hurted == false) || state == states.rideweenie)
+		else if ((instance_exists(obj_pizzafaceboss) && obj_pizzafaceboss.state == states.transitioncutscene) || (instance_exists(obj_pizzafaceboss_p2) && obj_pizzafaceboss_p2.state == states.fall) || state == states.shotgundash || ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.knightpepbump) && !cutscene) || state == states.ghost || state == states.slipnslide || state == states.trickjump || state == states.chainsaw || state == states.chainsawbump || (state == states.bombpep && !hurted) || state == states.rideweenie)
 		{
 		}
-		else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (hurted == false || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && cutscene == false)
+		else if (state != states.hurt && state != states.ratmounthurt && state != states.grabbed && (!hurted || state == states.cheesepep || state == states.cheesepepstickside || state == states.cheesepepstickup) && !cutscene)
 		{
 			if (state == states.animatronic)
 			{
@@ -211,7 +210,7 @@ function scr_hurtplayer(_player)
 				}
 				else
 				{
-					tv_do_expression(!ispeppino ? spr_tv_exprhurt : spr_tv_exprhurtN, false, true);
+					tv_do_expression(!ispeppino ? spr_tv_exprhurt : spr_tv_exprhurtN, true);
 				}
 				if (!ispeppino)
 				{

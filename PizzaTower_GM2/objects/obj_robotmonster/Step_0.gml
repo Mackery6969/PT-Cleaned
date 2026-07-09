@@ -37,7 +37,6 @@ switch (state)
 		{
 			image_xscale *= -1;
 		}
-		scr_monster_detect_audio();
 		if (scr_monster_detect(300, room_height, targetplayer))
 		{
 			state = states.monsterchase;

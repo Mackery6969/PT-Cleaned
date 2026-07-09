@@ -192,7 +192,7 @@ else if (instance_exists(hitboxID))
 {
 	instance_destroy(hitboxID);
 }
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if (state == states.stun && stunned > 100 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -245,7 +245,7 @@ if (state != states.stun)
 {
 	birdcreated = false;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }
@@ -262,7 +262,7 @@ else
 {
 	_art = elitehit <= 3;
 }
-if (_art && artdudes == false)
+if (_art && !artdudes)
 {
 	alarm[8] = 600;
 	artdudes = true;
@@ -271,7 +271,7 @@ if (state != states.stun)
 {
 	thrown = false;
 }
-if (boundbox == false)
+if (!boundbox)
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

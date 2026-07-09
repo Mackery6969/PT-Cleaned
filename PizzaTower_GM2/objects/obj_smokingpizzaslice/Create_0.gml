@@ -10,7 +10,6 @@ vsp = 0;
 state = states.walk;
 stunned = 0;
 alarm[0] = 150;
-roaming = true;
 shot = false;
 reset = false;
 flash = false;

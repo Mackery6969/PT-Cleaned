@@ -294,11 +294,6 @@ function scr_vigilante_arenaintro()
 	}
 }
 
-function scr_vigilante_do_hurt_phase2(_player)
-{
-	scr_boss_do_hurt_phase2(_player);
-}
-
 function scr_vigilante_phase1hurt()
 {
 	x = hitX + irandom_range(-1, 1);
@@ -543,8 +538,6 @@ function scr_vigilante_walk()
 				sprite_index = spr_vigilante_order;
 				image_index = 0;
 				image_speed = 0.35;
-				cowcrate = attack[0];
-				cowcrate = attack[1];
 				shot = false;
 				if (targetplayer.x != x)
 				{

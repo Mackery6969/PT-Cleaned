@@ -1,4 +1,4 @@
-if (global.timedgate == true)
+if (global.timedgate)
 {
 	global.timedgate = false;
 	global.seconds = 30;

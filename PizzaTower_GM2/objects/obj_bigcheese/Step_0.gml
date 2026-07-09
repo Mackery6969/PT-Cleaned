@@ -155,7 +155,7 @@ else if (state == states.throwing)
 		playerid = noone;
 	}
 }
-if (state == states.stun && stunned > 40 && birdcreated == false)
+if (state == states.stun && stunned > 40 && !birdcreated)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -175,7 +175,7 @@ else
 {
 	image_speed = 0.35;
 }
-if (flash == true && alarm[2] <= 0)
+if (flash && alarm[2] <= 0)
 {
 	alarm[2] = 0.15 * room_speed;
 }

@@ -550,7 +550,7 @@ function scr_pepperman_shoulderbash()
 	if (attackspeed >= a_treshold)
 	{
 		hsp = image_xscale * attackspeed;
-		if (woosh == false && phase == 2)
+		if (!woosh && phase == 2)
 		{
 			with (instance_create(x, y, obj_crazyrunothereffect))
 			{

@@ -4,7 +4,7 @@ if (ini_read_real("w3stick", "door", false) || ini_read_real("Highscore", "fores
 	instance_destroy();
 }
 ini_close();
-if (global.panic == true)
+if (global.panic)
 {
 	instance_destroy();
 }

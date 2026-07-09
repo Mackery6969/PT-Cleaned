@@ -23,11 +23,11 @@ if (fadealpha > 1)
 		room = rank_room;
 	}
 }
-if (fadein == false)
+if (!fadein)
 {
 	fadealpha += 0.1;
 }
-else if (fadein == true)
+else if (fadein)
 {
 	fadealpha -= 0.1;
 }

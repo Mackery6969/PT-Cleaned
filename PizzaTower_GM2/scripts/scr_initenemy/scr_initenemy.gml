@@ -24,7 +24,6 @@ function scr_initenemy()
 	vsp = 0;
 	stunned = 0;
 	alarm[0] = 150;
-	roaming = true;
 	escapespawnID = noone;
 	reset = false;
 	bombreset = 0;
@@ -91,7 +90,6 @@ function scr_initenemy()
 	state = states.walk;
 	stunned = 0;
 	alarm[0] = 150;
-	roaming = true;
 	shot = false;
 	reset = false;
 	flash = false;

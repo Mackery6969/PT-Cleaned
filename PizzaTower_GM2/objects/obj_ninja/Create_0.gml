@@ -13,7 +13,6 @@ movespeed = 4;
 state = states.idle;
 stunned = 0;
 alarm[0] = 150;
-roaming = false;
 shot = false;
 reset = false;
 hp = 2;

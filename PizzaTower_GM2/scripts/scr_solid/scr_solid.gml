@@ -50,7 +50,6 @@ function check_slope(_slope)
 		{
 			var object_side = 0;
 			var slope_start = 0;
-			var slope_end = 0;
 			if (image_xscale > 0)
 			{
 				object_side = other.bbox_right;
