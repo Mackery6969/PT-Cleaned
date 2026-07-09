@@ -2931,7 +2931,6 @@
     {"id":{"name":"spr_player_finishingblow3","path":"sprites/spr_player_finishingblow3/spr_player_finishingblow3.yy",},"order":173,},
     {"id":{"name":"obj_clock","path":"objects/obj_clock/obj_clock.yy",},"order":157,},
     {"id":{"name":"spr_player_finishingblow4","path":"sprites/spr_player_finishingblow4/spr_player_finishingblow4.yy",},"order":174,},
-    {"id":{"name":"editor_macros","path":"scripts/editor_macros/editor_macros.yy",},"order":22,},
     {"id":{"name":"spr_pizzasona40throw","path":"sprites/spr_pizzasona40throw/spr_pizzasona40throw.yy",},"order":1121,},
     {"id":{"name":"obj_objecticontracker","path":"objects/obj_objecticontracker/obj_objecticontracker.yy",},"order":1122,},
     {"id":{"name":"spr_player_finishingblow5","path":"sprites/spr_player_finishingblow5/spr_player_finishingblow5.yy",},"order":175,},

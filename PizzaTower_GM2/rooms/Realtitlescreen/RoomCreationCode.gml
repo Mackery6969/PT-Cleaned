@@ -381,7 +381,6 @@ with (obj_player)
 {
 	state = states.normal;
 }
-global.loadeditor = false;
 if (global.longintro)
 {
 	global.longintro = false;

@@ -1,5 +1,4 @@
 fadealpha = 0;
-custom_level = false;
 roomreset = false;
 index = 0;
 _id = 0;
