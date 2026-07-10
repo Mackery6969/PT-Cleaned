@@ -12,10 +12,6 @@ if (collect > 0)
 	scr_sound_multiple("event:/sfx/misc/collect", obj_player.x, obj_player.y);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	with (obj_camera)
-	{
-		healthshaketime = 30;
-	}
 	with (instance_create(obj_player.x, obj_player.y, obj_smallnumber))
 	{
 		number = string(diff);

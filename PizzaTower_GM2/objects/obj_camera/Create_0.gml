@@ -41,5 +41,3 @@ player = obj_player;
 image_speed = 0.35;
 p2pdistancex = 0;
 global.timedgate = false;
-healthold = 8;
-healthshaketime = 0;

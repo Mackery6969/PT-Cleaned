@@ -11,11 +11,10 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		create_debris(x + 32, y + 32, spr_icedebris);
 	}
 	instance_create(x + 32, y + 32, obj_parryeffect);
-	var val = 10;
-	global.collect += val;
+	global.collect += 10;
 	with (instance_create(x + 32, y + 32, obj_smallnumber))
 	{
-		number = string(val);
+		number = string(10);
 	}
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);

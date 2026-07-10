@@ -153,7 +153,6 @@ function scr_playerreset(_stop_music = true)
 		global.spaceblockswitch = true;
 		global.fill = 500;
 		global.hasfarmer = array_create(3, false);
-		global.hp = 0;
 		global.gerome = false;
 		global.mort = false;
 		global.spaceblockswitch = true;
@@ -187,9 +186,6 @@ function scr_playerreset(_stop_music = true)
 		global.hit = 0;
 		global.playerhealth = 100;
 		global.panic = false;
-		with (obj_music)
-		{
-		}
 		if (instance_exists(obj_endlevelfade))
 		{
 			instance_destroy(obj_endlevelfade);

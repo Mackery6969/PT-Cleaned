@@ -78,14 +78,6 @@ function scr_hurtplayer(_player)
 			}
 			_hurt = true;
 			pistolanim = noone;
-			if (global.hp > 1)
-			{
-				global.hp--;
-				with (obj_camera)
-				{
-					healthshaketime = 60;
-				}
-			}
 			if (state == states.trashroll || state == states.trashjump)
 			{
 				create_debris(x, y, spr_player_trashlid);

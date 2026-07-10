@@ -363,11 +363,6 @@ function scr_collect_hat(_ispersistent = false)
 			with (other)
 			{
 				scr_sound_multiple("event:/sfx/misc/collect", x, y);
-				with (obj_camera)
-				{
-					healthshaketime = 30;
-				}
-				var val = 50;
 				fmod_event_one_shot("event:/sfx/misc/cardcollect");
 				global.extrahats++;
 				with (instance_create(x, y, obj_smallnumber))

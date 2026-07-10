@@ -23,11 +23,10 @@ if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 	scr_sound_multiple("event:/sfx/misc/collect", x, y);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	var val = 10;
-	global.collect += val;
+	global.collect += 10;
 	with (instance_create(x + 16, y, obj_smallnumber))
 	{
-		number = string(val);
+		number = string(10);
 	}
 	tile_layer_delete_at(1, x, y);
 	notification_push(notifications.destroyable_destroyed, [room]);

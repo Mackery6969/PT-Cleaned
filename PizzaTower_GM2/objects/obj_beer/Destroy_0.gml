@@ -18,16 +18,11 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	notification_push(notifications.beer_knocked, [room, id, object_index]);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	with (obj_camera)
-	{
-		healthshaketime = 30;
-	}
-	var val = 10;
-	global.collect += val;
-	create_collect(x, y, spr_beerliquid, val);
+	global.collect += 10;
+	create_collect(x, y, spr_beerliquid, 10);
 	with (instance_create(x + 16, y, obj_smallnumber))
 	{
-		number = string(val);
+		number = string(10);
 	}
 	ds_list_add(global.saveroom, id);
 }

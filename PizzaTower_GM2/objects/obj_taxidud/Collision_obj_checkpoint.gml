@@ -1,6 +1,5 @@
 if (!playerid.visible)
 {
-	global.hp = 8;
 	global.failcutscene = false;
 	with (obj_player)
 	{

@@ -10,12 +10,11 @@ if (ds_list_find_index(global.saveroom, id) == -1 && !global.snickchallenge)
 	{
 		global.combotime += 50;
 		global.combotime = clamp(global.combotime, 0, 60);
-		var val = 100;
-		global.collect += val;
+		global.collect += 100;
 		scr_sound_multiple("event:/sfx/misc/collect", x, y);
 		with (instance_create(x + 16, y, obj_smallnumber))
 		{
-			number = string(val);
+			number = string(100);
 		}
 	}
 	else

@@ -5,10 +5,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	fmod_event_one_shot_3d("event:/sfx/misc/breakblock", x, y);
 	fmod_event_one_shot_3d("event:/sfx/misc/breakblock", x, y);
 	global.combotime = 60;
-	with (obj_camera)
-	{
-		healthshaketime = 30;
-	}
 	global.collect += 100;
 	with (obj_camera)
 	{

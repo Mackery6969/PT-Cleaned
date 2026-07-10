@@ -9,15 +9,10 @@ else
 }
 global.combotime += 10;
 global.combotime = clamp(global.combotime, 0, 60);
-with (obj_camera)
-{
-	healthshaketime = 30;
-}
-var val = 10;
-global.collect += val;
-create_collect(x, y, sprite_index, val);
+global.collect += 10;
+create_collect(x, y, sprite_index, 10);
 with (instance_create(x + 16, y, obj_smallnumber))
 {
-	number = string(val);
+	number = string(10);
 }
 instance_destroy();

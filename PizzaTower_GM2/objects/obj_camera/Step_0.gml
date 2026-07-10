@@ -8,19 +8,7 @@ if (collect_shake > 0)
 {
 	collect_shake *= 0.5;
 }
-if (healthshaketime > 0)
-{
-	healthshaketime--;
-}
-if (!(healthshaketime == 0))
-{
-	if (healthold != global.hp)
-	{
-		healthshaketime = 30;
-		healthold = global.hp;
-	}
-}
-	p2pdistancex = 0;
+p2pdistancex = 0;
 if (room == Longintro || room == Mainmenu || room == rank_room || room == timesuproom || room == Realtitlescreen || room == characterselect || room == hub_loadingscreen || (string_copy(room_get_name(room), 1, 5) == "tower" && !global.panic))
 {
 	visible = false;

@@ -465,7 +465,6 @@ if (!variable_global_exists("saveroom"))
 	global.toppintotal = 1;
 	global.hit = 0;
 	global.baddieroom = ds_list_create();
-	global.hp = 2;
 	global.panic = false;
 	global.snickchallenge = false;
 	global.golfhit = 0;

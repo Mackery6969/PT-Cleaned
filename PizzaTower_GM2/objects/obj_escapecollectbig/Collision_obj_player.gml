@@ -3,27 +3,15 @@ if (image_alpha == 1)
 {
 	if (other.state != states.gotoplayer)
 	{
-		with (obj_camera)
-		{
-			healthshaketime = 60;
-		}
 		global.combotime = 60;
 		fmod_event_one_shot_3d("event:/sfx/misc/collectpizza", x, y);
 		fmod_event_one_shot_3d("event:/sfx/misc/bellcollectbig", x, y);
 		instance_destroy();
-		var val = value;
-		if (other.object_index == obj_player)
-		{
-			global.collect += val;
-		}
-		else
-		{
-			global.collectN += val;
-		}
-		create_collect(x, y, sprite_index, val);
+		global.collect += value;
+		create_collect(x, y, sprite_index, value);
 		with (instance_create(x + 16, y, obj_smallnumber))
 		{
-			number = string(val);
+			number = string(other.value);
 		}
 	}
 }
