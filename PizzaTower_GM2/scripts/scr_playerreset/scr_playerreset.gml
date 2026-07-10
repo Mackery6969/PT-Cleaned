@@ -173,7 +173,6 @@ function scr_playerreset(_stop_music = true)
 		global.keyget = false;
 		global.collect = 0;
 		global.lastcollect = 0;
-		global.collectN = 0;
 		global.collect_player[0] = 0;
 		global.collect_player[1] = 0;
 		global.hats = 0;
