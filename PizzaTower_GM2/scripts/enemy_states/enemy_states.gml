@@ -186,7 +186,7 @@ function scr_enemy_grabbed()
 		with (obj_player)
 		{
 			move = key_left2 + key_right2;
-			if (!(state == states.grab || state == states.chainsaw || state == states.pummel || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
+			if (!(state == states.grab || state == states.chainsaw || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
 			{
 				other.x = x;
 				other.y = y;
@@ -257,48 +257,6 @@ function scr_enemy_grabbed()
 			image_xscale *= -1;
 			hsp = -image_xscale * 20;
 			vsp = -7;
-			if (object_index != obj_swapplayergrabbable)
-			{
-				global.combotime = 60;
-			}
-						instance_create(x, y, obj_slapstar);
-			instance_create(x, y, obj_baddiegibs);
-			flash = true;
-			with (obj_camera)
-			{
-				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
-			}
-		}
-		if (obj_player.state == states.shoulder)
-		{
-			alarm[3] = 3;
-			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
-			{
-				global.golfhit += 1;
-			}
-			hp -= 1;
-			instance_create(x, y + 20, obj_bumpeffect);
-			alarm[1] = 5;
-			thrown = true;
-			x = obj_player.x;
-			y = obj_player.y;
-			state = states.stun;
-			if (obj_player.sprite_index == spr_player_shoulder)
-			{
-				vsp = 15;
-			}
-			if (obj_player.sprite_index == spr_player_diagonaldownthrow)
-			{
-				hsp = -image_xscale * 10;
-				vsp = 15;
-			}
-			if (obj_player.sprite_index == spr_player_diagonalupthrow)
-			{
-				hsp = -image_xscale * 10;
-				vsp = -15;
-			}
 			if (object_index != obj_swapplayergrabbable)
 			{
 				global.combotime = 60;
@@ -758,7 +716,7 @@ function scr_enemy_hit()
 		alarm[1] = 5;
 		var _hp = 0;
 		_hp = -1;
-		if (((!elite && (hp <= _hp || mach3destroy)) || (elite && (elitehit <= 0 || mach3destroy))) && object_get_parent(object_index) != par_boss && object_index != obj_pizzafaceboss && destroyable && !mach2)
+		if (((!elite && (hp <= _hp || mach3destroy)) || (elite && (elitehit <= 0 || mach3destroy))) && object_index != obj_pizzafaceboss && destroyable && !mach2)
 		{
 			instance_destroy();
 			instance_create(x, y, obj_genericpoofeffect);

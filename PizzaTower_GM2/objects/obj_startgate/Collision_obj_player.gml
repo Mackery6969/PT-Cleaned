@@ -25,7 +25,6 @@ if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player
 	{
 		if (other.level == "snickchallenge")
 		{
-			global.wave = 0;
 			global.snickchallenge = true;
 			global.collect = 10000;
 			with (obj_camera)

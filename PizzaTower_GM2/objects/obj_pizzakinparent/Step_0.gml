@@ -1,8 +1,4 @@
 visible = (room == rank_room || room == timesuproom) ? false : obj_player.visible;
-if (obj_player.state == states.pizzathrow)
-{
-	visible = false;
-}
 if (state != states.backbreaker)
 {
 	if (object_index != obj_pizzakinpineapple || (sprite_index != spr_monsterpineapple_pose1 && sprite_index != spr_monsterpineapple_pose2 && sprite_index != spr_monsterpineapple_pose3))

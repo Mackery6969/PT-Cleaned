@@ -36,7 +36,6 @@ shake_mag = 0;
 shake_mag_acc = 0;
 chargecamera = 0;
 alpha = 1;
-global.wave = 0;
 ded = false;
 player = obj_player;
 image_speed = 0.35;

@@ -181,9 +181,6 @@ switch (state)
 	case states.shotgunjump:
 		scr_player_shotgunjump();
 		break;
-	case states.highjump:
-		scr_player_highjump();
-		break;
 	case states.chainsaw:
 		scr_player_chainsaw();
 		break;
@@ -814,7 +811,7 @@ if (walljumpbuffer > 0)
 if (tauntstoredisgustavo)
 {
 	isgustavo = true;
-	if (state != states.backbreaker && state != states.parry && state != states.graffiti)
+	if (state != states.backbreaker && state != states.parry)
 	{
 		tauntstoredisgustavo = false;
 	}
@@ -1207,7 +1204,7 @@ else
 {
 	attacking = false;
 }
-if (state == states.throwing || state == states.backkick || state == states.shoulder || state == states.uppunch)
+if (state == states.throwing || state == states.backkick || state == states.uppunch)
 {
 	grabbing = true;
 }
@@ -1429,7 +1426,7 @@ if (movespeed > 12 && abs(hsp) > 12 && state == states.mach3 && state != states.
 	}
 }
 scr_collide_destructibles();
-if (state != states.backtohub && state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.boulder && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover)
+if (state != states.backtohub && state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover)
 {
 	scr_collide_player();
 }
@@ -1437,10 +1434,6 @@ if (state == states.tube || state == states.gotoplayer || state == states.debugs
 {
 	x += hsp;
 	y += vsp;
-}
-if (state == states.boulder)
-{
-	scr_collide_player();
 }
 scr_collide_destructibles();
 with (obj_ratblock)

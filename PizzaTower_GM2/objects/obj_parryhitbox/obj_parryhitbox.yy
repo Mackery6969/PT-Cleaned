@@ -13,7 +13,6 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_pepgoblin_kickhitbox","path":"objects/obj_pepgoblin_kickhitbox/obj_pepgoblin_kickhitbox.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_minijohn_hitbox","path":"objects/obj_minijohn_hitbox/obj_minijohn_hitbox.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_thug_red","path":"objects/obj_thug_red/obj_thug_red.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"par_boss","path":"objects/par_boss/par_boss.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_enemybullet","path":"objects/obj_enemybullet/obj_enemybullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_ghoul","path":"objects/obj_ghoul/obj_ghoul.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_golfdemon","path":"objects/obj_golfdemon/obj_golfdemon.yy",},"eventNum":0,"eventType":4,"isDnD":false,},

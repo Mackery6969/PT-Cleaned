@@ -50,7 +50,7 @@ function scr_player_grabbed()
 				shake_mag_acc = 3 / room_speed;
 			}
 		}
-		if (!(state == states.grab || (state == states.ratmount || state == states.ratmountjump) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
+		if (!(state == states.grab || (state == states.ratmount || state == states.ratmountjump) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
 		{
 			baddiegrabbedID = noone;
 			other.x = _obj_player.x;

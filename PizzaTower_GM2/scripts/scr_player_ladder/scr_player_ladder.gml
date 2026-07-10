@@ -37,7 +37,7 @@ function scr_player_ladder()
 	jumpAnim = true;
 	landAnim = false;
 	crouchAnim = true;
-	if (!place_meeting(x, y, obj_ladder) && !place_meeting(x, y, obj_stairs))
+	if (!place_meeting(x, y, obj_ladder))
 	{
 		landAnim = false;
 		jumpAnim = false;

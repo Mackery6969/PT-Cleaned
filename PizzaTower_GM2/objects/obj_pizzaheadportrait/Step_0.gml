@@ -104,7 +104,7 @@ if (grabbed)
 	with (playerid)
 	{
 		move = key_left2 + key_right2;
-		if (!(state == states.finishingblow || state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
+		if (!(state == states.finishingblow || state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
 		{
 			other.grav = 0.5;
 			other.x = x;
@@ -167,26 +167,6 @@ if (grabbed)
 			depth = 0;
 			x = playerid.x + (playerid.xscale * 50);
 			y = playerid.y;
-		}
-	}
-	if (playerid.state == states.shoulder)
-	{
-		grav = 0.5;
-		instance_create(x, y + 20, obj_bumpeffect);
-		grabbed = false;
-		thrown = true;
-		x = playerid.x;
-		y = playerid.y;
-		if (playerid.sprite_index == spr_player_shoulder)
-		{
-			vsp = 15;
-		}
-		instance_create(x, y, obj_slapstar);
-		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
-		{
-			shake_mag = 3;
-			shake_mag_acc = 3 / room_speed;
 		}
 	}
 	if (playerid.state == states.throwing)

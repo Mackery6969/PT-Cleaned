@@ -73,7 +73,6 @@ function scr_initenemy()
 	dodgebuffer = 0;
 	escape = false;
 	escapestun = true;
-	wave = 0;
 	rage = false;
 	instakilled = false;
 	killprotection = false;

@@ -6,7 +6,7 @@ with (obj_player)
 {
 	if (other.image_yscale == 1)
 	{
-		if (((key_down && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other) && ((state == states.crouch) || state == states.machroll || (state == states.tumble && sprite_index == spr_dive))) || ((state == states.crouchslide || (state == states.tumble && key_down) || state == states.machcancel || state == states.unknown300 || state == states.unknown303 || state == states.freefall || state == states.freefallland) && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
+		if (((key_down && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other) && ((state == states.crouch) || state == states.machroll || (state == states.tumble && sprite_index == spr_dive))) || ((state == states.crouchslide || (state == states.tumble && key_down) || state == states.machcancel || state == states.freefall || state == states.freefallland) && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 		{
 			obj_player.lastroom = room;
 			other.depth = -10;
@@ -26,7 +26,7 @@ with (obj_player)
 	}
 	if (other.image_yscale == -1)
 	{
-		if (((key_up && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 10, other) && (state == states.normal || state == states.machcancel || state == states.unknown300 || state == states.unknown302 || state == states.machcancel || state == states.jump || state == states.mach1 || state == states.mach2 || state == states.mach3 || state == states.Sjumpprep || (state == states.punch && sprite_index == spr_breakdanceuppercut))) || ((state == states.Sjump || state == states.machcancel || state == states.Sjumpland) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
+		if (((key_up && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 10, other) && (state == states.normal || state == states.machcancel || state == states.machcancel || state == states.jump || state == states.mach1 || state == states.mach2 || state == states.mach3 || state == states.Sjumpprep || (state == states.punch && sprite_index == spr_breakdanceuppercut))) || ((state == states.Sjump || state == states.machcancel || state == states.Sjumpland) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 		{
 			obj_player.lastroom = room;
 			fmod_event_one_shot_3d("event:/sfx/pep/box", x, y);

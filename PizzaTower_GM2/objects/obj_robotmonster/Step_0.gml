@@ -153,13 +153,10 @@ switch (state)
 			state = states.monsterchase;
 		}
 		break;
-	case states.monsterinvestigate:
-		scr_monsterinvestigate(10, spr_monstershroom_chase, spr_monstershroom_idle);
-		break;
 }
 if (object_index == obj_robotmonster || object_index == obj_hillbillymonster)
 {
-	if (state == states.monsterchase || state == states.monsterrun || state == states.monsterinvestigate)
+	if (state == states.monsterchase)
 	{
 		instance_destroy(instance_place(x + hsp, y, obj_destructibles));
 		instance_destroy(instance_place(x + hsp, y, obj_spike));

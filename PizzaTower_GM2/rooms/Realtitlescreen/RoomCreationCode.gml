@@ -53,7 +53,6 @@ enum states
 	grabbing = 55,
 	shotgunjump = 57,
 	stunned = 59,
-	highjump = 60,
 	chainsaw = 61,
 	facestomp = 62,
 	mach4 = 63, // doesnt exist
@@ -76,10 +75,7 @@ enum states
 	punch = 80,
 	backkick = 81,
 	uppunch = 82,
-	shoulder = 83,
 	backbreaker = 84,
-	graffiti = 85,
-	pizzathrow = 87,
 	gameover = 89,
 	keyget = 90,
 	tackle = 91,
@@ -105,7 +101,6 @@ enum states
 	barreljump = 114,
 	barrelclimbwall = 115,
 	barrelslide = 116,
-	boulder = 118,
 	taxi = 119,
 	mach3 = 121,
 	freefallprep = 122,
@@ -124,8 +119,6 @@ enum states
 	hit = 137,
 	stun = 138,
 	chase = 141,
-	arenaspawn = 142, // spawnenemy
-	arenaend = 143,
 	arenaintro = 144,
 	actor = 146,
 	parry = 147,
@@ -134,12 +127,9 @@ enum states
 	tube = 150,
 	taxi2 = 152, // policetaxi
 	shoulderbash = 153,
-	pummel = 154,
 	staggered = 155,
 	thrown = 156,
-	superattack = 160,
 	shoulderturn = 161,
-	fistmatch = 162,
 	slipbanan = 165,
 	bombthrow = 168,
 	jetpackstart = 170,
@@ -151,7 +141,6 @@ enum states
 	trickjump = 187,
 	dance = 188,
 	underground = 189,
-	ridecow = 190,
 	ratmount = 191,
 	ratmountjump = 192,
 	ratmountclimbwall = 195,
@@ -169,8 +158,6 @@ enum states
 	trashstart = 209, // trashjumpprep
 	trashjump = 210,
 	trashroll = 211,
-	stringfling = 212,
-	stringjump = 213,
 	stringfall = 214,
 
 	// robot states start
@@ -178,8 +165,6 @@ enum states
 	monsterintro = 218,
 	monsterwalk = 219, // roaming
 	monsterchase = 220,
-	monsterinvestigate = 221,
-	monsterrun = 222, // seeking
 	// robot states end
 
 	flushidle = 223,
@@ -239,10 +224,6 @@ enum states
 	teleporter = 297, // teleport
 	pizzaheadKO = 298,
 	follow = 299, // camera_followtarget
-	unknown300 = 300, // Mr. Stick wallkick
-	unknown301 = 301, // Mr. Stick airspin
-	unknown302 = 302, // Mr. Stick superjump
-	unknown303 = 303, // Mr. Stick flycancel, used in obj_stickhat
 	machcancel = 306,
 }
 

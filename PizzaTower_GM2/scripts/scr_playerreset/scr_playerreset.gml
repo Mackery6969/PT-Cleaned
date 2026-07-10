@@ -144,7 +144,6 @@ function scr_playerreset(_stop_music = true)
 		ds_list_clear(global.saveroom);
 		ds_list_clear(global.escaperoom);
 		global.combodropped = false;
-		global.wave = 0;
 		global.secretfound = 0;
 		global.hurtcounter = 0;
 		global.snickchallenge = false;
