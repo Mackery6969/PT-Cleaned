@@ -1325,7 +1325,7 @@
     {"id":{"name":"scr_player_finishingblow","path":"scripts/scr_player_finishingblow/scr_player_finishingblow.yy",},"order":280,},
     {"id":{"name":"obj_title_oreganodesert","path":"objects/obj_title_oreganodesert/obj_title_oreganodesert.yy",},"order":35,},
     {"id":{"name":"timesuproom","path":"rooms/timesuproom/timesuproom.yy",},"order":3,},
-    {"id":{"name":"obj_consoledebug","path":"objects/obj_consoledebug/obj_consoledebug.yy",},"order":281,},
+    {"id":{"name":"obj_debugcontroller","path":"objects/obj_debugcontroller/obj_debugcontroller.yy",},"order":281,},
     {"id":{"name":"rank_room","path":"rooms/rank_room/rank_room.yy",},"order":4,},
     {"id":{"name":"spr_scorewinsN","path":"sprites/spr_scorewinsN/spr_scorewinsN.yy",},"order":281,},
     {"id":{"name":"obj_frontcanonbomb","path":"objects/obj_frontcanonbomb/obj_frontcanonbomb.yy",},"order":27,},

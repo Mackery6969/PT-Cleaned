@@ -1,4 +1,4 @@
-if (!global.option_hud || (instance_exists(obj_consoledebug) && !obj_consoledebug.showhud))
+if (!global.option_hud || (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud))
 {
 	exit;
 }
