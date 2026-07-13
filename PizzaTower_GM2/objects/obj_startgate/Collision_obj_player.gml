@@ -1,7 +1,7 @@
 var gate = id;
 with (other)
 {
-	if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && spotlight)
+	if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor)
 	{
 		audio_stop_all();
 		stop_music();
@@ -23,17 +23,6 @@ if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player
 {
 	with (obj_player)
 	{
-		if (other.level == "snickchallenge")
-		{
-			global.snickchallenge = true;
-			global.collect = 10000;
-			with (obj_camera)
-			{
-				alarm[1] = 60;
-				global.seconds = 59;
-				global.minutes = 9;
-			}
-		}
 		targetDoor = other.targetDoor;
 		targetRoom = other.targetRoom;
 		if (targetRoom == tower_finalhallway)

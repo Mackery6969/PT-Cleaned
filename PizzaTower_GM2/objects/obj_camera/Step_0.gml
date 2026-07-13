@@ -173,14 +173,11 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 			var cam_x, cam_y;
 			if (targetgolf == noone)
 			{
-				if (!global.coop || room == characterselect || room == Realtitlescreen)
-				{
-					cam_x = (tx - (cam_width / 2)) + chargecamera + p2pdistancex;
-					cam_y = ty - (cam_height / 2) - 50;
-					cam_x = clamp(cam_x, 0, room_width - cam_width);
-					cam_y = clamp(cam_y, 0, room_height - cam_height);
-					camera_zoom(1, 0.035);
-				}
+				cam_x = (tx - (cam_width / 2)) + chargecamera + p2pdistancex;
+				cam_y = ty - (cam_height / 2) - 50;
+				cam_x = clamp(cam_x, 0, room_width - cam_width);
+				cam_y = clamp(cam_y, 0, room_height - cam_height);
+				camera_zoom(1, 0.035);
 			}
 			else
 			{

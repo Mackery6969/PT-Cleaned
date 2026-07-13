@@ -14,7 +14,6 @@ if (!hub)
 	alarm[0] = 2;
 	obj_player.state = states.titlescreen;
 	obj_player.targetDoor = "A";
-	global.coop = false;
 }
 else
 {

@@ -914,10 +914,6 @@ if ((room == Realtitlescreen && instance_exists(obj_mainmenuselect)) || room == 
 {
 	state = states.titlescreen;
 }
-if (wallclingcooldown < 10)
-{
-	wallclingcooldown++;
-}
 if (boxxedspinbuffer > 0)
 {
 	boxxedspinbuffer--;

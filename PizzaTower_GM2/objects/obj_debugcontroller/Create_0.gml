@@ -312,31 +312,28 @@ PLAYER_SET_STATE = new DebugCommand("player_set_state", "Changes the player stat
 	{
 		with (obj_player)
 		{
-			if (object_index == obj_player || global.coop)
+			state = _state;
+			var _spr = sprite_index;
+			switch (_state)
 			{
-				state = _state;
-				var _spr = sprite_index;
-				switch (_state)
-				{
-					case states.normal:
-						_spr = spr_idle;
-						break;
-					case states.cheesepep:
-						_spr = spr_cheesepep_idle;
-						break;
-					case states.knightpep:
-						_spr = spr_knightpepidle;
-						break;
-					case states.firemouth:
-						_spr = spr_firemouth;
-						break;
-					case states.ratmount:
-						_spr = spr_player_ratmountidle;
-						break;
-				}
-				sprite_index = _spr;
-				image_index = 0;
+				case states.normal:
+					_spr = spr_idle;
+					break;
+				case states.cheesepep:
+					_spr = spr_cheesepep_idle;
+					break;
+				case states.knightpep:
+					_spr = spr_knightpepidle;
+					break;
+				case states.firemouth:
+					_spr = spr_firemouth;
+					break;
+				case states.ratmount:
+					_spr = spr_player_ratmountidle;
+					break;
 			}
+			sprite_index = _spr;
+			image_index = 0;
 		}
 	}
 });

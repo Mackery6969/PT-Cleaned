@@ -146,7 +146,6 @@ function scr_playerreset(_stop_music = true)
 		global.combodropped = false;
 		global.secretfound = 0;
 		global.hurtcounter = 0;
-		global.snickchallenge = false;
 		global.pizzadelivery = false;
 		global.failcutscene = false;
 		global.pizzasdelivered = 0;
@@ -227,7 +226,6 @@ function scr_playerreset(_stop_music = true)
 		obj_player.supercharge = 0;
 		obj_player.supercharged = false;
 		pistol = false;
-		obj_player.spotlight = true;
 		audio_stop_all();
 		global.seconds = 59;
 		global.minutes = 1;
