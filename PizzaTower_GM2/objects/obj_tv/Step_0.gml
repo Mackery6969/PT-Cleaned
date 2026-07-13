@@ -37,19 +37,15 @@ switch (state)
 		{
 			idlespr = spr_tv_idleN;
 		}
-		if (obj_player.shotgunAnim)
-		{
-			idlespr = spr_tv_shotgun;
-		}
 		if (global.panic)
 		{
 			idlespr = spr_tv_exprpanic;
 		}
-		else if (global.combo >= 3 && global.combo < 50 && !obj_player.isgustavo && !obj_player.shotgunAnim)
+		else if (global.combo >= 3 && global.combo < 50 && !obj_player.isgustavo)
 		{
 			idlespr = spr_tv_exprcombo;
 		}
-		else if (global.combo >= 50 && !obj_player.isgustavo && !obj_player.shotgunAnim)
+		else if (global.combo >= 50 && !obj_player.isgustavo)
 		{
 			idlespr = spr_tv_exprheat;
 		}
