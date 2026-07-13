@@ -66,6 +66,48 @@ switch (state)
 			}
 		}
 		break;
+	case states.underground:
+		hsp = 0;
+		if (underground)
+		{
+			if (vsp < 0)
+			{
+				vsp = 0;
+			}
+			sprite_index = spr_minijohn_ground;
+			image_index = 0;
+			if (player.x > (x - 200) && player.x < (x + 200) && y <= (player.y + 60) && y >= (player.y - 60))
+			{
+				underground = false;
+				if (player.x != x)
+				{
+					image_xscale = sign(x - player.x);
+				}
+				fmod_event_one_shot_3d("event:/sfx/enemies/comingoutground", x, y);
+			}
+		}
+		else if (sprite_index == spr_minijohn_ground)
+		{
+			if (vsp < 0)
+			{
+				vsp = 0;
+			}
+			if (ANIMATION_END)
+			{
+				sprite_index = spr_minijohn_stun;
+				vsp = -4;
+				repeat (3)
+				{
+					create_debris(x, y, spr_graveyarddebris2);
+				}
+			}
+		}
+		else if (grounded)
+		{
+			state = states.chase;
+			sprite_index = spr_minijohn_charge;
+		}
+		break;
 }
 if (state == states.stun && stunned > 100 && !birdcreated)
 {
