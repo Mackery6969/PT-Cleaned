@@ -40,9 +40,6 @@ switch (state)
 	case states.duel:
 		scr_vigilante_duel();
 		break;
-	case states.punch:
-		scr_vigilante_punch();
-		break;
 	case states.jump:
 		scr_vigilante_jump();
 		break;

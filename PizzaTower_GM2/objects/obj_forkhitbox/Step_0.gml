@@ -127,12 +127,6 @@ with (ID)
 				other.x = x + (image_xscale * 24);
 			}
 			break;
-		case obj_boulder:
-			if (!hitwall)
-			{
-				instance_destroy(other);
-			}
-			break;
 		case obj_pickle:
 			if (state != states.pizzagoblinthrow)
 			{

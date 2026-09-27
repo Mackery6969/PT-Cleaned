@@ -25,11 +25,11 @@ else if (state == states.actor)
 		shader_set(global.Pal_Shader);
 		var ps = paletteselect;
 		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, xscale, image_yscale, global.palettetexture);
-		pal_swap_set(spr_palette, ps, false);
+		pal_swap_set(spr_palette, ps);
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale, image_yscale, image_angle, image_blend, image_alpha);
 		if (global.noisejetpack)
 		{
-			pal_swap_set(spr_palette, 2, false);
+			pal_swap_set(spr_palette, 2);
 			draw_sprite_ext(sprite_index, image_index, x, y, xscale, image_yscale, image_angle, image_blend, image_alpha);
 		}
 		pattern_reset();

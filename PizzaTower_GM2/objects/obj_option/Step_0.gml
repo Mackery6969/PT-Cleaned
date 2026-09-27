@@ -169,10 +169,6 @@ if ((key_back || key_slap2 || keyboard_check_pressed(vk_escape)) && !instance_ex
 	fmod_event_one_shot("event:/sfx/ui/back");
 	if (menu == menuids.categories)
 	{
-		if (instance_exists(obj_mainmenuselect))
-		{
-			obj_mainmenuselect.selected = false;
-		}
 		if (instance_exists(obj_mainmenu))
 		{
 			obj_mainmenu.optionbuffer = 2;

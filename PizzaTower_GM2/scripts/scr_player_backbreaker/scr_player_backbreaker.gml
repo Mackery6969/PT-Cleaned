@@ -105,10 +105,6 @@ function scr_player_backbreaker()
 			instance_destroy(parry_inst);
 			parry_inst = noone;
 		}
-		if (is_array(global.hasfarmer) && global.hasfarmer[farmerpos])
-		{
-			scr_change_farmers();
-		}
 	}
 	if ((sprite_index == spr_taunt || sprite_index == spr_player_ratmounttaunt) && taunttimer == 0)
 	{
@@ -124,10 +120,6 @@ function scr_player_backbreaker()
 		{
 			instance_destroy(parry_inst);
 			parry_inst = noone;
-		}
-		if (is_array(global.hasfarmer) && global.hasfarmer[farmerpos])
-		{
-			scr_change_farmers();
 		}
 	}
 	if (ANIMATION_END && sprite_index == spr_player_throw)

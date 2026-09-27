@@ -134,7 +134,3 @@ if (brown)
 			break;
 	}
 }
-if (instance_exists(obj_treasureviewer))
-{
-	visible = false;
-}

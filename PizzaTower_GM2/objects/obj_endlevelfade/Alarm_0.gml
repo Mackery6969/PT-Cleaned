@@ -40,7 +40,7 @@ else
 	instance_create(0, 0, obj_endgamefade);
 	alarm[1] = 120;
 }
-if (instance_exists(obj_treasureviewer) || !do_rank)
+if (!do_rank)
 {
 	exit;
 }

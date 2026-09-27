@@ -32,11 +32,6 @@ function Instakill()
 		sprite_index = spr_playerN_boxxedhit;
 		image_index = 0;
 	}
-	if (state == states.chainsawbump && sprite_index != spr_player_chainsawhit)
-	{
-		image_index = 0;
-		sprite_index = spr_player_chainsawhit;
-	}
 	other.baddieID.invtime = 25;
 	other.baddieID.grabbedby = 1;
 
@@ -95,11 +90,6 @@ function Instakill()
 		{
 			sprite_index = spr_player_ungroundedattack;
 		}
-	}
-	if (state == states.chainsawbump)
-	{
-		sprite_index = spr_player_chainsawhit;
-		image_index = 0;
 	}
 	var lag;
 	if (other.baddieID.heavy)

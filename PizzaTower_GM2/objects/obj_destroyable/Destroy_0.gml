@@ -16,7 +16,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		image_speed = 0.35;
 	}
 	scr_sleep(5);
-	tile_layer_delete_at(1, x, y);
 	scr_sound_multiple("event:/sfx/misc/breakblock", x, y);
 	ds_list_add(global.saveroom, id);
 	notification_push(notifications.destroyable_destroyed, [room]);

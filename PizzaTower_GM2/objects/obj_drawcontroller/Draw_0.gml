@@ -37,7 +37,7 @@ if (use_dark)
 		}
 	}
 }
-if (obj_player.finisher || (obj_player.state == states.playersuperattack && obj_player.superattackstate == states.transitioncutscene))
+if (obj_player.finisher)
 {
 	finisher_alpha = Approach(finisher_alpha, 0.3, 0.1);
 }
@@ -64,7 +64,7 @@ with (obj_heatafterimage)
 	if (visible)
 	{
 		pattern_set(global.Base_Pattern_Color, obj_player.sprite_index, obj_player.image_index, obj_player.xscale, obj_player.yscale, global.palettetexture);
-		pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, false);
+		pal_swap_set(obj_player.spr_palette, obj_player.paletteselect);
 		draw_sprite_ext(obj_player.sprite_index, obj_player.image_index, x, y, obj_player.xscale, obj_player.yscale, obj_player.angle, c_white, alpha);
 		pattern_reset();
 	}
@@ -78,9 +78,9 @@ if (room == boss_fakepep)
 			var palinfo = get_pep_palette_info();
 			pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, palinfo.patterntexture);
 			var ps = palinfo.paletteselect;
-			pal_swap_set(spr_peppalette, ps, false);
+			pal_swap_set(spr_peppalette, ps);
 			draw_self();
-			pal_swap_set(spr_peppalette, 13, false);
+			pal_swap_set(spr_peppalette, 13);
 			draw_self();
 			pattern_reset();
 			draw_self();
@@ -137,7 +137,7 @@ for (var i = 0; i < array_length(flash_arr); i++)
 	}
 }
 shader_set(global.Pal_Shader);
-pal_swap_set(spr_peppalette, 0, false);
+pal_swap_set(spr_peppalette, 0);
 with (obj_pizzagoblinbomb)
 {
 	if (grabbable && grounded && vsp > 0)
@@ -157,14 +157,14 @@ pattern_set_solid(true);
 with (obj_noiseeffect)
 {
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
-	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, false);
+	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect);
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	pattern_reset();
 }
 with (obj_noisedebris)
 {
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
-	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, false);
+	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect);
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	pattern_reset();
 }
@@ -185,7 +185,7 @@ with (obj_sausageman_dead)
 		{
 			pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, oldpalettetexture);
 		}
-		pal_swap_set(spr_palette, paletteselect, false);
+		pal_swap_set(spr_palette, paletteselect);
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, b, image_alpha);
 		if (oldpalettetexture != noone)
 		{

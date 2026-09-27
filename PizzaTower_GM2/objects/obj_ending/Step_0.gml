@@ -7,13 +7,7 @@ else
 {
 	showtext = false;
 }
-var bg_arr = ["Backgrounds_sky2"];
-for (var i = 0; i < array_length(bg_arr); i++)
-{
-	var b = bg_arr[i];
-	var bg = layer_background_get_id(layer_get_id(b));
-	layer_background_alpha(bg, bgalpha);
-}
+layer_background_alpha(sky_bg, bgalpha);
 bgalpha = Approach(bgalpha, 0, 0.0003);
 switch (state)
 {

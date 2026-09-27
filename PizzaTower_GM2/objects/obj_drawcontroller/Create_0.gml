@@ -6,7 +6,6 @@ if (instance_number(object_index) > 1)
 depth = -7;
 finisher_alpha = 0;
 kidsparty_lightning = false;
-dark_lightning = false;
 flash = 0;
 surf = noone;
 surf2 = noone;

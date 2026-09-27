@@ -231,6 +231,5 @@ function scr_player_ratmountjump()
 		}
 		image_index = 0;
 	}
-	ratmount_shootpowerup();
 	ratmount_dotaunt();
 }

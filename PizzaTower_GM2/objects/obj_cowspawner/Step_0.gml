@@ -12,11 +12,4 @@ if (spawn)
 			image_xscale = other.image_xscale;
 		}
 	}
-	if (alarm[0] <= 20)
-	{
-		with (obj_ladderhorizontal)
-		{
-			blink = true;
-		}
-	}
 }

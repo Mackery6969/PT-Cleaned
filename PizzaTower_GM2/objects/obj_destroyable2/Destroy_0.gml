@@ -5,14 +5,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	{
 		with (create_debris(x + 16, y, sprite_index))
 		{
-			if (sprite_index == spr_destroyable2)
-			{
-				sprite_index = spr_debris;
-			}
-			else
-			{
-				sprite_index = spr_halloweendebris;
-			}
+			sprite_index = spr_debris;
 		}
 	}
 	with (instance_create(x + 16, y + 16, obj_parryeffect))
@@ -28,7 +21,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	{
 		number = string(10);
 	}
-	tile_layer_delete_at(1, x, y);
 	notification_push(notifications.destroyable_destroyed, [room]);
 	scr_sound_multiple("event:/sfx/misc/breakblock", x, y);
 	ds_list_add(global.saveroom, id);

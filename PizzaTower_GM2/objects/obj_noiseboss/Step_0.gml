@@ -64,9 +64,6 @@ switch (state)
 	case states.fightball:
 		scr_noise_fightball();
 		break;
-	case states.punch:
-		scr_vigilante_punch();
-		break;
 	case states.finale:
 		scr_noise_finale();
 		break;

@@ -276,11 +276,11 @@ function scr_bosscontroller_draw_health(_spr, _rowcount, _columncount, _hp, _max
 		{
 			if (_palindex == noone)
 			{
-				pal_swap_set(_palspr, _index, false);
+				pal_swap_set(_palspr, _index);
 			}
 			else
 			{
-				pal_swap_set(_palspr, _palindex, false);
+				pal_swap_set(_palspr, _palindex);
 			}
 		}
 		var _x = 0;
