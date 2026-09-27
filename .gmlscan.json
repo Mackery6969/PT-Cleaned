@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Mackery6969/GML-Code-Scanner/main/gmlscan.schema.json",
+  "suite": "default",
+  "rules": {
+    "gml/unused-function": "warning",
+    "gml/wrong-argument-count": "error"
+  },
+  "ignore": ["extensions/**", "scripts/vendor_*/**"],
+  "threatModels": ["remote", "local"],
+  "globalPrefixes": ["g_"],
+  "runtime": "2023.1.1.62"
+}
