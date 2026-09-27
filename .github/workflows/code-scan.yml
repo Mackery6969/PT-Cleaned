@@ -4,11 +4,12 @@ on:
     branches: [main]
   pull_request:
   schedule:
-    - cron: "30 4 * * 1"   # weekly, to pick up new rules
+    - cron: "30 4 * * 1"
 
 permissions:
   contents: read
-  security-events: write   # lets the scanner publish results to the Security tab
+  security-events: write
+  pull-requests: read
 
 jobs:
   scan:
@@ -16,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: Mackery6969/GML-Code-Scanner@v1
-         with:
+        with:
            config: .gmlscan.json
            path: ./PizzaTower_GM2
            fail-on: none
