@@ -295,7 +295,7 @@ function state_player_jump()
 		with (obj_camera)
 		{
 			shake_mag = 10;
-			shake_mag_acc = 30 / room_speed;
+			shake_mag_acc = 30 / game_get_speed(gamespeed_fps);
 		}
 	}
 	if (input_buffer_slap > 0 && !key_up && sprite_index != spr_suplexbump && !shotgunAnim && !global.pistol)
@@ -381,7 +381,7 @@ function state_player_jump()
 				with (obj_camera)
 				{
 					shake_mag = 3;
-					shake_mag_acc = 3 / room_speed;
+					shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 				}
 			}
 			else if (shoot)
@@ -394,7 +394,7 @@ function state_player_jump()
 				with (obj_camera)
 				{
 					shake_mag = 3;
-					shake_mag_acc = 3 / room_speed;
+					shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 				}
 				if (ispeppino)
 				{

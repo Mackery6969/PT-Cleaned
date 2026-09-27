@@ -316,7 +316,7 @@ switch (introstate)
 			with (obj_camera)
 			{
 				shake_mag = 15;
-				shake_mag_acc = 4 / room_speed;
+				shake_mag_acc = 4 / game_get_speed(gamespeed_fps);
 			}
 			with (obj_pizzafacep3_prop)
 			{

@@ -47,7 +47,7 @@ function scr_player_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 		}
 		if (!(state == states.grab || (state == states.ratmount || state == states.ratmountjump) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
@@ -88,7 +88,7 @@ function scr_player_grabbed()
 		with (obj_camera)
 		{
 			shake_mag = 3;
-			shake_mag_acc = 3 / room_speed;
+			shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 		}
 		state = states.hurt;
 		if (scr_solid(x, y) || collision_line(x, y, _obj_player.x, _obj_player.y, obj_solid, false, true) != noone)

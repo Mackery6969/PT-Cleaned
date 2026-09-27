@@ -185,7 +185,7 @@ if (wastedhits >= 6 && !pizzahead)
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 5 / room_speed;
+				shake_mag_acc = 5 / game_get_speed(gamespeed_fps);
 			}
 			var lay2 = layer_get_id("Backgrounds_2");
 			var lay3 = layer_get_id("Backgrounds_1");
@@ -266,7 +266,7 @@ if (pizzahead)
 }
 if (!invincible && !flash && alarm[5] < 0)
 {
-	alarm[5] = 0.15 * room_speed;
+	alarm[5] = 0.15 * game_get_speed(gamespeed_fps);
 }
 else if (invincible && state != states.staggered && flashbuffer <= 0)
 {
@@ -283,7 +283,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state != states.grabbed)
 {

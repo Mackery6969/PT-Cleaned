@@ -91,7 +91,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 var player = instance_nearest(x, y, obj_player);
 if (ragecooldown > 0)
