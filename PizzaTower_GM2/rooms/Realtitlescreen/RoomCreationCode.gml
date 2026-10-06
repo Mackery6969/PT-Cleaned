@@ -182,7 +182,6 @@ enum states
 
 	whitenoise = 250, // tv
 	expression = 251, // tv
-	playersuperattack = 252,
 	jetpackjump = 254,
 	ratmountpunch = 259,
 	ratmountcrouch = 260,

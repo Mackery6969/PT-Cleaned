@@ -15,8 +15,8 @@ if (frac(app_scale) > 0 && global.option_texfilter)
 	var th = texture_get_texel_height(tex);
 	shader_set(shd_aa);
 	gpu_set_texfilter(true);
-	shader_set_uniform_f(shader_get_uniform(shd_aa, "u_vTexelSize"), tw, th);
-	shader_set_uniform_f(shader_get_uniform(shd_aa, "u_vScale"), window_get_width() / surface_get_width(gui_surf), window_get_height() / surface_get_height(gui_surf));
+	shader_set_uniform_f(shd_aa_texelsize, tw, th);
+	shader_set_uniform_f(shd_aa_scale, window_get_width() / surface_get_width(gui_surf), window_get_height() / surface_get_height(gui_surf));
 	shd = true;
 }
 if (global.option_scale_mode == 0)

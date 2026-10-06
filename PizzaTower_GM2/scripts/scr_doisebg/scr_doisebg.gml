@@ -5,11 +5,11 @@ function doisebg_start()
 		shader_set(global.Pal_Shader);
 		if (!obj_player.ispeppino || global.swapmode)
 		{
-			pal_swap_set(spr_noiseboss_palette, 1, false);
+			pal_swap_set(spr_noiseboss_palette, 1);
 		}
 		else
 		{
-			pal_swap_set(spr_noiseboss_palette, 2, false);
+			pal_swap_set(spr_noiseboss_palette, 2);
 		}
 	}
 }

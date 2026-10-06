@@ -146,7 +146,7 @@ else
 }
 if ((!invincible || (_inv && elitehit == 1)) && !flash && alarm[5] < 0)
 {
-	alarm[5] = 0.15 * room_speed;
+	alarm[5] = 0.15 * game_get_speed(gamespeed_fps);
 }
 else if (invincible && (state != states.stun || (savedthrown != thrown && savedthrown) || elitehit > 1) && (state != states.ram || substate != states.land))
 {
@@ -162,7 +162,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 depth = 0;
 if (state != states.stun)

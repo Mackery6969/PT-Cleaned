@@ -64,9 +64,6 @@ switch (state)
 	case states.fightball:
 		scr_noise_fightball();
 		break;
-	case states.punch:
-		scr_vigilante_punch();
-		break;
 	case states.finale:
 		scr_noise_finale();
 		break;
@@ -268,7 +265,7 @@ if (pizzahead)
 }
 if ((!invincible || ((state == states.walk && flickertime <= 0) || (state == states.stun && !savedthrown))) && !flash && alarm[5] < 0)
 {
-	alarm[5] = 0.15 * room_speed;
+	alarm[5] = 0.15 * game_get_speed(gamespeed_fps);
 }
 else if (invincible && (state != states.walk || flickertime > 0) && (state != states.stun || savedthrown))
 {
@@ -292,7 +289,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state != states.grabbed)
 {

@@ -4,7 +4,7 @@ if (!ispeppino && room == boss_pizzaface && instance_exists(obj_pizzaface_thunde
 {
 	spr_pal = spr_noisepalette_rage;
 }
-pal_swap_set(spr_pal, paletteselect, false);
+pal_swap_set(spr_pal, paletteselect);
 pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
 event_inherited();
 pattern_reset();

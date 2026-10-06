@@ -459,9 +459,6 @@ function scr_vigilante_walk()
 			case vigilante_attacks.revolver:
 				scr_vigilante_do_revolver(1, attack[1], false);
 				break;
-			case vigilante_attacks.reload:
-				scr_vigilante_do_reload(attack[1]);
-				break;
 			case vigilante_attacks.dynamite:
 				scr_vigilante_do_dynamite(1);
 				break;
@@ -794,14 +791,6 @@ function scr_vigilante_revolver()
 			}
 		}
 	}
-}
-
-function scr_vigilante_do_reload(_reloadbuffer = 360)
-{
-	state = states.reloading;
-	reloadbuffer = _reloadbuffer;
-	sprite_index = spr_vigilante_vulnerable;
-	image_index = 0;
 }
 
 function scr_vigilante_dynamite()
@@ -1179,17 +1168,6 @@ function scr_vigilante_duel()
 	if (sprite_index == spr_playerV_revolverstart && ANIMATION_END)
 	{
 		sprite_index = spr_playerV_revolverhold;
-	}
-}
-
-function scr_vigilante_punch()
-{
-	image_speed = 0.35;
-	if (ANIMATION_END)
-	{
-		state = tauntstoredstate;
-		sprite_index = tauntstoredsprite;
-		image_index = tauntstoredindex;
 	}
 }
 

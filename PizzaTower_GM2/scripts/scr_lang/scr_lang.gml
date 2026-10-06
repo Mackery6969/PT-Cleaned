@@ -47,7 +47,7 @@ function scr_get_languages()
 
 function lang_read_file(_file)
 {
-	var fo = file_text_open_read("lang/" + _file);
+	var fo = file_text_open_read("lang/" + filename_name(_file));
 	var str = "";
 	while (!file_text_eof(fo))
 	{

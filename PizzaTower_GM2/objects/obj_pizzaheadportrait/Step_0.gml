@@ -21,7 +21,7 @@ if (move)
 				with (obj_camera)
 				{
 					shake_mag = 3;
-					shake_mag_acc = 5 / room_speed;
+					shake_mag_acc = 5 / game_get_speed(gamespeed_fps);
 				}
 			}
 			else
@@ -193,7 +193,7 @@ if (grabbed)
 		with (obj_camera)
 		{
 			shake_mag = 3;
-			shake_mag_acc = 3 / room_speed;
+			shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 		}
 	}
 	if (playerid.state == states.tacklecharge)
@@ -293,7 +293,7 @@ if (place_meeting(x, y, obj_swordhitbox) && !thrown)
 	with (obj_camera)
 	{
 		shake_mag = 3;
-		shake_mag_acc = 3 / room_speed;
+		shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 	}
 	state = states.hurt;
 	if (scr_solid(x, y))

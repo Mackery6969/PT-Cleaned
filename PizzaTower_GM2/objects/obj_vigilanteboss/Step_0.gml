@@ -40,9 +40,6 @@ switch (state)
 	case states.duel:
 		scr_vigilante_duel();
 		break;
-	case states.punch:
-		scr_vigilante_punch();
-		break;
 	case states.jump:
 		scr_vigilante_jump();
 		break;
@@ -299,7 +296,7 @@ if (state == states.pizzaheadKO)
 }
 if (pizzahead && state == states.stun && !thrown && alarm[5] == -1 && !flash)
 {
-	alarm[5] = 0.15 * room_speed;
+	alarm[5] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state == states.crouchslide && alarm[4] < 0)
 {
@@ -316,7 +313,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state != states.grabbed)
 {

@@ -73,14 +73,8 @@ switch (state)
 	case states.normal:
 		scr_player_normal();
 		break;
-	case states.revolver:
-		scr_player_revolver();
-		break;
 	case states.dynamite:
 		scr_player_dynamite();
-		break;
-	case states.grabbed:
-		scr_player_grabbed();
 		break;
 	case states.finishingblow:
 		scr_player_finishingblow();
@@ -96,12 +90,6 @@ switch (state)
 		break;
 	case states.fireass:
 		scr_player_fireass();
-		break;
-	case states.transitioncutscene:
-		scr_player_transitioncutscene();
-		break;
-	case states.hookshot:
-		scr_playerN_hookshot();
 		break;
 	case states.cheesepep:
 		scr_player_cheesepep();
@@ -162,9 +150,6 @@ switch (state)
 		break;
 	case states.knightpepbump:
 		scr_player_knightpepbump();
-		break;
-	case states.bombpep:
-		scr_player_bombpep();
 		break;
 	case states.bombpepup:
 		scr_player_bombpepup();
@@ -414,9 +399,6 @@ switch (state)
 		break;
 	case states.animatronic:
 		scr_player_animatronic();
-		break;
-	case states.playersuperattack:
-		scr_player_playersuperattack();
 		break;
 	case states.jetpackjump:
 		scr_player_jetpackjump();
@@ -910,7 +892,7 @@ else
 	}
 	hurt_buffer = -1;
 }
-if ((room == Realtitlescreen && instance_exists(obj_mainmenuselect)) || room == Mainmenu || room == Longintro || room == Endingroom || room == Creditsroom || room == Johnresurrectionroom)
+if (room == Mainmenu || room == Longintro || room == Endingroom || room == Creditsroom || room == Johnresurrectionroom)
 {
 	state = states.titlescreen;
 }
@@ -1226,7 +1208,7 @@ if (state == states.chainsaw || state == states.backbreaker)
 }
 if (flash && alarm[0] <= 0)
 {
-	alarm[0] = 0.15 * room_speed;
+	alarm[0] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state != states.ladder)
 {
@@ -1334,7 +1316,7 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
 		with (obj_camera)
 		{
 			shake_mag = 3;
-			shake_mag_acc = 3 / room_speed;
+			shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 		}
 		if (state == states.ghostpossess)
 		{

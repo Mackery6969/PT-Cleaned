@@ -21,7 +21,7 @@ if (hurted && !hurtfx)
 }
 if (flash && alarm[1] <= 0)
 {
-	alarm[1] = 0.15 * room_speed;
+	alarm[1] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (hurted)
 {

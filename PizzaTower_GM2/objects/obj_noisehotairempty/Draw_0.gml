@@ -1,14 +1,14 @@
 if (!obj_player.ispeppino || global.swapmode)
 {
 	shader_set(global.Pal_Shader);
-	pal_swap_set(spr_noiseboss_palette, 1, false);
+	pal_swap_set(spr_noiseboss_palette, 1);
 	draw_self();
 	shader_reset();
 }
 else
 {
 	shader_set(global.Pal_Shader);
-	pal_swap_set(spr_noiseboss_palette, 2, false);
+	pal_swap_set(spr_noiseboss_palette, 2);
 	draw_self();
 	shader_reset();
 }

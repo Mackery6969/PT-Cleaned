@@ -42,7 +42,7 @@ if (obj_player.state != states.gameover)
 	var hud_yy = 90 + irandom_range(-collect_shake, collect_shake) + hud_posY;
 	draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, sw * b, sh, hud_xx - 95, hud_yy + 24);
 	shader_set(global.Pal_Shader);
-	pal_swap_set(spr_heatmeter_palette, 0, false);
+	pal_swap_set(spr_heatmeter_palette, 0);
 	reset_shader_fix();
 	draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
 	var _score = global.collect;
@@ -176,7 +176,7 @@ if (obj_player.state != states.gameover)
 		color_array = array_create(num, 0);
 		for (var i = 0; i < array_length(color_array); i++)
 		{
-			color_array[i] = choose(irandom(3));
+			color_array[i] = irandom(3);
 		}
 		lastcollect = sc;
 	}
@@ -186,7 +186,7 @@ if (obj_player.state != states.gameover)
 	{
 		var yy = (((i + 1) % 2) == 0) ? -5 : 0;
 		var c = color_array[i];
-		pal_swap_set(spr_font_palette, c, false);
+		pal_swap_set(spr_font_palette, c);
 		draw_text(floor(xx), floor((hud_yy - 56) + text_y + yy), string_char_at(str, i + 1));
 		xx += (w / num);
 	}

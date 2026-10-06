@@ -9,9 +9,8 @@ if (room == Mainmenu || room == Longintro || room == Realtitlescreen)
 {
 	use_dark = false;
 	kidsparty_lightning = false;
-	dark_lightning = false;
 }
-if (kidsparty_lightning || dark_lightning)
+if (kidsparty_lightning)
 {
 	var cw = camera_get_view_width(view_camera[0]) + 32;
 	var ch = camera_get_view_height(view_camera[0]) + 32;
@@ -110,50 +109,6 @@ if (kidsparty_lightning || dark_lightning)
 			draw_set_alpha(bg_alpha);
 			draw_surface(surf2, surf_x, surf_y);
 			draw_set_alpha(1);
-		}
-	}
-	else if (dark_lightning)
-	{
-		if (surface_exists(surf))
-		{
-			surface_set_target(surf);
-			draw_clear_alpha(c_black, 0);
-			draw_set_color(c_black);
-			draw_set_alpha(0.8);
-			draw_rectangle(0, 0, cw, ch, false);
-			gpu_set_blendmode(bm_subtract);
-			draw_set_color(c_white);
-			for (var i = 0; i < 1; i++)
-			{
-				var _player = obj_player;
-				draw_set_alpha(circle_alpha_out);
-				with (_player)
-				{
-					if (state != states.gotoplayer)
-					{
-						draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 178, false);
-					}
-				}
-				draw_set_alpha(circle_alpha_in);
-				with (_player)
-				{
-					if (state != states.gotoplayer)
-					{
-						draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 128, false);
-					}
-				}
-			}
-			with (obj_chateaulight)
-			{
-				draw_set_alpha(circle_alpha_out);
-				draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), circle_size_out, false);
-				draw_set_alpha(circle_alpha_in);
-				draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), circle_size_in, false);
-			}
-			gpu_set_blendmode(bm_normal);
-			draw_set_alpha(1);
-			surface_reset_target();
-			draw_surface(surf, surf_x, surf_y);
 		}
 	}
 }

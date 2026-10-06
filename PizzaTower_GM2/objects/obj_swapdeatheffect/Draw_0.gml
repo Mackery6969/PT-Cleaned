@@ -11,7 +11,7 @@ else
 		spr_palette = spr_noisepalette_rage;
 	}
 }
-pal_swap_set(spr_palette, paletteselect, false);
+pal_swap_set(spr_palette, paletteselect);
 pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1);
 pattern_reset();

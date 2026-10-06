@@ -45,3 +45,5 @@ alarm[1] = 1;
 application_surface_draw_enable(false);
 display_set_gui_size(CAM_WIDTH, CAM_HEIGHT);
 screen_apply_size();
+shd_aa_texelsize = shader_get_uniform(shd_aa, "u_vTexelSize");
+shd_aa_scale = shader_get_uniform(shd_aa, "u_vScale");

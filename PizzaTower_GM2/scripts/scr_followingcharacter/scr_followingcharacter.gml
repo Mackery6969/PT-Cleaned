@@ -67,17 +67,6 @@ function following_add_to_front()
 	following_character_calculate();
 }
 
-function farmer_rearrange()
-{
-	with (obj_farmer1follow)
-	{
-		if (farmerpos == obj_player.farmerpos)
-		{
-			following_add_to_front();
-		}
-	}
-}
-
 function following_moonwalk_fix()
 {
 	if (!instance_exists(playerid))

@@ -99,7 +99,7 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 	{
 		shader_set(global.Pal_Shader);
 		var b = get_dark(image_blend, obj_drawcontroller.use_dark);
-		pal_swap_set(spr_palette, paletteselect, false);
+		pal_swap_set(spr_palette, paletteselect);
 		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
 		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, image_alpha);
 		pattern_reset();
@@ -130,7 +130,7 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 		if (object_index == obj_peppinoclone)
 		{
 			shader_set(global.Pal_Shader);
-			pal_swap_set(spr_peppalette, 1, false);
+			pal_swap_set(spr_peppalette, 1);
 		}
 		else if (usepalette && _pal)
 		{
@@ -148,7 +148,7 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 				var palinfo = get_pep_palette_info();
 				pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, palinfo.patterntexture);
 			}
-			pal_swap_set(spr_palette, paletteselect, false);
+			pal_swap_set(spr_palette, paletteselect);
 		}
 		var _ys = 1;
 		if (state == states.grabbed)
@@ -172,7 +172,7 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 		{
 			if (miniflash)
 			{
-				pal_swap_set(spr_peppalette, 14, false);
+				pal_swap_set(spr_peppalette, 14);
 				draw_sprite_ext(sprite_index, image_index, x, y + _stun, xscale * image_xscale, yscale * _ys, angle, b, image_alpha);
 			}
 		}
@@ -232,7 +232,7 @@ function draw_player()
 				var sprite = _info[i][0];
 				var pal = _info[i][1];
 				pattern_set(global.Base_Pattern_Color, sprite, image_index, image_xscale, image_yscale, pal.patterntexture);
-				pal_swap_set(pal.spr_palette, pal.paletteselect, false);
+				pal_swap_set(pal.spr_palette, pal.paletteselect);
 				draw_sprite_ext(sprite, image_index, x, y, image_xscale, image_yscale, image_angle, b, image_alpha);
 			}
 			pattern_reset();
@@ -271,17 +271,17 @@ function draw_player()
 	{
 		spr = spr_noisepalette_rage;
 	}
-	pal_swap_set(spr, ps, false);
+	pal_swap_set(spr, ps);
 	draw_sprite_ext(_sprite_index, _image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
 	if (global.noisejetpack && (ispeppino || noisepizzapepper))
 	{
-		pal_swap_set(spr_palette, 2, false);
+		pal_swap_set(spr_palette, 2);
 		draw_sprite_ext(_sprite_index, _image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
 	}
 	draw_superslam_enemy();
 	if (global.pistol)
 	{
-		pal_swap_set(spr_peppalette, 0, false);
+		pal_swap_set(spr_peppalette, 0);
 		if (pistolcharge >= 4)
 		{
 			draw_sprite(spr_revolvercharge, pistolcharge, x, y - 70);

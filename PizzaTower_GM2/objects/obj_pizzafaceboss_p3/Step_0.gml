@@ -4,9 +4,6 @@ targetplayer = obj_player.id;
 wastedhits = maxhp - elitehit;
 switch (state)
 {
-	case states.arenaintro:
-		scr_pizzaface_p3_arenaintro();
-		break;
 	case states.fall:
 		scr_pizzaface_p3_fall();
 		break;
@@ -24,9 +21,6 @@ switch (state)
 		break;
 	case states.jump:
 		scr_pizzaface_p3_jump();
-		break;
-	case states.throwing:
-		scr_pizzaface_p3_throwing();
 		break;
 	case states.swinging:
 		scr_pizzaface_p3_swinging();
@@ -128,7 +122,7 @@ if (state == states.stun && !savedthrown)
 }
 if (!invincible && alarm[5] < 0 && !flash)
 {
-	alarm[5] = 0.15 * room_speed;
+	alarm[5] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if ((state == states.grabdash || (state == states.mach2 && attackspeed >= 10) || (state == states.throwing && sprite_index == spr_fakepeppino_flailing)) && alarm[4] < 0)
 {
@@ -145,7 +139,7 @@ if (state != states.stun)
 }
 if (flash && alarm[2] <= 0)
 {
-	alarm[2] = 0.15 * room_speed;
+	alarm[2] = 0.15 * game_get_speed(gamespeed_fps);
 }
 if (state != states.grabbed)
 {

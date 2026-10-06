@@ -195,7 +195,7 @@ function scr_player_bombpepup()
 		with (obj_camera)
 		{
 			shake_mag = 10;
-			shake_mag_acc = 30 / room_speed;
+			shake_mag_acc = 30 / game_get_speed(gamespeed_fps);
 		}
 		with (obj_baddie)
 		{
@@ -220,7 +220,7 @@ function scr_player_bombpepup()
 		with (obj_camera)
 		{
 			shake_mag = 10;
-			shake_mag_acc = 30 / room_speed;
+			shake_mag_acc = 30 / game_get_speed(gamespeed_fps);
 		}
 		with (obj_baddie)
 		{
@@ -264,7 +264,7 @@ function scr_player_bombpepside()
 		with (obj_camera)
 		{
 			shake_mag = 20;
-			shake_mag_acc = 40 / room_speed;
+			shake_mag_acc = 40 / game_get_speed(gamespeed_fps);
 		}
 		hsp = 0;
 		with (obj_baddie)
@@ -284,145 +284,5 @@ function scr_player_bombpepside()
 		mach2 = 0;
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
-	}
-}
-
-function scr_player_bombpep()
-{
-	alarm[8] = 60;
-	alarm[7] = 120;
-	hurted = true;
-	if (key_jump)
-	{
-		input_buffer_jump = 0;
-	}
-	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
-	{
-		vsp /= 2;
-		jumpstop = true;
-	}
-	if (grounded && vsp > 0)
-	{
-		jumpstop = false;
-	}
-	mach2 = 0;
-	landAnim = false;
-	alarm[5] = 2;
-	if (sprite_index == spr_bombpepintro && ANIMATION_END)
-	{
-		sprite_index = spr_bombpeprun;
-	}
-	if (sprite_index == spr_bombpeprun || sprite_index == spr_bombpeprunabouttoexplode)
-	{
-		if (movespeed <= 8)
-		{
-			movespeed += 0.2;
-		}
-		move = key_left + key_right;
-		if (grounded)
-		{
-			if (move != 0 && !instance_exists(obj_bumpeffect))
-			{
-				xscale = move;
-			}
-		}
-		hsp = floor(xscale * movespeed);
-	}
-	else
-	{
-		hsp = 0;
-		movespeed = 0;
-	}
-	if (bombpeptimer < 20 && bombpeptimer != 0)
-	{
-		sprite_index = spr_bombpeprunabouttoexplode;
-	}
-	if (sprite_index == spr_bombpepend && ANIMATION_END)
-	{
-		alarm[5] = 2;
-		alarm[7] = 60;
-		hurted = true;
-		state = states.normal;
-		sprite_index = spr_idle;
-		image_index = 0;
-	}
-	if (bombpeptimer == 0 && sprite_index == spr_bombpeprunabouttoexplode)
-	{
-		hurted = true;
-		instance_create(x, y, obj_bombexplosion);
-		GamepadSetVibration(0, 1, 1, 0.9);
-		sprite_index = spr_bombpepend;
-	}
-	if (bombpeptimer > 0)
-	{
-		bombpeptimer -= 0.5;
-	}
-	if (scr_solid(x + 1, y) && xscale == 1 && hsp != 0 && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
-	{
-		instance_create(x + 10, y + 10, obj_bumpeffect);
-		xscale *= -1;
-		GamepadSetVibration(0, 0.2, 0.2, 0.4);
-	}
-	if (scr_solid(x - 1, y) && xscale == -1 && hsp != 0 && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
-	{
-		instance_create(x - 10, y + 10, obj_bumpeffect);
-		xscale *= -1;
-		GamepadSetVibration(0, 0.2, 0.2, 0.4);
-	}
-	if (input_buffer_jump > 0 && can_jump && hsp != 0)
-	{
-		input_buffer_jump = 0;
-		vsp = -11;
-	}
-	if (movespeed < 4)
-	{
-		image_speed = 0.35;
-	}
-	else if (movespeed > 4 && movespeed < 8)
-	{
-		image_speed = 0.45;
-	}
-	else
-	{
-		image_speed = 0.6;
-	}
-	if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && steppy == false && grounded)
-	{
-		steppy = true;
-	}
-	if (floor(image_index) != 0 && floor(image_index) != 2)
-	{
-		steppy = false;
-	}
-	if (key_slap2 && state != states.normal && sprite_index != spr_bombpepintro && sprite_index != spr_bombpepend)
-	{
-		sprite_index = spr_player_throw;
-		fmod_event_one_shot_3d("event:/sfx/enemies/projectile", x, y);
-		image_index = 0;
-		hsp = 0;
-		bombpeptimer = 0;
-		movespeed = 0;
-		state = states.backbreaker;
-		with (instance_create(x + (xscale * 50), y, obj_pizzagoblinbomb))
-		{
-			hsp = other.xscale * 8;
-			vsp = -11;
-			if (scr_solid(x, y))
-			{
-				var _dir = -sign(other.xscale);
-				var tx = try_solid(_dir, 0, obj_solid, 78);
-				if (tx != -1)
-				{
-					x += (tx * _dir);
-				}
-			}
-		}
-	}
-	if (!instance_exists(obj_dashcloud) && grounded && hsp != 0)
-	{
-		with (instance_create(x, y, obj_dashcloud))
-		{
-			image_xscale = other.xscale;
-		}
 	}
 }

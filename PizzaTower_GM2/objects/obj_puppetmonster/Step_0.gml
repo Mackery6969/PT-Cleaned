@@ -16,51 +16,6 @@ switch (state)
 			state = states.monsterchase;
 		}
 		break;
-	case states.monsterwalk:
-		sprite_index = spr_monstertomato_idle;
-		x = camera_get_view_x(view_camera[0]) + (SCREEN_WIDTH / 2);
-		y = camera_get_view_y(view_camera[0]) + yy;
-		switch (substate)
-		{
-			case states.fall:
-				yy += 2;
-				if (yy > 440)
-				{
-					var pid = scr_puppet_detect();
-					trace(pid);
-					if (pid != noone)
-					{
-						playerid = pid;
-						substate = states.chase;
-					}
-					else
-					{
-						substate = states.jump;
-					}
-				}
-				break;
-			case states.jump:
-				yy -= 3;
-				if (yy < -100)
-				{
-					destroy = false;
-					with (obj_monstertrackingrooms)
-					{
-						monster_pos[other.monsterid].x = last_puppet_pos.x;
-						monster_pos[other.monsterid].y = last_puppet_pos.y;
-					}
-					state = states.monsteridle;
-				}
-				break;
-			case states.chase:
-				yy -= 10;
-				if (yy < -100)
-				{
-					scr_puppet_appear(playerid);
-				}
-				break;
-		}
-		break;
 	case states.monsterchase:
 		playerid = obj_player.id;
 		sprite_index = spr_monstertomato_chase;

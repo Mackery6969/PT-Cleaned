@@ -1,4 +1,4 @@
-function scr_bombshoot(_state)
+function scr_bombshoot()
 {
 	if (pistolcooldown <= 0 && state != states.bombthrow && state != states.punch && instance_number(obj_playerbomb) < 2)
 	{
@@ -17,10 +17,6 @@ function scr_bombshoot(_state)
 		windingAnim = 0;
 		bombthrow = false;
 		jumpstop = true;
-		if (_state == states.mach2 || _state == states.mach3)
-		{
-			state = states.normal;
-		}
 	}
 }
 

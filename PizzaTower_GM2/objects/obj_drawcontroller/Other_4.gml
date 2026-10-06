@@ -5,18 +5,15 @@ if (room != rm_blank)
 	if (room == tower_pizzafacehall || room == tower_5 || room == boss_fakepephallway || roomname == "kidspartyfloor" || roomname == "kidspartyentrance" || roomname == "kidspartybasementsecret" || roomname == "kidspartysecret" || roomname == "streetbacon")
 	{
 		kidsparty_lightning = true;
-		dark_lightning = false;
 	}
 	else
 	{
 		kidsparty_lightning = false;
-		dark_lightning = false;
 	}
 }
 else
 {
 	kidsparty_lightning = false;
-	dark_lightning = false;
 }
 if (room == dungeon_5 || room == dungeon_6)
 {
@@ -31,5 +28,4 @@ if (room == Mainmenu || room == Longintro)
 {
 	use_dark = false;
 	kidsparty_lightning = false;
-	dark_lightning = false;
 }

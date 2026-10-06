@@ -13,13 +13,15 @@ function get_percentage()
 	var _extramax = (array_length(bossach) + array_length(levels) + array_length(bossranks) + array_length(levels)) - 1;
 	var count = 0;
 	var extracount = 0;
-	var _rank_map = ds_map_create();
-	ds_map_set(_rank_map, "p", 4);
-	ds_map_set(_rank_map, "s", 4);
-	ds_map_set(_rank_map, "a", 3);
-	ds_map_set(_rank_map, "b", 2);
-	ds_map_set(_rank_map, "c", 1);
-	ds_map_set(_rank_map, "d", 0);
+	var _rank_map =
+	{
+		p: 4,
+		s: 4,
+		a: 3,
+		b: 2,
+		c: 1,
+		d: 0
+	};
 	for (var i = 0; i < array_length(levels); i++)
 	{
 		var level = levels[i];
@@ -44,7 +46,7 @@ function get_percentage()
 		{
 			extracount++;
 		}
-		count += ds_map_find_value(_rank_map, r);
+		count += _rank_map[$ r];
 		count += ini_read_real("Secret", level, 0);
 		var ac = 0;
 		for (var j = 0; j < 3; j++)
@@ -75,7 +77,7 @@ function get_percentage()
 		{
 			extracount++;
 		}
-		count += ds_map_find_value(_rank_map, r);
+		count += _rank_map[$ r];
 	}
 	for (var i = 0; i < array_length(bossach); i++)
 	{

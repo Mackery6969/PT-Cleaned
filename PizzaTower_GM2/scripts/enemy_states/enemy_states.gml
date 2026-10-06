@@ -222,7 +222,7 @@ function scr_enemy_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 		}
 		if (obj_player.state == states.finishingblow)
@@ -267,7 +267,7 @@ function scr_enemy_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 		}
 		if (obj_player.state == states.finishingblow && (floor(obj_player.image_index) >= 4 || (floor(obj_player.image_index) < 1 && obj_player.sprite_index == obj_player.spr_swingdingend)))
@@ -313,7 +313,7 @@ function scr_enemy_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 			with (obj_player)
 			{
@@ -384,7 +384,7 @@ function scr_enemy_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 			check_grabbed_solid(obj_player);
 		}
@@ -495,7 +495,7 @@ function scr_enemy_grabbed()
 			with (obj_camera)
 			{
 				shake_mag = 3;
-				shake_mag_acc = 3 / room_speed;
+				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 			}
 			with (obj_player)
 			{
@@ -908,51 +908,6 @@ function scr_enemy_rage()
 {
 	switch (object_index)
 	{
-		case obj_forknight:
-			image_speed = 0.6;
-			if (sprite_index == spr_forknight_ragestart)
-			{
-				hsp = 0;
-				if (image_index > (image_number - 1))
-				{
-					sprite_index = spr_forknight_rageloop;
-					image_index = 0;
-				}
-			}
-			else if (sprite_index == spr_forknight_rageloop)
-			{
-				hsp = image_xscale * (4 + (global.baddiespeed - 1));
-				with (instance_place(x + hsp, y, obj_destructibles))
-				{
-					instance_destroy();
-				}
-				if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_slope))
-				{
-					state = states.stun;
-					stunned = 100;
-					vsp = -8;
-					hsp = -image_xscale * 5;
-				}
-			}
-			break;
-		case obj_soldier:
-			hsp = 0;
-			if (!hitboxcreate)
-			{
-				hitboxcreate = true;
-				with (instance_create(x, y, obj_forkhitbox))
-				{
-					image_xscale = other.image_xscale;
-					ID = other.id;
-				}
-			}
-			if (ANIMATION_END)
-			{
-				ragebuffer = 100;
-				state = states.walk;
-				sprite_index = walkspr;
-			}
-			break;
 		case obj_smokingpizzaslice:
 			if (floor(image_index) == 12 && !shot)
 			{
@@ -996,143 +951,6 @@ function scr_enemy_rage()
 					hsp = image_xscale * 6;
 					vsp = -11;
 				}
-			}
-			break;
-		case obj_miniufo:
-			if (floor(image_index) == 3 && !shoot)
-			{
-				shoot = true;
-				instance_create(x, y, obj_warplaserhoming);
-			}
-			if (ANIMATION_END)
-			{
-				state = states.walk;
-			}
-			break;
-		case obj_cheeseslime:
-			if (floor(image_index) > 10)
-			{
-				hsp = image_xscale * 8;
-				with (instance_create(x, y, obj_baddieragehitbox))
-				{
-					ID = other.id;
-					image_xscale = other.image_xscale;
-				}
-			}
-			else
-			{
-				hsp = 0;
-			}
-			if (ANIMATION_END)
-			{
-				state = states.walk;
-				sprite_index = walkspr;
-			}
-			break;
-		case obj_minijohn:
-			hsp = movespeed * image_xscale;
-			if (sprite_index == spr_minijohn_rage1 && ANIMATION_END)
-			{
-				sprite_index = spr_minijohn_rage2;
-			}
-			if (grounded && vsp > 0)
-			{
-				var targetplayer = obj_player;
-				movespeed = 4;
-				image_xscale = -sign(x - targetplayer.x);
-				state = states.chase;
-				sprite_index = spr_minijohn_charge;
-			}
-			break;
-		case obj_fencer:
-			var thespeed = 0;
-			if (image_index > 7)
-			{
-				thespeed = 12;
-			}
-			hsp = image_xscale * thespeed;
-			if (ANIMATION_END)
-			{
-				with (instance_create(x, y, obj_forkhitbox))
-				{
-					ID = other.id;
-				}
-				charging = true;
-				state = states.charge;
-				movespeed = 5;
-				vsp = -7;
-				sprite_index = spr_fencer_chargestart;
-			}
-			break;
-		case obj_ancho:
-			hsp = 0;
-			if (sprite_index == spr_ancho_rage1)
-			{
-				vsp = 0;
-			}
-			if (sprite_index == spr_ancho_rage2)
-			{
-				vsp = 10;
-			}
-			if (ANIMATION_END && sprite_index == spr_ancho_rage1)
-			{
-				sprite_index = spr_ancho_rage2;
-			}
-			if (grounded && sprite_index == spr_ancho_rage2)
-			{
-				with (obj_camera)
-				{
-					shake_mag = 10;
-					shake_mag_acc = 30 / room_speed;
-				}
-				image_index = 0;
-				sprite_index = spr_ancho_rage3;
-			}
-			if (ANIMATION_END && sprite_index == spr_ancho_rage3)
-			{
-				state = states.walk;
-				sprite_index = spr_ancho;
-			}
-			break;
-		case obj_spitcheese:
-			break;
-		case obj_tank:
-			if (sprite_index != spr_tank_chargestart)
-			{
-				if ((x + hsp) == xprevious)
-				{
-					slope_buffer--;
-				}
-				else
-				{
-					slope_buffer = 12;
-				}
-			}
-			if (sprite_index == spr_tank_chargestart)
-			{
-				hsp = 0;
-			}
-			if (sprite_index == spr_tank_charge)
-			{
-				hsp = image_xscale * 8;
-			}
-			if (ANIMATION_END && sprite_index == spr_tank_chargestart)
-			{
-				sprite_index = spr_tank_charge;
-			}
-			with (instance_place(x + hsp, y, obj_destructibles))
-			{
-				instance_destroy();
-			}
-			if ((place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !scr_slope()) || slope_buffer <= 0)
-			{
-				slope_buffer = 8;
-				state = states.stun;
-				hsp = -image_xscale * 7;
-				vsp = -6;
-				sprite_index = spr_tank_hitwall;
-				stunned = 200;
-				bombreset = 200;
 			}
 			break;
 		case obj_thug_red:

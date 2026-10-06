@@ -45,7 +45,7 @@ function scr_player_ratmountjump()
 				with (obj_camera)
 				{
 					shake_mag = 4;
-					shake_mag_acc = 5 / room_speed;
+					shake_mag_acc = 5 / game_get_speed(gamespeed_fps);
 				}
 				exit;
 			}
@@ -231,6 +231,5 @@ function scr_player_ratmountjump()
 		}
 		image_index = 0;
 	}
-	ratmount_shootpowerup();
 	ratmount_dotaunt();
 }

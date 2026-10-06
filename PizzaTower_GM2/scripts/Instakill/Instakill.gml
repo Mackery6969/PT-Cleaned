@@ -32,11 +32,6 @@ function Instakill()
 		sprite_index = spr_playerN_boxxedhit;
 		image_index = 0;
 	}
-	if (state == states.chainsawbump && sprite_index != spr_player_chainsawhit)
-	{
-		image_index = 0;
-		sprite_index = spr_player_chainsawhit;
-	}
 	other.baddieID.invtime = 25;
 	other.baddieID.grabbedby = 1;
 
@@ -96,11 +91,6 @@ function Instakill()
 			sprite_index = spr_player_ungroundedattack;
 		}
 	}
-	if (state == states.chainsawbump)
-	{
-		sprite_index = spr_player_chainsawhit;
-		image_index = 0;
-	}
 	var lag;
 	if (other.baddieID.heavy)
 	{
@@ -130,7 +120,7 @@ function Instakill()
 	with (obj_camera)
 	{
 		shake_mag = 3;
-		shake_mag_acc = 3 / room_speed;
+		shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
 	}
 	if (state != states.mach2 && state != states.tumble)
 	{

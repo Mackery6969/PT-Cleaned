@@ -1,3 +1,4 @@
+// gmlscan-ignore-file gml/unused-function -- GameMaker 1.x import glue, invoked via gml_pragma or kept for its enum
 function __view_set(argument0, argument1, argument2)
 {
     var __prop = argument0;

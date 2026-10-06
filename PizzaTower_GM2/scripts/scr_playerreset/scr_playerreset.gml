@@ -151,7 +151,6 @@ function scr_playerreset(_stop_music = true)
 		global.pizzasdelivered = 0;
 		global.spaceblockswitch = true;
 		global.fill = 500;
-		global.hasfarmer = array_create(3, false);
 		global.gerome = false;
 		global.mort = false;
 		global.spaceblockswitch = true;
@@ -204,7 +203,6 @@ function scr_playerreset(_stop_music = true)
 	{
 		mort = false;
 		noisepizzapepper = false;
-		goblinkey = false;
 		transformationsnd = false;
 		fmod_event_instance_release(snd_voiceok);
 		snd_voiceok = fmod_event_create_instance("event:/sfx/voice/ok");
@@ -212,7 +210,6 @@ function scr_playerreset(_stop_music = true)
 		hallway = false;
 		verticalhallway = false;
 		tauntstoredstate = states.normal;
-		ratpowerup = noone;
 		scale_xs = 1;
 		scale_ys = 1;
 		holycross = 0;

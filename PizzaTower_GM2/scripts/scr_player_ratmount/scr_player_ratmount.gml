@@ -51,7 +51,7 @@ function scr_player_ratmount()
 				with (obj_camera)
 				{
 					shake_mag = 4;
-					shake_mag_acc = 5 / room_speed;
+					shake_mag_acc = 5 / game_get_speed(gamespeed_fps);
 				}
 				exit;
 			}
@@ -340,7 +340,6 @@ function scr_player_ratmount()
 		}
 		brick = false;
 	}
-	ratmount_shootpowerup();
 	ratmount_dotaunt();
 }
 
@@ -399,35 +398,4 @@ function ratmount_kickbrick()
 	image_speed = 0.35;
 	gustavokicktimer = 5;
 	brick = false;
-}
-
-function ratmount_shootpowerup()
-{
-	if (key_shoot2 && ratpowerup != noone && ratshootbuffer <= 0)
-	{
-		switch (ratpowerup)
-		{
-			case obj_noisegoblin:
-				with (instance_create(x + (20 * xscale), y, obj_playernoisearrow))
-				{
-					direction = point_direction(x, y, x + (other.xscale * 4), y);
-				}
-				break;
-			case obj_smokingpizzaslice:
-				with (instance_create(x + (20 * xscale), y + 20, obj_playersmokehitbox))
-				{
-					spd += (other.movespeed / 2);
-					image_xscale = other.xscale;
-				}
-				break;
-			case obj_spitcheese:
-				with (instance_create(x + (20 * xscale), y, obj_playerspikecheese))
-				{
-					spd += other.movespeed;
-					image_xscale = other.xscale;
-				}
-				break;
-		}
-		ratshootbuffer = 30;
-	}
 }

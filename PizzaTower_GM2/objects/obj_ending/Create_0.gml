@@ -190,3 +190,4 @@ with (obj_player)
 	state = states.titlescreen;
 }
 depth = -10;
+sky_bg = layer_background_get_id(layer_get_id("Backgrounds_sky2"));
