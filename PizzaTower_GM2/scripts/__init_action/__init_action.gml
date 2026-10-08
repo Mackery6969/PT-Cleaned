@@ -1,4 +1,3 @@
-// gmlscan-ignore-file gml/unused-function -- GameMaker 1.x import glue, invoked via gml_pragma or kept for its enum
 function __init_action()
 {
 	gml_pragma( "global", "__init_action();");

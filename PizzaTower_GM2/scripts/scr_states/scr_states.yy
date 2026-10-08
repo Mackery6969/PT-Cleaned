@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "__background_get_element",
+  "name": "scr_states",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "background",
-    "path": "folders/Scripts/Compatibility/background.yy",
+    "name": "Utility",
+    "path": "folders/Scripts/Utility.yy",
   },
 }

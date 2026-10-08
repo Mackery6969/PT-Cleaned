@@ -1,17 +1,3 @@
-enum afterimagetype
-{
-	normal = 0,
-	mach3effect = 1,
-	heatattack = 2,
-	firemouth = 3,
-	blue = 4,
-	blur = 5,
-	red = 6,
-	red_alt = 7,
-	noise = 8,
-	last = 9,
-}
-
 depth = 1;
 global.afterimage_list = ds_list_create();
 alpha = array_create(afterimagetype.last, 1);

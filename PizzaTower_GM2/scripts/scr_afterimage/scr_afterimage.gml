@@ -1,3 +1,17 @@
+enum afterimagetype
+{
+	normal = 0,
+	mach3effect = 1,
+	heatattack = 2,
+	firemouth = 3,
+	blue = 4,
+	blur = 5,
+	red = 6,
+	red_alt = 7,
+	noise = 8,
+	last = 9,
+}
+
 function create_afterimage(_x, _y, _spr, _subimg)
 {
 	var q = 

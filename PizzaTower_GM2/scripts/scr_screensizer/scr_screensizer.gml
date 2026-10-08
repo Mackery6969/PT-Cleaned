@@ -1,3 +1,15 @@
+enum aspectratios
+{
+	ratio_16_9 = 0,
+	ratio_4_3 = 1,
+}
+
+#macro SCREEN_WIDTH obj_screensizer.actual_width
+#macro SCREEN_HEIGHT obj_screensizer.actual_height
+
+#macro CAM_WIDTH obj_screensizer.ideal_width
+#macro CAM_HEIGHT obj_screensizer.ideal_height
+
 function screen_apply_size_delayed()
 {
 	with (obj_screensizer)

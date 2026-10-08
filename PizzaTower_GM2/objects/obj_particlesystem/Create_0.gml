@@ -1,31 +1,3 @@
-enum particletypes
-{
-	first = 0,
-	cloudeffect = 1,
-	crazyrunothereffect = 2,
-	highjumpcloud1 = 3,
-	highjumpcloud2 = 4,
-	jumpdust = 5,
-	balloonpop = 6,
-	shotgunimpact = 7,
-	impact = 8,
-	genericpoofeffect = 9,
-	keyparticles = 10,
-	teleporteffect = 11,
-	landcloud = 12,
-	ratmountballooncloud = 13,
-	groundpoundeffect = 14,
-	noisegrounddasheffect = 15,
-	antigrav_bubblepop = 16,
-	last = 17,
-}
-
-enum particle_attributes
-{
-	normal = 0,
-	fade = 1,
-}
-
 if (instance_number(obj_particlesystem) > 1)
 {
 	instance_destroy();

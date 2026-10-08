@@ -177,7 +177,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				cam_y = ty - (cam_height / 2) - 50;
 				cam_x = clamp(cam_x, 0, room_width - cam_width);
 				cam_y = clamp(cam_y, 0, room_height - cam_height);
-				camera_zoom(1, 0.035);
+				camera_zoom(1);
 			}
 			else
 			{
@@ -189,7 +189,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				var disy = abs(obj_player.y - targetgolf.y - _py) / coop_zoom_height;
 				var dis = max(disx, disy);
 				dis = max(1, dis);
-				camera_zoom(dis, 0.035);
+				camera_zoom(dis);
 			}
 			if (shake_mag != 0 && global.option_screenshake)
 			{

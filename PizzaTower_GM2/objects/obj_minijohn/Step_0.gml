@@ -125,12 +125,10 @@ if (state == states.chase && ragecooldown <= 0)
 		{
 			image_xscale = sign(player.x - x);
 		}
-		{
-			sprite_index = spr_minijohn_punchstart;
-			image_index = 0;
-			ragecooldown = 100;
-			state = states.punch;
-		}
+		sprite_index = spr_minijohn_punchstart;
+		image_index = 0;
+		ragecooldown = 100;
+		state = states.punch;
 	}
 }
 if (ragecooldown > 0)
