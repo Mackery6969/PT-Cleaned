@@ -28,6 +28,14 @@ enum menuanchors
 	left = 1,
 }
 
+enum optiontypes
+{
+	toggle = 0,
+	multiple = 1,
+	press = 2,
+	slide = 3,
+}
+
 function menu_goto(_menuid)
 {
 	menu = 0;

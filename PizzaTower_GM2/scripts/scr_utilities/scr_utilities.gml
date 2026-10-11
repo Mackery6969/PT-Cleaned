@@ -24,15 +24,11 @@ function get_milliseconds()
 	return get_timer() / 1000;
 }
 
-function camera_zoom(_zoom, _zoomspd)
+function camera_zoom(_zoom)
 {
 	with (obj_camera)
 	{
-		targetzoom = _zoom;
-		targetzoom = clamp(targetzoom, 0, max_zoom);
-		if (_zoomspd != undefined)
-		{
-		}
+		targetzoom = clamp(_zoom, 0, max_zoom);
 	}
 }
 

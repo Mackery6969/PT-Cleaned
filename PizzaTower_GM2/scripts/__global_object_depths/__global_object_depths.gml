@@ -1,4 +1,3 @@
-// gmlscan-ignore-file gml/unused-function -- GameMaker 1.x import glue, invoked via gml_pragma or kept for its enum
 function __global_object_depths() {
 	// Initialise the global array that allows the lookup of the depth of a given object
 	// GM2.0 does not have a depth on objects so on import from 1.x a global array is created

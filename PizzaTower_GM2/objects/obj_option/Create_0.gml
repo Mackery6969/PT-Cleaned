@@ -1,11 +1,3 @@
-enum optiontypes
-{
-	toggle = 0,
-	multiple = 1,
-	press = 2,
-	slide = 3,
-}
-
 depth = -99;
 scr_init_input();
 slidecount = 0;
