@@ -3,7 +3,7 @@ if (!global.horse && !instance_exists(obj_jumpscare) && (obj_player.state == sta
 	ds_list_add(global.saveroom, id);
 	fmod_event_one_shot_3d("event:/sfx/misc/keyunlock", x, y);
 	fmod_event_one_shot("event:/sfx/misc/cheers");
-	fmod_event_one_shot_3d("event:/sfx/voice/ok");
+	fmod_event_one_shot_3d("event:/sfx/voice/ok", x, y);
 	obj_player.state = states.victory;
 	obj_player.image_index = 0;
 	image_index = 0;

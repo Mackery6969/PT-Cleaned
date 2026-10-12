@@ -127,7 +127,7 @@ if (flash && alarm[2] <= 0)
 }
 if (state == states.stun && fmod_event_instance_is_playing(snd))
 {
-	fmod_event_instance_stop(snd);
+	fmod_event_instance_stop(snd, true);
 }
 if (state != states.grabbed)
 {
