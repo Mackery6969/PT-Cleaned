@@ -2,7 +2,7 @@ name: Security
 
 on:
   workflow_run:
-    workflows: ["CodeQL", "GML Code Scanner"]
+    workflows: ["CodeQL", "GML Code Scanner", "Automatic Dependency Submission", "Dependency Graph", "Dependabot Updates"]
     types: [completed]
   issues:
     types: [opened, labeled, reopened]
