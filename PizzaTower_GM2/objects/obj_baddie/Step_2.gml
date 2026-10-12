@@ -141,5 +141,5 @@ if (state != states.hit)
 }
 if (fmod_event_instance_is_playing(chargesnd) && state != states.charge)
 {
-	fmod_event_instance_stop(chargesnd);
+	fmod_event_instance_stop(chargesnd, true);
 }
