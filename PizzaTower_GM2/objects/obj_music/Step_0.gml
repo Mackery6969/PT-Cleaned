@@ -63,7 +63,7 @@ if (global.panic)
 		if (room == tower_finalhallway && music != noone)
 		{
 			exitmusic = true;
-			fmod_event_instance_stop(panicmusicID);
+			fmod_event_instance_stop(panicmusicID, true);
 			fmod_event_instance_play(music.event);
 		}
 		fmod_event_instance_stop(pillarmusicID, true);
