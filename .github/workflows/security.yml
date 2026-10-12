@@ -1,26 +1,26 @@
 name: Security
 
 on:
-  push:
-    branches: ["main"]
-    paths-ignore: ["**.md"]
+  workflow_run:
+    workflows: ["CodeQL", "GML Code Scanner"]
+    types: [completed]
+  issues:
+    types: [opened, labeled, reopened]
   pull_request:
     types: [opened, synchronize, reopened, closed]
-  workflow_run:
-    workflows: ["GML Code Scanner"]
-    types: [completed]
   schedule:
-    - cron: "17 18 * * 5"
+    - cron: "47 */6 * * *"
   workflow_dispatch:
     inputs:
       force:
-        description: Triage again even if an earlier pull request covered these findings
+        description: Take everything on again, even what earlier pull requests already covered
         type: boolean
         default: false
 
 permissions:
   contents: write
   pull-requests: write
+  issues: write
   security-events: write
   actions: write
   checks: read
@@ -31,9 +31,9 @@ concurrency:
 
 jobs:
   security:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == github.event.repository.default_branch
+    if: ${{ !(startsWith(github.head_ref, 'claude/') && github.event.action != 'closed') && !startsWith(github.event.workflow_run.head_branch, 'claude/') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 355
     env:
       HAS_CLAUDE_APP: ${{ secrets.CLAUDE_APP_PRIVATE_KEY != '' }}
     steps:
@@ -48,7 +48,7 @@ jobs:
         with:
           persist-credentials: false
       - run: curl -fsSL https://github.com/Mackery6969/GML-Code-Scanner/releases/latest/download/gmlscan.mjs -o "$RUNNER_TEMP/gmlscan.mjs"
-      - uses: Mackery6969/Claude-Autofix@v1
+      - uses: Mackery6969/Claude-Autofix@v2
         with:
           task: security
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}

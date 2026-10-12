@@ -24,6 +24,7 @@ concurrency:
 
 jobs:
   quality:
+    if: ${{ !(startsWith(github.head_ref, 'claude/') && github.event.action != 'closed') && !startsWith(github.event.workflow_run.head_branch, 'claude/') }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -41,7 +42,7 @@ jobs:
           ref: ${{ github.head_ref || github.ref }}
           persist-credentials: false
       - run: curl -fsSL https://github.com/Mackery6969/GML-Code-Scanner/releases/latest/download/gmlscan.mjs -o "$RUNNER_TEMP/gmlscan.mjs"
-      - uses: Mackery6969/Claude-Autofix@v1
+      - uses: Mackery6969/Claude-Autofix@v2
         with:
           task: quality
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
