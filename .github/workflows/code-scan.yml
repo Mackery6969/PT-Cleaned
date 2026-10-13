@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: Mackery6969/GML-Code-Scanner@v1
+      - uses: Mackery6969/GML-Code-Scanner@v2
         with:
            config: .gmlscan.json
            path: ./PizzaTower_GM2
