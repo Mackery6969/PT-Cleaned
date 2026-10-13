@@ -3,81 +3,50 @@ if (instance_number(object_index) > 1)
 	instance_destroy();
 	exit;
 }
+var _steam_ids =
+[
+	["entrance", "ENTRANCE", 3],
+	["medieval", "MEDIEVAL", 3],
+	["ruin", "RUIN", 3],
+	["dungeon", "DUNGEON", 3],
+	["badland", "BADLAND", 3],
+	["graveyard", "GRAVEYARD", 3],
+	["farm", "FARM", 3],
+	["saloon", "SALOON", 3],
+	["plage", "BEACH", 3],
+	["forest", "FOREST", 3],
+	["space", "SPACE", 3],
+	["minigolf", "GOLF", 3],
+	["street", "STREET", 3],
+	["sewer", "SEWER", 3],
+	["industrial", "INDUSTRIAL", 3],
+	["freezer", "FREEZER", 3],
+	["chateau", "CHATEAU", 3],
+	["kidsparty", "KIDSPARTY", 3],
+	["war", "WAR", 3],
+	["pepperman", "BOSS", 1, 1],
+	["vigilante", "BOSS", 1, 2],
+	["noise", "BOSS", 1, 3],
+	["fakepep", "BOSS", 1, 4],
+	["pizzaface", "BOSS", 1, 5],
+	["sranks", "SRANK", 5],
+	["pranks", "PRANK", 5],
+	["halloween", "HALLOWEEN", 2]
+];
 global.steam_achievements = ds_map_create();
-ds_map_set(global.steam_achievements, "entrance1", "ACH_ENTRANCE_1");
-ds_map_set(global.steam_achievements, "entrance2", "ACH_ENTRANCE_2");
-ds_map_set(global.steam_achievements, "entrance3", "ACH_ENTRANCE_3");
-ds_map_set(global.steam_achievements, "medieval1", "ACH_MEDIEVAL_1");
-ds_map_set(global.steam_achievements, "medieval2", "ACH_MEDIEVAL_2");
-ds_map_set(global.steam_achievements, "medieval3", "ACH_MEDIEVAL_3");
-ds_map_set(global.steam_achievements, "ruin1", "ACH_RUIN_1");
-ds_map_set(global.steam_achievements, "ruin2", "ACH_RUIN_2");
-ds_map_set(global.steam_achievements, "ruin3", "ACH_RUIN_3");
-ds_map_set(global.steam_achievements, "dungeon1", "ACH_DUNGEON_1");
-ds_map_set(global.steam_achievements, "dungeon2", "ACH_DUNGEON_2");
-ds_map_set(global.steam_achievements, "dungeon3", "ACH_DUNGEON_3");
-ds_map_set(global.steam_achievements, "badland1", "ACH_BADLAND_1");
-ds_map_set(global.steam_achievements, "badland2", "ACH_BADLAND_2");
-ds_map_set(global.steam_achievements, "badland3", "ACH_BADLAND_3");
-ds_map_set(global.steam_achievements, "graveyard1", "ACH_GRAVEYARD_1");
-ds_map_set(global.steam_achievements, "graveyard2", "ACH_GRAVEYARD_2");
-ds_map_set(global.steam_achievements, "graveyard3", "ACH_GRAVEYARD_3");
-ds_map_set(global.steam_achievements, "farm1", "ACH_FARM_1");
-ds_map_set(global.steam_achievements, "farm2", "ACH_FARM_2");
-ds_map_set(global.steam_achievements, "farm3", "ACH_FARM_3");
-ds_map_set(global.steam_achievements, "saloon1", "ACH_SALOON_1");
-ds_map_set(global.steam_achievements, "saloon2", "ACH_SALOON_2");
-ds_map_set(global.steam_achievements, "saloon3", "ACH_SALOON_3");
-ds_map_set(global.steam_achievements, "plage1", "ACH_BEACH_1");
-ds_map_set(global.steam_achievements, "plage2", "ACH_BEACH_2");
-ds_map_set(global.steam_achievements, "plage3", "ACH_BEACH_3");
-ds_map_set(global.steam_achievements, "forest1", "ACH_FOREST_1");
-ds_map_set(global.steam_achievements, "forest2", "ACH_FOREST_2");
-ds_map_set(global.steam_achievements, "forest3", "ACH_FOREST_3");
-ds_map_set(global.steam_achievements, "space1", "ACH_SPACE_1");
-ds_map_set(global.steam_achievements, "space2", "ACH_SPACE_2");
-ds_map_set(global.steam_achievements, "space3", "ACH_SPACE_3");
-ds_map_set(global.steam_achievements, "minigolf1", "ACH_GOLF_1");
-ds_map_set(global.steam_achievements, "minigolf2", "ACH_GOLF_2");
-ds_map_set(global.steam_achievements, "minigolf3", "ACH_GOLF_3");
-ds_map_set(global.steam_achievements, "street1", "ACH_STREET_1");
-ds_map_set(global.steam_achievements, "street2", "ACH_STREET_2");
-ds_map_set(global.steam_achievements, "street3", "ACH_STREET_3");
-ds_map_set(global.steam_achievements, "sewer1", "ACH_SEWER_1");
-ds_map_set(global.steam_achievements, "sewer2", "ACH_SEWER_2");
-ds_map_set(global.steam_achievements, "sewer3", "ACH_SEWER_3");
-ds_map_set(global.steam_achievements, "industrial1", "ACH_INDUSTRIAL_1");
-ds_map_set(global.steam_achievements, "industrial2", "ACH_INDUSTRIAL_2");
-ds_map_set(global.steam_achievements, "industrial3", "ACH_INDUSTRIAL_3");
-ds_map_set(global.steam_achievements, "freezer1", "ACH_FREEZER_1");
-ds_map_set(global.steam_achievements, "freezer2", "ACH_FREEZER_2");
-ds_map_set(global.steam_achievements, "freezer3", "ACH_FREEZER_3");
-ds_map_set(global.steam_achievements, "chateau1", "ACH_CHATEAU_1");
-ds_map_set(global.steam_achievements, "chateau2", "ACH_CHATEAU_2");
-ds_map_set(global.steam_achievements, "chateau3", "ACH_CHATEAU_3");
-ds_map_set(global.steam_achievements, "kidsparty1", "ACH_KIDSPARTY_1");
-ds_map_set(global.steam_achievements, "kidsparty2", "ACH_KIDSPARTY_2");
-ds_map_set(global.steam_achievements, "kidsparty3", "ACH_KIDSPARTY_3");
-ds_map_set(global.steam_achievements, "war1", "ACH_WAR_1");
-ds_map_set(global.steam_achievements, "war2", "ACH_WAR_2");
-ds_map_set(global.steam_achievements, "war3", "ACH_WAR_3");
-ds_map_set(global.steam_achievements, "pepperman", "ACH_BOSS_1");
-ds_map_set(global.steam_achievements, "vigilante", "ACH_BOSS_2");
-ds_map_set(global.steam_achievements, "noise", "ACH_BOSS_3");
-ds_map_set(global.steam_achievements, "fakepep", "ACH_BOSS_4");
-ds_map_set(global.steam_achievements, "pizzaface", "ACH_BOSS_5");
-ds_map_set(global.steam_achievements, "sranks1", "ACH_SRANK_1");
-ds_map_set(global.steam_achievements, "sranks2", "ACH_SRANK_2");
-ds_map_set(global.steam_achievements, "sranks3", "ACH_SRANK_3");
-ds_map_set(global.steam_achievements, "sranks4", "ACH_SRANK_4");
-ds_map_set(global.steam_achievements, "sranks5", "ACH_SRANK_5");
-ds_map_set(global.steam_achievements, "pranks1", "ACH_PRANK_1");
-ds_map_set(global.steam_achievements, "pranks2", "ACH_PRANK_2");
-ds_map_set(global.steam_achievements, "pranks3", "ACH_PRANK_3");
-ds_map_set(global.steam_achievements, "pranks4", "ACH_PRANK_4");
-ds_map_set(global.steam_achievements, "pranks5", "ACH_PRANK_5");
-ds_map_set(global.steam_achievements, "halloween1", "ACH_HALLOWEEN_1");
-ds_map_set(global.steam_achievements, "halloween2", "ACH_HALLOWEEN_2");
+for (var i = 0; i < array_length(_steam_ids); i++)
+{
+	var _entry = _steam_ids[i];
+	if (array_length(_entry) == 4)
+	{
+		ds_map_set(global.steam_achievements, _entry[0], concat("ACH_", _entry[1], "_", _entry[3]));
+		continue;
+	}
+	for (var j = 1; j <= _entry[2]; j++)
+	{
+		ds_map_set(global.steam_achievements, concat(_entry[0], j), concat("ACH_", _entry[1], "_", j));
+	}
+}
 
 achievements_update = [];
 achievements_notify = [];
