@@ -2,7 +2,7 @@ if (state == states.charge)
 {
 	with (other)
 	{
-		if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
+		if (state != states.gameover && state != states.rideweenie)
 		{
 			GamepadSetVibration(0, 1, 1, 0.85);
 			state = states.fireass;

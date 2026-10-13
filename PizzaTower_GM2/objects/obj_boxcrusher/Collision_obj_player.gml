@@ -1,7 +1,3 @@
-if (other.state == states.gotoplayer)
-{
-	exit;
-}
 if (sprite_index == spr_boxcrusher_fall)
 {
 	other.image_index = 0;

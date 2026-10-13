@@ -774,7 +774,6 @@ function scr_vigilante_revolver()
 		else
 		{
 			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
-			ammo--;
 			shot--;
 			sprite_index = spr_playerV_revolvershoot;
 			image_index = 0;
@@ -822,25 +821,6 @@ function scr_vigilante_throwing()
 	if (ANIMATION_END && sprite_index == spr_playerV_dynamitethrow)
 	{
 		sprite_index = spr_playerV_idle;
-	}
-}
-
-function scr_vigilante_reloading()
-{
-	image_speed = 0.35;
-	hsp = Approach(hsp, 0, 1);
-	if (reloadbuffer > 0)
-	{
-		reloadbuffer--;
-	}
-	else
-	{
-		ammo = 6;
-		sprite_index = spr_playerV_idle;
-		state = states.walk;
-		hsp = 0;
-		cooldown = 0;
-		image_xscale = (x < (room_width / 2)) ? 1 : -1;
 	}
 }
 

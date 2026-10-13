@@ -22,11 +22,7 @@ switch (state)
 		{
 			with (playerid)
 			{
-				if (state == states.taxi2)
-				{
-					other.state = states.walk;
-				}
-				else if (!launched)
+				if (!launched)
 				{
 					hamkuffID = other.id;
 					var _xs = 0;

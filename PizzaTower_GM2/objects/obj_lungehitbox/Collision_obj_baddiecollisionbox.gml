@@ -3,7 +3,7 @@ if (!instance_exists(_baddieID))
 {
 	exit;
 }
-if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hittable && _baddieID.state != states.ghostpossess)
+if (_baddieID.state != states.grabbed && !_baddieID.invincible && _baddieID.hittable)
 {
 	with (playerid)
 	{

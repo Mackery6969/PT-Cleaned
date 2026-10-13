@@ -1698,7 +1698,7 @@ function scr_noise_finale()
 		{
 			image_index = image_number - 1;
 		}
-		else if ((sprite_index == spr_playerN_squished || sprite_index == spr_bombpepend) && ANIMATION_END)
+		else if (sprite_index == spr_bombpepend && ANIMATION_END)
 		{
 			sprite_index = spr_idle;
 		}

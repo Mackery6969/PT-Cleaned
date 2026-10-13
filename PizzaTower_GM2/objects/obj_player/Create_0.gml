@@ -343,47 +343,43 @@ doublejump = false;
 coopdelay = 0;
 supercharged = false;
 pizzapepper = 0;
-transformation[0] = states.bombpep;
-transformation[1] = states.knightpep;
-transformation[2] = states.knightpepslopes;
-transformation[3] = states.boxxedpep;
-transformation[4] = states.cheeseball;
-transformation[5] = states.cheesepep;
-transformation[6] = states.cheesepepstick;
-transformation[7] = states.cheesepepstickup;
-transformation[8] = states.cheesepepstickside;
-transformation[9] = states.firemouth;
-transformation[10] = states.fireass;
-transformation[11] = states.stunned;
-transformation[12] = states.rideweenie;
-transformation[13] = states.gameover;
-transformation[14] = states.door;
-transformation[15] = states.ghost;
-transformation[16] = states.ghostpossess;
-transformation[17] = states.mort;
-transformation[18] = states.tube;
-transformation[19] = states.actor;
-transformation[20] = states.rocket;
-transformation[21] = states.gotoplayer;
-transformation[22] = states.bombgrab;
-transformation[23] = states.bombpepside;
-transformation[24] = states.bombpepup;
-transformation[25] = states.barrelslide;
-transformation[26] = states.barreljump;
-transformation[27] = states.barrel;
-transformation[28] = states.cheeseballclimbwall;
-transformation[29] = states.motorcycle;
-transformation[30] = states.knightpepbump;
-transformation[31] = states.knightpepattack;
-transformation[32] = states.mortattack;
-transformation[33] = states.morthook;
-transformation[34] = states.mortjump;
-transformation[35] = states.boxxedpepjump;
-transformation[36] = states.boxxedpepspin;
-transformation[37] = states.rocketslide;
-transformation[38] = states.cheesepepjump;
-transformation[39] = states.rideweenie;
-transformation[40] = states.barrelclimbwall;
+transformation =
+[
+	states.bombpep,
+	states.knightpep,
+	states.knightpepslopes,
+	states.boxxedpep,
+	states.cheeseball,
+	states.cheesepep,
+	states.cheesepepstick,
+	states.cheesepepstickup,
+	states.cheesepepstickside,
+	states.firemouth,
+	states.fireass,
+	states.rideweenie,
+	states.gameover,
+	states.door,
+	states.ghost,
+	states.mort,
+	states.tube,
+	states.actor,
+	states.rocket,
+	states.bombgrab,
+	states.bombpepside,
+	states.bombpepup,
+	states.barrelslide,
+	states.barreljump,
+	states.barrel,
+	states.knightpepbump,
+	states.mortattack,
+	states.morthook,
+	states.mortjump,
+	states.boxxedpepjump,
+	states.boxxedpepspin,
+	states.rocketslide,
+	states.cheesepepjump,
+	states.barrelclimbwall
+];
 keysound = false;
 c = 0;
 breakdance = 50;

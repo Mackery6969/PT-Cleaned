@@ -131,27 +131,3 @@ function get_triangle_points(_x, _y, _direction, _length, _angle_offset)
 	var y3 = _y + lengthdir_y(_length, _direction + _angle_offset);
 	return [x2, y2, x3, y3];
 }
-
-function scr_monster_detect(_w, _h, _obj)
-{
-	var _dir = (image_xscale > 0) ? (_obj.x > x) : (_obj.x < x);
-	if (_dir && _obj.x < (x + _w) && _obj.x > (x - _w) && _obj.y < (y + _h) && _obj.y > (y - _h))
-	{
-		var detect = false;
-		if (_obj.y > (y - 200))
-		{
-			with (_obj)
-			{
-				if (state != states.crouch || (!scr_solid(x, y - 24) && !place_meeting(x, y - 24, obj_platform)))
-				{
-					detect = true;
-				}
-			}
-		}
-		if (detect)
-		{
-			return true;
-		}
-	}
-	return false;
-}

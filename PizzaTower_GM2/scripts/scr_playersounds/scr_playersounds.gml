@@ -37,7 +37,7 @@ function scr_playersounds()
 				fmod_event_instance_set_3d_attributes(global.snd_alarm, global.snd_alarm_baddieID.x, global.snd_alarm_baddieID.y);
 			}
 		}
-		if (state != states.tube && sprite_index != spr_knightpepstart && state != states.bombgrab && state != states.chainsaw && state != states.teleporter && state != states.secretportal && state != states.door && state != states.victory && state != states.stunned && state != states.gameover && state != states.fireass)
+		if (state != states.tube && sprite_index != spr_knightpepstart && state != states.bombgrab && state != states.chainsaw && state != states.teleporter && state != states.secretportal && state != states.door && state != states.victory && state != states.gameover && state != states.fireass)
 		{
 			if (!scr_transformationcheck())
 			{

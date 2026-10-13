@@ -30,10 +30,7 @@ if (!place_meeting(x, y, obj_doorblocked))
 			with (obj_player)
 			{
 				image_index = 0;
-				if (state != states.gotoplayer)
-				{
-					state = states.door;
-				}
+				state = states.door;
 				mach2 = 0;
 			}
 			other.visited = true;

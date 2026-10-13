@@ -1,7 +1,7 @@
 var t = id;
 with (other)
 {
-	if (state != states.gotoplayer && state != states.ghost && state != states.actor)
+	if (state != states.ghost && state != states.actor)
 	{
 		if (!boxxed && !isgustavo && other.buffer == 0 && other.sprite_index == spr_dashpad)
 		{

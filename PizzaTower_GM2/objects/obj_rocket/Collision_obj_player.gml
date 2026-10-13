@@ -4,7 +4,7 @@ if (buffer > 0)
 }
 with (other)
 {
-	if (other.playerid == noone && state != states.rocket && state != states.actor && state != states.rocketslide && state != states.gotoplayer)
+	if (other.playerid == noone && state != states.rocket && state != states.actor && state != states.rocketslide)
 	{
 		xscale = other.image_xscale;
 		state = states.rocket;

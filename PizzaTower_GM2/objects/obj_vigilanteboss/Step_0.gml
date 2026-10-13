@@ -16,9 +16,6 @@ switch (state)
 	case states.revolver:
 		scr_vigilante_revolver();
 		break;
-	case states.reloading:
-		scr_vigilante_reloading();
-		break;
 	case states.mach2:
 		scr_vigilante_mach2();
 		break;
@@ -259,7 +256,6 @@ if (state == states.stun)
 	if (grounded && vsp > 0 && savedthrown)
 	{
 		stunned = 1;
-		ammo = 6;
 	}
 }
 else
@@ -278,7 +274,7 @@ if (state == states.stun && stunned > 100 && !birdcreated)
 		ID = other.id;
 	}
 }
-if (state == states.reloading || (state == states.stun && savedthrown == thrown && !savedthrown))
+if (state == states.stun && savedthrown == thrown && !savedthrown)
 {
 	invincible = false;
 }

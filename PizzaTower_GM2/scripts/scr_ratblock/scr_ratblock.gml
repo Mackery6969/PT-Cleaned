@@ -52,7 +52,6 @@ function scr_ratblock_destroy()
 							bombpeptimer = 0;
 						}
 						break;
-					case states.gotoplayer:
 					case states.tube:
 					case states.actor:
 					case states.boxxedpep:

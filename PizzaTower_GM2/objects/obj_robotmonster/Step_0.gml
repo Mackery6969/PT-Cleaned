@@ -28,20 +28,6 @@ switch (state)
 			sprite_index = chasespr;
 		}
 		break;
-	case states.monsterwalk:
-		targetplayer = instance_nearest(x, y, obj_player);
-		image_speed = 0.35;
-		sprite_index = walkspr;
-		hsp = image_xscale * 4;
-		if (place_meeting(x + sign(hsp), y, obj_monstersolid) && (!place_meeting(x + sign(hsp), y, obj_monsterslope) || place_meeting(x + sign(hsp), y - 4, obj_solid)))
-		{
-			image_xscale *= -1;
-		}
-		if (scr_monster_detect(300, room_height, targetplayer))
-		{
-			state = states.monsterchase;
-		}
-		break;
 	case states.monsterchase:
 		if (sprite_index != spr_monstercheese_jump)
 		{

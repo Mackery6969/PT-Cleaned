@@ -103,7 +103,6 @@ function scr_tv_get_transfo_sprite()
 	switch (_state)
 	{
 		case states.knightpep:
-		case states.knightpepattack:
 		case states.knightpepbump:
 		case states.knightpepslopes:
 			_spr = spr_tv_knight;
@@ -133,14 +132,7 @@ function scr_tv_get_transfo_sprite()
 			_spr = spr_tv_firemouth;
 			break;
 		case states.ghost:
-		case states.ghostpossess:
 			_spr = spr_tv_ghost;
-			break;
-		case states.stunned:
-			if (obj_player.sprite_index == obj_player.spr_squished)
-			{
-				_spr = spr_tv_squished;
-			}
 			break;
 		case states.normal:
 		case states.jump:
@@ -224,7 +216,6 @@ function scr_tv_get_transfo_sprite()
 			break;
 		case states.mach2:
 		case states.climbwall:
-		case states.machroll:
 		case states.grind:
 			if (obj_player.skateboarding)
 			{

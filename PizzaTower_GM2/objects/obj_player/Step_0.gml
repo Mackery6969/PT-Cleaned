@@ -109,9 +109,6 @@ switch (state)
 	case states.cheesepepstick:
 		scr_player_cheesepepstick();
 		break;
-	case states.cheesepeplaunch:
-		scr_player_cheesepeplaunch();
-		break;
 	case states.boxxedpep:
 		scr_player_boxxedpep();
 		break;
@@ -988,7 +985,7 @@ if (state == states.gameover && y > (room_height * 2) && !instance_exists(obj_ba
 	global.leveltorestart = noone;
 	global.leveltosave = noone;
 }
-if (baddiegrabbedID == noone && (state == states.grab || state == states.superslam || state == states.tacklecharge))
+if (baddiegrabbedID == noone && (state == states.grab || state == states.superslam))
 {
 	state = states.normal;
 }
@@ -1013,7 +1010,7 @@ else if (state == states.barrel)
 {
 	grav = 0.6;
 }
-else if (state == states.ghost || state == states.ghostpossess)
+else if (state == states.ghost)
 {
 	grav = 0;
 }
@@ -1174,7 +1171,7 @@ if (!inv_frames && !hurted && state != states.ghost)
 {
 	image_alpha = 1;
 }
-if (state == states.punch || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.tacklecharge || state == states.skateboard || state == states.knightpep || state == states.cheesepep || state == states.knightpepslopes || state == states.knightpepattack || state == states.bombpep || state == states.facestomp || state == states.machfreefall || state == states.facestomp || state == states.mach3 || state == states.freefall || state == states.Sjump)
+if (state == states.punch || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.knightpep || state == states.cheesepep || state == states.knightpepslopes || state == states.bombpep || state == states.mach3 || state == states.freefall || state == states.Sjump)
 {
 	attacking = true;
 }
@@ -1182,7 +1179,7 @@ else
 {
 	attacking = false;
 }
-if (state == states.throwing || state == states.backkick || state == states.uppunch)
+if (state == states.throwing)
 {
 	grabbing = true;
 }
@@ -1190,7 +1187,7 @@ else
 {
 	grabbing = false;
 }
-if ((state == states.ratmountbounce && vsp >= 0) || (state == states.noisecrusher && vsp >= 0) || sprite_index == spr_player_Sjumpcancel || sprite_index == spr_swingding || sprite_index == spr_tumble || state == states.boxxedpepspin || state == states.trashroll || state == states.trashjump || state == states.shotgundash || (state == states.shotgunfreefall && (sprite_index == spr_shotgunjump2 || sprite_index == spr_shotgunjump3)) || state == states.Sjump || state == states.rocket || state == states.rocketslide || state == states.chainsawbump || (state == states.punch && ((sprite_index != spr_breakdanceuppercut && sprite_index != spr_breakdanceuppercutend) || vsp < 0)) || state == states.faceplant || state == states.rideweenie || state == states.mach3 || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.freefall || state == states.fireass || state == states.jetpackjump || (state == states.firemouth && sprite_index != spr_firemouthintro) || state == states.hookshot || state == states.jetpackjump || state == states.skateboard || state == states.mach4 || state == states.Sjump || state == states.machfreefall || state == states.tacklecharge || (state == states.superslam && sprite_index == spr_piledriver) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.trickjump || state == states.cheesepep || state == states.cheeseball || state == states.ratmounttumble || state == states.ratmountgroundpound || (global.noisejetpack && (ispeppino || noisepizzapepper)) || state == states.ratmountpunch || state == states.machcancel || state == states.antigrav || holycross > 0 || state == states.barrelslide || state == states.barrelclimbwall || ratmount_movespeed >= 12 || state == states.fightball || (!ispeppino && state == states.slipnslide && instance_exists(obj_surfback)) || ghostdash || state == states.slipbanan || state == states.shoulderbash || (state == states.machslide && (sprite_index == spr_mach3boost || sprite_index == spr_player_machslideboost3fall)))
+if ((state == states.ratmountbounce && vsp >= 0) || (state == states.noisecrusher && vsp >= 0) || sprite_index == spr_player_Sjumpcancel || sprite_index == spr_swingding || sprite_index == spr_tumble || state == states.boxxedpepspin || state == states.trashroll || state == states.trashjump || state == states.shotgundash || (state == states.shotgunfreefall && (sprite_index == spr_shotgunjump2 || sprite_index == spr_shotgunjump3)) || state == states.Sjump || state == states.rocket || state == states.rocketslide || (state == states.punch && ((sprite_index != spr_breakdanceuppercut && sprite_index != spr_breakdanceuppercutend) || vsp < 0)) || state == states.rideweenie || state == states.mach3 || (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || state == states.freefall || state == states.fireass || state == states.jetpackjump || (state == states.firemouth && sprite_index != spr_firemouthintro) || state == states.hookshot || state == states.jetpackjump || state == states.Sjump || (state == states.superslam && sprite_index == spr_piledriver) || state == states.knightpep || state == states.knightpepslopes || state == states.trickjump || state == states.cheesepep || state == states.cheeseball || state == states.ratmounttumble || state == states.ratmountgroundpound || (global.noisejetpack && (ispeppino || noisepizzapepper)) || state == states.ratmountpunch || state == states.machcancel || state == states.antigrav || holycross > 0 || state == states.barrelslide || state == states.barrelclimbwall || ratmount_movespeed >= 12 || state == states.fightball || (!ispeppino && state == states.slipnslide && instance_exists(obj_surfback)) || ghostdash || state == states.slipbanan || state == states.shoulderbash || (state == states.machslide && (sprite_index == spr_mach3boost || sprite_index == spr_player_machslideboost3fall)))
 {
 	instakillmove = true;
 }
@@ -1198,7 +1195,7 @@ else
 {
 	instakillmove = false;
 }
-if ((global.noisejetpack || holycross > 0) && (state == states.actor || state == states.chainsaw || state == states.backbreaker || state == states.gotoplayer || state == states.animation || state == states.arenaintro || state == states.teleporter || state == states.Sjumpland))
+if ((global.noisejetpack || holycross > 0) && (state == states.actor || state == states.chainsaw || state == states.backbreaker || state == states.animation || state == states.arenaintro || state == states.teleporter || state == states.Sjumpland))
 {
 	instakillmove = false;
 }
@@ -1238,7 +1235,7 @@ if (state != states.Sjump && state != states.Sjumpprep)
 {
 	a = 0;
 }
-if (state != states.freefall && state != states.facestomp && state != states.superslam && state != states.freefallland)
+if (state != states.freefall && state != states.superslam && state != states.freefallland)
 {
 	superslam = 0;
 }
@@ -1308,7 +1305,7 @@ if (restartbuffer > 0)
 {
 	restartbuffer--;
 }
-if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalhallway) && restartbuffer <= 0 && !verticalhallway && state != states.gameover && state != states.gotoplayer && !global.levelreset && room != boss_pizzaface && room != tower_outside && room != boss_pizzafacefinale && state != states.actor && !instance_exists(obj_backtohub_fadeout) && state != states.backtohub)
+if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalhallway) && restartbuffer <= 0 && !verticalhallway && state != states.gameover && !global.levelreset && room != boss_pizzaface && room != tower_outside && room != boss_pizzafacefinale && state != states.actor && !instance_exists(obj_backtohub_fadeout) && state != states.backtohub)
 {
 	if (room != Mainmenu && room != tower_outside && room != Realtitlescreen && room != Longintro && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom && room != rank_room)
 	{
@@ -1317,11 +1314,6 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
-		}
-		if (state == states.ghostpossess)
-		{
-			state = states.ghost;
-			sprite_index = spr_ghostidle;
 		}
 		var s = state;
 		notification_push(notifications.fell_into_pit, [id, s]);
@@ -1364,7 +1356,7 @@ if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalha
 }
 if (!scr_solid_player(x, y))
 {
-	if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_barrelslipnslide && sprite_index != spr_barrelroll && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
+	if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && !(state == states.bump && sprite_index == spr_tumbleend) && (state != states.barrelslide && state != states.barrelclimbwall) && sprite_index != spr_barrelslipnslide && sprite_index != spr_barrelroll && sprite_index != spr_knightpepthunder && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && (state != states.pistol) && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
 	{
 		mask_index = spr_player_mask;
 	}
@@ -1377,7 +1369,7 @@ else
 {
 	mask_index = spr_crouchmask;
 }
-if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.gameover || state == states.gotoplayer || state == states.taxi2 || state == states.actor || (collision_flags & collisionflags.secret) > 0)
+if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.gameover || state == states.actor || (collision_flags & collisionflags.secret) > 0)
 {
 	cutscene = true;
 }
@@ -1404,11 +1396,11 @@ if (movespeed > 12 && abs(hsp) > 12 && state == states.mach3 && state != states.
 	}
 }
 scr_collide_destructibles();
-if (state != states.backtohub && state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover)
+if (state != states.backtohub && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover)
 {
 	scr_collide_player();
 }
-if (state == states.tube || state == states.gotoplayer || state == states.debugstate)
+if (state == states.tube || state == states.debugstate)
 {
 	x += hsp;
 	y += vsp;

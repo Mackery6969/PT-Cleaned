@@ -158,7 +158,7 @@ function scr_enemy_grabbed()
 		image_xscale = -obj_player.xscale;
 		stunned = 200;
 		obj_player.baddiegrabbedID = id;
-		if (obj_player.state == states.grabbing || obj_player.state == states.grab || obj_player.state == states.throwing || obj_player.state == states.slam || obj_player.state == states.tacklecharge)
+		if (obj_player.state == states.grabbing || obj_player.state == states.grab || obj_player.state == states.throwing)
 		{
 			x = obj_player.x;
 			if (obj_player.sprite_index != obj_player.spr_haulingstart)
@@ -186,7 +186,7 @@ function scr_enemy_grabbed()
 		with (obj_player)
 		{
 			move = key_left2 + key_right2;
-			if (!(state == states.grab || state == states.chainsaw || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
+			if (!(state == states.grab || state == states.chainsaw || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.punch || state == states.superslam))
 			{
 				other.x = x;
 				other.y = y;
@@ -238,37 +238,6 @@ function scr_enemy_grabbed()
 				y = obj_player.y;
 			}
 			check_grabbed_solid(obj_player);
-		}
-		if (obj_player.state == states.backkick)
-		{
-			alarm[3] = 3;
-			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
-			{
-				global.golfhit += 1;
-			}
-			hp -= 1;
-			instance_create(x + (-obj_player.xscale * 50), y, obj_bumpeffect);
-			alarm[1] = 5;
-			thrown = true;
-			x = obj_player.x;
-			y = obj_player.y;
-			state = states.stun;
-			image_xscale *= -1;
-			hsp = -image_xscale * 20;
-			vsp = -7;
-			if (object_index != obj_swapplayergrabbable)
-			{
-				global.combotime = 60;
-			}
-						instance_create(x, y, obj_slapstar);
-			instance_create(x, y, obj_baddiegibs);
-			flash = true;
-			with (obj_camera)
-			{
-				shake_mag = 3;
-				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
-			}
 		}
 		if (obj_player.state == states.finishingblow && (floor(obj_player.image_index) >= 4 || (floor(obj_player.image_index) < 1 && obj_player.sprite_index == obj_player.spr_swingdingend)))
 		{
@@ -356,42 +325,6 @@ function scr_enemy_grabbed()
 			vsp = -6;
 			check_grabbed_solid(obj_player);
 			check_grabbed_solid(obj_player);
-		}
-		if (obj_player.state == states.uppunch)
-		{
-			alarm[3] = 3;
-			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
-			{
-				global.golfhit += 1;
-			}
-			hp -= 1;
-			instance_create(x + (-obj_player.xscale * 15), y - 50, obj_bumpeffect);
-			alarm[1] = 5;
-			thrown = true;
-			x = obj_player.x;
-			y = obj_player.y;
-			hsp = -image_xscale * 2;
-			state = states.stun;
-			vsp = -20;
-			if (object_index != obj_swapplayergrabbable)
-			{
-				global.combotime = 60;
-			}
-						instance_create(x, y, obj_slapstar);
-			instance_create(x, y, obj_baddiegibs);
-			flash = true;
-			with (obj_camera)
-			{
-				shake_mag = 3;
-				shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
-			}
-			check_grabbed_solid(obj_player);
-		}
-		if (obj_player.state == states.tacklecharge)
-		{
-			x = obj_player.x + (obj_player.xscale * 15);
-			y = obj_player.y;
 		}
 		if (obj_player.state == states.superslam || (obj_player.state == states.chainsaw && sprite_index == spr_player_piledriver))
 		{

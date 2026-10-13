@@ -1,7 +1,7 @@
 var v = id;
 with (other)
 {
-	if (state != states.Sjump && state != states.gotoplayer && state != states.actor)
+	if (state != states.Sjump && state != states.actor)
 	{
 		if (state == states.bombpep)
 		{

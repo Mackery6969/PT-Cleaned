@@ -6,10 +6,6 @@ if (other.state == states.hurt)
 {
 	exit;
 }
-if (other.state == states.gotoplayer)
-{
-	exit;
-}
 var _offset_x = 32 * image_xscale;
 var _offset_y = 14 * image_yscale;
 with (other)

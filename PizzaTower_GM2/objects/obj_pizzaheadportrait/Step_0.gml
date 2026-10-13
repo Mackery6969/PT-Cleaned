@@ -74,7 +74,7 @@ if (grabbed)
 	image_xscale = -playerid.xscale;
 	grav = 0;
 	playerid.baddiegrabbedID = id;
-	if (playerid.state == states.finishingblow || playerid.state == states.grabbing || playerid.state == states.grab || playerid.state == states.throwing || playerid.state == states.slam || playerid.state == states.tacklecharge)
+	if (playerid.state == states.finishingblow || playerid.state == states.grabbing || playerid.state == states.grab || playerid.state == states.throwing)
 	{
 		grav = 0;
 		grounded = false;
@@ -104,7 +104,7 @@ if (grabbed)
 	with (playerid)
 	{
 		move = key_left2 + key_right2;
-		if (!(state == states.finishingblow || state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch))
+		if (!(state == states.finishingblow || state == states.grab || state == states.grabbing || state == states.throwing || state == states.punch || state == states.superslam))
 		{
 			other.grav = 0.5;
 			other.x = x;
@@ -178,28 +178,6 @@ if (grabbed)
 		y = playerid.y;
 		hsp = -image_xscale * 10;
 		vsp = -10;
-	}
-	if (playerid.state == states.uppunch)
-	{
-		instance_create(x + (-playerid.xscale * 15), y - 50, obj_bumpeffect);
-		grav = 0.5;
-		thrown = true;
-		hsp = -image_xscale * 2;
-		grabbed = false;
-		vsp = -20;
-		instance_create(x, y, obj_slapstar);
-		instance_create(x, y, obj_baddiegibs);
-		flash = true;
-		with (obj_camera)
-		{
-			shake_mag = 3;
-			shake_mag_acc = 3 / game_get_speed(gamespeed_fps);
-		}
-	}
-	if (playerid.state == states.tacklecharge)
-	{
-		x = playerid.x + (playerid.xscale * 15);
-		y = playerid.y;
 	}
 	if (playerid.state == states.superslam)
 	{

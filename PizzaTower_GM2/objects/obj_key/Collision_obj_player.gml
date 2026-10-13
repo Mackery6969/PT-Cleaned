@@ -5,7 +5,7 @@ if (global.key_inv)
 }
 with (other)
 {
-	if (state != states.bombpep && state != states.gotoplayer && state != states.ghost && state != states.knightpep && state != states.cheeseball && state != states.boxxedpep && state != states.cheesepep && state != states.knightpepattack && state != states.knightpepslopes && state != states.hurt && state != states.knightpepbump)
+	if (state != states.bombpep && state != states.ghost && state != states.knightpep && state != states.cheeseball && state != states.boxxedpep && state != states.cheesepep && state != states.knightpepslopes && state != states.hurt && state != states.knightpepbump)
 	{
 		instance_destroy(other);
 		global.key_inv = true;

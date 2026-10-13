@@ -10,10 +10,6 @@ if (other.state == states.hurt)
 {
 	exit;
 }
-if (other.state == states.gotoplayer)
-{
-	exit;
-}
 if (other.state == states.stringfall)
 {
 	exit;

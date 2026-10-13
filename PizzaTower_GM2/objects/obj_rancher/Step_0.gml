@@ -53,7 +53,7 @@ if (bombreset > 0)
 	bombreset--;
 }
 var targetplayer = obj_player;
-if (sprite_index != scaredspr && x != targetplayer.x && state != states.pizzagoblinthrow && bombreset <= 0 && grounded && targetplayer.state != states.ghost && targetplayer.state != states.ghostpossess)
+if (sprite_index != scaredspr && x != targetplayer.x && state != states.pizzagoblinthrow && bombreset <= 0 && grounded && targetplayer.state != states.ghost)
 {
 	if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 100) && y >= (targetplayer.y - 100)))
 	{

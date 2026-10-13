@@ -2,7 +2,7 @@ if (place_meeting(x, y - 1, obj_player))
 {
 	with (obj_player)
 	{
-		if (state != states.gotoplayer && place_meeting(x, y + 1, other))
+		if (place_meeting(x, y + 1, other))
 		{
 			if (state == states.knightpep)
 			{

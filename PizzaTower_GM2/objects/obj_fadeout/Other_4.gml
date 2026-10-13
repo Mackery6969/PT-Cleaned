@@ -33,14 +33,6 @@ if (obj_player.state == states.taxi)
 		}
 	}
 }
-if (obj_player.state == states.taxi2)
-{
-	with (obj_player)
-	{
-		visible = true;
-		state = states.normal;
-	}
-}
 if (obj_player.state == states.spaceshuttle)
 {
 	instance_create(obj_spaceshuttlestop.x, camera_get_view_y(view_camera[0]) - 50, obj_spaceshuttletrans);

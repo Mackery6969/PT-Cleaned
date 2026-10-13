@@ -165,7 +165,6 @@ function scr_characterspr()
 		spr_shotguncrawl = spr_shotgun_crawl;
 		spr_shotgungoduck = spr_shotgun_goduck;
 		spr_fightball = spr_player_fightball;
-		spr_squished = spr_player_squished;
 		spr_supertaunt1 = spr_player_supertaunt1;
 		spr_supertaunt2 = spr_player_supertaunt2;
 		spr_supertaunt3 = spr_player_supertaunt3;
@@ -413,7 +412,6 @@ function scr_characterspr()
 		spr_shotgungoduck = spr_playerN_minigungoduck;
 		spr_taunt = spr_playerN_taunt;
 		spr_fightball = spr_playerN_fightball;
-		spr_squished = spr_playerN_squished;
 		spr_supertaunt1 = spr_playerN_supertaunt1;
 		spr_supertaunt2 = spr_playerN_supertaunt2;
 		spr_supertaunt3 = spr_playerN_supertaunt3;

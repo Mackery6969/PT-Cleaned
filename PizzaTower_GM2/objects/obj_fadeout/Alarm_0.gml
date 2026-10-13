@@ -10,7 +10,7 @@ if (instance_exists(obj_player))
 		}
 		with (obj_player)
 		{
-			if (state == states.ejected || state == states.taxi2)
+			if (state == states.ejected)
 			{
 				visible = true;
 				state = states.normal;
