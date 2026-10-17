@@ -1,0 +1,6 @@
+# Claude Autofix settings for this repository. See https://github.com/Mackery6969/Claude-Autofix#per-repository-settings
+verify-command: |
+  [ -f "$RUNNER_TEMP/gmlscan.mjs" ] || curl -fsSL https://github.com/Mackery6969/GML-Code-Scanner/releases/latest/download/gmlscan.mjs -o "$RUNNER_TEMP/gmlscan.mjs"
+  node "$RUNNER_TEMP/gmlscan.mjs" PizzaTower_GM2 --config .gmlscan.json --rule gml/syntax-error --fail-on error --no-color
+exclude:
+  - PizzaTower_GM2/extensions
