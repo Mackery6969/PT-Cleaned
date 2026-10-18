@@ -11,4 +11,5 @@ else if (visible)
 	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect);
 	draw_self();
 }
+pattern_reset();
 shader_reset();
