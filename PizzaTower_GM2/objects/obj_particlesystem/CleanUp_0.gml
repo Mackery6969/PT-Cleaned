@@ -1,3 +1,7 @@
+if (is_duplicate)
+{
+	exit;
+}
 part_emitter_destroy(global.particle_system, global.part_emitter);
 var i = particletypes.first;
 while (i < particletypes.last)

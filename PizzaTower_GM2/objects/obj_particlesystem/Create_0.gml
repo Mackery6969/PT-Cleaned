@@ -1,4 +1,5 @@
-if (instance_number(obj_particlesystem) > 1)
+is_duplicate = instance_number(obj_particlesystem) > 1;
+if (is_duplicate)
 {
 	instance_destroy();
 	exit;
