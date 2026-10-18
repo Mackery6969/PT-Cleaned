@@ -2,7 +2,7 @@ if (lock)
 {
 	exit;
 }
-if (followid != noone && !instance_exists(obj_player))
+if (!instance_exists(obj_player))
 {
 	exit;
 }
