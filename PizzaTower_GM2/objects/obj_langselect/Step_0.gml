@@ -54,6 +54,10 @@ if ((key_jump || key_back) && startbuffer <= 0)
 				instance_create(0, 0, obj_langload);
 			}
 		}
+		else
+		{
+			ini_close();
+		}
 	}
 	if (instance_exists(obj_option))
 	{
