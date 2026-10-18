@@ -4,7 +4,7 @@ if (instance_exists(baddieID))
 }
 else
 {
-	baddieID = instance_nearest(x, y, baddieID);
+	baddieID = instance_nearest(x, y, obj_baddie);
 }
 image_angle = direction;
 if (sprite_index == spr_bucket_war)
