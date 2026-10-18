@@ -57,7 +57,7 @@ with (other)
 						obj_player.xscale = 1;
 					}
 				}
-				if (((direction < 90 || direction > 270) && x < other.x) || ((direction > 90 || direction < 270) && x > other.x))
+				if (((direction < 90 || direction > 270) && x < other.x) || ((direction > 90 && direction < 270) && x > other.x))
 				{
 					_dir = -1;
 				}
