@@ -1,6 +1,7 @@
 if (!instance_exists(ID))
 {
 	instance_destroy();
+	exit;
 }
 x = ID.x;
 y = ID.y;
