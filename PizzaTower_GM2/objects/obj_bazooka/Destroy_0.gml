@@ -19,7 +19,6 @@ if (sprite_index != spr_piraneapple_projectile)
 			bombreset = 20;
 		}
 	}
-	destroy_sounds([snd]);
 }
 else
 {
@@ -30,3 +29,4 @@ else
 		sprite_index = spr_piraneapple_dead;
 	}
 }
+destroy_sounds([snd]);
