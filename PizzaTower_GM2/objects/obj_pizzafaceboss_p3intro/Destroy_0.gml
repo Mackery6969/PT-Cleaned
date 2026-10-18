@@ -1,1 +1,1 @@
-destroy_sounds([snd_spin]);
+destroy_sounds([snd_spin, snd_laugh]);
