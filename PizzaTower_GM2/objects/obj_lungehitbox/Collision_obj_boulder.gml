@@ -9,10 +9,11 @@ if (other.state != states.grabbed && playerid.state != states.grab)
 	{
 		other.grabbedby = 2;
 	}
+	var _boulderID = other.id;
 	with (playerid)
 	{
 		state = states.grab;
-		baddiegrabbedID = other.id;
+		baddiegrabbedID = _boulderID;
 		grabbingenemy = true;
 		movespeed = 0;
 		image_index = 0;
