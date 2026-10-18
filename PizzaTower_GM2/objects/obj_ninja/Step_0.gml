@@ -122,6 +122,7 @@ else if (state == states.punch)
 		}
 		else if (!shot)
 		{
+			shot = true;
 			with (instance_create(x, y + 6, obj_enemybullet))
 			{
 				image_xscale = other.image_xscale;
