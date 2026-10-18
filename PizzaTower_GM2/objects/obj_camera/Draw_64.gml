@@ -88,11 +88,11 @@ if (obj_player.state != states.gameover)
 	if (previousrank != rank_ix)
 	{
 		var _snd = global.snd_rankup;
-		previousrank = rank_ix;
 		if (rank_ix < previousrank)
 		{
 			_snd = global.snd_rankdown;
 		}
+		previousrank = rank_ix;
 		fmod_event_instance_play(_snd);
 		fmod_event_instance_set_parameter(_snd, "state", rank_ix - 1, true);
 		rank_scale = 3;
