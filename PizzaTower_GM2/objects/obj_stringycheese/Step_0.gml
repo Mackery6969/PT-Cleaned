@@ -161,7 +161,7 @@ switch (state)
 		break;
 	case states.hookshot:
 		sprite_index = spr_mrpinch_face2;
-		hand_index = spr_mrpinch_hand2;
+		spr_hand = spr_mrpinch_hand2;
 		hand_xscale = playerid.xscale;
 		handy = playerid.y;
 		handx = playerid.x;
@@ -221,7 +221,7 @@ switch (state)
 		break;
 }
 hand_index += 0.35;
-if (hand_index > (sprite_get_number(hand_index) - 1))
+if (hand_index > (sprite_get_number(spr_hand) - 1))
 {
 	hand_index = frac(hand_index);
 }
