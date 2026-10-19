@@ -1,5 +1,5 @@
 alarm[0] = 5;
-if (room_pos < (array_length(room_arr) - 1))
+if (room_pos < array_length(room_arr))
 {
 	with (obj_player)
 	{
