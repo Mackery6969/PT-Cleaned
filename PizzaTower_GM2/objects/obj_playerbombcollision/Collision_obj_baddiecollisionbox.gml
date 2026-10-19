@@ -82,7 +82,7 @@ if (baddie.object_index == obj_pizzafaceboss && baddie.state == states.ram && ba
 	with (bombID)
 	{
 		deadbuffer = 100;
-		array_push(baddie_arr, [baddie.id, 700]);
+		array_push(baddie_arr, [baddie.id, obj_baddie]);
 		instance_destroy();
 	}
 	exit;
@@ -92,7 +92,7 @@ if (!baddie.invincible || baddie.object_index == obj_vigilanteboss || baddie.obj
 	with (bombID)
 	{
 		deadbuffer = 100;
-		array_push(baddie_arr, [baddie.id, 700]);
+		array_push(baddie_arr, [baddie.id, obj_baddie]);
 		instance_destroy();
 	}
 }
