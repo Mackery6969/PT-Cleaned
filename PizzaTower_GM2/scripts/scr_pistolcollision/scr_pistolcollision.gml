@@ -188,7 +188,7 @@ function scr_pistolhit(_inst, _dmg)
 				_result = true;
 				flash = true;
 				flashbuffer = 8;
-				if (sprite_index == spr_peppinobulletGIANT)
+				if (other.sprite_index == spr_peppinobulletGIANT)
 				{
 					with (obj_camera)
 					{

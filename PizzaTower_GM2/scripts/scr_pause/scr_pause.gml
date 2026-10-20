@@ -146,7 +146,7 @@ function pause_spawn_priests()
 	}
 	else
 	{
-		p.x = irandom_range(SCREEN_WIDTH * 0.2, 0.42);
+		p.x = irandom_range(SCREEN_WIDTH * 0.2, SCREEN_WIDTH * 0.42);
 	}
 	ds_list_add(priest_list, p);
 }
