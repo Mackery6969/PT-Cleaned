@@ -219,7 +219,7 @@ function gameframe_button_reset() {
 
 function gameframe_button_update(_x, _y, _height, _mx, _my) {
 	/// @ignore
-	var _over_row = _mx >= _y && _my < _y + _height;
+	var _over_row = _my >= _y && _my < _y + _height;
 	if (_over_row) {
 		if (gameframe_has_native_extension) {
 			_over_row = gameframe_mouse_in_window();
