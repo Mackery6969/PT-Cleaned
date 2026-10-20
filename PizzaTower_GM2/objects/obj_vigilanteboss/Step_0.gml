@@ -198,7 +198,7 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 			vsp = 0;
 			sprite_index = spr_playerV_idle;
 			flickertime = 0;
-			playerhit--;
+			global.playerhit--;
 			touchedground = false;
 			alarm[6] = -1;
 			var dis = 264;
