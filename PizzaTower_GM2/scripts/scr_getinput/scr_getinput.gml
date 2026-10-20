@@ -96,7 +96,7 @@ function scr_menu_getinput()
 	{
 		var _dvc = obj_inputAssigner.player_input_device[!obj_inputAssigner.player_index];
 		tdp_input_update(_dvc);
-		var inputs = [["key_up", "menu_up", 0], ["key_up2", "menu_up", 1], ["key_down", "menu_down", 0], ["key_down2", "menu_down", 1], ["key_right", "menu_right", 0], ["key_right2", "menu_right", 1], ["key_start", "menu_start", 1], ["key_back", "menu_back", 1], ["key_jump", "menu_select", 1], ["key_jump2", "menu_select", 0], ["key_delete", "menu_delete", 0], ["key_delete2", "menu_delete", 1], ["key_quit", "menu_delete", 0], ["key_quit2", "menu_delete", 1]];
+		var inputs = [["key_up", "menu_up", 0], ["key_up2", "menu_up", 1], ["key_down", "menu_down", 0], ["key_down2", "menu_down", 1], ["key_right", "menu_right", 0], ["key_right2", "menu_right", 1], ["key_start", "menu_start", 1], ["key_back", "menu_back", 1], ["key_jump", "menu_select", 1], ["key_jump2", "menu_select", 0], ["key_delete", "menu_delete", 0], ["key_delete2", "menu_delete", 1], ["key_quit", "menu_quit", 0], ["key_quit2", "menu_quit", 1]];
 		for (var i = 0; i < array_length(inputs); i++)
 		{
 			var input = inputs[i];
