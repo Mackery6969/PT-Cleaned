@@ -41,7 +41,7 @@ function scr_lang_load_update()
 				for (var j = 0; j < array_length(sprite.frames); j++)
 				{
 					var frame = sprite.frames[j];
-					if (!ds_list_find_index(textures_to_offload, frame.texture))
+					if (ds_list_find_index(textures_to_offload, frame.texture) == -1)
 					{
 						ds_list_add(textures_to_offload, frame.texture);
 					}

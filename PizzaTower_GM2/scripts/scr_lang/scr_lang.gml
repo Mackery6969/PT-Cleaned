@@ -205,7 +205,7 @@ function lang_lexer(_list, _str)
 				if (pos <= len)
 				{
 					var val = string_copy(_str, start + 1, pos - start - 1);
-					string_replace_all(val, "\\\"", "\"");
+					val = string_replace_all(val, "\\\"", "\"");
 					ds_list_add(_list, [langtoken_type.string, start, val]);
 					pos += 1;
 				}
