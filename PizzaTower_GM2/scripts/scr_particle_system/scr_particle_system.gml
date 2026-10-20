@@ -52,7 +52,7 @@ function create_debris(_x, _y, _spr, _is_animated = false)
 		y: _y,
 		sprite_index: _spr,
 		image_number: sprite_get_number(_spr),
-		image_index: irandom(image_number - 1),
+		image_index: irandom(sprite_get_number(_spr) - 1),
 		image_angle: random_range(1, 270),
 		image_speed: 0.35,
 		sprw: sprite_get_width(_spr),
