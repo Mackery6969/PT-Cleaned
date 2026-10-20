@@ -95,7 +95,7 @@ function hub_state(_hubroom, _snd, arg2)
 
 function music_get_pos_wrap(_pos, _length)
 {
-	while (_pos > _length)
+	while (_length > 0 && _pos > _length)
 	{
 		_pos -= _length;
 	}
