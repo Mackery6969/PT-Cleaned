@@ -234,7 +234,7 @@ function scr_boss_pizzaheadKO()
 	}
 	if (pizzaheadKO_buffer > 0)
 	{
-		pizzaheadKO_buffer = 0;
+		pizzaheadKO_buffer--;
 	}
 	else
 	{
