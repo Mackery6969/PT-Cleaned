@@ -129,6 +129,7 @@ function scr_collide()
 				while (!place_meeting(x, y + 1, platformid))
 				{
 					y++;
+					i++;
 					if (i > abs(sprite_height))
 					{
 						break;
