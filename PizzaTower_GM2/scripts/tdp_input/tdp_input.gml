@@ -105,7 +105,7 @@ function tdp_input_deserialize(_inputkey, _inputstr)
 	var in = new tdp_input_key(_inputkey);
 	for (var i = 0; i < array_length(arr); i += 2)
 	{
-		if (arr[i] == "")
+		if (arr[i] == "" || (i + 1) >= array_length(arr))
 		{
 			break;
 		}
@@ -113,6 +113,10 @@ function tdp_input_deserialize(_inputkey, _inputstr)
 		var value = real(arr[i + 1]);
 		if (type == tdp_input_actiontypes.gamepad_axis)
 		{
+			if ((i + 2) >= array_length(arr))
+			{
+				break;
+			}
 			var joystick_direction = real(arr[i + 2]);
 			i++;
 			array_push(in.actions, new tdp_input_action(type, value, joystick_direction));
