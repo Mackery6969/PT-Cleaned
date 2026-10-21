@@ -40,7 +40,7 @@ function scr_player_shotgunjump()
 	}
 	if (input_buffer_jump > 0 && can_jump)
 	{
-		input_buffer_jump = 8;
+		input_buffer_jump = 0;
 		state = states.shotgunjump;
 		vsp = -11;
 		jumpstop = false;
