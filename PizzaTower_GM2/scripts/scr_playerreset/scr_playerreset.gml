@@ -1,5 +1,9 @@
 function textures_offload(_texgroups)
 {
+	if (!is_array(_texgroups))
+	{
+		_texgroups = [_texgroups];
+	}
 	var b = instance_create(0, 0, obj_loadingscreen);
 	with (b)
 	{
