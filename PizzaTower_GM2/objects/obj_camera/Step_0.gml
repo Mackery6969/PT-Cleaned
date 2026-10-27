@@ -60,7 +60,7 @@ if (global.seconds <= 0 && global.minutes <= 0 && !ded)
 if (global.seconds > 59)
 {
 	global.minutes += 1;
-	global.seconds -= 59;
+	global.seconds -= 60;
 }
 if (global.timedgatetimer)
 {
